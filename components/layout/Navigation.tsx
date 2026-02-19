@@ -1,300 +1,3 @@
-// "use client";
-
-// import { useState, useEffect } from "react";
-// import Link from "next/link";
-// import Image from "next/image";
-// import { ChevronDown } from "lucide-react";
-// import AGIManagersDropdown from "./navigation-dropdowns/AGIManagersDropdown";
-// import IntelligenceDropdown from "./navigation-dropdowns/IntelligenceDropdown";
-// import InsightsDropdown from "./navigation-dropdowns/InsightsDropdown";
-
-// export default function Navigation() {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const [openDropdown, setOpenDropdown] = useState(null);
-
-//   const dropdownLabels = {
-//     "agi-managers": "AGI Managers",
-//     intelligence: "Intelligence",
-//     insights: "Insights",
-//   };
-
-//   const toggleMenu = () => {
-//     setIsMenuOpen(!isMenuOpen);
-//     setOpenDropdown(null);
-//   };
-
-//   const toggleDropdown = (name) => {
-//     setOpenDropdown(openDropdown === name ? null : name);
-//   };
-
-//   const closeDropdown = () => setOpenDropdown(null);
-
-//   // outside click close (desktop only)
-//   useEffect(() => {
-//     const handleClickOutside = (e) => {
-//       if (window.innerWidth >= 1024) {
-//         if (
-//           !e.target.closest("[data-dropdown]") &&
-//           !e.target.closest("[data-dropdown-toggle]")
-//         ) {
-//           setOpenDropdown(null);
-//         }
-//       }
-//     };
-
-//     if (openDropdown) {
-//       document.addEventListener("click", handleClickOutside);
-//       return () => document.removeEventListener("click", handleClickOutside);
-//     }
-//   }, [openDropdown]);
-
-//   return (
-//     <>
-//       <style jsx global>{`
-//         .mega-menu-wrap::-webkit-scrollbar,
-//         .mega-column::-webkit-scrollbar {
-//           display: none;
-//         }
-//       `}</style>
-
-//       <div className="relative w-full">
-//         {/* NAVBAR */}
-//         <div className="fixed top-0 left-0 right-0 z-50">
-//           <nav>
-//             <div className="px-4 sm:px-6 lg:px-4">
-//               <div className="max-w-[1240px] h-[62px] mx-auto bg-white rounded-b-2xl p-4  lg:px-6 py-2 flex items-center justify-between">
-//                 {/* LEFT */}
-//                 <div className="flex items-center gap-16">
-//                   {/* LOGO */}
-//                   <Link href="/" className="flex items-center ">
-//                     <Image
-//                       src="/image/logo1.png"
-//                       alt="logo icon"
-//                       width={30}
-//                       height={30}
-//                     />
-//                     <Image
-//                       src="/image/logo.png"
-//                       alt="logo"
-//                       width={170}
-//                       height={60}
-//                     />
-//                   </Link>
-
-//                   {/* DESKTOP NAV */}
-//                   <div className="hidden lg:flex items-center gap-6 font-['League_Spartan']">
-//                     {/* AGI */}
-//                     <div className="relative" data-dropdown>
-//                       <button
-//                         onClick={() => toggleDropdown("agi-managers")}
-//                         data-dropdown-toggle
-//                         className="flex items-center gap-2 text-[14px] font-semibold hover:text-[#625FD0]"
-//                       >
-//                         AGI Managers
-//                         <ChevronDown
-//                           className={`w-4 h-4 transition ${openDropdown === "agi-managers" ? "rotate-180" : ""}`}
-//                         />
-//                       </button>
-
-//                       {openDropdown === "agi-managers" && (
-//                         <AGIManagersDropdown onClose={closeDropdown} />
-//                       )}
-//                     </div>
-
-//                     {/* Intelligence */}
-//                     <div className="relative" data-dropdown>
-//                       <button
-//                         onClick={() => toggleDropdown("intelligence")}
-//                         data-dropdown-toggle
-//                         className="flex items-center gap-2 text-[14px] font-semibold hover:text-[#625FD0]"
-//                       >
-//                         Intelligence
-//                         <ChevronDown
-//                           className={`w-4 h-4 transition ${openDropdown === "intelligence" ? "rotate-180" : ""}`}
-//                         />
-//                       </button>
-
-//                       {openDropdown === "intelligence" && (
-//                         <IntelligenceDropdown onClose={closeDropdown} />
-//                       )}
-//                     </div>
-
-//                     {/* Pricing */}
-//                     <Link
-//                       href="/pricing/"
-//                       className="text-[14px] font-semibold hover:text-[#625FD0]"
-//                     >
-//                       Pricing
-//                     </Link>
-
-//                     {/* Insights */}
-//                     <div className="relative" data-dropdown>
-//                       <button
-//                         onClick={() => toggleDropdown("insights")}
-//                         data-dropdown-toggle
-//                         className="flex items-center gap-2 text-[14px] font-semibold hover:text-[#625FD0]"
-//                       >
-//                         Insights
-//                         <ChevronDown
-//                           className={`w-4 h-4 transition ${openDropdown === "insights" ? "rotate-180" : ""}`}
-//                         />
-//                       </button>
-
-//                       {openDropdown === "insights" && (
-//                         <InsightsDropdown onClose={closeDropdown} />
-//                       )}
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* CTA */}
-
-//                 <div className="flex gap-4">
-//                   <Link
-//                   href="https://agent.oqlous.com/login"
-//                   className="hidden text-[#625FD0] hover:text-white lg:block items-center py-2 px-3 border-2 border-[#625FD0] hover:bg-[#625FD0]  rounded-lg text-[14px]  font-semibold transition"
-//                 >
-//                   OPEN APP
-//                 </Link>
-
-//                 <Link
-//                   href="/get-in-touch/"
-//                   className="hidden lg:block py-2 px-3 bg-[#625FD0] text-white rounded-lg text-[14px] font-semibold  transition"
-//                 >
-//                   GET IN TOUCH
-//                 </Link>
-
-//                 </div>
-
-                
-//                 {/* MOBILE TOGGLE */}
-//                 <button
-//                   onClick={toggleMenu}
-//                   className="lg:hidden flex flex-col gap-1.5 w-8 h-8 justify-center items-center"
-//                 >
-//                   <span
-//                     className={`w-6 h-0.5 bg-gray-700 transition ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
-//                   />
-//                   <span
-//                     className={`w-6 h-0.5 bg-gray-700 transition ${isMenuOpen ? "scale-0" : ""}`}
-//                   />
-//                   <span
-//                     className={`w-6 h-0.5 bg-gray-700 transition ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-//                   />
-//                 </button>
-//               </div>
-//             </div>
-//           </nav>
-
-//           {/* MOBILE MENU */}
-//           {isMenuOpen && (
-//             <div className="lg:hidden m-5 rounded-2xl bg-white animate-in fade-in duration-200">
-//               <div className=" p-2 sm:p-4">
-               
-//                 {openDropdown ? (
-//                   <div className="space-y-5">
-                  
-//                     <button
-//                       onClick={() => setOpenDropdown(null)}
-//                       className="flex items-center justify-between w-full text-base font-medium"
-//                     >
-//                       <span>{dropdownLabels[openDropdown]}</span>
-//                       <ChevronDown className="w-4 h-4 rotate-180" />
-//                     </button>
-
-                   
-//                     {openDropdown === "agi-managers" && <AGIManagersDropdown />}
-//                     {openDropdown === "intelligence" && (
-//                       <IntelligenceDropdown />
-//                     )}
-//                     {openDropdown === "insights" && <InsightsDropdown />}
-//                   </div>
-//                 ) : (
-                  
-//                   <div className="space-y-4">
-//                     <MenuBtn
-//                       label="AGI Managers"
-//                       onClick={() => toggleDropdown("agi-managers")}
-//                     />
-//                     <MenuBtn
-//                       label="Intelligence"
-//                       onClick={() => toggleDropdown("intelligence")}
-//                     />
-
-//                     <LinkItem
-//                       href="/pricing/"
-//                       close={() => setIsMenuOpen(false)}
-//                     />
-
-//                     <MenuBtn
-//                       label="Insights"
-//                       onClick={() => toggleDropdown("insights")}
-//                     />
-
-//                     <Link
-//                       href="/get-in-touch/"
-//                       onClick={() => setIsMenuOpen(false)}
-//                       className="block mt-4 text-center py-3 rounded-lg bg-[#625FD0] text-white font-semibold text-sm hover:bg-black transition"
-//                     >
-//                       Get in Touch
-//                     </Link>
-//                   </div>
-//                 )}
-//               </div>
-//             </div>
-//           )}
-//         </div>
-
-//         {/* OVERLAY */}
-//         {openDropdown && !isMenuOpen && (
-//           <div
-//             className="hidden lg:block fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
-//             onClick={closeDropdown}
-//           />
-//         )}
-//       </div>
-//     </>
-//   );
-// }
-
-// /* SMALL COMPONENTS */
-
-// function MenuBtn({ label, onClick }) {
-//   return (
-//     <button
-//       onClick={onClick}
-//       className="flex w-full justify-between items-center  text-base hover:text-[#625FD0]"
-//     >
-//       {label}
-//       <ChevronDown className="w-5 h-5" />
-//     </button>
-//   );
-// }
-
-// function LinkItem({ href, close }) {
-//   return (
-//     <Link
-//       href={href}
-//       onClick={close}
-//       className="block py-2 text-base hover:text-[#625FD0]"
-//     >
-//       Pricing
-//     </Link>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -305,12 +8,14 @@ import AGIManagersDropdown from "./navigation-dropdowns/AGIManagersDropdown";
 import IntelligenceDropdown from "./navigation-dropdowns/IntelligenceDropdown";
 import InsightsDropdown from "./navigation-dropdowns/InsightsDropdown";
 
-export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const navRef = useRef(null);
+type DropdownName = "agi-managers" | "intelligence" | "insights";
 
-  const dropdownLabels = {
+export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [openDropdown, setOpenDropdown] = useState<DropdownName | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const dropdownLabels: Record<DropdownName, string> = {
     "agi-managers": "AGI Managers",
     intelligence: "Intelligence",
     insights: "Insights",
@@ -321,7 +26,7 @@ export default function Navigation() {
     setOpenDropdown(null);
   };
 
-  const toggleDropdown = (name) => {
+  const toggleDropdown = (name: DropdownName) => {
     setOpenDropdown((prev) => (prev === name ? null : name));
   };
 
@@ -334,8 +39,8 @@ export default function Navigation() {
 
   // Close dropdown on outside click (desktop)
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenDropdown(null);
       }
     };
@@ -603,7 +308,12 @@ export default function Navigation() {
 
 /* ── Small reusable components ── */
 
-function MobileMenuBtn({ label, onClick }) {
+interface MobileMenuBtnProps {
+  label: string;
+  onClick: () => void;
+}
+
+function MobileMenuBtn({ label, onClick }: MobileMenuBtnProps) {
   return (
     <button
       onClick={onClick}
