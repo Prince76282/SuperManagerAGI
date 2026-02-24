@@ -33,9 +33,6 @@ export default function Home() {
         Notify Me
       </button>
 
-      <p className="absolute bottom-6 text-sm text-gray-500">
-        © 2026 SuperManager AGI. All rights reserved.
-      </p>
 
     </main>
   );

@@ -15,7 +15,7 @@ export default function IntelligenceDropdown({ onClose }) {
     <div
       className="
       absolute lg:left-2/3 lg:-translate-x-2/5
-      left-0 top-full mt-3
+      left-0 top-full mt-2
       w-full lg:w-screen max-w-[1290px] 
       z-50 dropdown-open lg:ml-4
       "
@@ -30,7 +30,7 @@ export default function IntelligenceDropdown({ onClose }) {
         
 
         {/* GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4">
 
           {/* Column 1 */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 space-y-6">

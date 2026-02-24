@@ -32,7 +32,7 @@ const Footer = () => {
                 width={40}
                 height={30}
               />
-              <Image src="/image/logo.png" alt="Logo" width={160} height={40} />
+              <Image src="/image/logo.png" alt="Logo" width={160} height={50} />
             </Link>
 
             <p className="text-center md:text-left text-base lg:text-lg">
@@ -131,9 +131,9 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* RIGHT PANEL */}
+
             <div className="lg:w-[280px] flex flex-col gap-6">
-              {/* CTA */}
+
               <div className="border border-gray-100 p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   Let's Build Autonomous Execution
@@ -158,8 +158,8 @@ const Footer = () => {
                   Follow us on
                 </h4>
 
-                <div className="flex gap-4 mb-8">
-                  <a
+                <div className="flex  gap-4 mb-8">
+                  <Link
                     href="https://www.linkedin.com/company/supermanagerai/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -168,12 +168,12 @@ const Footer = () => {
                     <Image
                       src="/image/linkedin.png"
                       alt="LinkedIn"
-                      width={20}
-                      height={20}
+                      width={30}
+                      height={30}
                     />
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     href="https://x.com/supermanageragi"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -182,10 +182,10 @@ const Footer = () => {
                     <Image
                       src="/image/twitter.png"
                       alt="Twitter"
-                      width={20}
-                      height={20}
+                      width={30}
+                      height={30}
                     />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Contact */}
@@ -200,10 +200,10 @@ const Footer = () => {
                 </p>
 
                 <p className="text-sm">
-                  <b>Contact:</b>{" "}
-                  <a href="tel:+14084712875" className="hover:text-[#625FD0]">
+                  <b>Contact: </b>{" "}
+                  <Link href="tel:+14084712875" className="hover:text-[#625FD0]">
                     +1 (408) 471-2875
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -238,10 +238,10 @@ const Footer = () => {
                 </Link>
               ))}
 
-              {/* Scroll Top */}
+              
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="ml-4 w-10 h-10 rounded-full text-2xl bg-[#625FD0] text-white hover:bg-black"
+                className="ml-4 w-10 h-10 rounded-full text-2xl bg-[#625FD0] text-white hover:bg-[#7d79f8]"
               >
                 ↑
               </button>
@@ -267,7 +267,7 @@ const FooterCol = ({
 }) => (
   <div>
     <h4
-      className={`font-bold text-sm uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
+      className={`font-bold text-md uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
     >
       {title}
     </h4>

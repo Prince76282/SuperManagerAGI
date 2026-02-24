@@ -72,7 +72,7 @@ export default function SuperManagerTabs() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
-                  className={`shrink-0 px-4 py-2 text-xs sm:text-sm rounded-full uppercase transition whitespace-nowrap ${
+                  className={`shrink-0 px-4 py-2 text-xs sm:text-sm rounded-full uppercase transition whitespace-nowrap  ${
                     activeTab === index
                       ? "bg-[#625FD0] text-white shadow-md"
                       : "bg-white border hover:bg-[#625FD0] hover:text-white "

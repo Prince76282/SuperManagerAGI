@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function InfrastructurePartners() {
   return (
-    <section className="bg-[#F0F6F9] py-16">
+    <section className="bg-[#F0F6F9] py-10">
       <div className="px-4 md:px-6 lg:px-8">
         <div className="container max-w-[1200px] mx-auto max-w-7xl">
           {/* Header */}

@@ -101,7 +101,7 @@ export default function HeroSection() {
               <Link
                 href="https://agent.oqlous.com/login"
                 target="_blank"
-                className="rounded-lg bg-[#625FD0] text-md text-white px-4 py-2 font-[var(--font-spartan)] font-semibold hover:bg-black transition"
+                className="rounded-lg bg-[#625FD0] text-md text-white px-4 py-2 font-[var(--font-spartan)] font-semibold  transition"
               >
                 OPEN APP
 
@@ -112,7 +112,7 @@ export default function HeroSection() {
 
         {/* 🤝 Trusted By */}
         <div className="mx-auto max-w-[1100px] px-5 pb-14 text-center">
-          <h1 className="mb-4 font-[var(--font-spartan)] text-gray-700 text-xl md:text-2xl font-bold">
+          <h1 className="mb-4 font-[var(--font-spartan)] text-black text-xl md:text-2xl font-bold">
             Trusted by 10+ Leading Companies
           </h1>
 
@@ -139,7 +139,7 @@ export default function HeroSection() {
             <Link
               key={index}
               href={feature.href}
-              className="group snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[23%] rounded-2xl bg-white/10 backdrop-blur-md border-2 border-gray-300/50 text-black transition-all hover:bg-white/15 hover:shadow-xl"
+              className="group snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] rounded-2xl bg-white/10 backdrop-blur-md border-2 border-gray-300/50 text-black transition-all hover:bg-white/15 hover:shadow-xl"
             >
               <div className="flex h-full flex-col">
                 <div className="p-6 flex-1">

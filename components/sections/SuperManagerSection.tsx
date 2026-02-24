@@ -132,7 +132,7 @@ export default function SuperManagerSection() {
                     className={`px-4 py-2 text-xs rounded-full uppercase transition ${
                       activeTab === i
                         ? "bg-[#625FD0] font-medium text-white"
-                        : "bg-white border font-medium hover:bg-[#625FD0] hover:text-white"
+                        : "bg-white border  hover:bg-[#625FD0] hover:text-white"
                     }`}
                   >
                     {tab.label}

@@ -12,7 +12,7 @@ export default function AGIManagersDropdown({ onClose }) {
     <div
       className="
       absolute lg:left-1/2 lg:-translate-x-1/2
-      left-0 top-full mt-3
+      left-0 top-full md:mt-2
       w-full lg:w-screen max-w-[1290px] lg:ml-70
       z-50 dropdown-open
       "
@@ -28,7 +28,7 @@ export default function AGIManagersDropdown({ onClose }) {
        
 
         {/* GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-5">
 
           {/* LEFT BIG COLUMN */}
           <div className="lg:col-span-2 bg-white rounded-2xl p-4 sm:p-6 space-y-4">
