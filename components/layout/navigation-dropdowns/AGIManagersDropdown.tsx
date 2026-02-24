@@ -37,14 +37,17 @@ export default function AGIManagersDropdown({ onClose }) {
               {
                 title: "AGI for Leadership",
                 desc: "Replace team leads and engineering managers with AGI. Autonomous coordination. Intelligent decisions. Drive performance.",
+                href: "/learnmore/"
               },
               {
                 title: "AGI for Execution",
                 desc: "Leverage AGI capabilities to autonomously execute projects and deliver outcomes without human intervention.",
+                href: "/learnmore/"
               },
               {
                 title: "AGI for Strategy",
                 desc: "Streamline strategic planning and resource allocation with autonomous AGI intelligence.",
+                href: "/learnmore/"
               },
             ].map((section, i) => (
               <div
@@ -64,7 +67,7 @@ export default function AGIManagersDropdown({ onClose }) {
                     </p>
 
                     <Link
-                      href="/learnmore/"
+                      href={section.href}
                       onClick={handleClose}
                       className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold  transition-all duration-300 ease-in-out"
                     >

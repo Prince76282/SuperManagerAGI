@@ -29,7 +29,7 @@ const Footer = () => {
               <Image
                 src="/image/logo1.png"
                 alt="Logo Icon"
-                width={40}
+                width={30}
                 height={30}
               />
               <Image src="/image/logo.png" alt="Logo" width={160} height={50} />
@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Columns */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-            {/* LEFT SIDE LINKS */}
+        
             <div className="flex-1">
               {/* TOP GRID */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -135,7 +135,7 @@ const Footer = () => {
             <div className="lg:w-[280px] flex flex-col gap-6">
 
               <div className="border border-gray-100 p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">
                   Let's Build Autonomous Execution
                 </h3>
 
@@ -154,7 +154,7 @@ const Footer = () => {
 
               {/* Social */}
               <div>
-                <h4 className="font-bold text-sm uppercase mb-5">
+                <h4 className="font-semibold text-md uppercase mb-5">
                   Follow us on
                 </h4>
 
@@ -188,7 +188,7 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                {/* Contact */}
+               
                 <p className="text-sm mb-2">
                   <b>Email:</b>{" "}
                   <a
@@ -210,7 +210,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom */}
-          <div className="border-t mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className=" mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-sm text-gray-600 text-center md:text-left">
               © 2026 SuperManager AGI. All rights reserved.
             </p>
@@ -267,7 +267,7 @@ const FooterCol = ({
 }) => (
   <div>
     <h4
-      className={`font-bold text-md uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
+      className={` text-xl font-[16px] uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
     >
       {title}
     </h4>

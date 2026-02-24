@@ -221,7 +221,7 @@ const ProjectManagementPlatform = () => {
             {activeTab === "Decision-Intelligence" && (
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
-                  <div className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3 md:mb-4">
+                  <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
                     Decision Intelligence
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -234,7 +234,7 @@ const ProjectManagementPlatform = () => {
                 <div className="space-y-6 md:space-y-8">
                   {decisionIntelligenceFeatures.map((item, i) => (
                     <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+                      <h4 className="text-xl md:text-2xl lg:text-3xl ">
                         AI for{" "}
                         <span className="text-[#625FD0]">{item.title}</span>
                       </h4>
@@ -251,7 +251,7 @@ const ProjectManagementPlatform = () => {
             {activeTab === "Delivery Automation" && (
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
-                  <div className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3 md:mb-4">
+                  <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
                     Delivery Automation
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -266,7 +266,7 @@ const ProjectManagementPlatform = () => {
                     <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
                       <div className="space-y-4 md:space-y-6">
                         <div>
-                          <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-4">
+                          <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
                             AI for{" "}
                             <span className="text-[#625FD0]">{item.title}</span>
                           </h4>
@@ -285,7 +285,7 @@ const ProjectManagementPlatform = () => {
             {activeTab === "Resource Management" && (
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
-                  <div className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3 md:mb-4">
+                  <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
                     Resource Management
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -298,7 +298,7 @@ const ProjectManagementPlatform = () => {
                   {eventWorkspaceFeatures.map((item, i) => (
                     <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
                       <div className="space-y-3 md:space-y-4">
-                        <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-4">
+                        <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
                           {item.title}{" "}
                           <span className="text-[#625FD0]">
                             {item.Highlight}
@@ -316,7 +316,7 @@ const ProjectManagementPlatform = () => {
             {activeTab === "Integrations" && (
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
-                  <div className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3 md:mb-4">
+                  <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
                     Integrations
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -330,7 +330,7 @@ const ProjectManagementPlatform = () => {
                   {enterpriseIntegrationFeatures.mainFeatures.map((item, i) => (
                     <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
                       <div className="space-y-3 md:space-y-4">
-                        <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-4">
+                        <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
                           {item.title}{" "}
                           <span className="text-[#625FD0]">
                             {item.Highlight}
@@ -348,7 +348,7 @@ const ProjectManagementPlatform = () => {
             {activeTab === "Workspace" && (
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
-                  <div className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3 md:mb-4">
+                  <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
                     Workspace
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
@@ -361,7 +361,7 @@ const ProjectManagementPlatform = () => {
                   {WorkspaceFeatures.mainFeatures.map((item, i) => (
                     <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
                       <div className="space-y-3 md:space-y-4">
-                        <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-4">
+                        <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
                           {item.title}{" "}
                           <span className="text-[#625FD0]">
                             {item.Highlight}

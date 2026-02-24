@@ -59,7 +59,7 @@ const DecisionIntelligence = () => {
               {/* CTA Card */}
               <div className="bg-white rounded-lg p-6 shadow-sm border-2 border border-gray-300">
                 <div className="mb-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl md:text-3xl  text-gray-900 mb-3">
                     Ready to get started?
                   </h3>
                   <p className="text-gray-900 font-normal">
