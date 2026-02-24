@@ -11,6 +11,11 @@ import {
 } from "lucide-react";
 
 export default function IntelligenceDropdown({ onClose }) {
+
+  const handleClick = () => {
+    if (onClose) onClose();
+  };
+
   return (
     <div
       className="
@@ -27,7 +32,6 @@ export default function IntelligenceDropdown({ onClose }) {
         lg:max-h-[90vh] lg:overflow-y-auto lg:scroll-smooth
         "
       >
-        
 
         {/* GRID */}
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4">
@@ -59,7 +63,8 @@ export default function IntelligenceDropdown({ onClose }) {
 
               <Link
                 href="./learnmore/"
-                className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold  transition-all duration-300 ease-in-out"
+                onClick={handleClick}
+                className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300 ease-in-out"
               >
                 Learn More
               </Link>
@@ -83,6 +88,7 @@ export default function IntelligenceDropdown({ onClose }) {
                   <li key={i}>
                     <Link
                       href="/learnmore/"
+                      onClick={handleClick}
                       className="flex items-center gap-3 text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group"
                     >
                       <item.icon className="w-4 h-4 text-gray-400 group-hover:text-[#625FD0]" />
@@ -144,6 +150,7 @@ export default function IntelligenceDropdown({ onClose }) {
                     <li key={i}>
                       <Link
                         href="/learnmore/"
+                        onClick={handleClick}
                         className="text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out"
                       >
                         {item}
@@ -160,7 +167,6 @@ export default function IntelligenceDropdown({ onClose }) {
 
             {/* Event Card */}
             <div className="bg-gradient-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
-             
 
               <div className="p-5">
                 <Image
@@ -187,7 +193,8 @@ export default function IntelligenceDropdown({ onClose }) {
 
                 <Link
                   href="/learnmore/"
-                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold  transition-all duration-300 ease-in-out"
+                  onClick={handleClick}
+                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300 ease-in-out"
                 >
                   Register <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -221,7 +228,12 @@ export default function IntelligenceDropdown({ onClose }) {
                     date: "12 Nov 2025",
                   },
                 ].map((item, i) => (
-                  <Link key={i} href="/learnmore/" className="block group">
+                  <Link
+                    key={i}
+                    href="/learnmore/"
+                    onClick={handleClick}
+                    className="block group"
+                  >
                     <div className="flex gap-3">
                       <Image
                         src={item.img}

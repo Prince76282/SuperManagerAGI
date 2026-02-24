@@ -218,15 +218,15 @@ const Footer = () => {
             <div className="flex flex-wrap gap-4 text-sm">
               {[
                 { label: "Privacy Policy", href: "./privacy-policy" },
-                { label: "Terms of Service", href: "/terms-of-service" },
+                { label: "Terms of Service", href: "/learnmore" },
                 {
                   label: "Acceptable Use Policy",
-                  href: "/acceptable-use-policy",
+                  href: "/learnmore",
                 },
-                { label: "Cookie Policy", href: "/cookie-policy" },
+                { label: "Cookie Policy", href: "/learnmore" },
                 {
                   label: "Intellectual Property Rights",
-                  href: "/intellectual-property-rights",
+                  href: "/learnmore",
                 },
               ].map((item) => (
                 <Link

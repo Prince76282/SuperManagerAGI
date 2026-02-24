@@ -7,6 +7,11 @@ import {
 } from "lucide-react";
 
 export default function InsightsDropdown({ onClose }) {
+
+  const handleClick = () => {
+    if (onClose) onClose();
+  };
+
   return (
     <div
       className="
@@ -24,7 +29,6 @@ export default function InsightsDropdown({ onClose }) {
         "
       >
         
-
         {/* GRID */}
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-5">
 
@@ -52,6 +56,7 @@ export default function InsightsDropdown({ onClose }) {
                   <li key={i}>
                     <Link
                       href="/learnmore/"
+                      onClick={handleClick}
                       className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group py-1"
                     >
                       <span>{item}</span>
@@ -79,6 +84,7 @@ export default function InsightsDropdown({ onClose }) {
                   <li key={i}>
                     <Link
                       href="/learnmore/"
+                      onClick={handleClick}
                       className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group py-1"
                     >
                       <span>{item}</span>
@@ -114,6 +120,7 @@ export default function InsightsDropdown({ onClose }) {
                   <li key={i}>
                     <Link
                       href="/learnmore/"
+                      onClick={handleClick}
                       className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group py-1"
                     >
                       <span>{item}</span>
@@ -136,7 +143,7 @@ export default function InsightsDropdown({ onClose }) {
                   { img: "/image/101.png", title: "Generative AI 101" },
                   { img: "/image/CXO AI toolkit.png", title: "CXO AI toolkit for enterprise AI success" },
                 ].map((item, i) => (
-                  <Link key={i} href="/learnmore/" className="block group">
+                  <Link key={i} href="/learnmore/" onClick={handleClick} className="block group">
                     <div className="flex gap-3">
                       <Image
                         src={item.img}
@@ -160,8 +167,6 @@ export default function InsightsDropdown({ onClose }) {
 
             {/* Event */}
             <div className="bg-gradient-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
-             
-
               <div className="p-5">
                 <Image
                   src="/image/CCWBerlin.png"
@@ -187,7 +192,8 @@ export default function InsightsDropdown({ onClose }) {
 
                 <Link
                   href="/learnmore/"
-                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold  transition-all duration-300 ease-in-out"
+                  onClick={handleClick}
+                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300 ease-in-out"
                 >
                   Register <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -197,6 +203,7 @@ export default function InsightsDropdown({ onClose }) {
             {/* CTA */}
             <Link
               href="/learnmore/"
+              onClick={handleClick}
               className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 hover:shadow-lg transition-all duration-300 ease-in-out group"
             >
               <div className="flex gap-4">

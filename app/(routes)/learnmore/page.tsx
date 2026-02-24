@@ -1,12 +1,12 @@
 import Image from "next/image";
-
-import image from '@/public/Image/logo1.png'
+import Link from "next/link";
+import image from "@/public/Image/logo1.png";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center bg-gray-100 text-center px-6">
-
-
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 px-6 text-center">
+      
+      {/* Logo */}
       <Image
         src={image}
         alt="SuperManager AGI Logo"
@@ -16,23 +16,29 @@ export default function Home() {
         className="mb-6"
       />
 
-      <h1 className="text-4xl font-bold mb-4">
+      {/* Title */}
+      <h1 className="text-4xl font-bold text-black mb-3">
         SuperManager AGI
       </h1>
 
-      <h2 className="text-5xl font-semibold mb-6">
-        Upcoming
+      {/* Subtitle */}
+      <h2 className="text-5xl font-semibold text-gray-900 mb-6">
+        Coming Soon
       </h2>
 
-      <p className="max-w-xl text-lg text-gray-600 mb-10">
-        SuperManager AGI replaces half your project managers with autonomous AI agents —
-        cutting costs, boosting productivity, and eliminating manual work.
+      {/* Description */}
+      <p className="max-w-xl text-lg text-gray-600 mb-10 leading-relaxed">
+        SuperManager AGI replaces half your project managers with autonomous AI
+        agents cutting costs, boosting productivity, and eliminating manual work.
       </p>
 
-      <button className="rounded-xl bg-[#625FD0] px-8 py-3 text-lg font-medium text-white shadow-md transition ">
+      {/* CTA Button */}
+      <Link
+        href="/"
+        className="rounded-xl bg-[#625FD0] px-8 py-3 text-lg font-medium text-white shadow-md transition hover:bg-[#5a57c0] focus:outline-none focus:ring-2 focus:ring-[#625FD0]/50"
+      >
         Notify Me
-      </button>
-
+      </Link>
 
     </main>
   );

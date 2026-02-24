@@ -76,7 +76,7 @@ const DecisionIntelligence = () => {
                     <span className="whitespace-nowrap">Request a Demo</span>
                   </Link>
                   <Link
-                    href="/get-in-touch/"
+                    href="https://agent.oqlous.com/login"
                     className="hidden text-[#625FD0] hover:text-white lg:block items-center py-2 px-3 border-2 border-[#625FD0] hover:bg-[#625FD0]  rounded-lg text-[14px]  font-semibold transition"
                     aria-label="Talk to an Expert"
                   >
