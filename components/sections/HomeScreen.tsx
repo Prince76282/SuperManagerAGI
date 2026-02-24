@@ -113,7 +113,7 @@ export default function HeroSection() {
         {/* 🤝 Trusted By */}
         <div className="mx-auto max-w-[1100px] px-5 pb-14 text-center">
           <h1 className="mb-4 font-[var(--font-spartan)] text-black text-xl md:text-2xl font-bold">
-            Trusted by 10+ Leading Companies
+            Trusted by 100+ Leading Companies
           </h1>
 
           <div className="overflow-hidden group">

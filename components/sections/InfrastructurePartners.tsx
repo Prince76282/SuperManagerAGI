@@ -25,7 +25,7 @@ export default function InfrastructurePartners() {
                   src="/image/image2.6.png"
                   alt="Private Deployment"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>
@@ -82,7 +82,7 @@ export default function InfrastructurePartners() {
                   src="/image/image2.7.png"
                   alt="Secure Cloud Deployment"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>

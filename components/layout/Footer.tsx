@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="relative">
       {/* Main Footer */}
-      <div className="bg-gradient-to-b from-gray-50 to-gray-100 relative">
+      <div className="bg-[#F6F7FE] from-gray-50 to-gray-100 relative">
         <Image
           src={img2}
           alt="Background"
@@ -36,7 +36,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-center md:text-left text-base lg:text-lg">
-              <span className="font-bold text-gray-900">
+              <span className="font-semibold text-gray-800">
                 Reimagine Enterprise Execution{" "}
               </span>
               <span className="text-gray-700">with SuperManager AGI</span>
@@ -47,9 +47,9 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
         
             <div className="flex-1">
-              {/* TOP GRID */}
+            
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {/* Get Started */}
+                
                 <FooterCol
                   title="Get Started"
                   links={[
@@ -134,7 +134,7 @@ const Footer = () => {
 
             <div className="lg:w-[280px] flex flex-col gap-6">
 
-              <div className="border border-gray-100 p-4 rounded-lg">
+              <div className="p-4 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">
                   Let's Build Autonomous Execution
                 </h3>
@@ -255,7 +255,7 @@ const Footer = () => {
 
 export default Footer;
 
-/* Reusable Column Component */
+
 const FooterCol = ({
   title,
   links,
@@ -277,7 +277,7 @@ const FooterCol = ({
         <li key={link}>
           <Link
             href="/learnmore"
-            className="text-gray-600 hover:text-[#625FD0] text-sm transition"
+            className="text-gray-600 hover:text-[#625FD0] text-md transition"
           >
             {link}
           </Link>

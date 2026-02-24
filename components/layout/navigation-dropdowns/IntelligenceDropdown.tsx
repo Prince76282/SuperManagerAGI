@@ -196,7 +196,7 @@ export default function IntelligenceDropdown({ onClose }) {
                   onClick={handleClick}
                   className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300 ease-in-out"
                 >
-                  Register <ArrowRight className="w-4 h-4" />
+                  Register 
                 </Link>
               </div>
             </div>

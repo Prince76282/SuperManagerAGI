@@ -174,9 +174,9 @@ export default function SuperManagerSection() {
                           </p>
 
                           {tab.showEmail && (
-                            <p className="mt-4 text-sm font-medium">
+                            <Link href="mailto:support@supermanager.co" className="mt-4 text-sm font-medium">
                               support@supermanager.co
-                            </p>
+                            </Link>
                           )}
                         </div>
 

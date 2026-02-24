@@ -17,7 +17,7 @@ export default function InsightsDropdown({ onClose }) {
       className="
        absolute lg:left-1/2 lg:-translate-x-1/2
       left-0 top-full mt-2 
-      w-full lg:w-screen max-w-[1290px] 
+      w-full lg:w-screen max-w-[1280px] 
       z-50 dropdown-open 
       "
     >
@@ -195,7 +195,7 @@ export default function InsightsDropdown({ onClose }) {
                   onClick={handleClick}
                   className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300 ease-in-out"
                 >
-                  Register <ArrowRight className="w-4 h-4" />
+                  Register 
                 </Link>
               </div>
             </div>

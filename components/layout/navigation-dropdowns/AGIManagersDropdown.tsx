@@ -38,6 +38,7 @@ export default function AGIManagersDropdown({ onClose }) {
                 title: "AGI for Leadership",
                 desc: "Replace team leads and engineering managers with AGI. Autonomous coordination. Intelligent decisions. Drive performance.",
                 href: "/learnmore/"
+                
               },
               {
                 title: "AGI for Execution",
@@ -81,24 +82,28 @@ export default function AGIManagersDropdown({ onClose }) {
                       CAPABILITIES
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      <li>Autonomous Decisions</li>
-                      <li>Coordination</li>
-                      <li>Task Automation</li>
-                      <li>Tracking</li>
-                      <li>Optimization</li>
+                      <li>Autonomous Decision Making</li>
+                      <li>Team Coordination</li>
+                      <li>Daily Standup Management</li>
+                      <li>Work Assignment & Distribution</li>
+                      <li>Performance Tracking & Blocker Resolution</li>
+                       <li>Career Development</li>
                     </ul>
                   </div>
 
-                  {/* USE CASES */}
+               
                   <div>
                     <h4 className="text-xs font-semibold text-gray-700 uppercase mb-3">
-                      USE CASES
+                      DEPARTMENTS
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      <li>Automate Workflows</li>
-                      <li>Remove Meetings</li>
-                      <li>Predict Risks</li>
-                      <li>Optimize Teams</li>
+                      <li>Engineering</li>
+                      <li>Product</li>
+                      <li>Operations</li>
+                      <li>Consulting</li>
+                      <li>IT</li>
+                      <li>Finance</li>
+                      <li>Marketing</li>
                     </ul>
                   </div>
 
