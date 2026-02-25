@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useMemo, useRef } from "react";
 
-
-
 type Testimonial = {
   company: string;
   quote: string;
@@ -15,7 +13,6 @@ type NavBtnProps = {
   children: React.ReactNode;
   onClick: () => void;
 };
-
 
 
 const testimonials: Testimonial[] = [
@@ -142,18 +139,17 @@ export default function TestimonialsSection() {
   if (!testimonials.length) return null;
 
 
-
   return (
-    <section className="bg-[#F0F6F9] py-14 sm:py-20">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#F0F6F9] py-5 sm:py-5">
+      <div className="max-w-[1200px] mx-auto px-4 ">
 
-        {/* Header */}
+      
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 mb-12">
           <div className="max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+            <h1 className="text-[2.5rem] font-medium leading-[1.2] tracking-[-0.02em] text-gray-900 ">
               What our customers say
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-600">
+            <p className="mt-4 text-lg sm:text-lg text-gray-600">
               Real results from teams that replaced half their PM headcount with SuperManager AI.
             </p>
           </div>
@@ -169,12 +165,12 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Cards */}
+        
         <div
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-opacity duration-200 ${
-            fade ? "opacity-0" : "opacity-100"
+            fade ? "opacity-0" : "opacity-105"
           }`}
         >
           {visibleItems.map((t, i) => (
@@ -196,20 +192,19 @@ export default function TestimonialsSection() {
   );
 }
 
-/* ================= SUB COMPONENTS ================= */
 
 function Card({ company, quote, name, title }: Testimonial) {
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col min-h-[250px]">
-      <h3 className="font-semibold text-xl">{company}</h3>
+      <h3 className="font-semibold text-gray-800  text-2xl">{company}</h3>
 
-      <p className="text-sm text-gray-700 mt-3 flex-1 leading-relaxed">
+      <p className="text-md text-gray-700 mt-3 flex-1 leading-relaxed">
         “{quote}”
       </p>
 
       <div className="mt-6">
-        <p className="font-semibold">{name}</p>
-        <p className="text-sm text-gray-500">{title}</p>
+        <p className="font-semibold text-gray-800  text-lg">{name}</p>
+        <p className="text-md text-gray-500">{title}</p>
       </div>
     </div>
   );
@@ -227,7 +222,7 @@ function NavBtn({ children, onClick }: NavBtnProps) {
   );
 }
 
-/* icons */
+
 
 function ChevronLeft() {
   return (

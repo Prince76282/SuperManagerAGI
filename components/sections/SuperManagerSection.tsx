@@ -81,7 +81,7 @@ export default function SuperManagerSection() {
             </h1>
 
             <p
-              className=" sm:text-[15px] text-gray-700 leading-relaxed"
+              className=" sm:text-md text-md text-gray-700 leading-relaxed"
               style={{ fontWeight: 500 }}
             >
               SuperManager AGI Combines Decision Intelligence and PM Automation
@@ -96,8 +96,8 @@ export default function SuperManagerSection() {
             </p>
 
             <p
-              className="text-sm  sm:text-base text-gray-500"
-              style={{ fontWeight: 400 }}
+              className="text-md  sm:text-md text-gray-500"
+             
             >
               Most Tools Automate Tasks. SuperManager AGI Automates Project
               Governance, Decision Intelligence, Risk Control, and PM Operations

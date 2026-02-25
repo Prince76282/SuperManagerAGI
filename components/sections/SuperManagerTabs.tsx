@@ -88,7 +88,7 @@ export default function SuperManagerTabs() {
 
               {/* Text */}
               <div className="flex flex-col justify-center space-y-4 sm:space-y-6">
-                <h3 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl text-gray-900 leading-snug" style={{ fontWeight: 500 }}>
+                <h3 className="text-2xl sm:text-2xl lg:text-3xl xl:text-4xl text-gray-900 leading-snug" style={{ fontWeight: 500 }}>
                   {tabsData[activeTab].heading}
                 </h3>
 
