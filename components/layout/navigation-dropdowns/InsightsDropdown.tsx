@@ -17,20 +17,20 @@ export default function InsightsDropdown({ onClose }) {
       className="
        absolute lg:left-1/2 lg:-translate-x-1/2
       left-0 top-full mt-2 
-      w-full lg:w-screen max-w-[1280px] 
+      w-full lg:w-screen max-w-[1290px] 
       z-50 dropdown-open 
       "
     >
       <div
         className="
-         p-4 sm:p-6 lg:p-8
+         p-4 sm:p-6 lg:p-8 mr-3
         max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide
         lg:max-h-[90vh] lg:overflow-y-auto lg:scroll-smooth 
         "
       >
         
         {/* GRID */}
-        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-4">
 
           {/* Column 1 */}
           <div className="space-y-6 p-4 sm:p-6 rounded-2xl bg-white">

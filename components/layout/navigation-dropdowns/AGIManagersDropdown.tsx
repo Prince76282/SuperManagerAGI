@@ -80,33 +80,33 @@ const sections: Section[] = [
       {
         title: "CAPABILITIES",
         items: [
-          "Autonomous Decision Making",
-          "Team Coordination",
-          "Daily Standup Management",
-          "Work Assignment & Distribution",
-          "Performance Tracking & Blocker Resolution",
-          "Career Development",
+          "Sprint Management",
+          "Ticket Automation",
+          "Status Reporting",
+          "Risk Detection",
+          "Dependency Management",
+          "Release Planning",
+          "Documentation Generation"
         ],
       },
       {
-        title: "DEPARTMENTS",
+        title: "USE CASES",
         items: [
-          "Engineering",
-          "Product",
-          "Operations",
-          "Consulting",
-          "IT",
-          "Finance",
-          "Marketing",
+          "Eliminate Status Meetings",
+          "Automate Ticket Management",
+          "Real time Progress Tracking",
+          "Predictive Risk Alerts",
+          
         ],
       },
       {
-        title: "PREBUILT",
+        title: "PRE BUILT MANAGERS",
         items: [
-          "Strategy AGI",
           "Delivery AGI",
-          "Resource AGI",
           "TaskMaster AGI",
+          "Docs AGI",
+          "Risk AGI",
+          "Release AGI"
         ],
       },
     ],
@@ -119,33 +119,32 @@ const sections: Section[] = [
       {
         title: "CAPABILITIES",
         items: [
-          "Autonomous Decision Making",
-          "Team Coordination",
-          "Daily Standup Management",
-          "Work Assignment & Distribution",
-          "Performance Tracking & Blocker Resolution",
-          "Career Development",
+          "Portfolio Management",
+          "Resource Optimization",
+          "Roadmap Planning",
+          "Capacity Analysis",
+          "Priority Decisions",
+          "OKR Tracking",
+          "Budget Allocation"
         ],
       },
       {
-        title: "DEPARTMENTS",
+        title: "USE CASES",
         items: [
-          "Engineering",
-          "Product",
-          "Operations",
-          "Consulting",
-          "IT",
-          "Finance",
-          "Marketing",
+          "Replace PMO Functions",
+          "Optimize Resource Allocation",
+          "Strategic Planning Automation",
+          "Cost Reduction Programs",
+       
         ],
       },
       {
-        title: "PREBUILT",
+        title: "PRE BUILT MANAGERS",
         items: [
           "Strategy AGI",
-          "Delivery AGI",
+          "Portfolio AGI",
           "Resource AGI",
-          "TaskMaster AGI",
+       
         ],
       },
     ],
@@ -227,6 +226,7 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
 
   return (
     <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full md:mt-2 w-full lg:w-screen max-w-[1290px] lg:ml-70 z-50 dropdown-open">
+      
       <div className="p-4 sm:p-6 lg:p-8 max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide">
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-5">
 
@@ -253,7 +253,7 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
                       className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
                     >
                       Learn More
-                      <ArrowRight size={16} className="ml-2" />
+                      
                     </Link>
                   </div>
 

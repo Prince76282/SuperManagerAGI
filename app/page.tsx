@@ -4,6 +4,7 @@ import ProjectManagementPlatform from '@/components/sections/ProjectManagementPl
 import DecisionIntelligence from '@/components/sections/DecisionIntelligence';
 import SuperManagerTabs from '@/components/sections/SuperManagerTabs';
 import InfrastructurePartners from '@/components/sections/InfrastructurePartners';
+import TestimonialsSection from '@/components/sections/Testimonialssection';
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <ProjectManagementPlatform />
       <DecisionIntelligence />
       <SuperManagerTabs />
+      <TestimonialsSection/>
       <InfrastructurePartners />
 
     </main>

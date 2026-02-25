@@ -42,7 +42,7 @@ export default function InfrastructurePartners() {
                   </p>
 
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>VPC / Private Network Deployment</li>
+                    <li>VPC , Private Network Deployment</li>
                     <li>Complete Data Residency & Ownership</li>
                     <li>SSO, RBAC & Enterprise Identity Integration</li>
                     <li>End-to-End Encryption (In Transit & At Rest)</li>
@@ -95,7 +95,7 @@ export default function InfrastructurePartners() {
 
                   <p>
                     Access SuperManager AGI through our secure, enterprise-grade cloud
-                    infrastructure — fully isolated, monitored, and SLA-backed.
+                    infrastructure , fully isolated, monitored, and SLA-backed.
                   </p>
 
                   <ul className="list-disc pl-5 space-y-1">
