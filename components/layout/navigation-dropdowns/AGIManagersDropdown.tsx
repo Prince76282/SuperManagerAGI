@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-/* ================= TYPES ================= */
+
 
 type DropdownProps = {
   onClose?: () => void;
@@ -30,7 +30,7 @@ type ListBlockProps = {
   items: string[];
 };
 
-/* ================= DATA ================= */
+
 
 const sections: Section[] = [
   {
