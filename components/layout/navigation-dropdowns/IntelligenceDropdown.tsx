@@ -9,30 +9,60 @@ import {
   Code,
   Link2,
 } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-export default function IntelligenceDropdown({ onClose }) {
-  const handleClick = () => {
-    if (onClose) onClose();
-  };
+/* ---------------- TYPES ---------------- */
+
+type Props = {
+  onClose?: () => void;
+};
+
+type Capability = {
+  icon: LucideIcon;
+  text: string;
+  href: string;
+};
+
+type SectionItem = {
+  label: string;
+  href: string;
+};
+
+type Section = {
+  title: string;
+  items: SectionItem[];
+};
+
+type Insight = {
+  img: string;
+  title: string;
+  date: string;
+  href: string;
+};
+
+/* ---------------- COMPONENT ---------------- */
+
+export default function IntelligenceDropdown({ onClose }: Props) {
+  const handleClick = () => onClose?.();
 
   /* ================= DATA ================= */
 
-  const capabilities = [
-    { icon: Users, text: "Multi-AGI Orchestration", href: "./learnmore" },
-    { icon: Brain, text: "AGI Decision Engine", href: "./learnmore" },
-    { icon: Zap, text: "Team + Resource AI", href: "./learnmore" },
-    { icon: Shield, text: "AGI Security + Governance", href: "./learnmore" },
-    { icon: Code, text: "No-Code + Low-Code Tools", href: "./learnmore" },
-    { icon: Link2, text: "Integrations", href: "./learnmore" },
+  const capabilities: Capability[] = [
+    { icon: Users, text: "Multi-AGI Orchestration", href: "/learnmore" },
+    { icon: Brain, text: "AGI Decision Engine", href: "/learnmore" },
+    { icon: Zap, text: "Team + Resource AI", href: "/learnmore" },
+    { icon: Shield, text: "AGI Security + Governance", href: "/learnmore" },
+    { icon: Code, text: "No-Code + Low-Code Tools", href: "/learnmore" },
+    { icon: Link2, text: "Integrations", href: "/learnmore" },
   ];
 
-  const sections = [
+  const sections: Section[] = [
     {
       title: "GET STARTED",
       items: [
-        { label: "AGI for Leadership", href: "./leadership" },
-        { label: "AGI for Execution", href: "./execution" },
-        { label: "AGI for Strategy", href: "./strategy" },
+        { label: "AGI for Leadership", href: "/leadership" },
+        { label: "AGI for Execution", href: "/execution" },
+        { label: "AGI for Strategy", href: "/strategy" },
         {
           label: "Manager Marketplace",
           href: "https://app.supermanager.co/login",
@@ -42,32 +72,32 @@ export default function IntelligenceDropdown({ onClose }) {
     {
       title: "LEARN + DISCOVER",
       items: [
-        { label: "About Us", href: "./aboutus" },
-        { label: "Customer Stories", href: "./learnmore" },
-        { label: "Partners", href: "./learnmore" },
-        { label: "Resource Hub", href: "./learnmore" },
-        { label: "Insights Blog", href: "./learnmore" },
-        { label: "Whitepapers", href: "./learnmore" },
-        { label: "AGI Research Reports", href: "./learnmore" },
-        { label: "Newsroom", href: "./learnmore" },
-        { label: "Documentation", href: "./learnmore" },
-        { label: "Get Support", href: "./learnmore" },
-        { label: "Academy", href: "./learnmore" },
+        { label: "About Us", href: "/aboutus" },
+        { label: "Customer Stories", href: "/learnmore" },
+        { label: "Partners", href: "/learnmore" },
+        { label: "Resource Hub", href: "/learnmore" },
+        { label: "Insights Blog", href: "/learnmore" },
+        { label: "Whitepapers", href: "/learnmore" },
+        { label: "AGI Research Reports", href: "/learnmore" },
+        { label: "Newsroom", href: "/learnmore" },
+        { label: "Documentation", href: "/learnmore" },
+        { label: "Get Support", href: "/learnmore" },
+        { label: "Academy", href: "/learnmore" },
       ],
     },
     {
       title: "GET INVOLVED",
       items: [
-        { label: "AGI Pulse", href: "./learnmore" },
-        { label: "Events", href: "./learnmore" },
-        { label: "Community", href: "./learnmore" },
-        { label: "Careers", href: "./learnmore" },
-        { label: "Contact Us", href: "./contactus" },
+        { label: "AGI Pulse", href: "/learnmore" },
+        { label: "Events", href: "/learnmore" },
+        { label: "Community", href: "/learnmore" },
+        { label: "Careers", href: "/learnmore" },
+        { label: "Contact Us", href: "/contactus" },
       ],
     },
   ];
 
-  const insights = [
+  const insights: Insight[] = [
     {
       img: "/image/AGIleadership.png",
       title:
@@ -99,6 +129,7 @@ export default function IntelligenceDropdown({ onClose }) {
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4">
           {/* COLUMN 1 */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 space-y-6">
+
             {/* HERO */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5">
               <Image
@@ -124,7 +155,7 @@ export default function IntelligenceDropdown({ onClose }) {
               <Link
                 href="/managerplatform"
                 onClick={handleClick}
-                className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition"
+                className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
               >
                 Learn More
               </Link>
@@ -137,8 +168,8 @@ export default function IntelligenceDropdown({ onClose }) {
               </h4>
 
               <ul className="space-y-3">
-                {capabilities.map((item, i) => (
-                  <li key={i}>
+                {capabilities.map((item) => (
+                  <li key={item.text}>
                     <Link
                       href={item.href}
                       onClick={handleClick}
@@ -159,15 +190,15 @@ export default function IntelligenceDropdown({ onClose }) {
 
           {/* COLUMN 2 */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 space-y-6">
-            {sections.map((section, idx) => (
-              <div key={idx}>
+            {sections.map((section) => (
+              <div key={section.title}>
                 <h4 className="text-lg text-gray-700 uppercase tracking-wider mb-3">
                   {section.title}
                 </h4>
 
                 <ul className="space-y-2">
-                  {section.items.map((item, i) => (
-                    <li key={i}>
+                  {section.items.map((item) => (
+                    <li key={item.label}>
                       <Link
                         href={item.href}
                         onClick={handleClick}
@@ -188,13 +219,7 @@ export default function IntelligenceDropdown({ onClose }) {
             {/* EVENT */}
             <div className="bg-gradient-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
               <div className="p-5">
-                <Image
-                  src="/image/CCWBerlin.png"
-                  alt="CCW Berlin"
-                  width={120}
-                  height={40}
-                  className="mb-3"
-                />
+                <Image src="/image/CCWBerlin.png" alt="CCW Berlin" width={120} height={40} className="mb-3" />
 
                 <p className="text-sm mb-4">
                   CCW Berlin brings together experts and companies to explore
@@ -202,18 +227,14 @@ export default function IntelligenceDropdown({ onClose }) {
                 </p>
 
                 <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">
-                    Berlin
-                  </span>
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">
-                    4 Feb
-                  </span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Berlin</span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">4 Feb</span>
                 </div>
 
                 <Link
-                  href="./learnmore"
+                  href="/learnmore"
                   onClick={handleClick}
-                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition"
+                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
                 >
                   Register
                 </Link>
@@ -227,24 +248,19 @@ export default function IntelligenceDropdown({ onClose }) {
               </h4>
 
               <div className="space-y-4">
-                {insights.map((item, i) => (
-                  <Link
-                    key={i}
-                    href={item.href}
-                    onClick={handleClick}
-                    className="block group"
-                  >
+                {insights.map((item) => (
+                  <Link key={item.title} href={item.href} onClick={handleClick} className="block group">
                     <div className="flex gap-3">
                       <Image
                         src={item.img}
-                        alt=""
+                        alt={item.title}
                         width={80}
                         height={60}
                         className="rounded-lg object-cover"
                       />
 
                       <div>
-                        <p className="text-sm text-gray-700 group-hover:text-[#625FD0] transition line-clamp-2 mb-1">
+                        <p className="text-sm text-gray-700 group-hover:text-[#625FD0] line-clamp-2 mb-1">
                           {item.title}
                         </p>
                         <span className="text-xs text-gray-500">
@@ -256,6 +272,7 @@ export default function IntelligenceDropdown({ onClose }) {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </div>

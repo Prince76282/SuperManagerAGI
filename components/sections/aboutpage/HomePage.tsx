@@ -17,11 +17,7 @@ export default function HeroSection() {
       {/* Container */}
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 py-24 md:py-32 text-center">
 
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#625FD0]/10 text-[#625FD0] text-xs sm:text-sm font-medium">
-          <Sparkles size={14} />
-          Enterprise Autonomous Intelligence
-        </div>
+       
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl  text-black leading-[1.1] tracking-tight mb-6">
@@ -32,7 +28,6 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        {/* Subtitle */}
         <p className="text-base sm:text-lg md:text-xl text-black/60 max-w-3xl mx-auto leading-relaxed mb-10">
           SuperManagerAGI builds and coordinates autonomous AI teams that
           manage enterprise operations, optimize workflows, make intelligent
@@ -40,10 +35,9 @@ export default function HeroSection() {
           leadership, and innovation.
         </p>
 
-        {/* CTA Buttons */}
+       
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
-          {/* Primary CTA */}
           <Link
             href="https://app.supermanager.co/login"
             className="group inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#625FD0] text-white text-md tracking-wide transition-all duration-300  hover:shadow-lg"
@@ -55,7 +49,7 @@ export default function HeroSection() {
             />
           </Link>
 
-          {/* Secondary CTA */}
+   
           <Link
             href="./learnmore"
             className="group inline-flex items-center gap-2 px-4 py-3 rounded-full border-2 border-[#625FD0] text-[#625FD0] text-md tracking-wide transition-all duration-300 hover:bg-[#625FD0] hover:text-white"

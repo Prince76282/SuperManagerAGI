@@ -1,17 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRight,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
-export default function InsightsDropdown({ onClose }) {
+/* ---------------- TYPES ---------------- */
 
+type NavItem = {
+  label: string;
+  href: string;
+};
+
+type GuideItem = {
+  img: string;
+  title: string;
+  href: string;
+};
+
+type InsightsDropdownProps = {
+  onClose?: () => void; // optional because you check it before calling
+};
+
+/* ---------------- COMPONENT ---------------- */
+
+export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
   const handleClick = () => {
-    if (onClose) onClose();
+    onClose?.();
   };
 
-  const resources = [
+  const resources: NavItem[] = [
     { label: "Resource Hub", href: "./learnmore" },
     { label: "Insights Blog", href: "./learnmore" },
     { label: "Whitepapers", href: "./learnmore" },
@@ -25,7 +40,7 @@ export default function InsightsDropdown({ onClose }) {
     { label: "CMO Toolkit", href: "./learnmore" },
   ];
 
-  const support = [
+  const support: NavItem[] = [
     { label: "Documentation", href: "./learnmore" },
     { label: "Get support", href: "./learnmore" },
     { label: "Submit RFP", href: "./learnmore" },
@@ -33,7 +48,7 @@ export default function InsightsDropdown({ onClose }) {
     { label: "Community", href: "./learnmore" },
   ];
 
-  const company = [
+  const company: NavItem[] = [
     { label: "About us", href: "./aboutus" },
     { label: "Leadership", href: "./learnmore" },
     { label: "Customer Stories", href: "./learnmore" },
@@ -45,7 +60,7 @@ export default function InsightsDropdown({ onClose }) {
     { label: "Contact us", href: "./contactus" },
   ];
 
-  const guides = [
+  const guides: GuideItem[] = [
     {
       img: "/image/Solution,2024.png",
       title: "SuperManager AGI: Recognized as a Leading Project Management Solution, 2024",
@@ -66,7 +81,6 @@ export default function InsightsDropdown({ onClose }) {
   return (
     <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full mt-2 w-full lg:w-screen max-w-[1290px] z-50 dropdown-open">
       <div className="p-4 sm:p-6 lg:p-8 mr-3 max-h-[90vh] overflow-y-auto scrollbar-hide">
-
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4">
 
           {/* Column 1 */}
@@ -74,12 +88,10 @@ export default function InsightsDropdown({ onClose }) {
 
             {/* Resources */}
             <div>
-              <h4 className="text-md text-gray-700 group-hover:text-[#625FD0] transition line-clamp-2 mb-1">
-                RESOURCES
-              </h4>
+              <h4 className="text-md text-gray-700 mb-1">RESOURCES</h4>
               <ul className="space-y-2">
-                {resources.map((item, i) => (
-                  <li key={i}>
+                {resources.map((item) => (
+                  <li key={item.label}>
                     <Link
                       href={item.href}
                       onClick={handleClick}
@@ -99,8 +111,8 @@ export default function InsightsDropdown({ onClose }) {
                 SUPPORT
               </h4>
               <ul className="space-y-2">
-                {support.map((item, i) => (
-                  <li key={i}>
+                {support.map((item) => (
+                  <li key={item.label}>
                     <Link
                       href={item.href}
                       onClick={handleClick}
@@ -124,8 +136,8 @@ export default function InsightsDropdown({ onClose }) {
                 COMPANY
               </h4>
               <ul className="space-y-2">
-                {company.map((item, i) => (
-                  <li key={i}>
+                {company.map((item) => (
+                  <li key={item.label}>
                     <Link
                       href={item.href}
                       onClick={handleClick}
@@ -146,10 +158,16 @@ export default function InsightsDropdown({ onClose }) {
               </h4>
 
               <div className="space-y-4">
-                {guides.map((item, i) => (
-                  <Link key={i} href={item.href} onClick={handleClick} className="block group">
+                {guides.map((item) => (
+                  <Link key={item.title} href={item.href} onClick={handleClick} className="block group">
                     <div className="flex gap-3">
-                      <Image src={item.img} alt="" width={80} height={60} className="rounded-lg object-cover" />
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        width={80}
+                        height={60}
+                        className="rounded-lg object-cover"
+                      />
                       <p className="text-sm text-gray-700 group-hover:text-[#625FD0] line-clamp-2">
                         {item.title}
                       </p>

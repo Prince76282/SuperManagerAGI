@@ -189,7 +189,7 @@ function QuickLinks({ onClose }: { onClose: () => void }) {
     { label: "Customer Stories", href: "/learnmore/" },
     { label: "Partners", href: "/learnmore/" },
     { label: "Resources", href: "/learnmore/" },
-    { label: "Blog", href: "/learnmore/" },
+    { label: "Blog", href: "/blog/" },
     { label: "Whitepapers", href: "/learnmore/" },
     { label: "Documentation", href: "/learnmore/" },
     { label: "Support", href: "/learnmore/" },
