@@ -132,7 +132,7 @@ const Footer = () => {
             </div>
 
 
-            <div className="lg:w-[280px] flex flex-col gap-6">
+            <div className="lg:w-70 flex flex-col gap-6">
 
               <div className="p-4 rounded-lg">
                 <h3 className="text-2xl mb-3 text-gray-900">

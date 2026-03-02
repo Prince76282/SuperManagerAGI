@@ -225,7 +225,7 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
   const handleClose = () => onClose?.();
 
   return (
-    <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full md:mt-2 w-full lg:w-screen max-w-[1290px] lg:ml-70 z-50 dropdown-open">
+    <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full md:mt-2 w-full lg:w-screen max-w-322.5 lg:ml-70 z-50 dropdown-open">
       
       <div className="p-4 sm:p-6 lg:p-8 max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide">
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-5">

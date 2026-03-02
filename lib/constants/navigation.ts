@@ -1,4 +1,4 @@
-import { NavItem } from '@/app/components/navigation/types';
+import { NavItem } from '@/lib/types/navigation';
 
 export const NAV_ITEMS: NavItem[] = [
   {

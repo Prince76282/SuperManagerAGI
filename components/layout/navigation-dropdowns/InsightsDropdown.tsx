@@ -79,7 +79,7 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
   ];
 
   return (
-    <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full mt-2 w-full lg:w-screen max-w-[1290px] z-50 dropdown-open">
+    <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full mt-2 w-full lg:w-screen max-w-322.5 z-50 dropdown-open">
       <div className="p-4 sm:p-6 lg:p-8 mr-3 max-h-[90vh] overflow-y-auto scrollbar-hide">
         <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4">
 
@@ -182,7 +182,7 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
           <div className="bg-white p-4 sm:p-6 rounded-2xl space-y-6">
 
             {/* Event */}
-            <div className="bg-gradient-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
+            <div className="bg-linear-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
               <div className="p-5">
                 <Image src="/image/CCWBerlin.png" alt="CCW Berlin" width={120} height={40} className="mb-3" />
 
@@ -209,7 +209,7 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
             <Link
               href="./learnmore"
               onClick={handleClick}
-              className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 hover:shadow-lg group"
+              className="block bg-linear-to-br from-blue-50 to-indigo-50 rounded-xl p-5 hover:shadow-lg group"
             >
               <div className="flex gap-4">
                 <div className="flex-1">

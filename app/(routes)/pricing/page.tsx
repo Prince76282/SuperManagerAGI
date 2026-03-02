@@ -93,7 +93,7 @@ export default function PricingPage() {
         </div>
 
         {/* PRO */}
-        <div className="bg-gradient-to-b from-green-50 to-white border-2 border-green-500 rounded-2xl p-8 flex flex-col scale-105 shadow relative">
+        <div className="bg-linear-to-b from-green-50 to-white border-2 border-green-500 rounded-2xl p-8 flex flex-col scale-105 shadow relative">
           <span className="absolute -top-3 right-5 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium">
             Best Value
           </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   Truck,
@@ -78,7 +78,12 @@ const managers = [
 
 /* ================= DASHBOARD CARD ================= */
 
-function DashboardPreview({ icon: Icon, title }) {
+interface DashboardPreviewProps {
+  icon: React.ComponentType<{ className: string }>;
+  title: string;
+}
+
+function DashboardPreview({ icon: Icon, title }: DashboardPreviewProps) {
   return (
     <div className="rounded-2xl border border-black/10 bg-gray-50 p-6 sm:p-8 min-h-[300px] flex flex-col justify-between transition-all duration-500">
       <div>

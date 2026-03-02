@@ -182,7 +182,7 @@ const ProjectManagementPlatform = () => {
 
   return (
     <div className="bg-[#F0F6F9] py-8 md:py-16 px-4">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-300 mx-auto">
         {/* Header */}
         <div className="mb-8 md:mb-12">
           <h2 className="text-[2.5rem] font-medium leading-[1.2] tracking-[-0.02em] text-gray-900 ">

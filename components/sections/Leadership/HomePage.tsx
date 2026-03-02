@@ -28,13 +28,13 @@ export default function AGIHeroSection() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link   href="/learnmore" className="px-6 py-3 text-white rounded-lg bg-[#625FD0] transition-all duration-300 min-w-[160px] font-medium">
+              <Link   href="/learnmore" className="px-6 py-3 text-white rounded-lg bg-[#625FD0] transition-all duration-300 min-w-40 font-medium">
                 Watch video
               </Link>
 
               <Link
                 href="/get-in-touch"
-                className="px-6 py-3 bg-[#625FD0] text-white rounded-lg   transition-all duration-300 min-w-[160px] text-center font-medium"
+                className="px-6 py-3 bg-[#625FD0] text-white rounded-lg   transition-all duration-300 min-w-40 text-center font-medium"
               >
                 Request a demo
               </Link>

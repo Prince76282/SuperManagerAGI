@@ -111,7 +111,11 @@ const TAG_COLORS = {
   Research: "bg-indigo-100 text-indigo-700",
 };
 
-function Tag({ label }) {
+interface TagProps {
+  label: keyof typeof TAG_COLORS;
+}
+
+function Tag({ label }: TagProps) {
   const color = TAG_COLORS[label] ?? "bg-gray-100 text-gray-600";
   return (
     <span
@@ -122,7 +126,11 @@ function Tag({ label }) {
   );
 }
 
-function FeaturedCard({ post }) {
+interface FeaturedCardProps {
+  post: typeof FEATURED | typeof ARTICLES[0];
+}
+
+function FeaturedCard({ post }: FeaturedCardProps) {
   return (
     <Link
       href={post.href}
@@ -134,10 +142,10 @@ function FeaturedCard({ post }) {
           alt={post.title}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-        {post.tag && (
+        <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
+        {"tag" in post && post.tag && (
           <div className="absolute top-4 left-4">
-            <Tag label={post.tag} />
+            <Tag label={post.tag as keyof typeof TAG_COLORS} />
           </div>
         )}
       </div>
@@ -145,13 +153,15 @@ function FeaturedCard({ post }) {
         <h2 className="text-2xl leading-snug text-gray-900 transition-colors duration-200 group-hover:text-[#625FD0]">
           {post.title}
         </h2>
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
-          {post.desc}
-        </p>
+        {"desc" in post && post.desc && (
+          <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
+            {post.desc}
+          </p>
+        )}
         <div className="mt-auto flex items-center justify-between pt-2">
           <div className="flex items-center gap-3 text-xs text-gray-400">
             <span>{post.date}</span>
-            {post.readTime && (
+            {"readTime" in post && post.readTime && (
               <>
                 <span>·</span>
                 <span className="flex items-center gap-1">
@@ -170,13 +180,17 @@ function FeaturedCard({ post }) {
   );
 }
 
-function LatestCard({ post }) {
+interface LatestCardProps {
+  post: (typeof LATEST)[0];
+}
+
+function LatestCard({ post }: LatestCardProps) {
   return (
     <Link
       href={post.href}
       className="group flex items-start gap-3.5 rounded-2xl p-3 transition-colors duration-200 hover:bg-violet-50/60 no-underline"
     >
-      <div className="relative h-14 w-[72px] shrink-0 overflow-hidden rounded-xl">
+      <div className="relative h-14 w-18 shrink-0 overflow-hidden rounded-xl">
         <img
           src={post.img}
           alt={post.title}
@@ -196,7 +210,11 @@ function LatestCard({ post }) {
   );
 }
 
-function ArticleCard({ post }) {
+interface ArticleCardProps {
+  post: (typeof ARTICLES)[0];
+}
+
+function ArticleCard({ post }: ArticleCardProps) {
   return (
     <Link
       href={post.href}
@@ -208,10 +226,10 @@ function ArticleCard({ post }) {
           alt={post.title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        {post.tag && (
+        <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
+        {"tag" in post && post.tag && (
           <div className="absolute top-3 left-3">
-            <Tag label={post.tag} />
+            <Tag label={post.tag as keyof typeof TAG_COLORS} />
           </div>
         )}
       </div>
@@ -261,7 +279,7 @@ export default function BlogPage() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1200px] ">
+      <div className="relative mx-auto max-w-300 ">
 
         {/* Header */} 
         <div className="mb-12 mt-5">

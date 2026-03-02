@@ -47,7 +47,7 @@ export default function EnterpriseSection() {
         }}
       />
 
-      <div className="relative max-w-[1200px] mx-auto">
+      <div className="relative max-w-300 mx-auto">
         {/* Header row */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
           <div className="max-w-xl">
@@ -75,12 +75,12 @@ export default function EnterpriseSection() {
           {cards.map(({ title, icon: Icon, description }, i) => (
             <div
               key={title}
-              className="group relative rounded-2xl border-2 border-[#625FD0] bg-black/[0.02] p-7 transition-all duration-500 cursor-default"
+              className="group relative rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 transition-all duration-500 cursor-default"
             >
        
               <div className="absolute top-0 left-0 w-10 h-10 rounded-tl-2xl overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-0 w-px h-6 bg-gradient-to-b from-black/60 to-transparent" />
-                <div className="absolute top-0 left-0 w-6 h-px bg-gradient-to-r from-black/60 to-transparent" />
+                <div className="absolute top-0 left-0 w-px h-6 bg-linear-to-b from-black/60 to-transparent" />
+                <div className="absolute top-0 left-0 w-6 h-px bg-linear-to-r from-black/60 to-transparent" />
               </div>
 
               {/* Icon */}
@@ -109,7 +109,7 @@ export default function EnterpriseSection() {
           ))}
 
           {/* CTA card */}
-          <div className="relative rounded-2xl border-2 border-[#625FD0] bg-black/[0.02] p-7 flex flex-col justify-between group  hover:bg-black/[0.04] transition-all duration-500 cursor-pointer">
+          <div className="relative rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 flex flex-col justify-between group  hover:bg-black/4 transition-all duration-500 cursor-pointer">
             <p className="text-xl  text-black leading-snug">
               Ready to orchestrate intelligence at scale?
             </p>

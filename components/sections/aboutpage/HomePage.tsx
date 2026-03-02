@@ -12,7 +12,7 @@ export default function HeroSection() {
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-white">
 
       {/* Soft Radial Background */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_#eef2ff_0%,_#ffffff_60%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,#eef2ff_0%,#ffffff_60%)]" />
 
       {/* Container */}
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 py-24 md:py-32 text-center">
@@ -23,7 +23,7 @@ export default function HeroSection() {
         <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl  text-black leading-[1.1] tracking-tight mb-6">
           Orchestrate the Future with{" "}
           <br/>
-          <span className=" bg-clip-text text-transparent bg-gradient-to-r from-[#625FD0] to-[#625FD0] p-2">
+          <span className=" bg-clip-text text-transparent bg-linear-to-r from-[#625FD0] to-[#625FD0] p-2">
             SuperManagerAGI
           </span>
         </h1>
