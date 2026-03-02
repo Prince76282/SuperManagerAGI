@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import image1 from '@/public/Image/AGIleadership.png';
+import image1 from '@/public/Image/newimage/PLAN.jpg';
 
 export default function AGIHeroSection() {
   return (
@@ -13,7 +13,7 @@ export default function AGIHeroSection() {
           {/* Hero Content */}
           <div className="text-center max-w-4xl mb-12">
             <div className="mb-8">
-              <h1 className="text-4xl md:text-4xl lg:text-5xl mb-6 tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl mb-6 animate-fade-in">
                AGI for Strategy
               </h1>
 

@@ -8,7 +8,7 @@ import {
   DollarSign,
 } from "lucide-react";
 
-/* ================= USE CASE DATA ================= */
+
 
 const useCases = [
   {
@@ -41,13 +41,12 @@ const useCases = [
   },
 ];
 
-/* ================= DOT GRID CONFIG ================= */
 
 const COLS = 13;
 const ROWS = 5;
 const TOTAL = COLS * ROWS;
 
-/* ================= DOT GRID ================= */
+
 
 function DotGrid({ percent, animate }: { percent: number; animate: boolean }) {
   const filled = Math.round((percent / 100) * TOTAL);
@@ -74,7 +73,7 @@ function DotGrid({ percent, animate }: { percent: number; animate: boolean }) {
   );
 }
 
-/* ================= ROW COMPONENT ================= */
+
 
 function UseCaseRow({
   item,
@@ -114,7 +113,7 @@ function UseCaseRow({
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
       `}
     >
-      {/* LEFT CONTENT */}
+  
       <div>
         <div className="flex items-center gap-4 mb-6">
           <div className="w-12 h-12 rounded-xl bg-indigo-100 text-[#625FD0] flex items-center justify-center">
@@ -131,10 +130,10 @@ function UseCaseRow({
         </p>
       </div>
 
-      {/* Divider */}
+      
       <div className="hidden lg:block w-px h-full bg-slate-200" />
 
-      {/* RIGHT DOT VISUAL */}
+     
       <div className="flex lg:justify-end">
         <DotGrid percent={item.value} animate={visible} />
       </div>
@@ -142,7 +141,7 @@ function UseCaseRow({
   );
 }
 
-/* ================= MAIN COMPONENT ================= */
+
 
 export default function SuperManagerUseCases() {
   return (

@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   ArrowRight,
   MessageCircle,
-  Calendar,
 } from "lucide-react";
 
 export default function InsightsDropdown({ onClose }) {
@@ -12,83 +11,103 @@ export default function InsightsDropdown({ onClose }) {
     if (onClose) onClose();
   };
 
+  const resources = [
+    { label: "Resource Hub", href: "./learnmore" },
+    { label: "Insights Blog", href: "./learnmore" },
+    { label: "Whitepapers", href: "./learnmore" },
+    { label: "Webinars", href: "./learnmore" },
+    { label: "AI Research Reports", href: "./learnmore" },
+    { label: "AI Glossary", href: "./learnmore" },
+    { label: "Videos", href: "./learnmore" },
+    { label: "AI Pulse", href: "./learnmore" },
+    { label: "Manager Replacement 101", href: "./learnmore" },
+    { label: "Adaptive AGI Framework", href: "./learnmore" },
+    { label: "CMO Toolkit", href: "./learnmore" },
+  ];
+
+  const support = [
+    { label: "Documentation", href: "./learnmore" },
+    { label: "Get support", href: "./learnmore" },
+    { label: "Submit RFP", href: "./learnmore" },
+    { label: "Academy", href: "./learnmore" },
+    { label: "Community", href: "./learnmore" },
+  ];
+
+  const company = [
+    { label: "About us", href: "./aboutus" },
+    { label: "Leadership", href: "./learnmore" },
+    { label: "Customer Stories", href: "./learnmore" },
+    { label: "Partners", href: "./learnmore" },
+    { label: "Analyst Recognition", href: "./learnmore" },
+    { label: "Newsroom", href: "./learnmore" },
+    { label: "Events", href: "./learnmore" },
+    { label: "Careers", href: "./learnmore" },
+    { label: "Contact us", href: "./contactus" },
+  ];
+
+  const guides = [
+    {
+      img: "/image/Solution,2024.png",
+      title: "SuperManager AGI: Recognized as a Leading Project Management Solution, 2024",
+      href: "./learnmore",
+    },
+    {
+      img: "/image/101.png",
+      title: "Generative AI 101",
+      href: "./learnmore",
+    },
+    {
+      img: "/image/CXO AI toolkit.png",
+      title: "CXO AI toolkit for enterprise AI success",
+      href: "./learnmore",
+    },
+  ];
+
   return (
-    <div
-      className="
-       absolute lg:left-1/2 lg:-translate-x-1/2
-      left-0 top-full mt-2 
-      w-full lg:w-screen max-w-[1290px] 
-      z-50 dropdown-open 
-      "
-    >
-      <div
-        className="
-         p-4 sm:p-6 lg:p-8 mr-3
-        max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide
-        lg:max-h-[90vh] lg:overflow-y-auto lg:scroll-smooth 
-        "
-      >
-        
-        {/* GRID */}
-        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-4">
+    <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full mt-2 w-full lg:w-screen max-w-[1290px] z-50 dropdown-open">
+      <div className="p-4 sm:p-6 lg:p-8 mr-3 max-h-[90vh] overflow-y-auto scrollbar-hide">
+
+        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4">
 
           {/* Column 1 */}
           <div className="space-y-6 p-4 sm:p-6 rounded-2xl bg-white">
+
+            {/* Resources */}
             <div>
-              <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              <h4 className="text-md text-gray-700 group-hover:text-[#625FD0] transition line-clamp-2 mb-1">
                 RESOURCES
               </h4>
-
               <ul className="space-y-2">
-                {[
-                  "Resource Hub",
-                  "Insights Blog",
-                  "Whitepapers",
-                  "Webinars",
-                  "AI Research Reports",
-                  "AI Glossary",
-                  "Videos",
-                  "AI Pulse",
-                  "Manager Replacement 101",
-                  "Adaptive AGI Framework",
-                  "CMO Toolkit",
-                ].map((item, i) => (
+                {resources.map((item, i) => (
                   <li key={i}>
                     <Link
-                      href="/learnmore/"
+                      href={item.href}
                       onClick={handleClick}
-                      className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group py-1"
+                      className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] group py-1"
                     >
-                      <span>{item}</span>
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
+                      {item.label}
+                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* SUPPORT */}
+            {/* Support */}
             <div>
-              <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              <h4 className="text-md font-semibold text-gray-700 uppercase tracking-wider mb-3">
                 SUPPORT
               </h4>
-
               <ul className="space-y-2">
-                {[
-                  "Documentation",
-                  "Get support",
-                  "Submit RFP",
-                  "Academy",
-                  "Community",
-                ].map((item, i) => (
+                {support.map((item, i) => (
                   <li key={i}>
                     <Link
-                      href="/learnmore/"
+                      href={item.href}
                       onClick={handleClick}
-                      className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group py-1"
+                      className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] group py-1"
                     >
-                      <span>{item}</span>
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
+                      {item.label}
+                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
                     </Link>
                   </li>
                 ))}
@@ -99,32 +118,21 @@ export default function InsightsDropdown({ onClose }) {
           {/* Column 2 */}
           <div className="space-y-6">
 
-            {/* COMPANY */}
+            {/* Company */}
             <div className="bg-white p-4 sm:p-6 rounded-2xl">
-              <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">
+              <h4 className="text-md font-semibold text-gray-700 uppercase tracking-wider mb-3">
                 COMPANY
               </h4>
-
               <ul className="space-y-2">
-                {[
-                  "About us",
-                  "Leadership",
-                  "Customer Stories",
-                  "Partners",
-                  "Analyst Recognition",
-                  "Newsroom",
-                  "Events",
-                  "Careers",
-                  "Contact us",
-                ].map((item, i) => (
+                {company.map((item, i) => (
                   <li key={i}>
                     <Link
-                      href="/learnmore/"
+                      href={item.href}
                       onClick={handleClick}
-                      className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] transition-colors duration-300 ease-in-out group py-1"
+                      className="flex items-center justify-between text-sm text-gray-700 hover:text-[#625FD0] group py-1"
                     >
-                      <span>{item}</span>
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
+                      {item.label}
+                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
                     </Link>
                   </li>
                 ))}
@@ -133,26 +141,16 @@ export default function InsightsDropdown({ onClose }) {
 
             {/* Guides */}
             <div className="bg-white rounded-2xl p-4 sm:p-6">
-              <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-4">
+              <h4 className="text-md font-semibold text-gray-700 uppercase tracking-wider mb-4">
                 AGENTIC AI GUIDES
               </h4>
 
               <div className="space-y-4">
-                {[
-                  { img: "/image/Solution,2024.png", title: "SuperManager AGI: Recognized as a Leading Project Management Solution, 2024" },
-                  { img: "/image/101.png", title: "Generative AI 101" },
-                  { img: "/image/CXO AI toolkit.png", title: "CXO AI toolkit for enterprise AI success" },
-                ].map((item, i) => (
-                  <Link key={i} href="/learnmore/" onClick={handleClick} className="block group">
+                {guides.map((item, i) => (
+                  <Link key={i} href={item.href} onClick={handleClick} className="block group">
                     <div className="flex gap-3">
-                      <Image
-                        src={item.img}
-                        alt=""
-                        width={80}
-                        height={60}
-                        className="rounded-lg object-cover"
-                      />
-                      <p className="text-sm text-gray-700 group-hover:text-[#625FD0] transition-colors duration-300 ease-in-out line-clamp-2">
+                      <Image src={item.img} alt="" width={80} height={60} className="rounded-lg object-cover" />
+                      <p className="text-sm text-gray-700 group-hover:text-[#625FD0] line-clamp-2">
                         {item.title}
                       </p>
                     </div>
@@ -168,43 +166,32 @@ export default function InsightsDropdown({ onClose }) {
             {/* Event */}
             <div className="bg-gradient-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
               <div className="p-5">
-                <Image
-                  src="/image/CCWBerlin.png"
-                  alt="CCW Berlin"
-                  width={120}
-                  height={40}
-                  className="mb-3"
-                />
+                <Image src="/image/CCWBerlin.png" alt="CCW Berlin" width={120} height={40} className="mb-3" />
 
                 <p className="text-sm mb-4">
-                  CCW Berlin brings together experts and companies to explore
-                  the future of AI.
+                  CCW Berlin brings together experts and companies to explore the future of AI.
                 </p>
 
                 <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">
-                    Berlin
-                  </span>
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">
-                    4 Feb
-                  </span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">Berlin</span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs">4 Feb</span>
                 </div>
 
                 <Link
-                  href="/learnmore/"
+                  href="./learnmore"
                   onClick={handleClick}
-                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300 ease-in-out"
+                  className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
                 >
-                  Register 
+                  Register
                 </Link>
               </div>
             </div>
 
             {/* CTA */}
             <Link
-              href="/learnmore/"
+              href="./learnmore"
               onClick={handleClick}
-              className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 hover:shadow-lg transition-all duration-300 ease-in-out group"
+              className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 hover:shadow-lg group"
             >
               <div className="flex gap-4">
                 <div className="flex-1">
@@ -214,8 +201,8 @@ export default function InsightsDropdown({ onClose }) {
                   </p>
                 </div>
 
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center group-hover:bg-[#625FD0] transition-colors duration-300 ease-in-out">
-                  <MessageCircle className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors duration-300 ease-in-out" />
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center group-hover:bg-[#625FD0]">
+                  <MessageCircle className="w-5 h-5 text-gray-600 group-hover:text-white" />
                 </div>
               </div>
             </Link>

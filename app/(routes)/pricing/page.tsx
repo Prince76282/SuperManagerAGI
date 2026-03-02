@@ -13,12 +13,12 @@ export default function PricingPage() {
   const handleBuyPro = () => {
     localStorage.setItem("proBought", "yes");
     window.location.href =
-      "https://rzp.io/rzp/a9FsjGa?redirect_url=https://agent.oqlous.com/login";
+      "https://rzp.io/rzp/a9FsjGa?redirect_url=https://app.supermanager.co/login";
   };
 
   const handleBuyPremium = () => {
     window.location.href =
-      "https://rzp.io/rzp/Izn9LLR?redirect_url=https://agent.oqlous.com/login";
+      "https://rzp.io/rzp/Izn9LLR?redirect_url=https://app.supermanager.co/login";
   };
 
   const proPrice = bought
@@ -40,14 +40,14 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-[#F0F6F9] py-20 px-5 ">
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-5xl font-bold">Pricing</h1>
+        <h1 className="text-5xl ">Pricing</h1>
         <p className="text-gray-500 mt-2">Choose the plan that works for you</p>
 
         {/* TOGGLE */}
         <div className="inline-flex mt-8 bg-gray-100 rounded-lg p-1">
           <button
             onClick={() => setYearly(false)}
-            className={`px-5 py-2 rounded-md text-sm font-semibold transition ${
+            className={`px-5 py-2 rounded-md text-sm font-medium transition ${
               !yearly ? " bg-[#625FD0] text-white shadow" : "text-gray-500 hover:text-black"
             }`}
           >
@@ -55,7 +55,7 @@ export default function PricingPage() {
           </button>
           <button
             onClick={() => setYearly(true)}
-            className={`px-5 py-2 rounded-md text-sm font-semibold transition ${
+            className={`px-5 py-2 rounded-md text-sm font-medium transition ${
               yearly ? "bg-[#625FD0] text-white shadow" : "text-gray-500 hover:text-black"
             }`}
           >
@@ -69,10 +69,10 @@ export default function PricingPage() {
         
         {/* FREE */}
         <div className="bg-white rounded-2xl border p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition">
-          <span className="bg-gray-100 px-2 font-semibold py-1 rounded text-lg mb-4 w-fit">
+          <span className="bg-gray-100 px-2 font-medium py-1 rounded text-lg mb-4 w-fit">
             Free
           </span>
-          <div className="text-4xl  font-bold">Free</div>
+          <h1 className="text-4xl  ">Free</h1>
 
           <p className="text-gray-500 mt-3 mb-5 text-sm">Includes</p>
 
@@ -84,9 +84,9 @@ export default function PricingPage() {
 
           <button
             onClick={() =>
-              (window.location.href = "https://agent.oqlous.com/login")
+              (window.location.href = "https://app.supermanager.co/login")
             }
-            className=" py-2 px-3 bg-[#625FD0] text-white rounded-lg text-[14px] font-semibold  transition"
+            className=" py-2 px-3 mt-4 bg-[#625FD0] text-white rounded-lg text-[14px] font-medium  transition"
           >
             Get Started
           </button>
@@ -94,7 +94,7 @@ export default function PricingPage() {
 
         {/* PRO */}
         <div className="bg-gradient-to-b from-green-50 to-white border-2 border-green-500 rounded-2xl p-8 flex flex-col scale-105 shadow relative">
-          <span className="absolute -top-3 right-5 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+          <span className="absolute -top-3 right-5 bg-green-500 text-white text-xs px-3 py-1 rounded-full font-medium">
             Best Value
           </span>
 
@@ -102,7 +102,7 @@ export default function PricingPage() {
             Pro
           </span>
 
-          <div className="text-4xl font-bold">{proPrice}</div>
+          <div className="text-4xl ">{proPrice}</div>
 
           {renewalText && (
             <p className="text-sm text-gray-500 mt-2">{renewalText}</p>
@@ -115,12 +115,12 @@ export default function PricingPage() {
           <ul className="space-y-3 text-sm flex-1">
             <li>2,000 credits per month</li>
             <li>Daily refresh credits</li>
-            <li className="text-blue-600 font-semibold">+ Bonus credits</li>
+            <li className="text-blue-600 font-medium">+ Bonus credits</li>
           </ul>
 
           <button
             onClick={handleBuyPro}
-            className=" py-2  mt-4 px-3 bg-green-500 text-white rounded-lg text-[14px] font-semibold  transition"
+            className=" py-2  mt-4 px-3 bg-green-500 text-white rounded-lg text-[14px] font-medium  transition"
           >
             {bought ? "Manage Plan" : "Start"}
           </button>
@@ -128,11 +128,11 @@ export default function PricingPage() {
 
         {/* PREMIUM */}
         <div className="bg-white rounded-2xl border p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition">
-          <span className="bg-gray-100 px-2 font-semibold py-1 rounded text-lg mb-4 w-fit">
+          <span className="bg-gray-100 px-2 font-medium py-1 rounded text-lg mb-4 w-fit">
             Premium
           </span>
 
-          <div className="text-4xl font-bold">{premiumPrice}</div>
+          <div className="text-4xl ">{premiumPrice}</div>
 
           <p className="text-gray-500 mt-3 mb-5 text-sm">
             Everything in Pro, plus
@@ -146,7 +146,7 @@ export default function PricingPage() {
 
           <button
             onClick={handleBuyPremium}
-            className=" py-2 px-3 bg-[#625FD0] text-white rounded-lg text-[14px] font-semibold  transition"
+            className=" py-2 px-3 mt-4 bg-[#625FD0] text-white rounded-lg text-[14px] font-medium  transition"
           >
             Start Free Trial
           </button>
@@ -154,11 +154,11 @@ export default function PricingPage() {
 
         {/* ENTERPRISE */}
         <div className="bg-white rounded-2xl border p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition">
-          <span className="bg-gray-100 px-2 font-semibold py-1 rounded text-lg mb-4 w-fit">
+          <span className="bg-gray-100 px-2 font-medium py-1 rounded text-lg mb-4 w-fit">
             Enterprise
           </span>
 
-          <div className="text-4xl font-bold">Custom</div>
+          <div className="text-4xl ">Custom</div>
 
           <p className="text-gray-500 mt-3 mb-5 text-sm">
             Everything in Premium
@@ -172,7 +172,7 @@ export default function PricingPage() {
 
           <button
             onClick={() => (window.location.href = "../get-in-touch/")}
-            className=" py-2 px-3 bg-[#625FD0] text-white rounded-lg text-[14px] font-semibold  transition"
+            className=" py-2 px-3 mt-4 bg-[#625FD0] text-white rounded-lg text-[14px] font-medium  transition"
           >
             Contact Sales
           </button>

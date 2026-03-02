@@ -165,7 +165,7 @@ export default function Navigation() {
                 {/* RIGHT */}
                 <div className="flex items-center gap-4">
                   <Link
-                    href="https://agent.oqlous.com/login"
+                    href="https://app.supermanager.co/login"
                     className="hidden lg:flex py-[6px] px-2 border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white rounded-lg text-[14px] font-semibold"
                   >
                     OPEN APP
@@ -453,7 +453,7 @@ function MobileMenuBtn({ label, onClick }: MobileMenuBtnProps) {
 //                 <div className="flex items-center gap-4">
 //                   {/* Open App */}
 //                   <Link
-//                     href="https://agent.oqlous.com/login"
+//                     href="https://app.supermanager.co/login"
 //                     className="hidden lg:flex items-center py-[6px] px-2 border-2 border-[#625FD0] text-[#625FD0] hover:text-white hover:bg-[#625FD0] rounded-lg text-[14px] font-semibold transition-colors"
 //                   >
 //                     OPEN APP
@@ -545,7 +545,7 @@ function MobileMenuBtn({ label, onClick }: MobileMenuBtnProps) {
 
 //                     <div className="pt-3 space-y-2 border-t border-gray-100">
 //                       <Link
-//                         href="https://agent.oqlous.com/login"
+//                         href="https://app.supermanager.co/login"
 //                         onClick={closeMobileMenu}
 //                         className="flex justify-center py-3 rounded-lg border-2 border-[#625FD0] text-[#625FD0] font-semibold text-sm hover:bg-[#625FD0] hover:text-white transition-colors"
 //                       >

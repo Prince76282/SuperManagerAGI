@@ -46,7 +46,7 @@ const Supermanagersection = () => {
     <div className="max-w-[1230px] py-12 mx-auto px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+        <h1 className="text-4xl lg:text-5xl  text-gray-900 leading-tight mb-4">
           SuperManager AGI Capabilities
         </h1>
 

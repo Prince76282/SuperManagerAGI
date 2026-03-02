@@ -36,7 +36,7 @@ const sections: Section[] = [
   {
     title: "AGI for Leadership",
     desc: "Replace team leads and engineering managers with AGI. Autonomous coordination. Intelligent decisions. Drive performance.",
-    href: "/learnmore/",
+    href: "/leadership",
     categories: [
       {
         title: "CAPABILITIES",
@@ -75,7 +75,7 @@ const sections: Section[] = [
   {
     title: "AGI for Execution",
     desc: "Leverage AGI capabilities to autonomously execute projects and deliver outcomes without human intervention.",
-    href: "/learnmore/",
+    href: "/execution/",
     categories: [
       {
         title: "CAPABILITIES",
@@ -114,7 +114,7 @@ const sections: Section[] = [
   {
     title: "AGI for Strategy",
     desc: "Streamline strategic planning and resource allocation with autonomous AGI intelligence.",
-    href: "/learnmore/",
+    href: "/strategy/",
     categories: [
       {
         title: "CAPABILITIES",
@@ -185,21 +185,21 @@ function ListBlock({ title, items }: ListBlockProps) {
 
 function QuickLinks({ onClose }: { onClose: () => void }) {
   const links = [
-    { label: "About SuperManager AGI", href: "/about.html" },
+    { label: "About Us ", href: "./aboutus" },
     { label: "Customer Stories", href: "/learnmore/" },
     { label: "Partners", href: "/learnmore/" },
     { label: "Resources", href: "/learnmore/" },
-    { label: "Blog", href: "/blog.html" },
+    { label: "Blog", href: "/learnmore/" },
     { label: "Whitepapers", href: "/learnmore/" },
     { label: "Documentation", href: "/learnmore/" },
     { label: "Support", href: "/learnmore/" },
     { label: "Community", href: "/learnmore/" },
-    { label: "Contact", href: "/learnmore/" },
+    { label: "Contact Us", href: "./contactus" },
   ];
 
   return (
     <div>
-      <h4 className="text-xs font-semibold text-gray-700 uppercase mb-3">
+      <h4 className="text-md font-semibold text-gray-700 uppercase mb-3">
         QUICK LINKS
       </h4>
       <ul className="space-y-2 text-sm text-gray-700">
@@ -272,7 +272,7 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
 
             {/* TOP RESOURCES */}
             <div className="bg-gray-50 rounded-xl p-5">
-              <h4 className="text-xs font-semibold text-gray-700 uppercase mb-4">
+              <h4 className="text-md font-semibold text-gray-700 uppercase mb-4">
                 TOP RESOURCES
               </h4>
               {resources.map((item, i) => (

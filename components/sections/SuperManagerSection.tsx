@@ -30,7 +30,7 @@ const tabs = [
     label: "ENTERPRISE COMPANIES",
     title: "Enterprise Companies",
     description:
-      "Autonomous Portfolio Orchestration Across 100+ Projects with Real Time Risk Intelligence, Budget Optimization, and Cross Team Resource Balancing—Cutting PM Overheadby Up to 85%",
+      "Autonomous Portfolio Orchestration Across 100+ Projects with Real Time Risk Intelligence, Budget Optimization, and Cross Team Resource Balancing Cutting PM Overheadby Up to 85%",
     footer:
       "Trusted by enterprise portfolios managing 100+ concurrent projects",
     image: "/image/World'sFirst/image2.jpeg",
@@ -76,7 +76,7 @@ export default function SuperManagerSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 items-start">
           {/* LEFT */}
           <div className="lg:sticky lg:top-24 space-y-6">
-            <h1 className="text-[2.5rem] font-medium leading-[1.2] tracking-[-0.02em] flex-none  overflow-visible">
+            <h1 className="text-[2.5rem]  leading-[1.2] tracking-[-0.02em] flex-none  overflow-visible">
               The World's First Agentic Project Management System
             </h1>
 
@@ -112,7 +112,7 @@ export default function SuperManagerSection() {
                 REQUEST A DEMO
               </Link>
               <Link
-                href="https://agent.oqlous.com/login"
+                href="https://app.supermanager.co/login"
                 className="hidden text-[#625FD0] hover:text-white lg:block items-center py-2 px-3 border-2 border-[#625FD0] hover:bg-[#625FD0]  rounded-lg text-[14px]  font-semibold transition"
               >
                 OPEN APP

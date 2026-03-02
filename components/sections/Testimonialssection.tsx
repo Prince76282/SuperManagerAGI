@@ -139,13 +139,13 @@ export default function TestimonialsSection() {
   return (
     <section className="bg-[#F0F6F9] py-10 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4">
-        <h1 className="text-4xl lg:text-5xl   tracking-tight">
+        <h1 className="text-[2.5rem]  leading-[1.2] tracking-[-0.02em] flex-none  overflow-visible">
           What our customers say
         </h1>
         {/* Header */}
         <div className="flex justify-between items-end mb-12">
           <div>
-            <p className="mt-3 text-gray-600 text-lg">
+            <p className="text-base font-[var(--font-grotesk)] text-gray-700 md:text-lg">
               Real results from teams using SuperManager AI.
             </p>
           </div>

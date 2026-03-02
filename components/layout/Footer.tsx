@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6 mb-12 pb-8 border-b border-gray-200">
             <Link
               href="/"
-              className="flex items-center gap-1 hover:opacity-80 transition"
+              className="flex items-center gap-1  transition"
             >
               <Image
                 src="/image/logo1.png"
@@ -37,7 +37,7 @@ const Footer = () => {
 
             <p className="text-center md:text-left text-base lg:text-lg">
               <span className="font-semibold text-gray-800">
-                Reimagine Enterprise Execution{" "}
+                Reimagine Enterprise Execution {" "}
               </span>
               <span className="text-gray-700">with SuperManager AGI</span>
             </p>
@@ -76,14 +76,14 @@ const Footer = () => {
 
                 {/* Industry */}
                 <FooterCol
-                  title="Industry Deployments"
+                  title="Agi Deployments"
                   links={[
-                    "Banking & Financial Services",
-                    "Healthcare & Life Sciences",
-                    "Retail & Commerce",
-                    "Engineering & Product Teams",
-                    "Enterprise Operations",
-                    "IT & Delivery Organizations",
+                    "Strategy & Decision Intelligence",
+                    "Multi-AGI Orchestration",
+                    "Portfolio & Program Management",
+                    "Resource & Workforce AI",
+                    "Enterprise Governance & Compliance",
+                    "IT & Delivery Automation",
                   ]}
                 />
               </div>
@@ -135,7 +135,7 @@ const Footer = () => {
             <div className="lg:w-[280px] flex flex-col gap-6">
 
               <div className="p-4 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">
+                <h3 className="text-2xl mb-3 text-gray-900">
                   Let's Build Autonomous Execution
                 </h3>
 
@@ -154,7 +154,7 @@ const Footer = () => {
 
               {/* Social */}
               <div>
-                <h4 className="font-semibold text-md uppercase mb-5">
+                <h4 className="text-md uppercase mb-5">
                   Follow us on
                 </h4>
 
@@ -267,7 +267,7 @@ const FooterCol = ({
 }) => (
   <div>
     <h4
-      className={` text-xl font-[16px] uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
+      className={` text-md uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
     >
       {title}
     </h4>

@@ -99,7 +99,7 @@ export default function HeroSection() {
 
             <div className="mt-8 flex justify-center">
               <Link
-                href="https://agent.oqlous.com/login"
+                href="https://app.supermanager.co/login"
                 target="_blank"
                 className="rounded-lg bg-[#625FD0] text-md text-white px-4 py-2 font-[var(--font-spartan)] font-semibold  transition"
               >

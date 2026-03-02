@@ -83,7 +83,7 @@ export default function SuperManagerUseCases() {
             className="inline-flex items-center gap-2 self-start bg-[#625FD0] lg:self-auto px-6 py-3 rounded-lg  text-white text-md font-medium  transition"
           >
             Explore Platform
-            <ArrowRight size={16} />
+    
           </Link>
         </div>
 

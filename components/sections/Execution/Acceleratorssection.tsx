@@ -214,15 +214,15 @@ export default function PrebuiltManagersSection() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/platform"
+                href="./learnmore"
                 className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-[#625FD0] hover:opacity-90 transition"
               >
                 Explore Platform
-                <ArrowRight className="w-4 h-4" />
+                
               </Link>
 
               <Link
-                href="/demo"
+                href="./get-in-touch"
                 className="inline-flex justify-center items-center px-6 py-3 rounded-full text-sm font-semibold border border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
               >
                 Book Demo
