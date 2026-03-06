@@ -17,21 +17,21 @@ export default function AGIHeroSection() {
                 AGI for Execution
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-900  leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
                 Leverage AGI capabilities to autonomously execute projects and deliver outcomes without human intervention.
                 
               </p>
             </div>
 
-            {/* Buttons */}
+      
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link   href="/learnmore" className="px-6 py-3 text-white rounded-lg bg-[#625FD0] transition-all duration-300 min-w-40 font-medium">
+              <Link   href="/learnmore" className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300">
                 Watch video
               </Link>
 
               <Link
                 href="/get-in-touch"
-                className="px-6 py-3 bg-[#625FD0] text-white rounded-lg   transition-all duration-300 min-w-40 text-center font-medium"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
               >
                 Request a demo
               </Link>

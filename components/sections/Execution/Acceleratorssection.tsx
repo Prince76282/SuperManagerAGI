@@ -87,12 +87,7 @@ function DashboardPreview({ icon: Icon, title }: DashboardPreviewProps) {
   return (
     <div className="rounded-2xl border border-black/10 bg-gray-50 p-6 sm:p-8 min-h-[300px] flex flex-col justify-between transition-all duration-500">
       <div>
-        <div className="flex items-center gap-2 mb-6">
-          <div className="w-2 h-2 rounded-full bg-[#625FD0] animate-pulse" />
-          <span className="text-black/40 text-xs font-mono tracking-widest uppercase">
-            SuperManagerAGI · Live Engine
-          </span>
-        </div>
+        
 
         <div className="rounded-xl border border-black/10 bg-white p-5">
           <div className="flex items-center gap-3 mb-4">
@@ -220,7 +215,7 @@ export default function PrebuiltManagersSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="./learnmore"
-                className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-[#625FD0] hover:opacity-90 transition"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
               >
                 Explore Platform
                 
@@ -228,7 +223,7 @@ export default function PrebuiltManagersSection() {
 
               <Link
                 href="./get-in-touch"
-                className="inline-flex justify-center items-center px-6 py-3 rounded-full text-sm font-semibold border border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
+                className="inline-flex justify-center items-center px-6 py-3 rounded-lg text-md font-semibold border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
               >
                 Book Demo
               </Link>

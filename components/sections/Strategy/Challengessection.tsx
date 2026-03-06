@@ -19,56 +19,56 @@ const capabilities = [
     description:
       "SuperManagerAGI continuously evaluates initiatives across departments, balancing risk, ROI, and strategic alignment to ensure leadership always invests in the highest-impact work.",
     icon: Briefcase,
-    iconBg: "bg-indigo-100",
-    iconColor: "text-indigo-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
   {
     title: "Resource Optimization",
     description:
       "Autonomously allocate engineers, product managers, and operational teams based on skill, workload, and delivery timelines to maximize organizational throughput.",
     icon: Users,
-    iconBg: "bg-emerald-100",
-    iconColor: "text-emerald-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
   {
     title: "Roadmap Planning",
     description:
       "Generate adaptive roadmaps that evolve in real time as priorities shift, ensuring execution stays aligned with business strategy and market conditions.",
     icon: Map,
-    iconBg: "bg-blue-100",
-    iconColor: "text-blue-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
   {
     title: "Capacity Analysis",
     description:
       "Monitor team bandwidth, sprint velocity, and execution constraints to prevent burnout and ensure sustainable scaling of operations.",
     icon: BarChart3,
-    iconBg: "bg-amber-100",
-    iconColor: "text-amber-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
   {
     title: "Priority Decisions",
     description:
       "Resolve cross-functional trade-offs with data-backed decision intelligence, reducing executive bottlenecks and accelerating delivery cycles.",
     icon: Flag,
-    iconBg: "bg-rose-100",
-    iconColor: "text-rose-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
   {
     title: "OKR Tracking",
     description:
       "Align initiatives directly to company OKRs and continuously track measurable outcomes with automated performance feedback loops.",
     icon: Target,
-    iconBg: "bg-purple-100",
-    iconColor: "text-purple-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
   {
     title: "Budget Allocation",
     description:
       "Dynamically distribute budgets across initiatives based on performance signals, forecast modeling, and strategic importance.",
     icon: DollarSign,
-    iconBg: "bg-teal-100",
-    iconColor: "text-teal-600",
+    iconBg: "bg-[#625FD0]",
+    iconColor: "text-white",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function SuperManagerCapabilities() {
             <p className="text-gray-500 text-md md:text-base leading-relaxed">
               SuperManagerAGI acts as an autonomous leadership layer
               optimizing portfolios, allocating resources, aligning execution 
-              to strategy, and continuously improving operational performance 
+              to strategy, an-d continuously improving operational performance 
               across the enterprise.
             </p>
           </div>

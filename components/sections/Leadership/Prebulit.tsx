@@ -159,7 +159,7 @@ export default function PrebuiltAGIPage() {
               <Feature key={i} {...f} />
             ))}
 
-            <Link href='./learnmore' className="mt-8  px-6 py-3 rounded-lg text-md font-medium text-white bg-[#625FD0] transition">
+            <Link href='./learnmore' className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300">
               REQUEST DEMO
             </Link>
           </div>
@@ -231,7 +231,7 @@ function DemoBubble({
   return (
     <div className={`flex ${side === "right" ? "justify-end" : "justify-start"}`}>
       <div
-        className={`px-4 py-2 rounded-2xl text-sm max-w-[80%]
+        className={`px-4 py-2 rounded-lg text-sm max-w-[80%]
         ${
           side === "right"
             ? "bg-[#625FD0] text-white rounded-br-sm"

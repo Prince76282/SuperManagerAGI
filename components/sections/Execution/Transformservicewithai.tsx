@@ -31,26 +31,26 @@ const useCases = [
   {
     title: "Eliminate Status Meetings",
     desc: "SuperManagerAGI continuously tracks execution, updates progress automatically, and delivers real-time summaries so teams never need manual sync calls.",
-    icon: <CalendarCheck size={26} className="text-gray-800" />,
-    bg: "bg-indigo-100",
+    icon: <CalendarCheck size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Automate Ticket Management",
     desc: "From creation to resolution, SuperManagerAGI triages, assigns, prioritizes, and closes tickets intelligently using historical learning.",
-    icon: <Ticket size={26} className="text-gray-800" />,
-    bg: "bg-amber-100",
+    icon: <Ticket size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Real-time Progress Tracking",
     desc: "Live dashboards, predictive timelines, and performance signals provide instant visibility across teams, tasks, and milestones.",
-    icon: <Activity size={26} className="text-gray-800" />,
-    bg: "bg-emerald-100",
+    icon: <Activity size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Predictive Risk Alerts",
-    desc: "AI models detect blockers, delays, and delivery risks before they occur — automatically recommending corrective actions.",
-    icon: <AlertTriangle size={26} className="text-gray-800" />,
-    bg: "bg-rose-100",
+    desc: "AI models detect blockers, delays, and delivery risks before they occur automatically recommending corrective actions.",
+    icon: <AlertTriangle size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function SuperManagerUseCases() {
 
           <Link
             href="/learnmore"
-            className="inline-flex items-center gap-2 self-start bg-[#625FD0] lg:self-auto px-6 py-3 rounded-lg  text-white text-md font-medium  transition"
+            className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
           >
             Explore Platform
     
@@ -105,7 +105,7 @@ export default function SuperManagerUseCases() {
               </p>
 
               {/* animated divider */}
-              <div className="mt-6 h-[2px] w-0 bg-gray-900 transition-all duration-300 group-hover:w-full" />
+              <div className="mt-6 h-[2px] w-0 bg-[#625FD0] transition-all duration-300 group-hover:w-full" />
             </div>
           ))}
         </div>

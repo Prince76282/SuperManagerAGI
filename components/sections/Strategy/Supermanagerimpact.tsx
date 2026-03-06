@@ -17,6 +17,7 @@ const useCases = [
     description:
       "SuperManagerAGI autonomously replaces traditional PMO layers by coordinating portfolios, enforcing governance, aligning roadmaps, and delivering executive-level reporting in real time.",
     icon: Briefcase,
+   
   },
   {
     value: 38,

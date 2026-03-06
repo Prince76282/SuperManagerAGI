@@ -7,11 +7,15 @@ import Link from "next/link";
 import img1 from "@/public/Image/newimage/image1.png";
 import img2 from "@/public/Image/newimage/image3.png";
 
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
 const Footer = () => {
   return (
     <footer className="relative">
-      {/* Main Footer */}
-      <div className="bg-[#F6F7FE] from-gray-50 to-gray-100 relative">
+      <div className="bg-[#F6F7FE] relative">
         <Image
           src={img2}
           alt="Background"
@@ -20,12 +24,10 @@ const Footer = () => {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          {/* Header */}
+
+          {/* TOP */}
           <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6 mb-12 pb-8 border-b border-gray-200">
-            <Link
-              href="/"
-              className="flex items-center gap-1  transition"
-            >
+            <Link href="/" className="flex items-center gap-1">
               <Image
                 src="/image/logo1.png"
                 alt="Logo Icon"
@@ -37,101 +39,98 @@ const Footer = () => {
 
             <p className="text-center md:text-left text-base lg:text-lg">
               <span className="font-semibold text-gray-800">
-                Reimagine Enterprise Execution {" "}
+                Reimagine Enterprise Execution{" "}
               </span>
               <span className="text-gray-700">with SuperManager AGI</span>
             </p>
           </div>
 
-          {/* Columns */}
+          {/* MAIN GRID */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-        
+
             <div className="flex-1">
-            
+
+              {/* TOP GRID */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                
+
                 <FooterCol
                   title="Get Started"
                   links={[
-                    "Autonomous Execution",
-                    "Project Intelligence",
-                    "Management Replacement",
-                    "Customer Outcomes",
+                    { label: "Autonomous Execution", href: "/learnmore/" },
+                    { label: "Project Intelligence", href: "/learnmore/" },
+                    { label: "Management Replacement", href: "/learnmore/" },
+                    { label: "Customer Outcomes", href: "/learnmore/" },
                   ]}
                 />
 
-                {/* Platform */}
                 <FooterCol
                   title="SuperManager AGI Intelligence"
                   links={[
-                    "Platform Overview",
-                    "Autonomous Agent Orchestration",
-                    "Execution Intelligence Engine",
-                    "Project & Workforce Intelligence",
-                    "Security, Compliance & Governance",
-                    "Low-Code & Pro Code Controls",
-                    "Enterprise Integrations",
+                    { label: "Platform Overview", href: "/learnmore/" },
+                    { label: "Autonomous Agent Orchestration", href: "/learnmore/" },
+                    { label: "Execution Intelligence Engine", href: "/learnmore/" },
+                    { label: "Project & Workforce Intelligence", href: "/learnmore/" },
+                    { label: "Enterprise Integrations", href: "/learnmore/" },
                   ]}
                 />
 
-                {/* Industry */}
                 <FooterCol
-                  title="Agi Deployments"
+                  title="AGI Deployments"
                   links={[
-                    "Strategy & Decision Intelligence",
-                    "Multi-AGI Orchestration",
-                    "Portfolio & Program Management",
-                    "Resource & Workforce AI",
-                    "Enterprise Governance & Compliance",
-                    "IT & Delivery Automation",
+                    { label: "AGI for Leadership", href: "/leadership/" },
+                    { label: "AGI for Execution", href: "/execution/" },
+                    { label: "AGI for Strategy", href: "/strategy/" },
+                    { label: "Manager Platform", href: "/managerplatform/" },
+                   
                   ]}
                 />
+
               </div>
 
               {/* BOTTOM GRID */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
                 <FooterCol
                   title="Company"
                   links={[
-                    "About SuperManager AGI",
-                    "Leadership",
-                    "Customer Stories",
-                    "Partners",
-                    "Industry Recognition",
-                    "Newsroom",
+                    { label: "About SuperManager AGI", href: "/aboutus/" },
+                    { label: "Leadership", href: "/leadership" },
+                    { label: "Customer Stories", href: "/customer-stories" },
+                    { label: "Partners", href: "/partners" },
+                  
+                    { label: "Newsroom", href: "/news-room" },
                   ]}
                 />
 
                 <FooterCol
                   title="Resources"
                   links={[
-                    "Documentation",
-                    "Execution Insights",
-                    "Whitepapers",
-                    "Webinars",
-                    "Research Reports",
-                    "Execution Glossary",
-                    "Videos",
-                    "Autonomous Management 101",
-                    "Responsible AI Framework",
-                    "Executive Playbooks",
+                    { label: "Documentation", href: "/doc" },
+                    { label: "Whitepapers", href: "/white-papers" },
+                    { label: "Webinars", href: "/learnmore" },
+                    { label: "Research Reports", href: "/learnmore" },
+                    { label: "Videos", href: "/learnmore" },
+                  
+           
+                 
                   ]}
                 />
 
                 <FooterCol
                   title="Get Involved"
                   links={[
-                    "Events",
-                    "Support",
-                    "Academy",
-                    "Community",
-                    "Careers",
+                    { label: "Events", href: "/learnmore" },
+                    { label: "Support", href: "/support" },
+                    
+                    { label: "Community", href: "/learnmore" },
+                    { label: "Careers", href: "/learnmore" },
                   ]}
                 />
+
               </div>
             </div>
 
-
+            {/* RIGHT SIDE */}
             <div className="lg:w-70 flex flex-col gap-6">
 
               <div className="p-4 rounded-lg">
@@ -145,25 +144,22 @@ const Footer = () => {
                 </p>
 
                 <Link
-                  href="/get-in-touch/"
-                  className="block text-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold  transition"
+                  href="/get-in-touch"
+                  className="block text-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
                 >
                   Submit RFP
                 </Link>
               </div>
 
-              {/* Social */}
+              {/* SOCIAL */}
               <div>
-                <h4 className="text-md uppercase mb-5">
-                  Follow us on
-                </h4>
+                <h4 className="text-md uppercase mb-5">Follow us on</h4>
 
-                <div className="flex  gap-4 mb-8">
+                <div className="flex gap-4 mb-8">
+
                   <Link
                     href="https://www.linkedin.com/company/supermanagerai/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="socialBtn"
                   >
                     <Image
                       src="/image/linkedin.png"
@@ -176,8 +172,6 @@ const Footer = () => {
                   <Link
                     href="https://x.com/supermanageragi"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="socialBtn"
                   >
                     <Image
                       src="/image/twitter.png"
@@ -186,67 +180,54 @@ const Footer = () => {
                       height={30}
                     />
                   </Link>
+
                 </div>
 
-               
                 <p className="text-sm mb-2">
                   <b>Email:</b>{" "}
-                  <a
-                    href="mailto:support@supermanager.co"
-                    className="hover:text-[#625FD0]"
-                  >
+                  <a href="mailto:support@supermanager.co">
                     support@supermanager.co
                   </a>
                 </p>
 
                 <p className="text-sm">
-                  <b>Contact: </b>{" "}
-                  <Link href="tel:+14084712875" className="hover:text-[#625FD0]">
+                  <b>Contact:</b>{" "}
+                  <Link href="tel:+14084712875">
                     +1 (408) 471-2875
                   </Link>
                 </p>
               </div>
+
             </div>
           </div>
 
-          {/* Bottom */}
-          <div className=" mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-sm text-gray-600 text-center md:text-left">
+          {/* BOTTOM */}
+          <div className="mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <p className="text-sm text-gray-600">
               © 2026 SuperManager AGI. All rights reserved.
             </p>
 
             <div className="flex flex-wrap gap-4 text-sm">
-              {[
-                { label: "Privacy Policy", href: "./privacy-policy" },
-                { label: "Terms of Service", href: "/learnmore" },
-                {
-                  label: "Acceptable Use Policy",
-                  href: "/learnmore",
-                },
-                { label: "Cookie Policy", href: "/learnmore" },
-                {
-                  label: "Intellectual Property Rights",
-                  href: "/learnmore",
-                },
-              ].map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="hover:underline"
-                >
-                  {item.label}
-                </Link>
-              ))}
 
-              
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/learnmore">Terms of Service</Link>
+              <Link href="/learnmore">Acceptable Use Policy</Link>
+              <Link href="/learnmore">Cookie Policy</Link>
+              <Link href="/learnmore">Intellectual Property Rights</Link>
+
               <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="ml-4 w-10 h-10 rounded-full text-2xl bg-[#625FD0] text-white hover:bg-[#7d79f8]"
+                onClick={() =>
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }
+                className="ml-4 w-10 h-10 rounded-full text-2xl bg-[#625FD0] text-white"
               >
                 ↑
               </button>
+
             </div>
           </div>
+
         </div>
       </div>
     </footer>
@@ -256,30 +237,27 @@ const Footer = () => {
 export default Footer;
 
 
+
 const FooterCol = ({
   title,
   links,
-  highlight = false,
 }: {
   title: string;
-  links: string[];
-  highlight?: boolean;
+  links: FooterLink[];
 }) => (
   <div>
-    <h4
-      className={` text-md uppercase mb-5 pb-2 inline-block ${highlight ? "border-b-2 border-[#625FD0]" : ""}`}
-    >
+    <h4 className="text-md uppercase mb-5 pb-2 inline-block">
       {title}
     </h4>
 
     <ul className="space-y-3">
       {links.map((link) => (
-        <li key={link}>
+        <li key={link.label}>
           <Link
-            href="/learnmore"
+            href={link.href}
             className="text-gray-600 hover:text-[#625FD0] text-md transition"
           >
-            {link}
+            {link.label}
           </Link>
         </li>
       ))}

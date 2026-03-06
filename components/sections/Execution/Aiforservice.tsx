@@ -25,44 +25,44 @@ const capabilities = [
   {
     title: "Sprint Management",
     desc: "SuperManagerAGI autonomously plans sprints, assigns tasks, balances workload, and optimizes velocity using real-time team analytics.",
-    icon: <GitBranch size={26} className="text-gray-800" />,
-    bg: "bg-indigo-100",
+    icon: <GitBranch size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Ticket Automation",
     desc: "Automatically generates, prioritizes, assigns, and resolves tickets while learning from historical patterns to improve accuracy.",
-    icon: <ClipboardList size={26} className="text-gray-800" />,
-    bg: "bg-amber-100",
+    icon: <ClipboardList size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Status Reporting",
     desc: "Produces executive-ready reports, progress dashboards, and performance summaries without manual tracking or data gathering.",
-    icon: <BarChart3 size={26} className="text-gray-800" />,
-    bg: "bg-emerald-100",
+    icon: <BarChart3 size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Risk Detection",
     desc: "Identifies delivery risks, delays, bottlenecks, and blockers early using predictive intelligence and proactive alerts.",
-    icon: <ShieldAlert size={26} className="text-gray-800" />,
-    bg: "bg-rose-100",
+    icon: <ShieldAlert size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Dependency Management",
     desc: "Maps project dependencies, detects conflicts, and coordinates cross-team execution automatically.",
-    icon: <Link2 size={26} className="text-gray-800" />,
-    bg: "bg-sky-100",
+    icon: <Link2 size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Release Planning",
     desc: "Strategically schedules releases, aligns stakeholders, and ensures launch readiness with AI-driven coordination.",
-    icon: <Rocket size={26} className="text-gray-800" />,
-    bg: "bg-violet-100",
+    icon: <Rocket size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
   {
     title: "Documentation Generation",
     desc: "Creates technical docs, sprint summaries, release notes, and knowledge bases instantly with contextual awareness.",
-    icon: <FileText size={26} className="text-gray-800" />,
-    bg: "bg-orange-100",
+    icon: <FileText size={26} className="text-white" />,
+    bg: "bg-[#625FD0]",
   },
 ];
 
@@ -105,7 +105,7 @@ export default function SuperManagerCapabilities() {
               </p>
 
      
-              <div className="mt-6 h-[2px] w-0 bg-gray-900 transition-all duration-300 group-hover:w-full" />
+              <div className="mt-6 h-[2px] w-0 bg-[#625FD0] transition-all duration-300 group-hover:w-full" />
             </div>
           ))}
         </div>

@@ -4,22 +4,22 @@ import { Sparkles, TrendingUp, Code2, Plug, ShieldCheck } from "lucide-react";
 
 const CARDS = [
   {
-    iconBg: "bg-[#FFF9C4]",
-    icon: <Sparkles className="w-[18px] h-[18px] text-black" strokeWidth={2} />,
+    iconBg: "bg-[#625FD0]",
+    icon: <Sparkles className="w-[18px] h-[18px] text-white" strokeWidth={2} />,
     title: "Orchestrate AI agents with a single prompt",
     desc: "Trigger AI agents, built in-house or with SuperManagerAGI, for workflows across systems, apps, and teams using natural language.",
   },
   {
-    iconBg: "bg-[#DCFCE7]",
+    iconBg: "bg-[#625FD0]",
     icon: (
-      <TrendingUp className="w-[18px] h-[18px] text-black" strokeWidth={2} />
+      <TrendingUp className="w-[18px] h-[18px] text-white" strokeWidth={2} />
     ),
     title: "Accelerate productivity with AI agents",
     desc: "Access 200+ AI agent templates, built for enterprise functions to enhance employee productivity and experience.",
   },
   {
-    iconBg: "bg-[#EDE9FE]",
-    icon: <Code2 className="w-[18px] h-[18px] text-black" strokeWidth={2} />,
+    iconBg: "bg-[#625FD0]",
+    icon: <Code2 className="w-[18px] h-[18px] text-white" strokeWidth={2} />,
     title: (
       <>
         Build AI agents with no code
@@ -30,15 +30,15 @@ const CARDS = [
     desc: "Allow every employee, not just developers, to build, publish, and manage AI agents seamlessly and securely.",
   },
   {
-    iconBg: "bg-[#DCFCE7]",
-    icon: <Plug className="w-[18px] h-[18px] text-black" strokeWidth={2} />,
+    iconBg: "bg-[#625FD0]",
+    icon: <Plug className="w-[18px] h-[18px] text-white" strokeWidth={2} />,
     title: "Freedom to choose how you use your system, no vendor lock-in",
     desc: "Avoid platform constraints with a solution that lets you use any LLM, integrates with your existing tech stack, and deploys on any cloud.",
   },
   {
-    iconBg: "bg-[#FFEDD5]",
+    iconBg: "bg-[#625FD0]",
     icon: (
-      <ShieldCheck className="w-[18px] h-[18px] text-black" strokeWidth={2} />
+      <ShieldCheck className="w-[18px] h-[18px] text-white" strokeWidth={2} />
     ),
     title: "Stay in control with enterprise-grade governance",
     desc: "Get complete visibility, auditability, and control across every agent, user, and data flow in one solution.",

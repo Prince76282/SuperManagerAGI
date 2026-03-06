@@ -98,13 +98,13 @@ export default function EnterpriseFeatures() {
         {/* HERO */}
         <div className="grid lg:grid-cols-2 gap-10 items-start mb-14">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight">
               AI Agents for Every Department
             </h2>
 
             <Link
               href="/get-in-touch"
-              className="inline-block px-6 py-3 bg-[#625FD0] text-white rounded-lg transition hover:opacity-90"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
             >
               Get in touch
             </Link>
@@ -126,7 +126,7 @@ export default function EnterpriseFeatures() {
               <button
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
-                className={`px-4 py-2 text-sm font-medium rounded-full uppercase transition whitespace-nowrap
+                className={`px-4 py-2 text-sm font-medium rounded-lg uppercase transition whitespace-nowrap
                 ${
                   active === tab.id
                     ? "bg-[#625FD0] text-white"

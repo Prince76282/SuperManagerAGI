@@ -186,13 +186,13 @@ function ListBlock({ title, items }: ListBlockProps) {
 function QuickLinks({ onClose }: { onClose: () => void }) {
   const links = [
     { label: "About Us ", href: "./aboutus" },
-    { label: "Customer Stories", href: "/learnmore/" },
-    { label: "Partners", href: "/learnmore/" },
-    { label: "Resources", href: "/learnmore/" },
+    { label: "Customer Stories", href: "/customer-stories/" },
+    { label: "Partners", href: "/partners/" },
+    { label: "Resources", href: "/resource/" },
     { label: "Blog", href: "/blog/" },
-    { label: "Whitepapers", href: "/learnmore/" },
-    { label: "Documentation", href: "/learnmore/" },
-    { label: "Support", href: "/learnmore/" },
+    { label: "Whitepapers", href: "/white-papers/" },
+    { label: "Documentation", href: "/doc/" },
+    { label: "Support", href: "/support/" },
     { label: "Community", href: "/learnmore/" },
     { label: "Contact Us", href: "./contactus" },
   ];

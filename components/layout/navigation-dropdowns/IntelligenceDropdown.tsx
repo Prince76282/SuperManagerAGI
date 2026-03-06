@@ -20,7 +20,7 @@ type Props = {
 type Capability = {
   icon: LucideIcon;
   text: string;
-  href: string;
+
 };
 
 type SectionItem = {
@@ -48,12 +48,12 @@ export default function IntelligenceDropdown({ onClose }: Props) {
   /* ================= DATA ================= */
 
   const capabilities: Capability[] = [
-    { icon: Users, text: "Multi-AGI Orchestration", href: "/learnmore" },
-    { icon: Brain, text: "AGI Decision Engine", href: "/learnmore" },
-    { icon: Zap, text: "Team + Resource AI", href: "/learnmore" },
-    { icon: Shield, text: "AGI Security + Governance", href: "/learnmore" },
-    { icon: Code, text: "No-Code + Low-Code Tools", href: "/learnmore" },
-    { icon: Link2, text: "Integrations", href: "/learnmore" },
+    { icon: Users, text: "Multi-AGI Orchestration",  },
+    { icon: Brain, text: "AGI Decision Engine", },
+    { icon: Zap, text: "Team + Resource AI", },
+    { icon: Shield, text: "AGI Security + Governance", },
+    { icon: Code, text: "No-Code + Low-Code Tools", },
+    { icon: Link2, text: "Integrations",  },
   ];
 
   const sections: Section[] = [
@@ -73,15 +73,15 @@ export default function IntelligenceDropdown({ onClose }: Props) {
       title: "LEARN + DISCOVER",
       items: [
         { label: "About Us", href: "/aboutus" },
-        { label: "Customer Stories", href: "/learnmore" },
-        { label: "Partners", href: "/learnmore" },
+        { label: "Customer Stories", href: "/customer-stories/" },
+        { label: "Partners", href: "/partners/" },
         { label: "Resource Hub", href: "/learnmore" },
         { label: "Insights Blog", href: "/learnmore" },
-        { label: "Whitepapers", href: "/learnmore" },
+        { label: "Whitepapers", href: "/white-papers/" },
         { label: "AGI Research Reports", href: "/learnmore" },
         { label: "Newsroom", href: "/learnmore" },
-        { label: "Documentation", href: "/learnmore" },
-        { label: "Get Support", href: "/learnmore" },
+        { label: "Documentation", href: "/doc/" },
+        { label: "Get Support", href: "/support/" },
         { label: "Academy", href: "/learnmore" },
       ],
     },
@@ -170,8 +170,8 @@ export default function IntelligenceDropdown({ onClose }: Props) {
               <ul className="space-y-3">
                 {capabilities.map((item) => (
                   <li key={item.text}>
-                    <Link
-                      href={item.href}
+                    <span
+                     
                       onClick={handleClick}
                       className="flex justify-between items-center gap-3 text-sm text-gray-700 hover:text-[#625FD0] group transition"
                     >
@@ -180,8 +180,8 @@ export default function IntelligenceDropdown({ onClose }: Props) {
                         {item.text}
                       </div>
 
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition" />
-                    </Link>
+                    
+                    </span>
                   </li>
                 ))}
               </ul>

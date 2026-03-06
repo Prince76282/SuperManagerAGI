@@ -134,7 +134,7 @@ export default function HeroSection() {
         </div>
 
         {/* 🚀 Features */}
-        <div className="mx-auto max-w-7xl px-4 pb-20 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
+        <div className="mx-auto max-w-[1200px] px-4 pb-20 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
           {features.map((feature, index) => (
             <Link
               key={index}

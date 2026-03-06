@@ -108,7 +108,7 @@ function StrategyVisual() {
         <div className="flex justify-center py-2">
           <Brain className="w-6 h-6 text-black/40" />
         </div>
-        <div className="px-5 py-2 rounded-lg bg-black text-white text-xs font-mono text-center">
+        <div className="px-5 py-2 rounded-lg bg-[#625FD0] text-white text-xs font-mono text-center">
           STRATEGIC DECISION OUTPUT
         </div>
       </div>
@@ -139,13 +139,13 @@ function ResourceVisual() {
       <div className="space-y-4 w-full max-w-xs">
         {["Engineering", "Product", "Operations", "Design"].map((team, i) => (
           <div key={i}>
-            <div className="flex justify-between text-[10px] text-black/50 font-mono mb-1">
+            <div className="flex justify-between text-[10px] text-[#625FD0] font-mono mb-1">
               <span>{team}</span>
               <span>{70 - i * 10}%</span>
             </div>
             <div className="h-2 bg-black/10 rounded-full">
               <div
-                className="h-full bg-black rounded-full"
+                className="h-full bg-[#625FD0] rounded-full"
                 style={{ width: `${70 - i * 10}%` }}
               />
             </div>
@@ -166,7 +166,7 @@ export default function PrebuiltManagers() {
     <section className="relative py-14 px-6 bg-white overflow-hidden">
 
       {/* subtle grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 " />
 
       <div className="relative z-10 max-w-6xl mx-auto">
 

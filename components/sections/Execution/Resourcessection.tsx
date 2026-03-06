@@ -13,7 +13,7 @@ const resources = [
     title:
       "The Rise of Autonomous Leadership: Why SuperManagerAGI is replacing traditional management layers",
     href: "/resources/autonomous-leadership-supermanageragi",
-    gradient: "from-violet-200 via-indigo-100 to-violet-300",
+    gradient: "bg-[#625FD0]",
     icon: "🧠",
     tag: "Leadership Intelligence",
   },
@@ -23,7 +23,7 @@ const resources = [
     title:
       "How a global enterprise reduced decision latency by 38% using SuperManagerAGI orchestration",
     href: "/resources/decision-latency-case-study",
-    gradient: "from-emerald-200 via-teal-100 to-emerald-300",
+    gradient: "bg-[#625FD0]",
     icon: "📊",
     tag: "Enterprise Ops",
   },
@@ -33,7 +33,7 @@ const resources = [
     title:
       "Inside the SuperManagerAGI architecture: deployment models, integrations, and scaling strategy",
     href: "/resources/supermanageragi-architecture-guide",
-    gradient: "from-orange-200 via-amber-100 to-orange-300",
+    gradient: "bg-[#625FD0]",
     icon: "📋",
     tag: "Platform Engineering",
   },
@@ -43,7 +43,7 @@ const resources = [
     title:
       "Autonomous organizations explained: the operating model powered by AI managers",
     href: "/resources/autonomous-organization-model",
-    gradient: "from-cyan-200 via-sky-100 to-cyan-300",
+    gradient: "bg-[#625FD0]",
     icon: "⚡",
     tag: "Operations Strategy",
   },
@@ -53,7 +53,7 @@ const resources = [
     title:
       "Scaling workforce intelligence: how SuperManagerAGI transforms people operations",
     href: "/resources/workforce-intelligence-research",
-    gradient: "from-pink-200 via-rose-100 to-pink-300",
+    gradient: "bg-[#625FD0]",
     icon: "👥",
     tag: "People Analytics",
   },
@@ -63,13 +63,12 @@ const resources = [
     title:
       "Trustworthy AGI management systems: governance, auditability, and enterprise safeguards",
     href: "/resources/trustworthy-agi-governance",
-    gradient: "from-indigo-200 via-purple-100 to-indigo-300",
+    gradient: "bg-[#625FD0]",
     icon: "🔐",
     tag: "AI Governance",
   },
 ];
 
-/* ================= COMPONENT ================= */
 
 export default function ResourcesSection() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -189,18 +188,18 @@ export default function ResourcesSection() {
               {/* Content */}
               <div className="p-5 flex flex-col gap-4 flex-1">
                 <div className="flex items-center justify-between">
-                  <h1 className="text-xs font-semibold uppercase tracking-wide text-[#625FD0]">
+                  <h1 className="text-md font-semibold uppercase tracking-wide text-[#625FD0]">
                     {card.type}
                   </h1>
 
-                  <span className="text-[11px] px-2 py-1 rounded-full bg-black/5 text-[#625FD0]">
+                  <span className="text-[14px] px-2 py-1 rounded-lg bg-black/5 text-[#625FD0]">
                     {card.tag}
                   </span>
                 </div>
 
-                <h3 className="text-md sm:text-base text-gray-700  flex-1">
+                <span className="text-md sm:text-base text-gray-700  flex-1">
                   {card.title}
-                </h3>
+                </span>
 
                 
               </div>

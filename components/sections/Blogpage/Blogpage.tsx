@@ -7,8 +7,8 @@ import Link from "next/link";
 const FEATURED = {
   href: "#",
   img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
-  title: "Introducing SuperManagerAGI: The Enterprise AI Orchestration Layer",
-  desc: "SuperManagerAGI enables enterprises to deploy, govern, and scale AI agents securely. From workflow automation to decision intelligence, organizations can finally move from AI pilots to production systems.",
+  title: "Introducing SuperManagerAGI: The Autonomous Project Management Brain for Modern Managers",
+  desc: "SuperManagerAGI is built for managers who lead complex teams and high stakes projects. With autonomous task delegation, real-time risk detection, and AI-driven decision support, it turns every manager into a force multiplier.",
   date: "Feb 20, 2026",
   readTime: "6 min read",
   tag: "Announcement",
@@ -18,28 +18,28 @@ const LATEST = [
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
-    title: "Designing Agentic AI Architecture for the Enterprise",
+    title: "How SuperManagerAGI Handles Sprint Planning So You Don't Have To",
     date: "Feb 20, 2026",
     readTime: "8 min",
   },
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-    title: "Enterprise AI Governance: A Practical Playbook",
+    title: "From Chaos to Clarity: AI-Driven Project Oversight for Enterprise Teams",
     date: "Feb 18, 2026",
     readTime: "5 min",
   },
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&q=80",
-    title: "Workflow Automation with AI Agents: Beyond RPA",
+    title: "Autonomous Task Assignment: How SuperManagerAGI Allocates Work Intelligently",
     date: "Feb 15, 2026",
     readTime: "7 min",
   },
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&q=80",
-    title: "Decision Intelligence with SuperManagerAGI",
+    title: "Why Managers Are the Key to Successful AI Adoption in the Enterprise",
     date: "Feb 12, 2026",
     readTime: "4 min",
   },
@@ -49,17 +49,17 @@ const ARTICLES = [
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80",
-    title: "SuperManagerAGI in Finance: Autonomous Operations at Scale",
-    desc: "Learn how SuperManagerAGI transforms finance teams with AI agents for reconciliation, forecasting, fraud detection, and compliance automation.",
+    title: "SuperManagerAGI in Action: Managing Cross-Functional Teams at Scale",
+    desc: "See how SuperManagerAGI autonomously coordinates cross-functional teams surfacing blockers, reallocating resources, and keeping stakeholders aligned without constant check-ins.",
     date: "Feb 16, 2026",
     author: "SuperManagerAGI Team",
-    tag: "Finance",
+    tag: "Use Cases",
   },
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
-    title: "Perform vs Transform: Unlocking Real AI Business Value",
-    desc: "Why incremental automation isn't enough. Discover how agentic AI transforms enterprise workflows, culture, and competitive advantage.",
+    title: "The Manager of Tomorrow: Human Judgment Meets AI Execution",
+    desc: "The best managers won't be replaced by AI, they'll be amplified by it. Explore what the manager-AI partnership looks like in practice with SuperManagerAGI.",
     date: "Feb 10, 2026",
     author: "SuperManagerAGI Insights",
     tag: "Strategy",
@@ -67,8 +67,8 @@ const ARTICLES = [
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-    title: "Enterprise AI Orchestration: From Tools to Systems",
-    desc: "Disconnected AI tools create chaos. Learn how orchestration unifies agents, data, and workflows into an intelligent enterprise system.",
+    title: "Project Risk, Predicted: How AGI Detects Deadline Threats Before They Hit",
+    desc: "SuperManagerAGI monitors project signals in real time flagging scope creep, team bottlenecks, and timeline drift before they derail delivery.",
     date: "Feb 5, 2026",
     author: "SuperManagerAGI Team",
     tag: "Engineering",
@@ -76,8 +76,8 @@ const ARTICLES = [
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80",
-    title: "AI Agents & the Future of Enterprise Productivity",
-    desc: "Explore how SuperManagerAGI enables AI agents to handle repetitive tasks, assist teams, and drive measurable ROI across departments.",
+    title: "Autonomous Stand-Ups: Reclaiming 5 Hours a Week for Your Team",
+    desc: "SuperManagerAGI conducts async stand-ups, synthesizes blockers, and surfaces action items giving managers a daily briefing without a single meeting.",
     date: "Jan 30, 2026",
     author: "Product Strategy Team",
     tag: "Productivity",
@@ -85,8 +85,8 @@ const ARTICLES = [
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
-    title: "Scaling AI from Pilot to Production",
-    desc: "Most AI projects stall at the pilot stage. Here's how SuperManagerAGI enables secure deployment, monitoring, and governance at scale.",
+    title: "From Pilot to Production: Deploying AI Project Management Across Your Org",
+    desc: "Rolling out AI-assisted project management across a large organization is hard. Here's how SuperManagerAGI makes it repeatable, governed, and scalable.",
     date: "Jan 23, 2026",
     author: "SuperManagerAGI Engineering",
     tag: "Engineering",
@@ -94,8 +94,8 @@ const ARTICLES = [
   {
     href: "#",
     img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80",
-    title: "The Rise of the Agentic Enterprise",
-    desc: "Agentic enterprises leverage AI agents for continuous decision-making and automation. Learn what it takes to become one.",
+    title: "The Autonomous Project Manager: What It Means for Leadership in 2026",
+    desc: "As AI takes on execution, managers are freed to focus on strategy, culture, and outcomes. SuperManagerAGI is redefining what great leadership looks like.",
     date: "Jan 16, 2026",
     author: "SuperManagerAGI Research",
     tag: "Research",
@@ -104,7 +104,7 @@ const ARTICLES = [
 
 const TAG_COLORS = {
   Announcement: "bg-[#625FD0] text-violet-700",
-  Finance: "bg-emerald-100 text-emerald-700",
+  "Use Cases": "bg-emerald-100 text-emerald-700",
   Strategy: "bg-amber-100 text-amber-700",
   Engineering: "bg-sky-100 text-sky-700",
   Productivity: "bg-rose-100 text-rose-700",
@@ -119,7 +119,7 @@ function Tag({ label }: TagProps) {
   const color = TAG_COLORS[label] ?? "bg-gray-100 text-gray-600";
   return (
     <span
-      className={`inline-block rounded-full px-2.5 py-0.5 text-[15px]  tracking-wide ${color}`}
+      className={`inline-block rounded-full px-2.5 py-0.5 text-[15px] tracking-wide ${color}`}
     >
       {label}
     </span>
@@ -127,7 +127,7 @@ function Tag({ label }: TagProps) {
 }
 
 interface FeaturedCardProps {
-  post: typeof FEATURED | typeof ARTICLES[0];
+  post: typeof FEATURED | (typeof ARTICLES)[0];
 }
 
 function FeaturedCard({ post }: FeaturedCardProps) {
@@ -198,9 +198,9 @@ function LatestCard({ post }: LatestCardProps) {
         />
       </div>
       <div className="flex flex-col gap-1 min-w-0">
-        <h3 className="text-lg  leading-snug text-gray-800 transition-colors duration-200 group-hover:text-[#625FD0] line-clamp-2">
+        <span className="text-md leading-snug text-gray-800 transition-colors duration-200 group-hover:text-[#625FD0] line-clamp-2">
           {post.title}
-        </h3>
+        </span>
         <div className="flex items-center gap-2 text-sm text-gray-400">
           <span>{post.date}</span>
           {post.readTime && <span>· {post.readTime}</span>}
@@ -235,16 +235,14 @@ function ArticleCard({ post }: ArticleCardProps) {
       </div>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <span className="text-[15px] text-gray-400">{post.date}</span>
-        <h5 className="text-lg  leading-snug text-gray-900 transition-colors duration-200 group-hover:text-[#625FD0] line-clamp-2">
+        <span className="text-lg leading-snug text-gray-900 transition-colors duration-200 group-hover:text-[#625FD0] line-clamp-2">
           {post.title}
-        </h5>
+        </span>
         <p className="text-md text-gray-500 leading-relaxed line-clamp-3">
           {post.desc}
         </p>
         <div className="mt-auto flex items-center justify-between pt-2">
-          <span className="text-md text-[#625FD0]">
-            {post.author}
-          </span>
+          <span className="text-md text-[#625FD0]">{post.author}</span>
           <ArrowUpRight
             size={14}
             className="text-[#625FD0] opacity-0 transition-opacity duration-200 group-hover:opacity-100"
@@ -279,17 +277,15 @@ export default function BlogPage() {
         }}
       />
 
-      <div className="relative mx-auto max-w-300 ">
-
-        {/* Header */} 
+      <div className="relative mx-auto max-w-300">
+        {/* Header */}
         <div className="mb-12 mt-5">
-        
-          <h1 className="text-4xl lg:text-5xl  tracking-tight text-gray-950">
+          <h1 className="text-4xl lg:text-5xl tracking-tight text-gray-950">
             Blog
           </h1>
           <p className="mt-3 text-md text-gray-500 max-w-xl">
-            Insights on enterprise AI, agentic systems, and the future of
-            intelligent operations.
+            Insights on autonomous project management, AI for managers, and the
+            future of intelligent team leadership.
           </p>
         </div>
 
@@ -316,9 +312,7 @@ export default function BlogPage() {
 
         <div>
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <h4 className="text-2xl  text-gray-950">
-              All Articles
-            </h4>
+            <h4 className="text-2xl text-gray-950">All Articles</h4>
             <div className="relative w-full max-w-xs">
               <Search
                 className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"

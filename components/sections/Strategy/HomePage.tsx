@@ -17,7 +17,7 @@ export default function AGIHeroSection() {
                AGI for Strategy
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-700  leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
                 Streamline strategic planning and resource allocation with autonomous AGI intelligence.
                 
               </p>
@@ -26,13 +26,13 @@ export default function AGIHeroSection() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="/get-in-touch" className="px-6 py-3  bg-[#625FD0] rounded-lg text-white transition-all duration-300 min-w-40 font-medium">
+                href="/get-in-touch" className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300">
                 Watch video
               </Link>
 
               <Link
                 href="/get-in-touch"
-                className="px-6 py-3 bg-[#625FD0] text-white rounded-lg transition-all duration-300 min-w-40 text-center font-medium"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
               >
                 Request a demo
               </Link>

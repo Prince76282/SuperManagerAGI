@@ -28,8 +28,8 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
 
   const resources: NavItem[] = [
     { label: "Resource Hub", href: "./learnmore" },
-    { label: "Insights Blog", href: "./learnmore" },
-    { label: "Whitepapers", href: "./learnmore" },
+    { label: " Blog", href: "./blog" },
+    { label: "Whitepapers", href: "./white-papers/" },
     { label: "Webinars", href: "./learnmore" },
     { label: "AI Research Reports", href: "./learnmore" },
     { label: "AI Glossary", href: "./learnmore" },
@@ -41,20 +41,20 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
   ];
 
   const support: NavItem[] = [
-    { label: "Documentation", href: "./learnmore" },
-    { label: "Get support", href: "./learnmore" },
-    { label: "Submit RFP", href: "./learnmore" },
+    { label: "Documentation", href: "./doc/" },
+    { label: "Get support", href: "./support/" },
+    { label: "Submit RFP", href: "./get-in-touch" },
     { label: "Academy", href: "./learnmore" },
     { label: "Community", href: "./learnmore" },
   ];
 
   const company: NavItem[] = [
     { label: "About us", href: "./aboutus" },
-    { label: "Leadership", href: "./learnmore" },
-    { label: "Customer Stories", href: "./learnmore" },
-    { label: "Partners", href: "./learnmore" },
-    { label: "Analyst Recognition", href: "./learnmore" },
-    { label: "Newsroom", href: "./learnmore" },
+    { label: "Leadership", href: "./leadership/" },
+    { label: "Customer Stories", href: "./customer-stories/" },
+    { label: "Partners", href: "./partners/" },
+    { label: "Analyst Recognition", href: "./analyst-recognition/" },
+    { label: "Newsroom", href: "./news-room" },
     { label: "Events", href: "./learnmore" },
     { label: "Careers", href: "./learnmore" },
     { label: "Contact us", href: "./contactus" },

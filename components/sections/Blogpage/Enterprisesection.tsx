@@ -1,72 +1,70 @@
 "use client";
 
-import { Zap, SlidersHorizontal, Layers, BrainCircuit, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  Zap,
+  SlidersHorizontal,
+  Layers,
+  BrainCircuit,
+  ShieldCheck,
+  ArrowRight,
+} from "lucide-react";
+import Link from "next/link";
 
 const cards = [
   {
-    title: "Velocity",
+    title: "Autonomous Execution",
     icon: Zap,
     description:
-      "Deploy AGI workflows at machine speed-pre-built agent templates, orchestration primitives, and a curated AGI Marketplace slash time-to-production from months to hours.",
+      "SuperManagerAGI takes your project goals and runs assigning tasks, reallocating resources, and unblocking teams without waiting for manual input. From kickoff to delivery, autonomy is the default.",
   },
   {
-    title: "Governance",
+    title: "Manager-Grade Oversight",
     icon: SlidersHorizontal,
     description:
-      "Enterprise-wide observability across every agent, task, and decision. Audit trails, role-based access, and real-time guardrails keep your AGI systems accountable.",
+      "Stay in control without being in the weeds. Real-time dashboards, decision audit trails, and escalation triggers give managers full visibility into every autonomous action taken on their behalf.",
   },
   {
-    title: "Adaptability",
+    title: "Seamless Integration",
     icon: Layers,
     description:
-      "Model-agnostic by design. Swap LLMs, connect any data source, run on-prem or in the cloud SuperManage AGI bends to your stack, not the other way around.",
+      "Plugs directly into your existing tools  Jira, Asana, Notion, Slack, and more. SuperManagerAGI works inside your stack, syncing context across platforms so nothing falls through the cracks.",
   },
   {
-    title: "Intelligence",
+    title: "Contextual Intelligence",
     icon: BrainCircuit,
     description:
-      "Persistent memory, multi-agent reasoning, and self-improving workflows that learn from every interaction and continuously elevate enterprise performance.",
+      "Learns your team's velocity, communication patterns, and project history. SuperManagerAGI reasons across timelines, dependencies, and risks to surface what matters before it becomes a problem.",
   },
   {
-    title: "Trust",
+    title: "Enterprise-Ready Trust",
     icon: ShieldCheck,
     description:
-      "Built alongside enterprises from day one. SOC-2 certified, GDPR-ready, and battle-tested in the world's most demanding operational environments.",
+      "Role-based permissions, SOC-2 compliance, and GDPR-ready infrastructure. Built for organizations where reliability isn't a feature  it's a requirement.",
   },
 ];
 
 export default function EnterpriseSection() {
   return (
-    <section className="relative  bg-white py-28 px-6 overflow-hidden">
-      {/* Subtle grid texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(0deg, #000 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, #000 0px, transparent 1px, transparent 40px)",
-        }}
-      />
+    <section className="relative bg-white py-28 px-6 overflow-hidden">
+ 
+      <div className="pointer-events-none absolute inset-0 opacity-[0.04]" />
 
       <div className="relative max-w-300 mx-auto">
-        {/* Header row */}
+  
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl leading-tight text-black font-syne">
-              Built for enterprises that can&apos;t afford to move slow.
+              The AI that manages projects so managers can lead.
             </h2>
           </div>
 
           <div className="shrink-0">
-            <a
+            <Link
               href="#"
-              className="group inline-flex items-center gap-3 px-4 py-3 rounded-full border-2 border-[#625FD0] text-black text-md  hover:bg-[#625FD0] hover:text-white transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
             >
               Explore the platform
-              <ArrowRight
-                size={16}
-                className="group-hover:translate-x-1 transition-transform duration-300"
-              />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -75,54 +73,46 @@ export default function EnterpriseSection() {
           {cards.map(({ title, icon: Icon, description }, i) => (
             <div
               key={title}
-              className="group relative rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 transition-all duration-500 cursor-default"
+              className="group relative  rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 transition-all duration-500 cursor-default"
             >
-       
-              <div className="absolute top-0 left-0 w-10 h-10 rounded-tl-2xl overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-0 w-px h-6 bg-linear-to-b from-black/60 to-transparent" />
-                <div className="absolute top-0 left-0 w-6 h-px bg-linear-to-r from-black/60 to-transparent" />
-              </div>
+         
 
-              {/* Icon */}
-              <div className="mb-5 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 border-2 border-[#625FD0] group-hover:bg-[#625FD0]  transition-all duration-500">
+                <div className="mb-5 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 border-2 border-[#625FD0] group-hover:bg-[#625FD0] transition-all duration-500">
                 <Icon
                   size={20}
-                  className="text-black group-hover:text-white transition-colors duration-300"
+                  className="text-[#625FD0] group-hover:text-white transition-colors duration-300"
                 />
               </div>
 
-              {/* Title */}
-              <h3 className="text-lg font-semibold text-black mb-3 tracking-tight font-syne">
+       
+              <span className="text-lg ml-3 font-semibold text-black mb-3 tracking-tight font-syne">
                 {title}
-              </h3>
+              </span>
+      
 
-              {/* Description */}
+              
+
               <p className="text-sm leading-relaxed text-black/50 group-hover:text-black/70 transition-colors duration-300">
                 {description}
               </p>
 
-              {/* Index watermark */}
               <span className="absolute bottom-5 right-6 text-[10px] font-mono text-black/15 group-hover:text-black/30 transition-colors">
                 0{i + 1}
               </span>
             </div>
           ))}
 
-          {/* CTA card */}
-          <div className="relative rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 flex flex-col justify-between group  hover:bg-black/4 transition-all duration-500 cursor-pointer">
-            <p className="text-xl  text-black leading-snug">
-              Ready to orchestrate intelligence at scale?
+
+          <div className="relative rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 flex flex-col justify-between group hover:bg-black/4 transition-all duration-500 cursor-pointer">
+            <p className="text-xl text-black leading-snug">
+              Ready to put your project management on autopilot?
             </p>
-            <a
-              href="#"
-              className="mt-6 self-start inline-flex items-center gap-2 text-md font-medium text-[#625FD0] group-hover:text-black transition-colors"
+            <Link
+              href="/get-in-touch"
+              className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
             >
               Schedule a demo
-              <ArrowRight
-                size={14}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -108,7 +108,7 @@ const ContactPage = () => {
 
                 <Link
                   href="/learnmore"
-                  className="inline-flex items-center gap-2 border-2 border-[#625FD0] text-gray-700 text-xs font-semibold uppercase tracking-widest px-4 py-2.5 rounded-md hover:text-white hover:bg-[#625FD0] transition"
+                  className="inline-flex items-center gap-2 border-2 border-[#625FD0] text-[#625FD0] text-xs font-semibold uppercase tracking-widest px-4 py-2.5 rounded-md hover:text-white hover:bg-[#625FD0] transition"
                 >
                   Partner Program
               

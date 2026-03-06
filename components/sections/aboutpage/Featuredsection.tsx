@@ -62,14 +62,14 @@ export default function HomePage() {
 
               <Link
                 href="/contactus"
-                className="px-4 py-3 rounded-full bg-[#625FD0] text-white text-md font-medium  transition-transform duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
               >
                 Talk to Sales
               </Link>
 
               <Link
                  href="/learnmore"
-                className="px-4 py-3 rounded-full hover:bg-[#625FD0] border-2 border-[#625FD0] text-[#625FD0] hover:text-white text-md font-medium  transition-transform duration-300"
+                className="px-4 py-2 rounded-lg hover:bg-[#625FD0] border-2 border-[#625FD0] text-[#625FD0] hover:text-white font-semibold  transition-transform duration-300"
               >
                 Explore Platform
               </Link>
