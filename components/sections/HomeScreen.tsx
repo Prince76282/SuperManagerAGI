@@ -14,51 +14,51 @@ const companies = [
 
 const features = [
   {
-    title: "Decision Intelligence Engine",
+    title: "Prompt and Do Any Task",
     description:
-      "Continuously Tracks High-Impact Business Events Including Scope Changes, Informal Requests, Defect vs Enhancement Classification, Delivery Risks, Resource Constraints, and Escalations. Captures Who Decided What, When, and Why Through a Structured Context Graph. Links Decisions to Scope, Timeline, Capacity, and Dependencies. Enables Feasibility Analysis, Effort Estimation Support, and Structured Impact Assessment Before Approvals.",
+      "Type a natural language instruction and SuperManager AGI executes it across every connected application. The Controller Agent decomposes tasks into a DAG of subtasks, dispatches them to specialist agents in parallel using a work-stealing scheduler, and commits validated results. From creating tickets and sending updates to generating reports and reconciling settlementsone prompt, work done.",
     image: "/image/newimage/image1.1.png",
     href: "/learnmore/",
   },
   {
-    title: "Execution Reporting Automation",
+    title: "Prompt and Get Data 1,000 Feet Deep",
     description:
-      "Ingests Updates from Jira, Slack, Teams, Email, and Meeting Transcripts. Extracts Progress, Blockers, Risks, Decisions, and Next Steps. Normalizes Fragmented Inputs into Structured Daily Stand-Ups, Weekly Sprint Reports, and Executive-Ready Portfolio Summaries with RAG Indicators. Auto Distributes Reports to Relevant Stakeholders.",
+      "Access critical data across 8–12 disconnected tools instantly. The ADA Integration Layer connects agents natively to databases with 2–15ms latencyno slow APIs. Query operations, finances, inventory, pipeline, or customers and receive precise answers from live enterprise data in under 65ms. No cached summaries. No dashboard approximations.",
     image: "/image/newimage/image1.2.png",
     href: "/learnmore/",
   },
   {
-    title: "Structured Task & Action Automation",
+    title: "Multi-Action Agent Orchestration",
     description:
-      "Automatically Extracts Action Items from Meetings, Emails, and Collaboration Threads. Creates and Updates Tasks in Jira, Azure DevOps, and Other PM Tools. Assigns Owners Based on Context Patterns, Sets Due Dates, Links to Epics and Sprints, and Maintains Full Traceability Between Discussions and Execution Artifacts.",
+      "Execute complex workflows across multiple applications automatically. The Beehive Architecture deploys specialist agents that run in parallel. Evidence-majority voting validates outputs before execution. Achieve 6.7x throughput with 10 parallel agents and 97% task execution accuracy.",
     image: "/image/newimage/image1.5.png",
     href: "/learnmore/",
   },
   {
-    title: "Intelligent Follow Up & Escalation Workflows",
+    title: "Autonomous AI Agents Running 24x7",
     description:
-      "Detects Overdue Tasks, Stalled Tickets, Pending Approvals, and Dependency Delays Across Tools. Triggers Context Aware Nudges via Slack, Teams, and Email. Escalates Critical Items Based on Configurable Thresholds. Tracks Response Patterns and Resolution Timelines to Strengthen Accountability.",
+      "Deploy always-on agents that monitor systems, detect triggers, and execute actions without prompts. Includes inventory agents, finance reconciliation agents, NDR management agents, campaign monitoring agents, and customer care agentsall autonomous, coordinated, and fully auditable.",
     image: "/image/newimage/image1.4.png",
     href: "/learnmore/",
   },
   {
-    title: "Risk & Dependency Monitoring",
+    title: "Universal Application Connectivity",
     description:
-      "Analyzes Velocity Patterns, Blocker Frequency, Communication Signals, and Historical Delivery Data to Identify Emerging Risks. Detects Cross-Team Dependency Exposure and Potential Schedule Slippage. Auto-Generates Structured Risk Log Entries and Surfaces High-Risk Areas Proactively.",
+      "Connect 200+ applications including Shopify, Amazon, Flipkart, Shiprocket, Jira, Slack, Salesforce, HubSpot, GitHub, SAP, Workday, Razorpay, and more. Every app becomes a system agents can read, write, and execute tasks insimultaneously and in the correct sequence.",
     image: "/image/newimage/image1.8.png",
     href: "/learnmore/",
   },
   {
-    title: "Sprint & Capacity Optimization",
+    title: "Human in the Loop Controls",
     description:
-      "Evaluates Backlog Priority, Business Value, Complexity, Historical Velocity, and Team Availability. Recommends Optimal Sprint Scope, Balanced Workload Distribution, Task Splitting or Consolidation, and Sprint Goal Alignment. Provides Capacity-Aware Planning Across Concurrent Projects.",
+      "Maintain full control with audit trails, approval gates, and override mechanisms. Critical decisions are routed to the right human before execution. AI handles operations while humans retain final authority.",
     image: "/image/newimage/image1.6.png",
     href: "/learnmore/",
   },
   {
-    title: "Change Impact & Predictive Planning",
+    title: "ADA Integration Layer",
     description:
-      "Detects Scope, Priority, and Resource Allocation Changes in Real Time. Recalculates Critical Path Shifts, Milestone Impact, and Capacity Adjustments. Simulates Multiple Timeline Scenarios and Generates Structured Impact Reports for Approval Workflows. Supports Effort Estimation Using Historical Task Patterns and Confidence Scoring.",
+      "Powered by proprietary Agentic Data Architecture, enabling direct database access without APIs, MCP overhead, or rate limits. Achieves 2–15ms latency vs 200–500ms traditional systems. Reduces hallucination rates from 22.4% to 4.2% through evidence-grounded outputs. Peer-reviewed and runs on consumer hardware without GPUs.",
     image: "/image/newimage/image1.7.png",
     href: "/learnmore/",
   },
@@ -90,11 +90,11 @@ export default function HeroSection() {
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl py-12 lg:py-22">
             <h1 className="mx-auto max-w-[700px] text-center  text-3xl mt-10 md:text-5xl xl:text-6xl leading-tight">
-              AI Autonomous Systems designed for Manager’s
+             The AI Vibe Working Platform
             </h1>
 
             <p className="mx-auto mt-6 max-w-[700px] font-[var(--font-grotesk)] text-center text-base md:text-lg">
-              SuperManager AGI monitors high impact project events, captures decisions and ownership in a living context graph, and automates status tracking, stakeholder reporting, meeting notes, action item creation, risk monitoring, dependency follow-ups, and resource updates eliminating manual coordination overhead while improving delivery efficiency. Save 20+ Hours per PM per Week.
+             SuperManager AGI is the world’s first and most advanced AI Vibe Working Platform. Prompt and do any task. Prompt and get data 1,000 feet deep inside your enterprise. Deploy autonomous AI agents that work 24x7 across every application, every department and every workflow  executing tasks, coordinating between systems and delivering outcomes without manual triggers . Save 20+ Hours per Team Member per Week.
             </p>
 
             <div className="mt-8 flex justify-center">
@@ -115,6 +115,7 @@ export default function HeroSection() {
           <h1 className="mb-4 font-[var(--font-spartan)] text-black text-xl md:text-2xl font-bold">
             Trusted by 100+ Leading Companies
           </h1>
+          <p className="text-md">Companies using or associated with the ecosystem include</p>
 
           <div className="overflow-hidden group">
             <div className="flex w-max animate-marquee gap-12 group-hover:[animation-play-state:paused]">

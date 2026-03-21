@@ -45,7 +45,7 @@ export default function DemoSection() {
         <div className="w-full h-[clamp(520px,70vh,700px)] rounded-[14px] overflow-hidden">
           <div
             className="calendly-inline-widget w-full h-full"
-            data-url="https://calendly.com/nirmalsupermanageragi"
+            data-url="https://calendly.com/nirmalsupermanageragi/60min?back=1&month=2026-03"
           />
         </div>
       </section>

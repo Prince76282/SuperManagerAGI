@@ -4,7 +4,6 @@ import { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/* ================= TYPES ================= */
 
 type Testimonial = {
   company: string;
@@ -13,82 +12,79 @@ type Testimonial = {
   title: string;
 };
 
-/* ================= DATA ================= */
 
 const testimonials = [
   {
-    company: "Enterprise Engineering Team",
+    industry: "D2C Fashion",
     quote:
-      "SuperManager AI has transformed how we oversee complex programs. Leadership now has real-time visibility into delivery health, risks, and execution progress. Decisions are faster, coordination is smoother, and teams stay aligned without constant oversight. It has significantly improved predictability, accountability, and confidence across our entire organization.",
+      "We launched 3 collections without a single stock-out or delay. Inventory, logistics, marketing, and support now run on one AI layer. The reconciliation agent alone paid for the platform in the first month.",
+    name: "COO",
+    title: "Fashion D2C Brand",
+  },
+  {
+    industry: "Management Consulting",
+    quote:
+      "We now have live visibility across 24 client engagements. Reports and tracking are fully automated. Internal meetings dropped by 70% while client satisfaction reached an all-time high.",
+    name: "Managing Partner",
+    title: "Consulting Firm",
+  },
+  {
+    industry: "SaaS Company",
+    quote:
+      "Sprint planning, standups, release notes, and updates are fully automated. Engineers focus only on shipping. Delivery velocity increased by 31% in one quarter.",
     name: "VP Engineering",
-    title: "Platform Systems",
+    title: "SaaS Product Company",
   },
   {
-    company: "Global Product Division",
+    industry: "Global Enterprise",
     quote:
-      "The platform provides structured execution intelligence across all initiatives. We identify delivery risks earlier, reduce coordination overhead, and maintain consistent visibility across teams. Leadership discussions are now data-driven instead of assumption-based, which has strengthened planning accuracy and improved trust among stakeholders throughout our programs.",
-    name: "Chief Product Officer",
-    title: "Enterprise Products",
+      "For the first time, leadership has real-time visibility across finance, operations, sales, and HR. Decision-making is 3x faster with dramatically lower coordination overhead.",
+    name: "Chief Operating Officer",
+    title: "Enterprise (5000+ employees)",
   },
   {
-    company: "Technology Operations",
+    industry: "Startup",
     quote:
-      "SuperManager AI introduced clarity into complex workflows that previously required constant manual monitoring. With automated insights and real-time reporting, our teams execute faster and with greater confidence. It acts as an operational backbone that keeps programs aligned while reducing friction across departments and leadership levels.",
-    name: "Director",
-    title: "Operations Strategy",
+      "We operate like an 80-person company with a team of 30. Agents handle MIS, vendor follow-ups, and escalations. I focus purely on growth and strategy.",
+    name: "Founder & CEO",
+    title: "Series B Startup",
   },
   {
-    company: "Cloud Infrastructure Group",
+    industry: "Consumer Electronics",
     quote:
-      "Since implementing the platform, coordination across distributed teams has improved dramatically. We now operate with shared visibility, predictable timelines, and fewer execution surprises. The system highlights risks early and ensures stakeholders remain aligned, enabling us to deliver large-scale initiatives with precision and consistency.",
-    name: "Head of Infrastructure",
-    title: "Cloud Systems",
+      "Stock-out risks are flagged 12–14 days in advance. Reverse logistics costs dropped 18% in two months. Zero settlement discrepancies in six months.",
+    name: "Head of Operations",
+    title: "Electronics D2C",
   },
   {
-    company: "Strategic Programs Office",
+    industry: "Logistics",
     quote:
-      "SuperManager AI has given our leadership team continuous visibility into execution health across multiple initiatives. We can now identify risks early, adjust priorities quickly, and ensure alignment without additional reporting overhead. It has streamlined governance, improved delivery consistency, and strengthened stakeholder confidence throughout our organization.",
-    name: "Executive Program Director",
-    title: "Strategy & Delivery",
+      "NDR follow-ups, courier tracking, and COD reconciliation are fully autonomous. Our team focuses only on exceptions, not routine operations.",
+    name: "Director of Operations",
+    title: "Logistics Company",
   },
   {
-    company: "Enterprise Solutions Team",
+    industry: "Healthcare",
     quote:
-      "The platform has significantly improved how we coordinate large cross-functional programs. Teams operate with shared context, leadership decisions are supported by live execution data, and bottlenecks are surfaced automatically. This has reduced delays, improved efficiency, and allowed us to maintain consistent momentum across complex initiatives.",
-    name: "Senior Director",
-    title: "Enterprise Solutions",
+      "Scheduling, billing, and compliance are automated. Administrative overhead reduced by over 60%, allowing teams to focus on patient care.",
+    name: "COO",
+    title: "Healthcare Network",
   },
   {
-    company: "Innovation Technology Group",
+    industry: "Financial Services",
     quote:
-      "Before implementing SuperManager AI, gaining reliable execution insight required multiple meetings and manual updates. Now, we receive structured intelligence instantly. It has accelerated decision cycles, reduced uncertainty, and enabled our teams to focus more on delivery and less on reporting or administrative coordination tasks.",
-    name: "Chief Innovation Officer",
-    title: "Technology Strategy",
+      "Reconciliation, reporting, and anomaly detection now run overnight autonomously. Accuracy improved while costs dropped significantly.",
+    name: "Head of Operations",
+    title: "Financial Services",
   },
   {
-    company: "Global Delivery Team",
+    industry: "Manufacturing",
     quote:
-      "Execution predictability has improved dramatically since adopting the platform. We now operate with real-time clarity on progress, dependencies, and risks. Leadership interventions happen earlier, teams stay aligned, and outcomes are more consistent. It has become a critical operational layer supporting our most important initiatives.",
-    name: "VP Delivery",
-    title: "Global Operations",
-  },
-  {
-    company: "Systems Engineering Division",
-    quote:
-      "SuperManager AI acts like an intelligent coordination engine that keeps complex programs synchronized. Communication overhead has decreased, timelines are more reliable, and stakeholders stay informed automatically. The result is smoother execution, stronger accountability, and a noticeable improvement in delivery confidence across our teams.",
-    name: "Principal Engineering Lead",
-    title: "Systems Architecture",
-  },
-  {
-    company: "Digital Platforms Organization",
-    quote:
-      "The platform has elevated our operational maturity by providing continuous insight into execution signals. Instead of reacting to problems late, we address them early with clear data. This shift has strengthened governance, improved delivery speed, and increased confidence across leadership and project teams alike.",
-    name: "Director",
-    title: "Digital Platforms",
+      "We detected a supply chain risk 3 weeks early through AI signals. Production planning, vendor management, and dispatch now run autonomously.",
+    name: "Head of Supply Chain",
+    title: "Manufacturing",
   },
 ];
-
-/* ================= MAIN ================= */
 
 export default function TestimonialsSection() {
   const [[index, direction], setIndex] = useState([0, 0]);
@@ -140,13 +136,13 @@ export default function TestimonialsSection() {
     <section className="bg-[#F0F6F9] py-10 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4">
         <h1 className="text-[2.5rem]  leading-[1.2] tracking-[-0.02em] flex-none  overflow-visible">
-          What our customers say
+       What Our Customers Say
         </h1>
         {/* Header */}
         <div className="flex justify-between items-end mb-12">
           <div>
-            <p className="text-base font-[var(--font-grotesk)] text-gray-700 md:text-lg">
-              Real results from teams using SuperManager AI.
+            <p className="text-base  text-gray-700 md:text-lg">
+             Real results from organisations using SuperManager AGI as their AI Vibe Working Platform.
             </p>
           </div>
 

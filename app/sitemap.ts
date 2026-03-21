@@ -64,8 +64,99 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.3,
     },
+    {
+      url: `${base}/analyst-recognition`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/autonomous`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/autonomousagent`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+  
+    {
+      url: `${base}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: `${base}/customer-stories`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+     {
+      url: `${base}/doc`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+     {
+      url: `${base}/enterprise-integrations`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    }, {
+      url: `${base}/events`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+
+    {
+      url: `${base}/partners`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/platform`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+  
+    {
+      url: `${base}/project-intelligence`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: `${base}/research-reports`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+     {
+      url: `${base}/resource`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+     {
+      url: `${base}/support`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    }, {
+      url: `${base}/white-papers`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
 {
-      url: `${base}/managerplatform`,
+      url: `${base}/management`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.6,

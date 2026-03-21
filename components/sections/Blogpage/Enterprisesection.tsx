@@ -6,7 +6,6 @@ import {
   Layers,
   BrainCircuit,
   ShieldCheck,
-  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -45,22 +44,20 @@ const cards = [
 
 export default function EnterpriseSection() {
   return (
-    <section className="relative bg-white py-28 px-6 overflow-hidden">
- 
+    <section className="relative bg-white py-20 px-6 overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-[0.04]" />
 
       <div className="relative max-w-300 mx-auto">
-  
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl leading-tight text-black font-syne">
+            <h2 className="text-3xl md:text-5xl leading-tight text-black font-syne">
               The AI that manages projects so managers can lead.
             </h2>
           </div>
 
           <div className="shrink-0">
             <Link
-              href="#"
+              href="/managerplatform"
               className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
             >
               Explore the platform
@@ -75,22 +72,16 @@ export default function EnterpriseSection() {
               key={title}
               className="group relative  rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 transition-all duration-500 cursor-default"
             >
-         
-
-                <div className="mb-5 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 border-2 border-[#625FD0] group-hover:bg-[#625FD0] transition-all duration-500">
+              <div className="mb-5 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-black/5 border-2 border-[#625FD0] group-hover:bg-[#625FD0] transition-all duration-500">
                 <Icon
                   size={20}
                   className="text-[#625FD0] group-hover:text-white transition-colors duration-300"
                 />
               </div>
 
-       
               <span className="text-lg ml-3 font-semibold text-black mb-3 tracking-tight font-syne">
                 {title}
               </span>
-      
-
-              
 
               <p className="text-sm leading-relaxed text-black/50 group-hover:text-black/70 transition-colors duration-300">
                 {description}
@@ -102,14 +93,13 @@ export default function EnterpriseSection() {
             </div>
           ))}
 
-
           <div className="relative rounded-2xl border-2 border-[#625FD0] bg-black/2 p-7 flex flex-col justify-between group hover:bg-black/4 transition-all duration-500 cursor-pointer">
             <p className="text-xl text-black leading-snug">
               Ready to put your project management on autopilot?
             </p>
             <Link
               href="/get-in-touch"
-              className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center justify-center mt-8 rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
             >
               Schedule a demo
             </Link>

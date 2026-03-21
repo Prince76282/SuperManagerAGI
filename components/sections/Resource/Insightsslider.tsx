@@ -1,107 +1,73 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 import Link from "next/link";
 
 const insights = [
   {
-    title: "What Great Managers Do Differently: Habits That Drive Team Performance",
+    title:
+      "Research and Architecture",
     excerpt:
-      "In today's rapidly evolving workplace, the ability to motivate employees, streamline communication, and unlock team potential is a competitive necessity for every manager.",
+      "Peer-reviewed research and technical documentation on the Agentic Data Architecture, Beehive Agentic Architecture, evidence-majority voting and the MCP and CLI trilemma. All benchmarks and configurations published for full reproducibility.",
     tag: "Management Insight",
-    href: "#",
+   
   },
   {
-    title: "The Art of Parallel Delegation",
+    title: "Deployment Guides",
     excerpt:
-      "Running multiple workstreams simultaneously is one of the most persistent challenges in management. Learn how top managers delegate without losing control.",
+      "Step-by-step implementation guides for deploying specialist agents across every department and industry. From first agent configuration to full organisational rollout. Covers ADA integration layer setup, database connectivity, agent calibration and human oversight configuration.",
     tag: "Management Insight",
-    href: "#",
+   
   },
   {
-    title: "The Manager Productivity Paradox",
+    title: "Industry Insights",
     excerpt:
-      "Micromanagement slows teams down. The best managers know when to step back and how to create the conditions for autonomous execution.",
+      "Deep analysis of how the Vibe Working Platform is transforming D2C brand operations, consulting firm delivery, manufacturing supply chains, financial services reconciliation, healthcare administration and enterprise portfolio management.",
     tag: "Management Insight",
-    href: "#",
+   
   },
-  {
-    title: "The Rise of Collaborative Leadership",
-    excerpt:
-      "Today's most effective managers lead through influence, not authority.",
-    tag: "Management Insight",
-    href: "#",
-  },
-  {
-    title: "1:1 Meetings That Actually Work",
-    excerpt:
-      "One-on-ones are the most powerful tool a manager has  and the most wasted.",
-    tag: "Management Insight",
-    href: "#",
-  },
-  {
-    title: "The Future of Managing People",
-    excerpt:
-      "Research shows leadership expectations are evolving rapidly.",
-    tag: "Management Insight",
-    href: "#",
-  },
+ 
 ];
 
 export default function InsightsSlider() {
-  const [current, setCurrent] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(3);
 
-  /* RESPONSIVE BREAKPOINT LOGIC */
-  useEffect(() => {
-    const update = () => {
-      if (window.innerWidth < 640) setVisibleCount(1);
-      else if (window.innerWidth < 1024) setVisibleCount(2);
-      else setVisibleCount(3);
-    };
+  const sliderRef = useRef<HTMLDivElement>(null);
 
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
+  const scroll = (dir: number) => {
+    const el = sliderRef.current;
+    if (!el) return;
 
-  const maxIndex = insights.length - visibleCount;
-
-  const prev = () => setCurrent((c) => Math.max(0, c - 1));
-  const next = () => setCurrent((c) => Math.min(maxIndex, c + 1));
-
-  useEffect(() => {
-    if (current > maxIndex) setCurrent(maxIndex);
-  }, [visibleCount]);
+    el.scrollBy({
+      left: dir * el.clientWidth * 0.8,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <section className="bg-white py-16 lg:py-20">
+    <section className="bg-white py-16 lg:py-16">
 
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-black">
-            Management Insights
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl text-black">
+            Resource Categories
           </h2>
 
-          {/* Controls */}
           <div className="flex items-center gap-3">
 
             <button
-              onClick={prev}
-              disabled={current === 0}
-              className="w-10 h-10 border-2 border-[#625FD0] rounded-full flex items-center justify-center hover:bg-[#625FD0] text-[#625FD0] hover:text-white transition disabled:opacity-30"
+              onClick={() => scroll(-1)}
+              className="w-10 h-10 border-2 border-[#625FD0] rounded-full flex items-center justify-center text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
             >
               <ChevronLeft size={18} />
             </button>
 
             <button
-              onClick={next}
-              disabled={current >= maxIndex}
-              className="w-10 h-10 border-2 border-[#625FD0] rounded-full flex items-center justify-center hover:bg-[#625FD0] text-[#625FD0]  hover:text-white transition disabled:opacity-30"
+              onClick={() => scroll(1)}
+              className="w-10 h-10 border-2 border-[#625FD0] rounded-full flex items-center justify-center text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
             >
               <ChevronRight size={18} />
             </button>
@@ -111,47 +77,41 @@ export default function InsightsSlider() {
         </div>
 
         {/* Slider */}
-        <div className="overflow-hidden">
+        <div
+          ref={sliderRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 no-scrollbar"
+        >
 
-          <div
-            className="flex gap-6 transition-transform duration-500"
-            style={{
-              transform: `translateX(-${current * (100 / visibleCount)}%)`,
-            }}
-          >
+          {insights.map((item, i) => (
 
-            {insights.map((item) => (
-              <article
-                key={item.title}
-                className="min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)]
-                border border-gray-200 hover:border-[#625FD0] rounded-2xl p-6
-                flex flex-col gap-4 hover:shadow-xl hover:-translate-y-1
-                transition-all duration-300 group"
-              >
+            <article
+              key={i}
+              className="snap-start flex-shrink-0
+              w-[85%] sm:w-[48%] lg:w-[32%]
+              border border-gray-200 rounded-xl
+              p-6 flex flex-col gap-4
+              hover:border-[#625FD0]
+              hover:shadow-lg hover:-translate-y-1
+              transition-all duration-300 group"
+            >
 
-                <span className="text-[11px] text-[#625FD0] uppercase tracking-widest font-medium">
-                  {item.tag}
-                </span>
+              <span className="text-[11px] text-[#625FD0] uppercase tracking-widest font-medium">
+                {item.tag}
+              </span>
 
-                <span className="text-lg font-semibold text-black leading-snug group-hover:text-[#625FD0] transition">
-                  {item.title}
-                </span>
+              <h3 className="text-lg font-semibold text-black leading-snug group-hover:text-[#625FD0] transition">
+                {item.title}
+              </h3>
 
-                <p className="text-sm text-black/60 flex-1 leading-relaxed">
-                  {item.excerpt}
-                </p>
+              <p className="text-sm text-black/60 flex-1 leading-relaxed">
+                {item.excerpt}
+              </p>
 
-                <Link
-                  href={item.href}
-                  className="flex items-center justify-center bg-[#625FD0] px-6 py-3 text-white font-semibold text-sm rounded-md hover:opacity-90 transition"
-                >
-                  Read More
-                </Link>
+              
 
-              </article>
-            ))}
+            </article>
 
-          </div>
+          ))}
 
         </div>
 

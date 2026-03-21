@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const tabsData = [
-  { id: "Decision-Intelligence", label: "Decision Intelligence" },
+  { id: "Autonomous", label: "Autonomous Task Execution" },
   { id: "Delivery Automation", label: "Delivery Automation" },
   { id: "Resource Management", label: "Resource Management" },
   { id: "Integrations", label: "Integrations" },
@@ -12,59 +12,54 @@ const tabsData = [
 
 const decisionIntelligenceFeatures = [
   {
-    title: "Scope & Change Control",
+    title: "Prompt and Execute  ",
     description:
-      "Detect Scope Changes, Informal Requests, and Defect vs Enhancement Shifts Across Email, Slack, Jira and Meetings. Automatically Flag High-Impact Deviations Before They Affect Budget or Delivery Timelines.",
+      "any natural language instruction executed across every connected app simultaneously",
   },
   {
-    title: "Decision Traceability",
+    title: "Multi-Action Orchestration ",
     description:
-      "Build a Live Context Graph Tracking Who Decided What, When, Why, and What Alternatives Were Considered. Maintain Full Audit Logs with Ownership and Approval Visibility.",
+      "complex workflows decomposed into parallel subtasks in the right order",
   },
   {
-    title: "Impact & Estimation",
+    title: "	Evidence Validation ",
     description:
-      "Perform Effort Estimation, Timeline Recalculation, and Change Impact Simulation in Real Time. Quantify Downstream Risk Before Approvals Are Made.",
+      "every output verified via evidence-majority voting before any system is updated",
   },
   {
-    title: "Risk & Escalation Intelligence",
+    title: "Autonomous Triggers ",
     description:
-      "Identify Delivery Risks, Blockers, and Escalation Signals Early from Communication and Execution Patterns. Trigger Structured Decision Workflows Before Firefighting Begins.",
+      "agents detect conditions and execute without prompts, 24 hours a day",
   },
 ];
 
 const pmProtectionFeatures = {
   mainFeatures: [
     {
-      title: " Task Capture & Creation",
+      title: "ADA Direct Access ",
       description:
-        "Extract Action Items from Meetings, Slack, Teams, and Email. Automatically Create and Update Tickets in Jira, Azure DevOps, and Other Systems with Proper Context and Ownership.",
+        "native database connections at 2 to 15ms, no API round-trip, no hallucination from data gaps",
     },
 
     {
-      title: "Reporting & Standups",
+      title: "Per-Subtask RAG Grounding ",
 
       description:
-        "Generate Daily Standups, Weekly Delivery Reports, and Executive RAG Status Updates from Real-Time Task and Communication Data. Auto Distribute to Stakeholders.",
+        "every agent response grounded in retrieved evidence before generation",
     },
     {
-      title: "Sprint Optimization",
+      title: "Cross-System Intelligence ",
 
       description:
-        "Analyze Backlog Priority, Velocity, Capacity, and Dependencies. Recommend Balanced Sprint Scope and Workload Distribution in Minutes.",
+        "inventory, revenue, logistics, pipeline, customers pulled simultaneously",
     },
     {
-      title: "Follow-Ups & Coordination",
+      title: "Live Data ",
 
       description:
-        "Detect Overdue Tasks, Stalled Work, and Pending Approvals. Send Context-Aware Nudges and Escalations Automatically Across Slack, Teams, and Email.",
+        "actual live data from your actual systems at 65ms average latency",
     },
-    {
-      title: "Predictive Risk Monitoring",
-
-      description:
-        "Continuously Monitor Execution Signals, Velocity Trends, and Blocker Patterns to Detect Emerging Risks Before They Escalate.",
-    },
+    
   ],
 };
 
@@ -178,7 +173,7 @@ const WorkspaceFeatures = {
 };
 
 const ProjectManagementPlatform = () => {
-  const [activeTab, setActiveTab] = useState("Decision-Intelligence");
+  const [activeTab, setActiveTab] = useState("Autonomous");
 
   return (
     <div className="bg-[#F0F6F9] py-8 md:py-16 px-4">
@@ -186,7 +181,7 @@ const ProjectManagementPlatform = () => {
         {/* Header */}
         <div className="mb-8 md:mb-12">
           <h2 className="text-[2.5rem] font-medium leading-[1.2] tracking-[-0.02em] text-gray-900 ">
-            Complete AI Powered Project Management Platform
+Complete AI Vibe Working Platform
           </h2>
         </div>
 
@@ -218,11 +213,11 @@ const ProjectManagementPlatform = () => {
           {/* Right Side - Scrollable Content */}
           <div className="lg:w-3/4">
             {/* Decision Intelligence Tab */}
-            {activeTab === "Decision-Intelligence" && (
+            {activeTab === "Autonomous" && (
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Decision Intelligence
+                    Autonomous Task Execution
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                     Protect Budget, Scope, and Timelines by Making Every

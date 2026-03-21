@@ -11,22 +11,20 @@ import {
   Layers,
   Workflow,
   Cpu,
-  Sparkles,
   BarChart3,
-  Activity,
   Network,
 } from "lucide-react";
 import Image from "next/image";
 
 const companies = [
-  { name: "Adobe", src: "/image/newimage/Adobe.png", width: 120 },
-  { name: "BrowserStack", src: "/image/newimage/Browser1.png", width: 200 },
-  { name: "Zoho", src: "/image/newimage/Zoho.png", width: 120 },
-  { name: "Microsoft", src: "/image/newimage/Microsoft.png", width: 200 },
-  { name: "Sprinto", src: "/image/newimage/Sprinto.png", width: 120 },
-  { name: "Perplexity", src: "/image/newimage/perplexity.png", width: 200 },
-  { name: "Socket", src: "/image/newimage/Socket.png", width: 120 },
-  { name: "Nvidia", src: "/image/newimage/image.png", width: 200 },
+  { name: "Adobe", src: "/image/newimage/Adobe.png", width: 160 },
+  { name: "BrowserStack", src: "/image/newimage/Browser1.png", width: 160 },
+  { name: "Zoho", src: "/image/newimage/Zoho.png", width: 160 },
+  { name: "Microsoft", src: "/image/newimage/Microsoft.png", width: 160 },
+  { name: "Sprinto", src: "/image/newimage/Sprinto.png", width: 160},
+  { name: "Perplexity", src: "/image/newimage/perplexity.png", width: 160 },
+  { name: "Socket", src: "/image/newimage/Socket.png", width: 160 },
+  { name: "Nvidia", src: "/image/newimage/image.png", width: 160 },
 ];
 
 const capabilities = [
@@ -74,13 +72,7 @@ export default function SuperManagerPage() {
       {/* HERO */}
       <section className="py-24 px-6 lg:px-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <Sparkles className="w-12 h-12 text-[#625FD0]" />
-          </div>
-
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            SuperManager AGI
-          </h1>
+          <h1 className="text-3xl lg:text-5xl  mb-6">SuperManager AGI</h1>
 
           <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-10">
             Autonomous enterprise management platform that replaces traditional
@@ -89,15 +81,10 @@ export default function SuperManagerPage() {
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link
-              href="#capabilities"
-              className="bg-[#625FD0] text-white px-4 py-3 rounded-lg font-semibold hover:bg-[#5146d9] transition"
-            >
-              Explore Platform
-            </Link>
+           
 
             <Link
-              href="/demo"
+              href="/get-in-touch"
               className="border-2 border-[#625FD0] px-4 py-3 text-[#625FD0]  rounded-lg font-semibold hover:text-white hover:bg-[#625FD0] transition"
             >
               Request Demo
@@ -107,12 +94,12 @@ export default function SuperManagerPage() {
       </section>
 
       <div className="mx-auto max-w-[1100px] px-5 pb-14 text-center">
-        <h1 className="mb-4 font-[var(--font-spartan)] text-black text-2xl md:text-2xl font-bold">
+        <h1 className="mb-4 font-[var(--font-spartan)] text-black text-2xl md:text-2xl ">
           Trusted by 100+ Leading Companies
         </h1>
 
         <div className="overflow-hidden group">
-          <div className="flex w-max animate-marquee gap-12 group-hover:[animation-play-state:paused]">
+          <div className="flex w-max animate-marquee gap-8 group-hover:[animation-play-state:paused]">
             {[...companies, ...companies].map((company, index) => (
               <div
                 key={index}
@@ -123,7 +110,7 @@ export default function SuperManagerPage() {
                   alt={company.name}
                   width={company.width}
                   height={80}
-                  className="h-[100px] object-contain opacity-90"
+                  className=" w-auto object-contain opacity-90"
                 />
               </div>
             ))}
@@ -136,14 +123,14 @@ export default function SuperManagerPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
             <Layers className="w-10 h-10 text-[#625FD0] mb-6" />
-            <h2 className="text-4xl lg:text-5xl mb-6">
+            <h2 className="text-3xl lg:text-5xl mb-6">
               Enterprise Management. Reimagined.
             </h2>
 
             <p className="text-gray-600 text-lg mb-6">
               SuperManager AGI transforms enterprise operations into a real-time
               autonomous intelligence system. It simultaneously analyzes
-              strategy, resources, risks, and execution paths — then deploys
+              strategy, resources, risks, and execution paths then deploys
               coordinated AGI agents to deliver outcomes.
             </p>
 
@@ -181,7 +168,7 @@ export default function SuperManagerPage() {
       {/* HOW IT WORKS */}
       <section className="py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl mb-6">
+          <h2 className="text-3xl lg:text-5xl mb-6">
             How SuperManager AGI Works
           </h2>
 
@@ -226,7 +213,7 @@ export default function SuperManagerPage() {
       <section id="capabilities" className="py-24 px-6 lg:px-20 bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl mb-4">Core Capabilities</h2>
+            <h2 className="text-3xl lg:text-5xl mb-4">Core Capabilities</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Modular intelligence components working together as a unified
               enterprise platform.

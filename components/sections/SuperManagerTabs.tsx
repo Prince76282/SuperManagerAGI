@@ -18,29 +18,29 @@ const tabsData: TabContent[] = [
   {
     id: "automate",
     title: "AUTOMATE DAILY OPS",
-    heading: "95% of Routine PM Work Runs Autonomously",
+    heading: "Prompt and Execute Any Task One Prompt Executes Work Across Every Connected Application",
     description:
-      "SuperManager AGI Handles Daily Standups, Meeting Notes, Task Creation, Status Updates, and Stakeholder Reporting with Zero Human Intervention. Every Morning at 9 AM, Your Team Receives Automated Standup Summaries. Every Meeting Auto-Generates Tickets with Assignees and Due Dates. Every Status Change Triggers Stakeholder Notifications. Your PMs Focus on Strategy While AGI Handles Execution.",
-    buttonText: "Learn More",
+      "SuperManager AGI takes any natural language instruction and executes it end to end across every connected system. The Controller Agent orchestrates specialist agents in parallel, validates all outputs via evidence-majority voting and commits results with a full audit trail. No manual steps. No app switching. No waiting.",
+    buttonText: "/Learn More",
     imageSrc: "/image/ai-maannger.jpg",
     imageAlt: "AI Manager Dashboard",
   },
   {
     id: "optimize",
     title: "OPTIMIZE RESOURCES",
-    heading: "AI That Knows Who Should Work on What and When",
+    heading: "Retrieve Data 1,000 Feet DeepAny Answer From the Actual Live Data Inside Your Enterprise ",
     description:
-      "SuperManager AGI Continuously Tracks Every Team Member’s Capacity, Skills, Current Workload, and Performance Patterns. It Auto Assigns Tasks Based on Optimal Fit, Rebalances Workloads When Someone Gets Blocked, and Forecasts Resource Needs for Upcoming Sprints. When a New Project Arrives, AGI Analyzes Requirements and Assembles the Perfect Team Composition Automatically No Spreadsheets, No Guesswork.",
-    buttonText: "Get Access to the Report",
+      "Ask anything about your enterprise and get a grounded, accurate answer retrieved directly from your live databases in under 65ms via the ADA layer. Financial analytics hallucination drops from 25.1% to 2.7%. Customer support hallucination drops from 12.4% to 3.8%. Operational data drops from 13.5% to 5.1%. Not approximations  actual data from actual databases.",
+    buttonText: "Get Report",
     imageSrc: "/image/image.png",
     imageAlt: "Resource Optimization",
   },
   {
     id: "predict",
     title: "PREDICT PROBLEMS",
-    heading: "Know About Risks 2–3 Weeks Before They Become Fires",
+    heading: "Deploy Autonomous Agents Build an AI Workforce That Runs 24x7 Without Prompts",
     description:
-      "SuperManager AGI Monitors 50+ Risk Indicators Continuously Scope Creep, Schedule Slippage, Team Burnout, Budget Overruns, Code Quality Drops, and Dependency Delays. When It Detects Early Warning Signs (Like “Might Slip” in Chat or Velocity Trending Down), It Auto-Generates Risk Mitigation Plans, Creates Tasks, Assigns Owners, and Alerts Stakeholders. You Fix Problems Before They Explode not After.",
+      "Configure specialist agents that monitor your connected systems continuously, detect conditions that require action and execute tasks autonomously. Each agent is purpose-built for its domain. All coordinated by the Beehive architecture. All auditable. All running whether or not anyone is watching.",
     buttonText: "Learn More",
     imageSrc: "/image/World'sFirst/image1.webp",
     imageAlt: "Risk Prediction Dashboard",
@@ -48,12 +48,12 @@ const tabsData: TabContent[] = [
   {
     id: "protect",
     title: "PROTECT YOUR TEAM",
-    heading: "Never Let Your PM Take the Blame Again",
+    heading: "Live Org Intelligence for Every Leader Know What Is Happening Across Every Department, Live",
     description:
-      "SuperManager AGI Captures Every Decision with Full Context: Who Decided, When, Why, What Alternatives Were Considered, and What Evidence Supported It. When Executives Ask, “Why Did We Scope This In?” Six Months Later, You Have Instant Receipts. When Audits Happen, You Export Complete Decision Trails in One Click. When Escalations Occur, Discussions Are Factual not Political. Your PMs Stop Being Scapegoats.",
+      "Founders, COOs and department heads get a live view of every metric that matters  revenue, inventory, logistics, marketing spend, customer care, finance  updated in real time from every connected system. Not a report someone built last week. The actual live state of your organisation, visible in one place at 65ms",
     buttonText: "Learn More",
     imageSrc: "/image/image1.4.jpg",
-    imageAlt: "Decision Trail Protection",
+    imageAlt: "Decision Audit Trail",
   },
 ];
 
@@ -96,14 +96,14 @@ export default function SuperManagerTabs() {
                   {tabsData[activeTab].description}
                 </p>
 
-                <div className="pt-2">
+                {/* <div className="pt-2">
                   <Link
                     href="/learnmore/"
                     className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-2 py-2 text-white font-semibold  transition"
                   >
                     {tabsData[activeTab].buttonText}
                   </Link>
-                </div>
+                </div> */}
               </div>
 
               {/* Image */}

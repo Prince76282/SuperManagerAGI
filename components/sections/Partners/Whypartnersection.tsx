@@ -12,21 +12,21 @@ type PartnerItem = {
 const partners: PartnerItem[] = [
   {
     icon: Brain,
-    title: "Accelerate AI Adoption",
+    title: "Accelerate Vibe Working Platform Adoption",
     description:
-      "Leverage our partner ecosystem to access deep agentic AI expertise and curated enterprise resources enabling faster deployment and measurable ROI.",
+      "Access deep specialist expertise in Beehive agent architecture, ADA integration layer configuration and domain-specific agent deployment. Our certified partners have implemented SuperManager AGI across D2C brands, consulting firms, manufacturing companies, financial services organisations and enterprise portfolios. They bring repeatable deployment frameworks that compress your time to value.",
   },
   {
     icon: Globe2,
-    title: "Scale Operations Globally",
+    title: "Scale Operations Across Every Market",
     description:
-      "Expand into new markets with trusted global partners and industry specific AI specialists aligned to your operational goals.",
+      "Expand into new markets and geographies with trusted regional partners who understand local operational workflows, compliance requirements and integration landscapes. Industry-specific partners across retail, logistics, BFSI, healthcare and technology bring domain depth that accelerates deployment accuracy.",
   },
   {
     icon: Zap,
-    title: "Drive Faster Business Results",
+    title: "Drive Faster Measurable Results",
     description:
-      "Reduce deployment timelines with pre-built AI orchestration workflows optimized for SuperManagerAGI environments.",
+      "Pre-built agent deployment workflows optimised for SuperManager AGI environments mean partners can have your first specialist agents live within two weeks and full organisational deployment complete within 90 days. Every engagement is structured around measurable operational outcomes  time recovered, cost reduced, revenue protected.",
   },
 ];
 
@@ -40,18 +40,14 @@ export default function WhyPartnerSection() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl lg:text-5xl max-w-3xl text-black leading-tight mb-6 tracking-tight">
-          Work with your partners to integrate{" "}
-          <span className="text-[#625FD0]">SuperManagerAGI</span> across your
-          business
+        <h2 className="text-3xl lg:text-5xl max-w-3xl text-black leading-tight mb-6 tracking-tight">
+         Work With Partners to Deploy the {" "}
+          <span className="text-[#625FD0]">Vibe Working Platform</span> Across Your Organisation
         </h2>
 
         {/* Subtext */}
         <p className="text-base md:text-lg max-w-3xl text-gray-600 mb-16 leading-relaxed">
-          Our ecosystem of agentic AI partners supports organizations of every
-          size , delivering end-to-end integration, orchestration, and
-          enterprise-grade transformation.
-        </p>
+         Our ecosystem of specialist partners supports organisations of every size  delivering end-to-end agent deployment, ADA integration, enterprise system connectivity and full operational transformation. From first agent to full org rollout, our partners bring the implementation depth to get you to value fast. </p>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -79,9 +75,7 @@ export default function WhyPartnerSection() {
                 <div className="relative mb-6">
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                      isHovered
-                        ? "bg-[#625FD0]"
-                        : "bg-gray-600"
+                      isHovered ? "bg-[#625FD0]" : "bg-gray-600"
                     }`}
                   >
                     <Icon
@@ -102,7 +96,6 @@ export default function WhyPartnerSection() {
                   {item.description}
                 </p>
 
-                
                 <div
                   className={`absolute bottom-0 left-0 h-[2px] bg-[#625FD0] transition-all duration-500 ${
                     isHovered ? "w-full" : "w-0"

@@ -15,57 +15,57 @@ import {
 
 const capabilities = [
   {
-    title: "Portfolio Management",
+    title: "Live Revenue and Business Intelligence",
     description:
-      "SuperManagerAGI continuously evaluates initiatives across departments, balancing risk, ROI, and strategic alignment to ensure leadership always invests in the highest-impact work.",
+      "SuperManager AGI retrieves and synthesises revenue data across every channel  D2C, marketplace, wholesale, retail  in real time from every connected system. No manual compilation. No stale dashboards. The actual live revenue state of your business at 65ms via the ADA layer.",
     icon: Briefcase,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
   },
   {
-    title: "Resource Optimization",
+    title: "Cross-Department Portfolio Visibility",
     description:
-      "Autonomously allocate engineers, product managers, and operational teams based on skill, workload, and delivery timelines to maximize organizational throughput.",
+      "Every active initiative across every department  operations, finance, logistics, marketing, engineering, customer care  visible in one unified intelligence view. OKR alignment tracked continuously. Deviations surfaced before they compound into missed targets.",
     icon: Users,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
   },
   {
-    title: "Roadmap Planning",
+    title: "Adaptive Planning and Scenario Intelligence",
     description:
-      "Generate adaptive roadmaps that evolve in real time as priorities shift, ensuring execution stays aligned with business strategy and market conditions.",
+      "When market conditions shift, agents generate updated scenario models based on actual performance data  not assumptions. Resource reallocation options, revised timelines and trade-off analysis available on demand from live data across connected systems.",
     icon: Map,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
   },
   {
-    title: "Capacity Analysis",
+    title: "Capacity and Resource Intelligence",
     description:
-      "Monitor team bandwidth, sprint velocity, and execution constraints to prevent burnout and ensure sustainable scaling of operations.",
+      "Real-time visibility into team bandwidth, workload distribution and execution constraints across every department. Overallocation detected before burnout. Underutilisation surfaced before it wastes capacity. Reallocation recommendations generated from actual data.",
     icon: BarChart3,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
   },
   {
-    title: "Priority Decisions",
+    title: "Priority Intelligence Across Competing Initiatives",
     description:
-      "Resolve cross-functional trade-offs with data-backed decision intelligence, reducing executive bottlenecks and accelerating delivery cycles.",
+      "When multiple initiatives compete for the same resources, agents generate data-backed priority recommendations using actual revenue impact, strategic alignment scores and execution risk signals  eliminating the politics and assumptions from prioritisation decisions.",
     icon: Flag,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
   },
   {
-    title: "OKR Tracking",
+    title: "OKR and Goal Alignment Tracking",
     description:
-      "Align initiatives directly to company OKRs and continuously track measurable outcomes with automated performance feedback loops.",
+      "Every active initiative mapped to company OKRs in real time. Contribution tracked continuously. Deviations surfaced to leadership before end-of-quarter surprises. Quarterly planning transformed from a retrospective exercise into a forward-looking intelligence loop.",
     icon: Target,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
   },
   {
-    title: "Budget Allocation",
+    title: "Budget and Investment Intelligence",
     description:
-      "Dynamically distribute budgets across initiatives based on performance signals, forecast modeling, and strategic importance.",
+      "Budget allocation monitored against actual performance signals across every department. Underspending in high-performing areas and overspending in underperforming areas both flagged automatically. Reallocation recommendations generated from live data.",
     icon: DollarSign,
     iconBg: "bg-[#625FD0]",
     iconColor: "text-white",
@@ -90,13 +90,10 @@ export default function SuperManagerCapabilities() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <h1 className="text-2xl md:text-3xl lg:text-5xl text-gray-900 mb-4">
-              SuperManagerAGI Capabilities
+              SuperManager AGI Strategy Capabilities
             </h1>
             <p className="text-gray-500 text-md md:text-base leading-relaxed">
-              SuperManagerAGI acts as an autonomous leadership layer
-              optimizing portfolios, allocating resources, aligning execution 
-              to strategy, an-d continuously improving operational performance 
-              across the enterprise.
+           SuperManager AGI acts as an autonomous intelligence layer continuously retrieving enterprise data, surfacing strategic signals, monitoring OKR alignment and generating executive intelligence  so leadership operates on live reality, not stale reports.
             </p>
           </div>
 

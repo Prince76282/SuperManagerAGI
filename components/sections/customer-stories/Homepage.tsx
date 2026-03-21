@@ -2,10 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Play } from "lucide-react";
 
-/* ================= TYPES ================= */
 
 type Story = {
   tag: string;
@@ -24,19 +21,19 @@ type Company = {
   width: number;
 };
 
-/* ================= DATA ================= */
+
 
 const STORIES: Story[] = [
   {
     tag: "Enterprise Transformation",
     title:
-      "Global FinTech Enterprise Deploys SuperManager AGI Across 42 Business Units",
+      "D2C Fashion Brand Deploys Vibe Working Platform Across Inventory, Logistics and Finance",
     description:
-      "SuperManager AGI replaced traditional coordination layers with autonomous intelligence streamlining executive decision cycles and eliminating operational bottlenecks at scale.",
+      "SuperManager AGI deployed specialist agents across operations, logistics and finance simultaneously. Inventory agents predict stock-outs 14 days in advance. Logistics agents manage NDR follow-ups daily. Finance agents reconcile settlements overnight. The founding team gets a live intelligence brief every morning without a single manual report.",
     impact: [
-      "↓ 38% Operational Delays",
-      "↑ 27% Cross-Team Alignment",
-      "3x Faster Executive Decisions",
+      "	Zero stock-outs in 3 consecutive collection launches",
+      " 18% reduction in reverse logistics cost from NDR automation",
+      "	Settlement reconciliation time reduced from 2 days to overnight",
     ],
     href: "/learnmore/",
     img: "/Image/Customer/FinTech.jpg",
@@ -44,15 +41,15 @@ const STORIES: Story[] = [
     accent: "#625FD0",
   },
   {
-    tag: "Autonomous Leadership",
+    tag: "Consulting Firm Intelligence",
     title:
-      "Fortune 500 Technology Company Replaces Engineering Management Layers",
+      " Management Consulting Firm Scales to 24 Active Client Engagements With Same Principal Headcount",
     description:
-      "By integrating SuperManager AGI into sprint orchestration and roadmap planning, the company optimized resource allocation, improved delivery velocity, and scaled engineering output without increasing headcount.",
+      " SuperManager AGI deployed engagement management agents that track deliverable status, generate client reports, monitor billable hours and surface at-risk engagements automatically. Principals now have live visibility across all 24 client engagements without any manual status gathering.",
     impact: [
-      "↑ 31% Engineering Velocity",
-      "↓ 22% Sprint Slippage",
-      "2x Faster Release Cycles",
+      "	70% reduction in internal coordination meetings",
+      "	24 engagements managed with the oversight previously requiring 6 team members",
+      "	Client satisfaction scores highest in firm history",
     ],
     href: "/learnmore/",
     img: "/Image/Customer/Technology.jpg",
@@ -60,15 +57,15 @@ const STORIES: Story[] = [
     accent: "#625FD0",
   },
   {
-    tag: "AI-Driven Performance",
+    tag: "Engineering Velocity",
     title:
-      "Enterprise SaaS Platform Achieves 2x Productivity with AGI-Orchestrated Teams",
+      "SaaS Product Company Increases Engineering Delivery Velocity by 31% in First Quarter",
     description:
-      "SuperManager AGI acted as an autonomous coordination layer, continuously analyzing dependencies, optimizing workload distribution, and driving performance accountability across departments.",
+      "SuperManager AGI deployed sprint intelligence, standup automation, blocker detection and release coordination agents. Engineering leaders gained 3 hours back per sprint planning cycle. Standups now generate automatically from Jira and GitHub activity. Release notes, stakeholder updates and risk reports all autonomous.",
     impact: [
-      "2x Productivity Increase",
-      "↓ 35% Decision Bottlenecks",
-      "↑ 40% Strategic Execution Speed",
+      "	31% increase in engineering delivery velocity in Q1",
+      "	Sprint planning prep time reduced from 3 hours to 20 minutes",
+      "	Zero manual standup coordination required",
     ],
     href: "/learnmore/",
     img: "/Image/Customer/Enterprise.webp",
@@ -105,12 +102,12 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
         <div className="space-y-6">
           <div
             className="text-xs font-semibold tracking-widest uppercase"
-            style={{ color: story.accent }}
+         
           >
             {story.tag}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-black leading-tight">
+          <h2 className="text-2xl sm:text-3xl  text-black leading-tight">
             {story.title}
           </h2>
 
@@ -131,24 +128,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
           </div>
         </div>
 
-        <Link
-          href={story.href}
-          className="mt-8 inline-flex items-center gap-3 group/btn w-fit"
-        >
-          <span
-            className="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 group-hover/btn:scale-110"
-            style={{
-              background: story.accent + "22",
-              color: story.accent,
-            }}
-          >
-            <Play size={14} fill="currentColor" />
-          </span>
-
-          <span className="text-sm font-semibold text-gray-700">
-            View Full Case Study
-          </span>
-        </Link>
+        
       </div>
 
       {/* IMAGE SIDE */}
@@ -174,7 +154,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
 function Marquee() {
   return (
     <div className="mx-auto max-w-[1100px] px-4 pt-20 text-center">
-      <h2 className="mb-8 text-xl sm:text-2xl lg:text-4xl text-black">
+      <h2 className="mb-8 text-xl sm:text-2xl lg:text-3xl text-black">
         Trusted by 100+ Leading Companies
       </h2>
 
@@ -187,7 +167,7 @@ function Marquee() {
                 alt={company.name}
                 width={company.width}
                 height={80}
-                className="h-[60px] sm:h-[80px] object-contain opacity-90"
+                className="h-[60px] sm:h-[80px] w-auto object-contain opacity-90"
               />
             </div>
           ))}
@@ -204,14 +184,12 @@ export default function CustomerStories() {
     <main className="min-h-screen bg-white">
       <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-14 max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl  tracking-tight">
             Customer <span className="text-[#625FD0]">Stories</span>
           </h1>
-
+  
           <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
-            SuperManager AGI replaces traditional management layers with
-            autonomous coordination intelligence driving faster decisions,
-            measurable productivity gains, and scalable enterprise execution.
+            SuperManager AGI delivers the Vibe Working Platform experience that transforms how organisations operate  giving every team an AI workforce that executes tasks autonomously, surfaces live intelligence and coordinates across every department.
           </p>
         </div>
 

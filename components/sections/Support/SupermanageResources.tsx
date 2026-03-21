@@ -2,40 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  BookOpen,
-  GraduationCap,
-  MessageSquare,
-  Layers,
-  PlayCircle,
-} from "lucide-react";
+import { GraduationCap, MessageSquare, Layers, PlayCircle } from "lucide-react";
 
 export default function SupermanageResources() {
   return (
-    <section className="bg-white text-black py-24">
+    <section className="bg-white text-black ">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
-
-        {/* ================= HERO BLOCK ================= */}
         <div className="grid lg:grid-cols-2 gap-16 items-center  justify-between mb-24">
-
-         
           <div>
-           
-            <h2 className="text-3xl md:text-4xl lg:text-5xl  leading-tight mb-6">
-              Everything you need to build and deploy autonomous AGI leadership
+            <h2 className="text-3xl md:text-3xl lg:text-5xl  leading-tight mb-6">
+              Everything You Need to Deploy and Scale the Vibe Working Platform
             </h2>
 
             <p className="text-black/70 text-lg mb-8 max-w-xl">
-              Explore the Supermanage AGI platform documentation ,architecture,
-              orchestration models, decision engines, autonomous workflows, and
-              enterprise deployment strategies.
+              Explore platform documentation, ADA integration guides, specialist agent configuration, deployment frameworks, Beehive orchestration architecture and enterprise governance resources.
             </p>
-
-            
           </div>
 
-          {/* Right Image */}
+     
           <div className="relative h-[420px] rounded-2xl overflow-hidden border-2 border-[#625FD0]">
             <Image
               src="/Image/support2.png"
@@ -46,58 +30,55 @@ export default function SupermanageResources() {
           </div>
         </div>
 
-        {/* ================= RESOURCE CARDS ================= */}
+        
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-
           {/* Academy */}
           <ResourceCard
             icon={<GraduationCap size={22} />}
-            title="AGI Leadership Academy"
-            description="Master autonomous coordination systems, agent orchestration, and AGI-driven executive decision frameworks."
+            title="Vibe Working Platform Academy"
+            description="Structured learning for founders, operators and implementation teams deploying SuperManager AGI. Covers ADA integration layer setup, specialist agent configuration by department, Beehive orchestration architecture, human-in-the-loop governance design and 90-day deployment framework. Certification available on completion."
             link="/academy"
           />
 
           {/* Community */}
           <ResourceCard
             icon={<MessageSquare size={22} />}
-            title="AGI Community Forum"
-            description="Collaborate with founders, engineers, and operators building the future of AI-led organizations."
+            title="Implementation Community"
+            description="Collaborate with founders, operators, engineers and implementation partners deploying the Vibe Working Platform across every industry. Share deployment configurations, agent calibration approaches, integration patterns and ROI data. Real practitioners sharing real production experience."
             link="/community"
           />
 
           {/* Training */}
           <ResourceCard
             icon={<Layers size={22} />}
-            title="Enterprise Training"
-            description="Hands-on labs, enterprise onboarding programs, and real-world AGI deployment simulations."
+            title="Enterprise Deployment Training"
+            description="Hands-on deployment training for enterprise implementation teams. Covers ADA connector configuration, specialist agent deployment by function, data sovereignty architecture, human oversight design and governance framework setup. Available as on-site, remote or self-paced formats."
             link="/training"
           />
         </div>
 
-        {/* ================= MARKETPLACE & VIDEOS ================= */}
+    
         <div className="grid lg:grid-cols-2 gap-8">
-
           <LargeCard
             icon={<Layers size={22} />}
-            title="AGI Marketplace"
-            description="Deploy pre-configured AGI leaders, autonomous workflow templates, and decision intelligence modules to accelerate time-to-value."
+            title="Agent Marketplace"
+            description="Deploy pre-configured specialist agent templates for every business function, industry and workflow. Operations AGI, Finance AGI, Logistics AGI, Marketing AGI, Customer Care AGI, Engineering AGI and more  each pre-calibrated for its domain and ready to connect to your systems via the ADA Integration Layer."
             link="/marketplace"
           />
 
           <LargeCard
             icon={<PlayCircle size={22} />}
-            title="Product & Architecture Videos"
-            description="Watch deep dives into AGI governance models, real-world deployment case studies, and product walkthroughs."
+            title="Architecture and Research Library"
+            description="Complete access to the ADA research paper, Beehive architecture documentation, MCP and CLI trilemma analysis, benchmark datasets and evaluation methodology. All configurations and hyperparameters published for full reproducibility. Intel i7, 16GB RAM, no GPU, no cloud API."
             link="/videos"
           />
         </div>
-
       </div>
     </section>
   );
 }
 
-/* ================= SMALL CARD ================= */
+
 
 function ResourceCard({
   icon,
@@ -120,18 +101,11 @@ function ResourceCard({
 
       <p className="text-black/70 mb-6">{description}</p>
 
-      <Link
-        href={link}
-        className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
-      >
-        Learn More
-      
-      </Link>
     </div>
   );
 }
 
-/* ================= LARGE CARD ================= */
+
 
 function LargeCard({
   icon,
@@ -154,13 +128,7 @@ function LargeCard({
 
       <p className="text-black/70 mb-8 max-w-lg">{description}</p>
 
-      <Link
-        href={link}
-        className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
-      >
-        Explore
-       
-      </Link>
+   
     </div>
   );
 }

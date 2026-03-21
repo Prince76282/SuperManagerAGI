@@ -16,67 +16,67 @@ import {
 const managers = [
   {
     id: "delivery",
-    label: "Delivery AGI",
+    label: "Operations AGI",
     icon: Truck,
-    title: "Autonomous delivery orchestration across teams",
-    desc: "Delivery AGI coordinates timelines, dependencies, execution velocity, and resource allocation automatically. It predicts delays, reassigns tasks, and ensures projects ship on time without manual intervention.",
+    title: "Autonomous Operations Management Across Every Channel",
+    desc: "Operations AGI manages inventory, procurement, vendor coordination, inward reconciliation and dispatch planning  all running autonomously from live data across connected systems.",
     stats: [
-      { value: "41%", label: "faster releases" },
-      { value: "96%", label: "deadline adherence" },
-      { value: "3.2x", label: "execution throughput" },
+      { value: "14days ", label: "advance stock-out prediction" },
+      { value: "80%", label: " reduction in manual operations overhead" },
+      { value: "3-2x", label: "faster procurement cycle" },
     ],
   },
   {
     id: "taskmaster",
-    label: "TaskMaster AGI",
+    label: "Finance AGI",
     icon: CheckSquare,
-    title: "AI task command center for entire organizations",
-    desc: "TaskMaster AGI assigns, prioritizes, escalates, and tracks tasks across departments. It ensures work always flows to the right person at the right time with zero manual coordination.",
+    title: "Autonomous Financial Reconciliation and Reporting",
+    desc: "Finance AGI reconciles platform settlements, matches payment gateway transactions, compiles GST workings, monitors vendor payables and generates monthly P and L by channel  all running overnight without manual intervention.",
     stats: [
-      { value: "92%", label: "tasks auto-assigned" },
-      { value: "68%", label: "less coordination" },
-      { value: "2.9x", label: "team output" },
+      { value: "100% ", label: "settlement reconciliation coverage" },
+      { value: "85%", label: "reduction in manual finance overhead" },
+      { value: "Zero", label: " settlement discrepancies undetected beyond 7 days" },
     ],
   },
   {
     id: "docs",
-    label: "Docs AGI",
+    label: "Logistics AGI",
     icon: FileText,
-    title: "Living documentation that updates itself",
-    desc: "Docs AGI automatically generates, maintains, and audits internal documentation, policies, reports, and knowledge bases so teams always work from accurate information.",
+    title: "Autonomous Delivery Operations and Intelligence",
+    desc: "Logistics AGI manages the full delivery lifecycle  NDR follow-ups, courier performance monitoring, return tracking, COD reconciliation and geo-targeting intelligence fed back to marketing agents.",
     stats: [
-      { value: "100%", label: "doc accuracy" },
-      { value: "85%", label: "less manual writing" },
-      { value: "Instant", label: "knowledge retrieval" },
+      { value: "Daily automated NDR ", label: "follow-up across 100% of stuck orders" },
+      { value: "18% ", label: "average reduction in reverse logistics cost" },
+      { value: "Real-time courier", label: " performance monitoring across all partners" },
     ],
   },
   {
     id: "risk",
-    label: "Risk AGI",
+    label: "Marketing AGI",
     icon: ShieldAlert,
-    title: "Predictive intelligence that prevents failures",
-    desc: "Risk AGI continuously monitors signals across systems, performance, timelines, and behavior patterns to predict issues before they occur and trigger mitigation workflows automatically.",
+    title: "Autonomous Campaign Intelligence and Revenue Attribution",
+    desc: "Marketing AGI monitors campaign performance across Meta, Google, Amazon and Flipkart Ads, attributes revenue to every creative and channel, detects fatigue and flags budget pacing issues before spend is wasted.",
     stats: [
-      { value: "94%", label: "risk prediction accuracy" },
-      { value: "63%", label: "incident reduction" },
-      { value: "5x", label: "faster mitigation" },
+      { value: "Revenue attribution ", label: "within 24 hours of every influencer post" },
+      { value: "Campaign ROAS ", label: "alerts before weekly budget is consumed" },
+      { value: "Creative fatigue ", label: "detected before CTR drops compound" },
     ],
   },
   {
     id: "release",
-    label: "Release AGI",
+    label: "Customer Care AGI",
     icon: Rocket,
-    title: "Autonomous release and deployment manager",
-    desc: "Release AGI coordinates testing, validation, deployment, rollback logic, and monitoring. It ensures safe, fast, and reliable releases without human bottlenecks.",
+    title: "Autonomous Customer Query and Return Resolution",
+    desc: "Customer Care AGI manages all queries across Shopify, WhatsApp, email and marketplace channels, tracks return journeys from initiation to resolution and detects negative reviews within hours of posting.",
     stats: [
-      { value: "52%", label: "faster deployments" },
-      { value: "0", label: "manual approvals" },
-      { value: "99.99%", label: "release reliability" },
+      { value: "Unified query", label: " visibility across all channels in real time" },
+      { value: "60%", label: "reduction in customer care coordination overhead" },
+      { value: "Return journey ", label: "tracking from initiation to warehouse receipt" },
     ],
   },
 ];
 
-/* ================= DASHBOARD CARD ================= */
+
 
 interface DashboardPreviewProps {
   icon: React.ComponentType<{ className: string }>;
@@ -87,8 +87,6 @@ function DashboardPreview({ icon: Icon, title }: DashboardPreviewProps) {
   return (
     <div className="rounded-2xl border border-black/10 bg-gray-50 p-6 sm:p-8 min-h-[300px] flex flex-col justify-between transition-all duration-500">
       <div>
-        
-
         <div className="rounded-xl border border-black/10 bg-white p-5">
           <div className="flex items-center gap-3 mb-4">
             <Icon className="w-5 h-5 text-[#625FD0]" />
@@ -114,9 +112,7 @@ function DashboardPreview({ icon: Icon, title }: DashboardPreviewProps) {
       </div>
 
       <div className="mt-6 pt-4 border-t border-black/10 flex items-center justify-between">
-        <span className="text-black/30 text-xs font-mono">
-          Synced live
-        </span>
+        <span className="text-black/30 text-xs font-mono">Synced live</span>
 
         <div className="flex gap-1">
           {[0, 1, 2].map((i) => (
@@ -142,17 +138,15 @@ export default function PrebuiltManagersSection() {
   return (
     <section className="relative bg-white py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-
         {/* HEADER */}
         <div className="mb-12 max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight mb-4">
-            Pre-Built Managers powered by
-            <br />
-            <span className="text-[#625FD0]">SuperManagerAGI</span>
+          <h1 className="text-3xl sm:text-3xl md:text-5xl font-semibold leading-tight mb-4">
+            Pre-Built Specialist AGI Agents
+          
           </h1>
 
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            Deploy specialized AI managers that autonomously run operations, execution, documentation, and risk intelligence across your organization.
+          Deploy purpose-built AI agents that autonomously run every operational function across your organisation. Each agent is trained for its domain, connected to the right data sources via ADA and coordinated by the Beehive architecture.
           </p>
         </div>
 
@@ -176,7 +170,6 @@ export default function PrebuiltManagersSection() {
 
         {/* CONTENT */}
         <div className="grid lg:grid-cols-2 gap-8 border border-black/10 rounded-2xl bg-white p-6 sm:p-8 shadow-sm">
-
           {/* LEFT */}
           <div className="flex flex-col justify-between">
             <div>
@@ -189,23 +182,17 @@ export default function PrebuiltManagersSection() {
                 </span>
               </div>
 
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-3xl font-semibold mb-6">
                 {tab.title}
               </h2>
 
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                {tab.desc}
-              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">{tab.desc}</p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
                 {tab.stats.map((stat, i) => (
                   <div key={i} className="border-l-2 border-[#625FD0] pl-3">
-                    <div className="text-2xl font-bold">
-                      {stat.value}
-                    </div>
-                    <p className="text-sm text-gray-500">
-                      {stat.label}
-                    </p>
+                    <div className="text-2xl ">{stat.value}</div>
+                    <p className="text-sm text-gray-500">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -218,7 +205,6 @@ export default function PrebuiltManagersSection() {
                 className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
               >
                 Explore Platform
-                
               </Link>
 
               <Link

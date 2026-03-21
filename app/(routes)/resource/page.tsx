@@ -3,7 +3,7 @@ import CustomerStoriesSlider from '@/components/sections/Resource/Customerstorie
 import InsightsSlider from '@/components/sections/Resource/Insightsslider'
 import ResourcesHub from '@/components/sections/Resource/Resourceshub'
 import WhitepapersSlider from '@/components/sections/Resource/Whitepapersslider'
-import React from 'react'
+
 
 const page = () => {
   return (

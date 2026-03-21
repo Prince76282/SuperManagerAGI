@@ -26,19 +26,19 @@ export default function PricingPage() {
       ? "$183 /yr"
       : "$19 /mo"
     : yearly
-    ? "$183 /yr"
-    : "$5 first month";
+      ? "$48 /yr"
+      : "$5 first month";
 
   const renewalText = bought
     ? ""
     : yearly
-    ? "Yearly discount applied"
-    : "Then $19/month";
+      ? "Yearly discount applied"
+      : "Then $19/month";
 
   const premiumPrice = yearly ? "$768 /yr" : "$80 /mo";
 
   return (
-    <div className="min-h-screen bg-[#F0F6F9] py-20 px-5 ">
+    <div className="min-h-screen bg-[#F0F6F9] py-24 px-5 ">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-5xl ">Pricing</h1>
         <p className="text-gray-500 mt-2">Choose the plan that works for you</p>
@@ -48,7 +48,9 @@ export default function PricingPage() {
           <button
             onClick={() => setYearly(false)}
             className={`px-5 py-2 rounded-md text-sm font-medium transition ${
-              !yearly ? " bg-[#625FD0] text-white shadow" : "text-gray-500 hover:text-black"
+              !yearly
+                ? " bg-[#625FD0] text-white shadow"
+                : "text-gray-500 hover:text-black"
             }`}
           >
             MONTHLY
@@ -56,7 +58,9 @@ export default function PricingPage() {
           <button
             onClick={() => setYearly(true)}
             className={`px-5 py-2 rounded-md text-sm font-medium transition ${
-              yearly ? "bg-[#625FD0] text-white shadow" : "text-gray-500 hover:text-black"
+              yearly
+                ? "bg-[#625FD0] text-white shadow"
+                : "text-gray-500 hover:text-black"
             }`}
           >
             YEARLY (SAVE 20%)
@@ -66,13 +70,12 @@ export default function PricingPage() {
 
       {/* CARDS */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
-        
         {/* FREE */}
         <div className="bg-white rounded-2xl border p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition">
           <span className="bg-gray-100 px-2 font-medium py-1 rounded text-lg mb-4 w-fit">
             Free
           </span>
-          <h1 className="text-4xl  ">Free</h1>
+          <h1 className="text-3xl  ">Free</h1>
 
           <p className="text-gray-500 mt-3 mb-5 text-sm">Includes</p>
 
@@ -102,7 +105,7 @@ export default function PricingPage() {
             Pro
           </span>
 
-          <div className="text-4xl ">{proPrice}</div>
+          <div className="text-3xl ">{proPrice}</div>
 
           {renewalText && (
             <p className="text-sm text-gray-500 mt-2">{renewalText}</p>
@@ -132,7 +135,7 @@ export default function PricingPage() {
             Premium
           </span>
 
-          <div className="text-4xl ">{premiumPrice}</div>
+          <div className="text-3xl ">{premiumPrice}</div>
 
           <p className="text-gray-500 mt-3 mb-5 text-sm">
             Everything in Pro, plus
@@ -158,7 +161,7 @@ export default function PricingPage() {
             Enterprise
           </span>
 
-          <div className="text-4xl ">Custom</div>
+          <div className="text-3xl ">Custom</div>
 
           <p className="text-gray-500 mt-3 mb-5 text-sm">
             Everything in Premium

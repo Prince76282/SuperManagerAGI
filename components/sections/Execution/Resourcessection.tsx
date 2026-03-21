@@ -11,64 +11,63 @@ const resources = [
     id: 1,
     type: "Executive Brief",
     title:
-      "The Rise of Autonomous Leadership: Why SuperManagerAGI is replacing traditional management layers",
+      "The AI Vibe Working Platform: Why Autonomous Agent Workforces Are Replacing Manual Operational Layers",
     href: "/resources/autonomous-leadership-supermanageragi",
     gradient: "bg-[#625FD0]",
     icon: "🧠",
-    tag: "Leadership Intelligence",
+    tag: "Vibe Working Platform",
   },
   {
     id: 2,
     type: "Case Study",
     title:
-      "How a global enterprise reduced decision latency by 38% using SuperManagerAGI orchestration",
+      "How a D2C Fashion Brand Eliminated Stock-Outs and Reduced Logistics Cost by 18% Using SuperManager AGI",
     href: "/resources/decision-latency-case-study",
     gradient: "bg-[#625FD0]",
     icon: "📊",
-    tag: "Enterprise Ops",
+    tag: "D2C Operations",
   },
   {
     id: 3,
-    type: "Deployment Guide",
+    type: "Technical Brief",
     title:
-      "Inside the SuperManagerAGI architecture: deployment models, integrations, and scaling strategy",
+      "Inside the Agentic Data Architecture: How SuperManager AGI Achieves 65ms Latency and 4.2% Hallucination Rate",
     href: "/resources/supermanageragi-architecture-guide",
     gradient: "bg-[#625FD0]",
     icon: "📋",
-    tag: "Platform Engineering",
+    tag: "ADA Architecture",
   },
   {
     id: 4,
-    type: "Insights",
+    type: "Competitive Analysis",
     title:
-      "Autonomous organizations explained: the operating model powered by AI managers",
+      "Why Claude MCP, Manus and Microsoft Copilot Cannot Match the Vibe Working Platform Architecture",
     href: "/resources/autonomous-organization-model",
     gradient: "bg-[#625FD0]",
     icon: "⚡",
-    tag: "Operations Strategy",
+    tag: "Platform Differentiation",
   },
   {
     id: 5,
-    type: "Research",
+    type: "Research Paper",
     title:
-      "Scaling workforce intelligence: how SuperManagerAGI transforms people operations",
+      "Agentic Data Architecture (ADA): Eliminating the API Layer for Hallucination-Free, Sub-100ms Enterprise AI Agents , Nirmal Nambiar, March 2026",
     href: "/resources/workforce-intelligence-research",
     gradient: "bg-[#625FD0]",
     icon: "👥",
-    tag: "People Analytics",
+    tag: "Peer-Reviewed Research",
   },
   {
     id: 6,
-    type: "Whitepaper",
+    type: "Deployment Guide",
     title:
-      "Trustworthy AGI management systems: governance, auditability, and enterprise safeguards",
+      "From First Agent to Full Org Deployment: The 90-Day SuperManager AGI Implementation Playbook",
     href: "/resources/trustworthy-agi-governance",
     gradient: "bg-[#625FD0]",
     icon: "🔐",
-    tag: "AI Governance",
+    tag: "Enterprise Deployment",
   },
 ];
-
 
 export default function ResourcesSection() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -92,10 +91,8 @@ export default function ResourcesSection() {
     setIndex(i);
   };
 
-  const next = () =>
-    scrollToIndex(Math.min(index + 1, resources.length - 1));
-  const prev = () =>
-    scrollToIndex(Math.max(index - 1, 0));
+  const next = () => scrollToIndex(Math.min(index + 1, resources.length - 1));
+  const prev = () => scrollToIndex(Math.max(index - 1, 0));
 
   useEffect(() => {
     const el = sliderRef.current;
@@ -117,18 +114,13 @@ export default function ResourcesSection() {
   return (
     <section className="bg-white text-black py-16 sm:py-20 px-4 sm:px-6 md:px-8 overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
-
         {/* HEADER */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
-
           <div className="max-w-2xl">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  leading-tight">
-              Learn how{" "}
-              <span className="text-[#625FD0]">
-                SuperManagerAGI
-              </span>
+            <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl  leading-tight">
+              Learn How <span className="text-[#625FD0]">SuperManager AGI </span>
               <br className="hidden md:block" />
-              powers autonomous organizations
+              Powers the Vibe Working Platform
             </h1>
           </div>
 
@@ -200,8 +192,6 @@ export default function ResourcesSection() {
                 <span className="text-md sm:text-base text-gray-700  flex-1">
                   {card.title}
                 </span>
-
-                
               </div>
             </div>
           ))}
@@ -214,16 +204,11 @@ export default function ResourcesSection() {
               key={i}
               onClick={() => scrollToIndex(i)}
               className={`transition-all rounded-full ${
-                i === index
-                  ? "w-6 h-2 bg-[#625FD0]"
-                  : "w-2 h-2 bg-black/20"
+                i === index ? "w-6 h-2 bg-[#625FD0]" : "w-2 h-2 bg-black/20"
               }`}
             />
           ))}
         </div>
-
-     
-        
       </div>
     </section>
   );

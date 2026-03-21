@@ -5,13 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 const tabs = [
-  { id: "engineering", label: "Engineering" },
-  { id: "product", label: "Product" },
-  { id: "operations", label: "Operations" },
-  { id: "consulting", label: "Consulting" },
-  { id: "it", label: "IT" },
-  { id: "finance", label: "Finance" },
-  { id: "marketing", label: "Marketing" },
+  { id: "Founder and Leadership AI", label: "Founder and Leadership AI" },
+  { id: "Sales and Revenue AI", label: "Sales and Revenue AI" },
+  { id: "Operations and Supply Chain AI", label: "Operations and Supply Chain AI" },
+  { id: "Finance and Accounts AI", label: "Finance and Accounts AI" },
+  { id: "Logistics and Delivery AI", label: "Logistics and Delivery AI" },
+  { id: "Marketing and Growth AI", label: "Marketing and Growth AI" },
+  { id: "Customer Care AI", label: "Customer Care AI" },
+  { id: "Engineering and Product AI", label: "Engineering and Product AI" },
+  { id: "Clerical and Administrative AI", label: "Clerical and Administrative AI" },
 ] as const;
 
 type TabId = (typeof tabs)[number]["id"];
@@ -25,70 +27,90 @@ const contentData: Record<
     img: string;
   }
 > = {
-  engineering: {
-    badge: "Engineering AI",
-    title: "Accelerate development with autonomous engineering agents",
-    desc: "SuperManager AGI assists engineering teams by reviewing code, tracking sprint progress, assigning tasks, and identifying blockers before they delay releases.",
+  "Founder and Leadership AI": {
+    badge: "Founder and Leadership AI",
+    title: "Real-Time Org Intelligence Without a Single Manual Report",
+    desc: "Live org dashboard, morning intelligence brief, anomaly alerts, board report generation, OKR tracking and competitive intelligence. All running autonomously from connected systems.",
     img: "/Image/image1.4.jpg",
   },
-  product: {
-    badge: "Product Intelligence",
-    title: "Build better products with AI-driven insights",
-    desc: "Analyze user feedback, prioritize features, generate specs, and align roadmaps automatically using real-time product intelligence.",
+
+  "Sales and Revenue AI": {
+    badge: "Sales and Revenue AI",
+    title: "Agents That Monitor and Drive Revenue Across Every Channel",
+    desc: "Unified revenue dashboard across D2C, marketplace, wholesale and retail. Pipeline intelligence, marketplace listing health monitoring, daily sales MIS distribution, return rate tracking by SKU and channel.",
     img: "/Image/image1.4.jpg",
   },
-  operations: {
-    badge: "Operations Automation",
-    title: "Optimize operations with intelligent execution",
-    desc: "Streamline workflows, manage resources, and monitor KPIs continuously while AI agents coordinate processes across departments.",
+
+  "Operations and Supply Chain AI": {
+    badge: "Operations and Supply Chain AI",
+    title: "Agents That Run Inventory, Procurement and Operations",
+    desc: "Real-time unified inventory across all locations, stock-out prediction 10 to 14 days ahead, overstock detection, PO drafting on reorder trigger, inward reconciliation and vendor delivery tracking.",
     img: "/Image/image1.4.jpg",
   },
-  consulting: {
-    badge: "Consulting Intelligence",
-    title: "Deliver client outcomes faster",
-    desc: "Automate research, generate reports, track deliverables, and manage engagements while ensuring accuracy and strategic alignment.",
+
+  "Finance and Accounts AI": {
+    badge: "Finance and Accounts AI",
+    title: "Agents That Automate Every Financial Workflow",
+    desc: "Platform settlement reconciliation across Amazon, Flipkart and Shopify, payment gateway matching, COD remittance tracking, GST workings compilation, vendor payables monitoring and monthly P and L by channel.",
     img: "/Image/image1.4.jpg",
   },
-  it: {
-    badge: "IT Automation",
-    title: "Run IT infrastructure autonomously",
-    desc: "Monitor systems, resolve incidents, enforce security policies, and maintain uptime with AI agents that act before issues escalate.",
+
+  "Logistics and Delivery AI": {
+    badge: "Logistics and Delivery AI",
+    title: "Agents That Make Logistics Data Drive Smarter Operations",
+    desc: "NDR dashboard and follow-up automation, courier performance monitoring, return tracking, COD reconciliation, geo-targeting intelligence and effective ROAS calculation accounting for returns and logistics cost.",
     img: "/Image/image1.4.jpg",
   },
-  finance: {
-    badge: "Finance Intelligence",
-    title: "Drive financial precision with AI",
-    desc: "Automate reporting, detect anomalies, forecast trends, and ensure compliance using intelligent financial monitoring systems.",
+
+  "Marketing and Growth AI": {
+    badge: "Marketing and Growth AI",
+    title: "Agents That Attribute Revenue to Every Marketing Action",
+    desc: "Cross-channel campaign performance across Meta, Google, Amazon and Flipkart Ads, revenue attribution per creative and channel, influencer post-to-purchase tracking within 24 hours, budget pacing alerts and creative fatigue detection.",
     img: "/Image/image1.4.jpg",
   },
-  marketing: {
-    badge: "Marketing AI",
-    title: "Scale campaigns with autonomous growth agents",
-    desc: "Plan campaigns, analyze performance, generate content, and optimize targeting in real time to maximize ROI.",
+
+  "Customer Care AI": {
+    badge: "Customer Care AI",
+    title: "Agents That Resolve Issues Before They Escalate",
+    desc: "Unified query dashboard across Shopify, WhatsApp, email and marketplace channels, return and exchange full-journey tracking, proactive delivery delay communication, negative review detection and weekly customer care MIS.",
+    img: "/Image/image1.4.jpg",
+  },
+
+  "Engineering and Product AI": {
+    badge: "Engineering and Product AI",
+    title: "Agents That Accelerate Delivery",
+    desc: "Sprint planning intelligence before every planning meeting, autonomous standup generation from Jira and GitHub activity, blocker detection, release coordination, risk prediction 2 to 3 weeks in advance and product feedback loop aggregation.",
+    img: "/Image/image1.4.jpg",
+  },
+
+  "Clerical and Administrative AI": {
+    badge: "Clerical and Administrative AI",
+    title: "Agents That Eliminate Every Repetitive Manual Task",
+    desc: "All recurring MIS reports in Excel generated and distributed automatically. Data entry eliminated. Vendor follow-up communication drafted and sent. Document management, meeting action tracking and compliance due date monitoring running autonomously.",
     img: "/Image/image1.4.jpg",
   },
 };
 
 const features = [
   {
-    title: "Department-Specific Intelligence",
+    title: "Domain-Specific Intelligence",
     description:
-      "Each AI agent understands domain workflows, terminology, and KPIs unique to every department.",
+      "Each AI agent understands the workflows, terminology, data patterns and KPIs unique to its department and industry. Specialist agents per function, not one generic model for everything.",
   },
   {
-    title: "Cross-Functional Coordination",
+    title: "Cross-Department Coordination",
     description:
-      "Align teams automatically by syncing data, priorities, and execution across departments.",
+      "Agents coordinate automatically across departments. Logistics intelligence feeds marketing targeting. Inventory signals trigger procurement workflows. Finance alerts surface on the founder dashboard. All autonomous.",
   },
   {
     title: "Real-Time Execution Visibility",
     description:
-      "Track progress, detect delays, and receive insights instantly across the entire organization.",
+      "Live dashboards for every role from analyst to founder. Every connected system. Every active workflow. Updated continuously from actual live data via the ADA layer.",
   },
 ];
 
 export default function EnterpriseFeatures() {
-  const [active, setActive] = useState<TabId>("engineering");
+  const [active, setActive] = useState<TabId>("Founder and Leadership AI");
 
   const data = contentData[active];
 
@@ -96,25 +118,22 @@ export default function EnterpriseFeatures() {
     <section className="w-full bg-[#F0F6F9] py-14 md:py-20">
       <div className="max-w-[1230px] mx-auto px-4 sm:px-6">
         {/* HERO */}
-        <div className="grid lg:grid-cols-2 gap-10 items-start mb-14">
+        <div className="grid lg:grid-cols-2 gap-10 items-start mb-16">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight">
+            <h2 className="text-3xl md:text-3xl lg:text-5xl leading-tight font-semibold">
               AI Agents for Every Department
             </h2>
 
             <Link
               href="/get-in-touch"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-5 py-2.5 text-white font-semibold shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
             >
               Get in touch
             </Link>
           </div>
 
-          <p className="text-lg text-gray-600 leading-relaxed">
-            SuperManager AGI transforms how organizations operate by deploying
-            intelligent agents across departments. From engineering to finance,
-            each team gains autonomous execution, real-time insights, and
-            seamless coordination.
+          <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+            SuperManager AGI deploys autonomous specialist agents across every function inside any organisation. From founders and the C-suite to operations, finance, logistics, marketing, customer care and engineering every role gains an AI workforce that fetches data, executes tasks, generates reports and coordinates across departments 24x7.
           </p>
         </div>
 
@@ -126,11 +145,11 @@ export default function EnterpriseFeatures() {
               <button
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
-                className={`px-4 py-2 text-sm font-medium rounded-lg uppercase transition whitespace-nowrap
+                className={`px-4 py-2 text-sm font-medium rounded-lg uppercase transition-all duration-300 whitespace-nowrap
                 ${
                   active === tab.id
-                    ? "bg-[#625FD0] text-white"
-                    : "bg-white border hover:bg-[#625FD0] hover:text-white"
+                    ? "bg-[#625FD0] text-white shadow-md"
+                    : "bg-white border border-gray-200 hover:bg-[#625FD0] hover:text-white hover:shadow-sm"
                 }`}
               >
                 {tab.label}
@@ -139,8 +158,11 @@ export default function EnterpriseFeatures() {
           </div>
 
           {/* CONTENT */}
-          <div className="flex-1 bg-white rounded-2xl p-6 md:p-10">
-            <div className="flex flex-col lg:flex-row gap-10 items-center mb-12">
+          <div className="flex-1 bg-white rounded-2xl p-6 md:p-10 shadow-sm transition-all duration-300">
+            <div
+              key={active}
+              className="flex flex-col lg:flex-row gap-10 items-center mb-12 animate-fade"
+            >
               {/* TEXT */}
               <div className="flex-1">
                 <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-slate-500 bg-slate-100 rounded-full uppercase mb-5">
@@ -151,9 +173,7 @@ export default function EnterpriseFeatures() {
                   {data.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed">
-                  {data.desc}
-                </p>
+                <p className="text-gray-600 leading-relaxed">{data.desc}</p>
               </div>
 
               {/* IMAGE */}
@@ -163,7 +183,7 @@ export default function EnterpriseFeatures() {
                   alt={data.title}
                   width={420}
                   height={420}
-                  className="object-contain max-w-[320px] w-full"
+                  className="object-contain max-w-[340px] w-full transition-transform duration-500 hover:scale-105"
                   priority
                 />
               </div>
@@ -174,7 +194,7 @@ export default function EnterpriseFeatures() {
               {features.map((item, i) => (
                 <div
                   key={i}
-                  className="bg-slate-50 rounded-xl p-6 hover:shadow-md transition"
+                  className="bg-slate-50 rounded-xl p-6 border border-transparent hover:border-slate-200 hover:shadow-md transition-all duration-300"
                 >
                   <div className="border-l-2 border-dotted border-slate-400 pl-4">
                     <h4 className="text-lg font-semibold mb-2">
@@ -190,17 +210,6 @@ export default function EnterpriseFeatures() {
           </div>
         </div>
       </div>
-
-      {/* Hide scrollbar utility */}
-      <style jsx>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   );
 }

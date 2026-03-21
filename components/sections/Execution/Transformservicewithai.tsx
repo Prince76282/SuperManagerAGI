@@ -9,15 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-
-
-const IconBox = ({
-  icon,
-  bg,
-}: {
-  icon: React.ReactNode;
-  bg: string;
-}) => (
+const IconBox = ({ icon, bg }: { icon: React.ReactNode; bg: string }) => (
   <div
     className={`w-14 h-14 rounded-xl ${bg} flex items-center justify-center`}
   >
@@ -25,30 +17,28 @@ const IconBox = ({
   </div>
 );
 
-
-
 const useCases = [
   {
-    title: "Eliminate Status Meetings",
-    desc: "SuperManagerAGI continuously tracks execution, updates progress automatically, and delivers real-time summaries so teams never need manual sync calls.",
+    title: "Eliminate Manual MIS and Reporting",
+    desc: "Every recurring report across every department  sales MIS, logistics summary, finance reconciliation, customer care metrics, marketing attribution  generated automatically in the right Excel format and distributed to the right stakeholders. Work that previously took 2 to 3 hours runs in 30 seconds.",
     icon: <CalendarCheck size={26} className="text-white" />,
     bg: "bg-[#625FD0]",
   },
   {
-    title: "Automate Ticket Management",
-    desc: "From creation to resolution, SuperManagerAGI triages, assigns, prioritizes, and closes tickets intelligently using historical learning.",
+    title: "Automate Every Follow-Up Workflow",
+    desc: "From NDR follow-ups to vendor payment reminders to customer return updates to overdue task escalations  agents execute every follow-up workflow automatically based on configured conditions. No manual chasing. No missed follow-ups. No dropped threads.",
     icon: <Ticket size={26} className="text-white" />,
     bg: "bg-[#625FD0]",
   },
   {
-    title: "Real-time Progress Tracking",
-    desc: "Live dashboards, predictive timelines, and performance signals provide instant visibility across teams, tasks, and milestones.",
+    title: "Real-Time Execution Intelligence",
+    desc: "Live dashboards for every role from analyst to founder. Every connected system. Every active workflow. Every KPI that matters. Updated continuously from actual live data via the ADA layer at 65ms average latency.",
     icon: <Activity size={26} className="text-white" />,
     bg: "bg-[#625FD0]",
   },
   {
     title: "Predictive Risk Alerts",
-    desc: "AI models detect blockers, delays, and delivery risks before they occur automatically recommending corrective actions.",
+    desc: "Agents detect emerging risks 10 to 14 days before they materialise  stock-out risk based on velocity, campaign degradation based on frequency trends, settlement delays based on gateway patterns, engineering delivery risk based on velocity drops. You fix problems before they explode, not after.",
     icon: <AlertTriangle size={26} className="text-white" />,
     bg: "bg-[#625FD0]",
   },
@@ -64,26 +54,20 @@ export default function SuperManagerUseCases() {
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="max-w-2xl">
-        
-            <h2 className="mt-5 text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Where SuperManagerAGI Delivers Instant Impact
+            <h2 className="mt-5 text-3xl md:text-3xl  text-gray-900 leading-tight">
+              Where SuperManager AGI Delivers Instant Impact
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
-              SuperManagerAGI replaces manual coordination, reporting, and
-              tracking with autonomous execution intelligence allowing teams to
-              focus on strategy, innovation, and delivery instead of
-              administrative work.
+            SuperManager AGI replaces manual coordination, reporting and tracking with autonomous execution intelligence  allowing every team to focus on strategy, growth and delivery instead of administrative overhead.
             </p>
           </div>
-
 
           <Link
             href="/learnmore"
             className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
           >
             Explore Platform
-    
           </Link>
         </div>
 

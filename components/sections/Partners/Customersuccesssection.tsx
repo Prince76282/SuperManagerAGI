@@ -1,15 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { MdSearch, MdLogin, MdPlayCircle, MdArrowForward } from "react-icons/md";
+import {
+  MdSearch,
+  MdLogin,
+  MdPlayCircle,
+  MdArrowForward,
+} from "react-icons/md";
 
 const cards = [
   {
     tag: "Find a Partner",
     icon: MdSearch,
-    title: "Explore the partner directory",
+    title: "D2C and E-commerce Specialists",
     description:
-      "Use our partner directory to find a certified SuperManagerAGI channel partner, technology partner, or independent software vendor (ISV).",
+      "Implementation partners specialising in D2C brand operations deploy Operations AGI, Finance AGI, Logistics AGI and Marketing AGI across Shopify, Amazon, Flipkart, Shiprocket and payment gateway stacks. Brands are live with inventory intelligence, NDR automation and settlement reconciliation within 14 days.",
+    linkLabel: "Find a partner",
+    href: "#",
+    external: false,
+  },
+   {
+    tag: "Partner Type",
+    icon: MdSearch,
+    title: "Consulting Firm Specialists",
+    description:
+      "Implementation partners specialising in professional services firms deploy engagement management agents, client reporting automation and resource utilisation intelligence. Consulting principals are operating with live visibility across 20+ client engagements within 30 days of deployment.",
+    linkLabel: "Find a partner",
+    href: "#",
+    external: false,
+  },
+   {
+    tag: "Find a Partner",
+    icon: MdSearch,
+    title: "Explore the Partner Directory",
+    description:
+      "Use our partner directory to find a certified SuperManager AGI implementation partner, technology integration specialist or independent software vendor with your industry and stack.",
     linkLabel: "Find a partner",
     href: "#",
     external: false,
@@ -17,9 +42,9 @@ const cards = [
   {
     tag: "The Partner Portal",
     icon: MdLogin,
-    title: "Access partner ecosystem",
+    title: "Enterprise Technology Integrators",
     description:
-      "Are you an existing partner? Access SuperManagerAGI resources and support through our dedicated partner portal.",
+      "Large system integrators connecting SuperManager AGI to SAP, Oracle, Workday and Salesforce stacks across enterprise organisations. ADA Integration Layer configured for direct database connectivity inside enterprise VPC environments. Full data sovereignty. Zero external API dependency during agent reasoning.",
     linkLabel: "Login to Portal",
     href: "https://app.supermanager.co/login",
     external: true,
@@ -36,18 +61,14 @@ export default function CustomerSuccessSection() {
             <span className="inline-flex items-center w-fit gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#625FD0] border border-indigo-200 bg-indigo-50 px-3 py-1.5 rounded-full">
               Customer Success
             </span>
-            <h2 className="text-3xl md:text-4xl  text-black leading-tight tracking-tight">
-              Accelerate growth with{" "}
-              <span className="text-[#625FD0]">SuperManagerAGI</span> partners
+            <h2 className="text-3xl md:text-3xl  text-black leading-tight tracking-tight">
+              Partners Are Delivering {" "}
+              <span className="text-[#625FD0]">Real Vibe Working </span> Platform Results
             </h2>
           </div>
 
           <p className="text-base text-gray-600 leading-relaxed max-w-lg md:pt-10">
-            Our partners are at the forefront of Enterprise AI transformation,
-            and their success stories speak volumes. By partnering with
-            SuperManagerAGI, they have helped businesses reimagine how work gets
-            done, service is delivered, and processes are automated , delivering
-            real business value with AI.
+            Our implementation partners are at the forefront of the AI Vibe Working Platform transformation  helping organisations across every industry deploy autonomous agent workforces that execute operational tasks, surface live enterprise intelligence and coordinate across departments without manual overhead.
           </p>
         </div>
 
@@ -97,18 +118,14 @@ export default function CustomerSuccessSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
                   >
-                    
                     {card.linkLabel}
-                  
                   </Link>
                 ) : (
                   <Link
                     href={card.href}
                     className="inline-flex items-center rounded-lg justify-center bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
                   >
-                   
                     {card.linkLabel}
-               
                   </Link>
                 )}
               </div>

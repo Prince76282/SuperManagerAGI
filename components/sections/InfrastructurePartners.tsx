@@ -9,10 +9,10 @@ export default function InfrastructurePartners() {
           {/* Header */}
           <div className="mb-12 flex max-w-3xl flex-col space-y-4">
             <h3 className="text-4xl md:text-5xl  text-gray-900 leading-tight" >
-              Infrastructure & Security Built for Enterprise Grade Autonomous Execution
+             Infrastructure and Security Built for Enterprise-Grade Autonomous AI Execution
             </h3>
-            <p className="text-base font-[var(--font-grotesk)] text-gray-700 md:text-lg">
-             SuperManager AGI Operates Within Secure, Enterprise Grade Environments with Flexible Deployment Options. Whether You Require Full Infrastructure Control or a Secure Managed Cloud, We Ensure Data Protection, Compliance Alignment, and Reliable AI Execution for Mission Critical Project Operations.
+            <p className="text-base text-gray-700 md:text-lg">
+             SuperManager AGI operates within secure, enterprise-grade environments with flexible deployment options. The ADA Integration Layer ensures enterprise data never crosses your organisational boundary during agent reasoning  data sovereignty is not a feature, it is the default architecture. Whether you require full infrastructure control or a secure managed cloud, we ensure data protection, compliance alignment and reliable AI execution.
             </p>
           </div>
 
@@ -31,43 +31,41 @@ export default function InfrastructurePartners() {
               </div>
 
               <div className="flex flex-col space-y-6 p-6">
-                <div className="space-y-3 text-black font-[var(--font-grotesk)] text-sm md:text-base leading-relaxed">
+                <div className="space-y-3 text-black text-sm md:text-base leading-relaxed">
                   <p className="font-semibold text-base md:text-lg">
-                    Private Deployment Within Your Infrastructure
+                   Private Deployment Within Your Infrastructure
                   </p>
 
                   <p>
-                    Deploy SuperManager AGI directly inside your AWS, Azure, GCP, or
-                    on-prem environment with full data sovereignty and governance control.
+                    Deploy SuperManager AGI directly inside your AWS, Azure, GCP or on-premises environment. ADA connects agents natively to your internal databases  no external API calls, no data crossing your perimeter, full data sovereignty and governance control.
                   </p>
 
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>VPC , Private Network Deployment</li>
-                    <li>Complete Data Residency & Ownership</li>
-                    <li>SSO, RBAC & Enterprise Identity Integration</li>
-                    <li>End-to-End Encryption (In Transit & At Rest)</li>
-                    <li>Full Audit Logs & Decision Traceability</li>
-                    <li>Human-in-the-Loop Controls for Critical Actions</li>
-                    <li>No External Data Exposure</li>
+                    <li>	VPC and Private Network Deployment</li>
+                    <li>	Complete Data Residency and Ownership  ADA keeps all data inside your perimeter</li>
+                    <li>	SSO, RBAC and Enterprise Identity Integration</li>
+                    <li>	End-to-End Encryption In Transit and At Rest</li>
+                    <li>	Full Audit Logs and Decision Traceability</li>
+                    <li>	Human-in-the-Loop Controls for Critical Actions</li>
+                    <li>	No External Data Exposure  zero API calls to external services during agent reasoning</li>
                   </ul>
 
                   <p className="font-medium">
-                    Built for enterprises requiring maximum security, compliance, and
-                    internal control.
+                   Built for enterprises requiring maximum security, compliance and internal control. The only AI agent platform where enterprise data provably never leaves your environment.
                   </p>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    href="/learnmore/"
-                    className="inline-flex items-center justify-center font-[var(--font-spartan)] rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
+                    href="/"
+                    className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
                   >
                     Read More
                   </Link>
 
                   <Link
-                    href="/learnmore/"
-                    className="inline-flex items-center justify-center font-[var(--font-spartan)] rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
+                    href="/"
+                    className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
                   >
                     PRIVATE DEPLOYMENT
                   </Link>
@@ -94,16 +92,15 @@ export default function InfrastructurePartners() {
                   </p>
 
                   <p>
-                    Access SuperManager AGI through our secure, enterprise-grade cloud
-                    infrastructure , fully isolated, monitored, and SLA-backed.
+                   Access SuperManager AGI through our secure, enterprise-grade cloud infrastructure fully isolated, monitored and SLA-backed.
                   </p>
 
                   <ul className="list-disc pl-5 space-y-1">
                     <li>Dedicated Tenant Architecture</li>
-                    <li>Encrypted Data Storage & Processing</li>
+                    <li>Encrypted Data Storage and Processing</li>
                     <li>Continuous Security Monitoring</li>
-                    <li>Automated Backups & Disaster Recovery</li>
-                    <li>Enterprise Reliability & High Availability</li>
+                    <li>Automated Backups and Disaster Recovery</li>
+                    <li>Enterprise Reliability and High Availability</li>
                     <li>Strict Access Governance</li>
                   </ul>
 
@@ -115,15 +112,15 @@ export default function InfrastructurePartners() {
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    href="/learnmore/"
-                    className="inline-flex items-center justify-center font-[var(--font-spartan)] rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
+                    href="/"
+                    className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
                   >
                     Read More
                   </Link>
 
                   <Link
-                    href="/learnmore/"
-                    className="inline-flex items-center justify-center font-[var(--font-spartan)] rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
+                    href="/"
+                    className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold  transition"
                   >
                     SECURE CLOUD DEPLOYMENT
                   </Link>

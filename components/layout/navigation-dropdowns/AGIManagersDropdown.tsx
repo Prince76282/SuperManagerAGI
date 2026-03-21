@@ -1,8 +1,11 @@
+
+
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 
-
+import { managers } from "@/lib/Dataset/contentData";
 
 type DropdownProps = {
   onClose?: () => void;
@@ -20,17 +23,10 @@ type Section = {
   categories: Category[];
 };
 
-type Resource = {
-  img: string;
-  text: string;
-};
-
 type ListBlockProps = {
   title: string;
   items: string[];
 };
-
-
 
 const sections: Section[] = [
   {
@@ -75,7 +71,7 @@ const sections: Section[] = [
   {
     title: "AGI for Execution",
     desc: "Leverage AGI capabilities to autonomously execute projects and deliver outcomes without human intervention.",
-    href: "/execution/",
+    href: "/execution",
     categories: [
       {
         title: "CAPABILITIES",
@@ -86,7 +82,7 @@ const sections: Section[] = [
           "Risk Detection",
           "Dependency Management",
           "Release Planning",
-          "Documentation Generation"
+          "Documentation Generation",
         ],
       },
       {
@@ -96,7 +92,6 @@ const sections: Section[] = [
           "Automate Ticket Management",
           "Real time Progress Tracking",
           "Predictive Risk Alerts",
-          
         ],
       },
       {
@@ -106,7 +101,7 @@ const sections: Section[] = [
           "TaskMaster AGI",
           "Docs AGI",
           "Risk AGI",
-          "Release AGI"
+          "Release AGI",
         ],
       },
     ],
@@ -114,59 +109,42 @@ const sections: Section[] = [
   {
     title: "AGI for Strategy",
     desc: "Streamline strategic planning and resource allocation with autonomous AGI intelligence.",
-    href: "/strategy/",
-    categories: [
-      {
-        title: "CAPABILITIES",
-        items: [
-          "Portfolio Management",
-          "Resource Optimization",
-          "Roadmap Planning",
-          "Capacity Analysis",
-          "Priority Decisions",
-          "OKR Tracking",
-          "Budget Allocation"
-        ],
-      },
-      {
-        title: "USE CASES",
+     href: "/strategy/",
+     categories: [
+       {
+         title: "CAPABILITIES",
+         items: [
+           "Portfolio Management",
+           "Resource Optimization",
+           "Roadmap Planning",
+           "Capacity Analysis",
+           "Priority Decisions",
+           "OKR Tracking",
+           "Budget Allocation"
+         ],
+       },
+       {
+         title: "USE CASES",
         items: [
           "Replace PMO Functions",
-          "Optimize Resource Allocation",
-          "Strategic Planning Automation",
-          "Cost Reduction Programs",
+           "Optimize Resource Allocation",
+           "Strategic Planning Automation",
+           "Cost Reduction Programs",
        
-        ],
-      },
-      {
-        title: "PRE BUILT MANAGERS",
-        items: [
-          "Strategy AGI",
-          "Portfolio AGI",
-          "Resource AGI",
-       
-        ],
-      },
-    ],
-  },
+         ],
+       },
+       {
+         title: "PRE BUILT MANAGERS",
+         items: [
+           "Strategy AGI",
+           "Portfolio AGI",
+           "Resource AGI",
+     
+         ],
+       },
+     ],
+   },
 ];
-
-const resources: Resource[] = [
-  {
-    img: "/image/ManagerReplacement.png",
-    text: "Manager Replacement Economics: practical insights from AGI deployments",
-  },
-  {
-    img: "/image/AGIleadership.png",
-    text: "AGI leadership case studies from companies who replaced managers",
-  },
-  {
-    img: "/image/Beyondhuman.png",
-    text: "Beyond human management: how AGI leads teams autonomously",
-  },
-];
-
-/* ================= SUB COMPONENTS ================= */
 
 function ListBlock({ title, items }: ListBlockProps) {
   return (
@@ -174,6 +152,7 @@ function ListBlock({ title, items }: ListBlockProps) {
       <h4 className="text-xs font-semibold text-gray-700 uppercase mb-3">
         {title}
       </h4>
+
       <ul className="space-y-2 text-sm text-gray-700">
         {items.map((item, i) => (
           <li key={i}>{item}</li>
@@ -185,16 +164,15 @@ function ListBlock({ title, items }: ListBlockProps) {
 
 function QuickLinks({ onClose }: { onClose: () => void }) {
   const links = [
-    { label: "About Us ", href: "./aboutus" },
-    { label: "Customer Stories", href: "/customer-stories/" },
-    { label: "Partners", href: "/partners/" },
-    { label: "Resources", href: "/resource/" },
-    { label: "Blog", href: "/blog/" },
-    { label: "Whitepapers", href: "/white-papers/" },
-    { label: "Documentation", href: "/doc/" },
-    { label: "Support", href: "/support/" },
-    { label: "Community", href: "/learnmore/" },
-    { label: "Contact Us", href: "./contactus" },
+    { label: "About Us", href: "/aboutus" },
+    { label: "Customer Stories", href: "/customer-stories" },
+    { label: "Partners", href: "/partners" },
+    { label: "Resources", href: "/resource" },
+    { label: "Blog", href: "/blog" },
+    { label: "Whitepapers", href: "/white-papers" },
+    { label: "Documentation", href: "/doc" },
+    { label: "Support", href: "/support" },
+    { label: "Contact Us", href: "/contactus" },
   ];
 
   return (
@@ -202,6 +180,7 @@ function QuickLinks({ onClose }: { onClose: () => void }) {
       <h4 className="text-md font-semibold text-gray-700 uppercase mb-3">
         QUICK LINKS
       </h4>
+
       <ul className="space-y-2 text-sm text-gray-700">
         {links.map((link, i) => (
           <li key={i}>
@@ -219,19 +198,17 @@ function QuickLinks({ onClose }: { onClose: () => void }) {
   );
 }
 
-/* ================= MAIN COMPONENT ================= */
-
 export default function AGIManagersDropdown({ onClose }: DropdownProps) {
   const handleClose = () => onClose?.();
 
   return (
     <div className="absolute lg:left-1/2 lg:-translate-x-1/2 left-0 top-full md:mt-2 w-full lg:w-screen max-w-322.5 lg:ml-70 z-50 dropdown-open">
-      
-      <div className="p-4 sm:p-6 lg:p-8 max-h-[90vh] overflow-y-auto scroll-smooth scrollbar-hide">
-        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-4 lg:gap-5">
+      <div className="p-4 sm:p-6 lg:p-8 max-h-[90vh] overflow-y-auto scrollbar-hide">
+
+        <div className="grid grid-cols-1 mb-25 lg:grid-cols-3 gap-5">
 
           {/* LEFT PANEL */}
-          <div className="lg:col-span-2 bg-white rounded-2xl p-4 sm:p-6 space-y-4">
+          <div className="lg:col-span-2 bg-white rounded-2xl p-6 space-y-4">
             {sections.map((section, i) => (
               <div
                 key={i}
@@ -239,25 +216,25 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                  {/* SECTION INFO */}
                   <div>
-                    <h3 className="text-lg font-bold text-black mb-2">
+                    <h3 className="text-lg text-black mb-2">
                       {section.title}
                     </h3>
+
                     <p className="text-sm text-gray-600 mb-4">
                       {section.desc}
                     </p>
+
                     <Link
                       href={section.href}
                       onClick={handleClose}
-                      className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                      className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
                     >
                       Learn More
-                      
+                     
                     </Link>
                   </div>
 
-                  {/* CATEGORY LISTS */}
                   {section.categories.map((cat, idx) => (
                     <ListBlock key={idx} title={cat.title} items={cat.items} />
                   ))}
@@ -268,21 +245,24 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
           </div>
 
           {/* RIGHT PANEL */}
-          <div className="bg-white rounded-2xl p-4 sm:p-6 space-y-6">
+          <div className="bg-white rounded-2xl p-6 space-y-6">
 
             {/* TOP RESOURCES */}
             <div className="bg-gray-50 rounded-xl p-5">
+
               <h4 className="text-md font-semibold text-gray-700 uppercase mb-4">
                 TOP RESOURCES
               </h4>
-              {resources.map((item, i) => (
+
+              {managers.map((item) => (
                 <Link
-                  key={i}
-                  href="/learnmore/"
+                  key={item.id}
+                  href={`/resource/${item.id}`}
                   onClick={handleClose}
                   className="block mb-4 group"
                 >
                   <div className="flex gap-3">
+
                     <Image
                       src={item.img}
                       alt={item.text}
@@ -290,18 +270,21 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
                       height={60}
                       className="rounded-lg object-cover"
                     />
+
                     <p className="text-sm text-gray-700 group-hover:text-[#625FD0] transition-colors line-clamp-2">
                       {item.text}
                     </p>
+
                   </div>
                 </Link>
               ))}
+
             </div>
 
-            {/* QUICK LINKS */}
             <QuickLinks onClose={handleClose} />
 
           </div>
+
         </div>
       </div>
     </div>
