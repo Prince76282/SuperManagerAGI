@@ -88,12 +88,12 @@ export default function ProjectWorkforce() {
                   </p>
                 </div>
 
-                <Link
+                {/* <Link
                   href={item.ctaHref}
                   className="inline-flex items-center justify-center mt-4 gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
                 >
                   {item.ctaLabel}
-                </Link>
+                </Link> */}
               </div>
 
               {/* Image */}

@@ -117,12 +117,12 @@ export default function ProjectWorkforceTabs() {
                 {active.body}
               </p>
 
-              <a
+              {/* <Link
                 href={active.href}
                 className="inline-flex items-center justify-center mt-4 gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
               >
                 Learn more
-              </a>
+              </Link> */}
             </div>
 
             {/* Image */}

@@ -65,12 +65,12 @@ export default function AnalystRecognition() {
                   </p>
                 </div>
 
-                <Link
+                {/* <Link
                   href={item.ctaHref}
                   className="inline-flex mt-4 items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white  hover:opacity-90 transition"
                 >
                   {item.ctaLabel}
-                </Link>
+                </Link> */}
               </div>
 
               {/* Image */}

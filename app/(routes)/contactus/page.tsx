@@ -72,7 +72,7 @@ const ContactPage = () => {
               </p>
 
               <Link
-                href="/learnmore"
+                href="/get-in-touch"
                 className="inline-flex items-center gap-2 bg-[#625FD0] text-white text-xs font-semibold uppercase tracking-widest px-4 py-2.5 rounded-md  transition w-fit mt-auto"
               >
                 Submit an Enquiry
@@ -90,14 +90,14 @@ const ContactPage = () => {
 
               <div className="flex gap-3 mt-auto flex-wrap">
                 <Link
-                  href="/learnmore"
+                  href="/partners"
                   className="inline-flex items-center gap-2 bg-[#625FD0] text-white text-xs font-semibold uppercase tracking-widest px-4 py-2.5 rounded-md  transition"
                 >
                   Become a Partner
                 </Link>
 
                 <Link
-                  href="/learnmore"
+                  href="/partners"
                   className="inline-flex items-center gap-2 border-2 border-[#625FD0] text-[#625FD0] text-xs font-semibold uppercase tracking-widest px-4 py-2.5 rounded-md hover:text-white hover:bg-[#625FD0] transition"
                 >
                   Partner Program

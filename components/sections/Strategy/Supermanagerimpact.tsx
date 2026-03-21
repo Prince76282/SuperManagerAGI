@@ -120,7 +120,7 @@ function UseCaseRow({
           {item.description}
         </p>
 
-        <p className="text-sm font-semibold text-indigo-600">
+        <p className="text-sm font-semibold text-[#625FD0]">
           Impact: {item.impact}
         </p>
       </div>

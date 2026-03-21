@@ -113,12 +113,12 @@ export default function AutonomousAgentTabs() {
                 {active.body}
               </p>
 
-              <Link
+              {/* <Link
                 href={active.href}
                 className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#625FD0] text-white font-medium hover:bg-indigo-700 transition"
               >
                 Learn more
-              </Link>
+              </Link> */}
             </div>
 
             {/* IMAGE */}

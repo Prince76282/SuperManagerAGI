@@ -54,7 +54,7 @@ export default function SuperManagerUseCases() {
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="max-w-2xl">
-            <h2 className="mt-5 text-3xl md:text-3xl  text-gray-900 leading-tight">
+            <h2 className="mt-5 text-3xl md:text-5xl  text-gray-900 leading-tight">
               Where SuperManager AGI Delivers Instant Impact
             </h2>
 
@@ -64,7 +64,7 @@ export default function SuperManagerUseCases() {
           </div>
 
           <Link
-            href="/learnmore"
+            href="/"
             className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
           >
             Explore Platform

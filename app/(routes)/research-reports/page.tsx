@@ -134,13 +134,13 @@ export default function AIResearchReports() {
               <p className="text-gray-600 text-sm sm:text-base">
                 {featuredReport.description}
               </p>
-              text-3xl
-              <Link
+              
+              {/* <Link
                 href={featuredReport.href}
                 className="inline-flex items-center justify-center bg-[#625FD0] text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition w-fit"
               >
                 Read Full Report
-              </Link>
+              </Link> */}
             </div>
 
             <div className="relative h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px] rounded-xl overflow-hidden">

@@ -61,15 +61,15 @@ export default function IntelligenceDropdown({ onClose }: Props) {
       title: "LEARN + DISCOVER",
       items: [
         { label: "About Us", href: "/aboutus" },
-        { label: "Customer Stories", href: "/customer-stories/" },
-        { label: "Partners", href: "/partners/" },
+        { label: "Customer Stories", href: "/customer-stories" },
+        { label: "Partners", href: "/partners" },
         { label: "Resource Hub", href: "/resource" },
         { label: "Blog", href: "/blog" },
-        { label: "Whitepapers", href: "/white-papers/" },
+        { label: "Whitepapers", href: "/white-papers" },
         { label: "AGI Research Reports", href: "/research-reports" },
 
-        { label: "Documentation", href: "/doc/" },
-        { label: "Get Support", href: "/support/" },
+        { label: "Documentation", href: "/doc" },
+        { label: "Get Support", href: "/support" },
       ],
     },
     {

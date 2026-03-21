@@ -109,7 +109,7 @@ const sections: Section[] = [
   {
     title: "AGI for Strategy",
     desc: "Streamline strategic planning and resource allocation with autonomous AGI intelligence.",
-     href: "/strategy/",
+     href: "/strategy",
      categories: [
        {
          title: "CAPABILITIES",

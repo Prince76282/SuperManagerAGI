@@ -26,7 +26,7 @@ export default function DemoSection() {
           </p>
 
           <p className="mt-3">
-            *Learn more in our
+            Learn more in our
             <a href="/learnmore" target="_blank" className="underline ml-1 mr-3">
               Documentation
             </a>

@@ -201,7 +201,7 @@ export default function PrebuiltManagersSection() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="./learnmore"
+                href="/"
                 className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
               >
                 Explore Platform

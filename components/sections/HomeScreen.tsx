@@ -18,49 +18,49 @@ const features = [
     description:
       "Type a natural language instruction and SuperManager AGI executes it across every connected application. The Controller Agent decomposes tasks into a DAG of subtasks, dispatches them to specialist agents in parallel using a work-stealing scheduler, and commits validated results. From creating tickets and sending updates to generating reports and reconciling settlementsone prompt, work done.",
     image: "/image/newimage/image1.1.png",
-    href: "/learnmore/",
+    href: "/",
   },
   {
     title: "Prompt and Get Data 1,000 Feet Deep",
     description:
       "Access critical data across 8–12 disconnected tools instantly. The ADA Integration Layer connects agents natively to databases with 2–15ms latencyno slow APIs. Query operations, finances, inventory, pipeline, or customers and receive precise answers from live enterprise data in under 65ms. No cached summaries. No dashboard approximations.",
     image: "/image/newimage/image1.2.png",
-    href: "/learnmore/",
+    href: "/",
   },
   {
     title: "Multi-Action Agent Orchestration",
     description:
       "Execute complex workflows across multiple applications automatically. The Beehive Architecture deploys specialist agents that run in parallel. Evidence-majority voting validates outputs before execution. Achieve 6.7x throughput with 10 parallel agents and 97% task execution accuracy.",
     image: "/image/newimage/image1.5.png",
-    href: "/learnmore/",
+    href: "/",
   },
   {
     title: "Autonomous AI Agents Running 24x7",
     description:
       "Deploy always-on agents that monitor systems, detect triggers, and execute actions without prompts. Includes inventory agents, finance reconciliation agents, NDR management agents, campaign monitoring agents, and customer care agentsall autonomous, coordinated, and fully auditable.",
     image: "/image/newimage/image1.4.png",
-    href: "/learnmore/",
+    href: "/",
   },
   {
     title: "Universal Application Connectivity",
     description:
       "Connect 200+ applications including Shopify, Amazon, Flipkart, Shiprocket, Jira, Slack, Salesforce, HubSpot, GitHub, SAP, Workday, Razorpay, and more. Every app becomes a system agents can read, write, and execute tasks insimultaneously and in the correct sequence.",
     image: "/image/newimage/image1.8.png",
-    href: "/learnmore/",
+    href: "/",
   },
   {
     title: "Human in the Loop Controls",
     description:
       "Maintain full control with audit trails, approval gates, and override mechanisms. Critical decisions are routed to the right human before execution. AI handles operations while humans retain final authority.",
     image: "/image/newimage/image1.6.png",
-    href: "/learnmore/",
+    href: "/",
   },
   {
     title: "ADA Integration Layer",
     description:
       "Powered by proprietary Agentic Data Architecture, enabling direct database access without APIs, MCP overhead, or rate limits. Achieves 2–15ms latency vs 200–500ms traditional systems. Reduces hallucination rates from 22.4% to 4.2% through evidence-grounded outputs. Peer-reviewed and runs on consumer hardware without GPUs.",
     image: "/image/newimage/image1.7.png",
-    href: "/learnmore/",
+    href: "/",
   },
 ];
 
