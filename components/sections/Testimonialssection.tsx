@@ -6,14 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 type Testimonial = {
-  company: string;
+  industry: string;
   quote: string;
   name: string;
   title: string;
 };
 
-
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     industry: "D2C Fashion",
     quote:
@@ -191,10 +190,10 @@ export default function TestimonialsSection() {
 
 /* ================= CARD ================= */
 
-function Card({ company, quote, name, title }: Testimonial) {
+function Card({ industry, quote, name, title }: Testimonial) {
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition h-full flex flex-col">
-      <h3 className="text-xl font-semibold">{company}</h3>
+      <h3 className="text-xl font-semibold">{industry}</h3>
 
       <p className="text-gray-600 mt-3 flex-1 leading-relaxed">“{quote}”</p>
 

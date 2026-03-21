@@ -2,8 +2,20 @@
 
 import { useEffect, useState } from "react";
 
+type StatCardProps = {
+  value: string;
+  label: string;
+  delay: number;
+};
+
+type FeatureCardProps = {
+  icon: string;
+  title: string;
+  body: string;
+};
+
 // Stat card
-function StatCard({ value, label, delay }) {
+function StatCard({ value, label, delay }: StatCardProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +36,7 @@ function StatCard({ value, label, delay }) {
 }
 
 // Feature card
-function FeatureCard({ icon, title, body }) {
+function FeatureCard({ icon, title, body }: FeatureCardProps) {
   return (
     <div className="rounded-xl border-2 border-[#625FD0] p-5 sm:p-6 bg-white hover:shadow-lg transition">
       <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#625FD0]/10 text-[#625FD0] flex items-center justify-center text-lg sm:text-xl mb-4">

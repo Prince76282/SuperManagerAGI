@@ -1,10 +1,22 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
+type StatCardProps = {
+  value: string;
+  label: string;
+  delay: number;
+};
+
+type FeatureCardProps = {
+  icon: string;
+  title: string;
+  body: string;
+  delay: number;
+};
+
 // Stat card
-function StatCard({ value, label, delay }) {
+function StatCard({ value, label, delay }: StatCardProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -27,7 +39,7 @@ function StatCard({ value, label, delay }) {
 }
 
 // Feature card
-function FeatureCard({ icon, title, body, delay }) {
+function FeatureCard({ icon, title, body, delay }: FeatureCardProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

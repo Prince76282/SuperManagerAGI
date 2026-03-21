@@ -1,8 +1,34 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-const TABS = [
+type TabHighlight = {
+  icon: string;
+  title: string;
+  body: string;
+};
+
+type TabVisualItem = {
+  label: string;
+  status: "done" | "warn";
+  time: string;
+};
+
+type TabVisual = {
+  badge: string;
+  items: TabVisualItem[];
+};
+
+type Tab = {
+  id: string;
+  label: string;
+  heading: string;
+  subheading: string;
+  highlights: TabHighlight[];
+  visual: TabVisual;
+};
+
+const TABS: Tab[] = [
   {
     id: "automation",
     label: "Autonomous Execution",
@@ -189,7 +215,7 @@ const TABS = [
   },
 ];
 
-function VisualPanel({ visual }) {
+function VisualPanel({ visual }: { visual: TabVisual }) {
   return (
     <div className="relative rounded-2xl border border-gray-200 overflow-hidden bg-white flex flex-col min-h-[420px]">
       <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-200">

@@ -1,8 +1,28 @@
 "use client";
 
-import Link from "next/link";
+import type { ReactNode } from "react";
 
-function Tag({ children, wide }) {
+type TagProps = {
+  children: ReactNode;
+  wide?: boolean;
+};
+
+type LogoBadgeProps = {
+  label: string;
+  wide?: boolean;
+};
+
+type ColumnProps = {
+  title: string;
+  children: ReactNode;
+};
+
+type ColumnSectionProps = {
+  label?: string;
+  children: ReactNode;
+};
+
+function Tag({ children, wide = false }: TagProps) {
   return (
     <div
       className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium border border-gray-200 bg-white hover:shadow-sm transition ${wide ? "col-span-2" : ""}`}
@@ -13,7 +33,7 @@ function Tag({ children, wide }) {
   );
 }
 
-function LogoBadge({ label, wide }) {
+function LogoBadge({ label, wide = false }: LogoBadgeProps) {
   return (
     <div
       className={`flex items-center justify-center px-3 py-2.5 rounded-lg border text-xs font-semibold tracking-wide transition hover:shadow-sm ${wide ? "col-span-2" : ""}`}
@@ -28,7 +48,7 @@ function LogoBadge({ label, wide }) {
   );
 }
 
-function Column({ title, children }) {
+function Column({ title, children }: ColumnProps) {
   return (
     <div className="flex flex-col rounded-2xl overflow-hidden border border-gray-200 bg-white">
       <div className="px-5 py-4 border-b border-gray-200 bg-[#625FD0]">
@@ -44,7 +64,7 @@ function Column({ title, children }) {
   );
 }
 
-function ColumnSection({ label, children }) {
+function ColumnSection({ label, children }: ColumnSectionProps) {
   return (
     <div className="px-5 py-4 flex flex-col gap-3">
       {label && (

@@ -53,7 +53,23 @@ const upcomingWebinars = [
   },
 ];
 
-function WebinarCard({ type, date, time, image, title, href }) {
+type WebinarCardProps = {
+  type: string;
+  date: string;
+  time: string;
+  image: string;
+  title: string;
+  href: string;
+};
+
+function WebinarCard({
+  type,
+  date,
+  time,
+  image,
+  title,
+  href,
+}: WebinarCardProps) {
   return (
     <Link
       href={href}
@@ -102,7 +118,7 @@ function WebinarCard({ type, date, time, image, title, href }) {
 }
 
 export default function UpcomingWebinars() {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
 

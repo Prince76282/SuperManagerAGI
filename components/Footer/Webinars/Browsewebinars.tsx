@@ -42,7 +42,15 @@ const webinars = [
   },
 ];
 
-function WebinarCard({ title, type, date, image, href }) {
+type WebinarCardProps = {
+  title: string;
+  type: string;
+  date: string;
+  image: string;
+  href: string;
+};
+
+function WebinarCard({ title, type, date, image, href }: WebinarCardProps) {
   return (
     <article className="group relative flex flex-col rounded-lg overflow-hidden border border-zinc-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       {/* clickable overlay */}

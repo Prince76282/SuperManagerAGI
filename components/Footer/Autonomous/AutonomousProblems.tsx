@@ -1,8 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+type Problem = {
+  icon: string;
+  title: string;
+  body: string;
+};
 
-const problems = [
+const problems: Problem[] = [
   {
     icon: "💬",
     title: "Manual Coordination That Agents Eliminate",
@@ -25,7 +29,7 @@ const problems = [
   },
 ];
 
-function ProblemCard({ icon, title, body }) {
+function ProblemCard({ icon, title, body }: Problem) {
   return (
     <div className="relative group rounded-xl border border-gray-200 p-6 flex flex-col gap-4 bg-white transition hover:shadow-lg hover:-translate-y-1">
       <div className="absolute top-0 inset-x-6 h-[2px] bg-[#625FD0] rounded-full opacity-60" />

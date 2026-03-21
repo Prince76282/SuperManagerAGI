@@ -1,11 +1,29 @@
 "use client";
 
-import Link from "next/link";
-import { Tags } from "lucide-react";
+import type { ReactNode } from "react";
 
 /* ---------- Small Components ---------- */
 
-function Tag({ children, wide }) {
+type TagProps = {
+  children: ReactNode;
+  wide?: boolean;
+};
+
+type LogoBadgeProps = {
+  label: string;
+};
+
+type ColumnProps = {
+  title: string;
+  children: ReactNode;
+};
+
+type ColumnSectionProps = {
+  label?: string;
+  children: ReactNode;
+};
+
+function Tag({ children, wide = false }: TagProps) {
   return (
     <div
       className={`flex items-start gap-2 px-3 py-2 rounded-md text-xs leading-relaxed border bg-white transition hover:shadow-sm hover:border-[#625FD0]/30 ${
@@ -18,7 +36,7 @@ function Tag({ children, wide }) {
   );
 }
 
-function LogoBadge({ label }) {
+function LogoBadge({ label }: LogoBadgeProps) {
   return (
     <div className="flex items-center justify-center px-3 py-2.5 rounded-md border text-xs font-semibold tracking-wide bg-white hover:shadow-sm transition text-gray-800">
       {label}
@@ -26,7 +44,7 @@ function LogoBadge({ label }) {
   );
 }
 
-function Column({ title, children }) {
+function Column({ title, children }: ColumnProps) {
   return (
     <div className="flex flex-col rounded-2xl overflow-hidden border bg-white shadow-sm">
       <div className="px-5 py-4 bg-[#625FD0]">
@@ -40,7 +58,7 @@ function Column({ title, children }) {
   );
 }
 
-function ColumnSection({ label, children }) {
+function ColumnSection({ label, children }: ColumnSectionProps) {
   return (
     <div className="px-5 py-5 flex flex-col gap-4">
       {label && (

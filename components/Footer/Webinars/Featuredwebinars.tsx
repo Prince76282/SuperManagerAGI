@@ -25,7 +25,21 @@ const webinars = [
   },
 ];
 
-function WebinarCard({ badge, image, title, description, href }) {
+type WebinarCardProps = {
+  badge: string;
+  image: string;
+  title: string;
+  description: string | null;
+  href: string;
+};
+
+function WebinarCard({
+  badge,
+  image,
+  title,
+  description,
+  href,
+}: WebinarCardProps) {
   return (
     <article className="group relative flex flex-col rounded-2xl overflow-hidden border border-zinc-200 bg-white shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       {/* Badge */}

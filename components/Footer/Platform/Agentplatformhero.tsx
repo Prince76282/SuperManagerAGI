@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import type { ReactNode } from "react";
 
 
 const solutions = [
@@ -104,7 +104,25 @@ const cloudInfra = [
 ];
 
 // --- Sub Components ---
-function SectionLabel({ children }) {
+type SectionLabelProps = {
+  children: ReactNode;
+};
+
+type FeatureCardProps = {
+  title: string;
+  body: string;
+};
+
+type ChipGridProps = {
+  items: string[];
+};
+
+type InfoBlockProps = {
+  title: string;
+  items: string[];
+};
+
+function SectionLabel({ children }: SectionLabelProps) {
   return (
     <div className="text-[11px] font-semibold uppercase tracking-wider text-[#625FD0] mb-2">
       {children}
@@ -112,7 +130,7 @@ function SectionLabel({ children }) {
   );
 }
 
-function FeatureCard({ title, body }) {
+function FeatureCard({ title, body }: FeatureCardProps) {
   return (
     <div className="border rounded-xl p-5 bg-white hover:border-[#625FD0] transition">
       <h4 className="font-semibold text-black mb-2">{title}</h4>
@@ -121,7 +139,7 @@ function FeatureCard({ title, body }) {
   );
 }
 
-function ChipGrid({ items }) {
+function ChipGrid({ items }: ChipGridProps) {
   return (
     <div className="flex flex-wrap gap-2 mt-3">
       {items.map((item) => (
@@ -136,7 +154,7 @@ function ChipGrid({ items }) {
   );
 }
 
-function InfoBlock({ title, items }) {
+function InfoBlock({ title, items }: InfoBlockProps) {
   return (
     <div className="border rounded-xl p-5 bg-white">
       <h4 className="font-semibold text-black mb-2">{title}</h4>

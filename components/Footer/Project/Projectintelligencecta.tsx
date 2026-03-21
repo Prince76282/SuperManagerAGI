@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const ACCORDIONS = [
@@ -22,9 +21,23 @@ const ACCORDIONS = [
   },
 ];
 
-function Accordion({ title, body, index, openIndex, setOpenIndex }) {
+type AccordionProps = {
+  title: string;
+  body: string;
+  index: number;
+  openIndex: number | null;
+  setOpenIndex: React.Dispatch<React.SetStateAction<number | null>>;
+};
+
+function Accordion({
+  title,
+  body,
+  index,
+  openIndex,
+  setOpenIndex,
+}: AccordionProps) {
   const isOpen = openIndex === index;
-  const bodyRef = useRef(null);
+  const bodyRef = useRef<HTMLDivElement | null>(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
@@ -75,8 +88,8 @@ function Accordion({ title, body, index, openIndex, setOpenIndex }) {
 }
 
 export default function ProjectIntelligenceCTA() {
-  const [openIndex, setOpenIndex] = useState(0);
-  const ref = useRef(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const ref = useRef<HTMLElement | null>(null);
 
   return (
     <section className="bg-white py-24 px-6" ref={ref}>
