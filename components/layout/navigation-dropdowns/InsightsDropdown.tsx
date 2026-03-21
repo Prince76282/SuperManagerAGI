@@ -8,12 +8,6 @@ type NavItem = {
   href: string;
 };
 
-type GuideItem = {
-  img: string;
-  title: string;
-  href: string;
-};
-
 type InsightsDropdownProps = {
   onClose?: () => void; 
 };
@@ -26,26 +20,26 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
   };
 
   const resources: NavItem[] = [
-    { label: "Resource Hub", href: "./resource" },
-    { label: " Blog", href: "./blog" },
-    { label: "Whitepapers", href: "./white-papers/" },
-    { label: "AI Research Reports", href: "./research-reports" },
+    { label: "Resource Hub", href: "/resource" },
+    { label: "Blog", href: "/blog" },
+    { label: "Whitepapers", href: "/white-papers/" },
+    { label: "AI Research Reports", href: "/research-reports" },
   ];
 
   const support: NavItem[] = [
-    { label: "Documentation", href: "./doc/" },
-    { label: "Get support", href: "./support/" },
-    { label: "Submit RFP", href: "./get-in-touch" },
+    { label: "Documentation", href: "/doc/" },
+    { label: "Get support", href: "/support/" },
+    { label: "Submit RFP", href: "/get-in-touch" },
   ];
 
   const company: NavItem[] = [
-    { label: "About us", href: "./aboutus" },
-    { label: "Leadership", href: "./leadership/" },
-    { label: "Customer Stories", href: "./customer-stories/" },
-    { label: "Partners", href: "./partners/" },
-    { label: "Analyst Recognition", href: "./analyst-recognition/" },
+    { label: "About us", href: "/aboutus" },
+    { label: "Leadership", href: "/leadership/" },
+    { label: "Customer Stories", href: "/customer-stories/" },
+    { label: "Partners", href: "/partners/" },
+    { label: "Analyst Recognition", href: "/analyst-recognition/" },
 
-    { label: "Contact us", href: "./contactus" },
+    { label: "Contact us", href: "/contactus" },
   ];
 
   return (

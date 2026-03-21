@@ -1,4 +1,11 @@
-import { managers, guides, insights } from "@/lib/Dataset/contentData";
+import {
+  guides,
+  insights,
+  managers,
+  type GuideItem,
+  type Insight,
+  type Manager,
+} from "@/lib/Dataset/contentData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -8,6 +15,8 @@ type PageProps = {
   }>;
 };
 
+type Resource = Manager | GuideItem | Insight;
+
 export async function generateStaticParams() {
   const managerParams = managers.map((item) => ({
     id: item.id,
@@ -16,6 +25,7 @@ export async function generateStaticParams() {
   const guideParams = guides.map((item) => ({
     id: item.id,
   }));
+
   const insightsParams = insights.map((item) => ({
     id: item.id,
   }));
@@ -26,51 +36,44 @@ export async function generateStaticParams() {
 export default async function ResourcePage({ params }: PageProps) {
   const { id } = await params;
 
-  const resource =
-    managers.find((item) => item.id === id) ||
-    guides.find((item) => item.id === id) ||
-    insights.find((item) => item.id === id);
+  const allResources: Resource[] = [...managers, ...guides, ...insights];
+  const resource = allResources.find((item) => item.id === id);
 
   if (!resource) {
     notFound();
   }
 
   return (
-    <div className="max-w-[1200px] mx-auto py-20 px-6">
-      <h1 className="text-4xl mb-6 py-10">
-        {"title" in resource ? resource.title : resource.id}
-      </h1>
+    <article className="mx-auto max-w-[1200px] px-6 py-20">
+      <h1 className="mb-6 py-10 text-4xl">{resource.title}</h1>
 
       <Image
         src={resource.img}
-        alt={"title" in resource ? resource.title : resource.text}
-        width={500}
-        height={300}
-        className="rounded-xl mb-8 w-full h-auto object-contain"
+        alt={resource.title}
+        width={1600}
+        height={900}
+        className="mb-8 h-auto w-full rounded-xl object-contain"
       />
 
-      <p className="text-lg py-10 text-gray-700 leading-relaxed">
-        {"text" in resource ? resource.text : resource.title}
+      <p className="py-10 text-lg leading-relaxed text-gray-700">
+        {resource.text}
       </p>
-      {"intro" in resource && (
-        <span className="text-2xl ">{resource.intro}</span>
-      )}
 
-      {"sections" in resource &&
-        resource.sections?.map(
-          (
-            section: { heading: string; content: string[] },
-            index: number
-          ) => (
-          <div key={index}>
-            <p className="text-2xl  py-10">{section.heading}</p>
+      <p className="py-6 text-2xl">{resource.intro}</p>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {section.content}
-            </p>
-          </div>
-          )
-        )}
-    </div>
+      <div className="space-y-10">
+        {resource.sections.map((section) => (
+          <section key={section.heading} className="py-6">
+            <h2 className="mb-4 text-2xl font-semibold">{section.heading}</h2>
+
+            <div className="space-y-4 text-lg leading-relaxed text-gray-700">
+              {section.content.map((paragraph, index) => (
+                <p key={`${section.heading}-${index}`}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </article>
   );
 }

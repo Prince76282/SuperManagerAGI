@@ -1,32 +1,27 @@
 
 
-export type GuideItem = {
-  id: string
-  img: string
-  title: string
-
+type ResourceSection = {
+  heading: string
+  content: string[]
 }
 
-export type Insight = {
-  id: string
-  img: string
-  title: string
-  date: string
-  href: string
-}
-
-
-export type Manager = {
+type ResourceEntry = {
   id: string
   img: string
   text: string
   title: string
   intro: string
-  sections: {
-    heading: string
-    content: string[]
-  }[]
+  sections: ResourceSection[]
 }
+
+export type GuideItem = ResourceEntry
+
+export type Insight = ResourceEntry & {
+  date: string
+  href: string
+}
+
+export type Manager = ResourceEntry
 
 export const managers: Manager[] = [
   {
