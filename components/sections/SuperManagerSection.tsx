@@ -77,14 +77,15 @@ const tabs = [
 ];
 
 const companies = [
-  { name: "Adobe", src: "/image/newimage/Adobe.png" },
-  { name: "BrowserStack", src: "/image/newimage/Browser1.png" },
-  { name: "Zoho", src: "/image/newimage/Zoho.png" },
-  { name: "Microsoft", src: "/image/newimage/Microsoft.png" },
-  { name: "Sprinto", src: "/image/newimage/Sprinto.png" },
-  { name: "Perplexity", src: "/image/newimage/perplexity.png" },
-  { name: "Socket", src: "/image/newimage/Socket.png" },
-  { name: "Nvidia", src: "/image/newimage/image.png" },
+  { name: "Adobe", src: "/image/newimage/Adobe1.png" },
+  { name: "BrowserStack", src: "/image/newimage/Browser.png" },
+  { name: "Zoho", src: "/image/newimage/Zoho1.png" },
+  { name: "Microsoft", src: "/image/newimage/Microsoft1.png" },
+  { name: "Sprinto", src: "/image/newimage/Sprinto1.png" },
+  { name: "Perplexity", src: "/image/newimage/perplexity1.png" },
+    { name: "Deloite", src: "/image/newimage/Deloite1.png" },
+  { name: "Socket", src: "/image/newimage/Socket1.png" },
+  { name: "Nvidia", src: "/image/newimage/nvida.png" },
 ];
 
 export default function SuperManagerSection() {

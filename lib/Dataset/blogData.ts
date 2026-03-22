@@ -310,7 +310,7 @@ export const articles: Articles[] = [
 
     title: "How Logistics Intelligence Feeds Marketing: The Cross-Department Agent Coordination Loop",
 
-    desc: "When the Logistics AGI detects elevated NDR rates in a specific geography and automatically adjusts Meta campaign geo-targeting to exclude COD-heavy audiences in that area — that coordination previously required a logistics manager, a data analyst and a marketing manager in a meeting. Now it happens autonomously in under 24 hours.",
+    desc: "When the Logistics AGI detects elevated NDR rates in a specific geography and automatically adjusts Meta campaign geo-targeting to exclude COD-heavy audiences in that area  that coordination previously required a logistics manager, a data analyst and a marketing manager in a meeting. Now it happens autonomously in under 24 hours.",
 
     author: "SuperManagerAGI Team",
     date: "Feb 16, 2026",
@@ -349,7 +349,7 @@ export const articles: Articles[] = [
 
     title: "The Settlement Reconciliation Agent: How Finance AGI Catches What Manual Review Misses",
 
-    desc: "Finance AGI achieved a 22.4 percentage point hallucination reduction in financial analytics in the ADA evaluation — the largest improvement of any domain tested. This piece explains why structured financial data retrieved via direct database access is the single most accurate foundation for autonomous financial reconciliation.",
+    desc: "Finance AGI achieved a 22.4 percentage point hallucination reduction in financial analytics in the ADA evaluation  the largest improvement of any domain tested. This piece explains why structured financial data retrieved via direct database access is the single most accurate foundation for autonomous financial reconciliation.",
 
     author: "SuperManagerAGI Insights",
     date: "Feb 10, 2026",

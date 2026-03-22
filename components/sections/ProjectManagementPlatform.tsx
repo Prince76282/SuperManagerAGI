@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const tabsData = [
   { id: "Autonomous", label: "Autonomous Task Execution" },
-  { id: "Delivery Automation", label: "Delivery Automation" },
-  { id: "Resource Management", label: "Resource Management" },
+  { id: "Delivery Automation", label: "Enterprise Data Intelligence" },
+  { id: "Resource Management", label: "Autonomous Agent Workforce" },
   { id: "Integrations", label: "Integrations" },
   { id: "Workspace", label: "Workspace" },
 ];
@@ -59,74 +59,138 @@ const pmProtectionFeatures = {
       description:
         "actual live data from your actual systems at 65ms average latency",
     },
-    
   ],
 };
 
 const eventWorkspaceFeatures = [
   {
-    title: "Live",
-    Highlight: " Commitment Model",
-    description:
-      "A unified, time aware view of person , project , allocation across the organization including priority, duration, and cross-project dependencies.",
-  },
-  {
-    title: "Allocation",
-    Highlight: "Conflict Detection",
-    description:
-      "Proactively identify double booking, hidden overcommitment, and future resource collisions before they impact delivery timelines.",
-  },
-  {
-    title: "Cross Project",
-    Highlight: "Impact Analysis",
-    description:
-      "Simulate downstream effects of delays, reassignments, scope shifts, and priority changes across concurrent engagements.",
-  },
-  {
-    title: "Utilization",
-    Highlight: " & Margin Intelligence ",
-    description:
-      "Real time visibility into capacity, slack windows, overload risk, and utilization variance that directly affects delivery margins.",
-  },
-  {
-    title: "Structured Reallocation",
-    Highlight: " & Trade-Offs ",
-    description:
-      "Surface decision-ready reallocation options with clear ownership, priority awareness, and coordinated impact visibility.",
+    highlight: "Commitment Model",
+    description: [
+      " •	  Inventory agents that reorder before stock-outs based on live velocity data",
+      <br />,
+      " •	  Finance agents that reconcile settlements overnight across every channel",
+      <br />,
+      " •	  Logistics agents that manage NDR follow-ups every morning autonomously",
+      <br />,
+      " •	  Marketing agents that pause underperforming spend when ROAS drops below threshold",
+      <br />,
+      " •	  Customer care agents that track returns from initiation to resolution",
+      <br />,
+      " •	  Operations agents that generate MIS reports automatically in the right format",
+    ],
   },
 ];
 
 const enterpriseIntegrationFeatures = {
   mainFeatures: [
     {
-      title: "Work Management",
-      Highlight: " & PPM Systems",
-      description:
-        "Native Connectors for Jira, Azure DevOps, Confluence, and 50+ Project, PPM, and Work Tracking Platforms.",
+      Highlight: "E-commerce and D2C",
+      description: [
+        "•	Shopify",
+        ,
+        <br />,
+        "•	Amazon Seller Central",
+        ,
+        <br />,
+        "•	Flipkart Seller Hub",
+        ,
+        <br />,
+        "•	Meesho",
+        ,
+        <br />,
+        "•	Blinkit, Zepto, Swiggy Instamart",
+        ,
+        <br />,
+        "•	50+ marketplace tools",
+      ],
     },
     {
-      title: "Communication",
-      Highlight: " & Collaboration Platforms",
-      description:
-        "Deep Integration with Slack, Microsoft Teams, Email, and Enterprise Messaging Systems. ",
+      Highlight: "Logistics and Delivery",
+      description: [
+        "•	Shiprocket ",
+        <br />,
+        "•	Delhivery",
+        <br />,
+        "•	BlueDart ",
+        <br />,
+        "•	Xpressbees, Ecom Express, FedEx, DHL  ",
+        <br />,
+      ],
+    },
+
+    {
+     Highlight: "Work Management and Engineering",
+      description: [
+        "• Jira ",
+        <br />,
+        "• Linear, Asana, Monday.com, ClickUp ",
+        <br />,
+        "• GitHub, GitLab, Azure DevOps ",
+        <br />,
+        "• Notion, Confluence, Figma ",
+        <br />,
+        "• 50+ work management tools ",
+        <br />,
+      ],
     },
     {
-      title: "Enterprise Applications",
-      Highlight: " & Business Systems",
-      description:
-        "Integrated with Microsoft 365, Google Workspace, CRM Platforms, HR Systems, Finance Tools, and Internal Business Applications.",
+Highlight: "Communication Platforms",
+      description: [
+        "• Slack ",
+        <br />,
+        "• Microsoft Teams ",
+        <br />,
+        "• WhatsApp Business ",
+        <br />,
+        "• Email systems ",
+        <br />,
+      ],
     },
     {
-      title: "Secure LLM",
-      Highlight: " & AI Model Integrations",
-      description:
-        "Compatible with Leading Enterprise-Grade LLM Providers Including OpenAI (Azure OpenAI), Anthropic, Google Vertex AI, AWS Bedrock, and Other Secure Model Endpoints.",
+      Highlight: "CRM and Sales",
+      description: [
+        "• Salesforce ",
+        <br />,
+        "• HubSpot, Pipedrive, Zoho CRM ",
+        <br />,
+        "• Freshsales ",
+        <br />,
+      ],
     },
     {
-      title: "Custom",
-      Highlight: "& In-House System Connectivity",
-      description:
-        "Robust API Framework and Webhook Support for Proprietary Systems, Internal Tools, Data Warehouses, and Custom Enterprise Workflows. Extend SuperManager AGI Without Vendor Lock In.",
+     Highlight: "Finance and Payments",
+      description: [
+        "• Razorpay, PayU, Stripe ",
+        <br />,
+        "• QuickBooks, Tally, Zoho Books ",
+        <br />,
+      ],
+    },
+    {
+      Highlight: "ERP and Enterprise Systems",
+      description: [
+        "• SAP, Oracle, Workday, ServiceNow ",
+        <br />,
+        "• Microsoft Dynamics, NetSuite ",
+        <br />,
+        "• Sellerware, Genesis ERP ",
+        <br />,
+      ],
+    },
+    {
+      Highlight: "AI Model Integrations",
+      description: [
+        "• Anthropic Claude ",
+        <br />,
+        "• OpenAI GPT ",
+        <br />,
+        "• Azure OpenAI ",
+        <br />,
+        "• Google Vertex AI ",
+        <br />,
+        "• AWS Bedrock ",
+        <br />,
+      ],
     },
   ],
 };
@@ -134,42 +198,17 @@ const enterpriseIntegrationFeatures = {
 const WorkspaceFeatures = {
   mainFeatures: [
     {
-      title: "Intelligent",
-      Highlight: "Notification Center",
-      description:
-        "The Workspace includes a dedicated notification layer where the system surfaces only critical, decision grade events in real time. Scope changes, high risk emails, allocation conflicts, blockers, stalled tasks, and escalations are automatically detected and presented in a structured attention feed.",
-    },
-    {
-      title: "Context-Rich",
-      Highlight: "Decision Modals",
-      description:
-        "Every notification opens into an interactive modal that brings together the full execution context. Linked tasks, dependencies, conversations, timeline impacts, resource effects, and risk exposure are presented in one structured view.",
-    },
-    {
-      title: "Unified",
-      Highlight: "Chat Interface",
-      description:
-        "The Workspace includes a unified conversational control layer that connects across all integrated enterprise systems. Managers can search, analyze, and take action across all platforms.",
-    },
-    {
-      title: "Preview",
-      Highlight: " & Approval Layer",
-      description:
-        "No operational change executes automatically. Every task update, reallocation, report generation, escalation, or structural change appears in a structured preview panel before execution.",
-    },
-    {
-      title: "Intelligent",
-      Highlight: "Dashboards",
-      description:
-        "The Workspace provides continuously updating dashboards across delivery health, RAG status, resource utilization, cross-project commitments, sprint performance, risk trends, and escalation patterns.",
-    },
-    {
-      title: "Process Visibility",
-      Highlight: " & Decision Auditability",
-      description:
-        "Every recommendation, approval, override, and system-triggered action is recorded with full traceability for enterprise-grade governance.",
-    },
-  ],
+      Highlight: "Features",
+      description: [
+        "• Natural language command interface ",<br />,,
+        "• Live autonomous action feed ",<br />,,
+        "• Approval and override controls ",<br />,
+        "• Cross-department execution dashboard ",<br />,
+        "• Audit trail and decision traceability ",<br />,
+        "• Agent configuration and deployment console ",<br />,
+      ]
+    }
+  ]
 };
 
 const ProjectManagementPlatform = () => {
@@ -181,7 +220,7 @@ const ProjectManagementPlatform = () => {
         {/* Header */}
         <div className="mb-8 md:mb-12">
           <h2 className="text-[2.5rem] font-medium leading-[1.2] tracking-[-0.02em] text-gray-900 ">
-Complete AI Vibe Working Platform
+            Complete AI Vibe Working Platform
           </h2>
         </div>
 
@@ -228,10 +267,12 @@ Complete AI Vibe Working Platform
 
                 <div className="space-y-6 md:space-y-8">
                   {decisionIntelligenceFeatures.map((item, i) => (
-                    <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
                       <h4 className="text-xl md:text-2xl lg:text-3xl ">
-                        AI for{" "}
-                        <span className="text-[#625FD0]">{item.title}</span>
+                        {item.title}
                       </h4>
                       <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed mt-3 md:mt-4">
                         {item.description}
@@ -247,23 +288,25 @@ Complete AI Vibe Working Platform
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Delivery Automation
+                    Get Any Answer From 1,000 Feet Deep Inside Your Enterprise
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Eliminate PM Operational Overhead Across Tasks, Meetings,
-                    Reporting, Planning, and Coordination.
+                    Eliminate the information gap between what your organisation
+                    knows and what your decision-makers can access.
                   </p>
                 </div>
 
                 {/* Main Features */}
                 <div className="space-y-6 md:space-y-8">
                   {pmProtectionFeatures.mainFeatures.map((item, i) => (
-                    <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
                       <div className="space-y-4 md:space-y-6">
                         <div>
                           <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
-                            AI for{" "}
-                            <span className="text-[#625FD0]">{item.title}</span>
+                            {item.title}
                           </h4>
                           <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                             {item.description}
@@ -281,25 +324,27 @@ Complete AI Vibe Working Platform
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Resource Management
+                    Deploy Agents That Work 24x7 Without Being Prompted
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Continuously model, monitor, and reconcile resource
-                    commitments across all active projects in real time.
+                    Build a specialist AI workforce that monitors your connected
+                    systems and executes tasks continuously.
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   {eventWorkspaceFeatures.map((item, i) => (
-                    <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
                       <div className="space-y-3 md:space-y-4">
                         <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
-                          {item.title}{" "}
-                          <span className="text-[#625FD0]">
-                            {item.Highlight}
-                          </span>
+                          {item.Highlight}
                         </h4>
-                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">{item.description}</p>
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -315,23 +360,26 @@ Complete AI Vibe Working Platform
                     Integrations
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Seamlessly Connect SuperManager AGI Across Your Enterprise
-                    Stack With Secure, Enterprise-Grade Integrations.
+                    SuperManager AGI integrates with every application your
+                    organisation uses. Agents work across all connected systems
+                    simultaneously.
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   {/* Main Features */}
                   {enterpriseIntegrationFeatures.mainFeatures.map((item, i) => (
-                    <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
                       <div className="space-y-3 md:space-y-4">
                         <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
-                          {item.title}{" "}
-                          <span className="text-[#625FD0]">
-                            {item.Highlight}
-                          </span>
+                          {item.Highlight}
                         </h4>
-                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">{item.description}</p>
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -347,22 +395,28 @@ Complete AI Vibe Working Platform
                     Workspace
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    A Two Way Operating Interface Where Managers Direct the Agent and the Agent Surfaces What Requires Attention.
+                    A unified operating interface where you direct agents in
+                    natural language and agents surface completed actions, live
+                    intelligence and items requiring your approval.
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   {/* Main Features */}
                   {WorkspaceFeatures.mainFeatures.map((item, i) => (
-                    <div key={i} className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
                       <div className="space-y-3 md:space-y-4">
                         <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
-                          {item.title}{" "}
-                          <span className="text-[#625FD0]">
+                          
                             {item.Highlight}
-                          </span>
+                          
                         </h4>
-                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">{item.description}</p>
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   ))}
