@@ -64,7 +64,7 @@ const pmProtectionFeatures = {
 
 const eventWorkspaceFeatures = [
   {
-    highlight: "Commitment Model",
+    Highlight: "Commitment Model",
     description: [
       " •	  Inventory agents that reorder before stock-outs based on live velocity data",
       <br />,
