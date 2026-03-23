@@ -21,7 +21,7 @@ const DecisionIntelligence = () => {
                   </h3>
                   <div className="w-9 h-9 sm:w-11 sm:h-11 flex-shrink-0 flex items-center justify-center">
                     <Image
-                      src="/image/newimage/Pmicons.png"
+                      src="/Image/newimage/Pmicons.png"
                       alt="ADA Architecture"
                       width={44}
                       height={44}
@@ -101,14 +101,9 @@ const DecisionIntelligence = () => {
                       We’re Ready When You Are
                     </p>
                   </div>
-
-                  
                 </div>
 
-              
                 <div className="bg-white rounded-lg flex-col p-4 sm:p-6 shadow-sm border border-gray-300">
-                  
-
                   <div className="flex items-end flex-wrap gap-3 sm:gap-4">
                     <Link
                       href="get-in-touch"

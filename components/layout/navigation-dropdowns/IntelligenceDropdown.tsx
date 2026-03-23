@@ -87,7 +87,7 @@ export default function IntelligenceDropdown({ onClose }: Props) {
             {/* HERO */}
             <div className="bg-linear-to-br from-blue-50 to-indigo-50 rounded-xl p-5">
               <Image
-                src="/image/Manager-Platform.jpg"
+                src="/Image/Manager-Platform.jpg"
                 alt="Manager Platform"
                 width={400}
                 height={200}
@@ -169,7 +169,7 @@ export default function IntelligenceDropdown({ onClose }: Props) {
             <div className="bg-linear-to-br from-[#8885e5] to-[#9f9ddf] rounded-xl overflow-hidden text-white">
               <div className="p-5">
                 <Image
-                  src="/image/Experience-Action.png"
+                  src="/Image/Experience-Action.png"
                   alt="CCW Berlin"
                   width={120}
                   height={40}

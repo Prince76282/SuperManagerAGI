@@ -38,15 +38,20 @@ export default function HomePage() {
           <div className="flex flex-col gap-8 lg:w-[46%] text-center lg:text-left">
             <div className="flex flex-col gap-6">
               <h1 className="text-gray-900  leading-[1.1] md:leading-[1.05] tracking-tight text-3xl sm:text-3xl md:text-3xl lg:text-5xl">
-             Run Your Organisation at Vibe Working Platform Speed
+                Run Your Organisation at Vibe Working Platform Speed
               </h1>
 
               <p className="text-[#181818]/70  text-base md:text-lg leading-relaxed max-w-140 mx-auto lg:mx-0">
-                SuperManager AGI deploys autonomous specialist agents across every business function that execute workflows, retrieve data from 1,000 feet deep inside your enterprise and coordinate across every connected system simultaneously.
+                SuperManager AGI deploys autonomous specialist agents across
+                every business function that execute workflows, retrieve data
+                from 1,000 feet deep inside your enterprise and coordinate
+                across every connected system simultaneously.
               </p>
 
               <p className="text-[#181818]/60 text-sm md:text-base leading-relaxed font-light max-w-130 mx-auto lg:mx-0">
-                Build, orchestrate and scale AI agents with enterprise-grade control, security and performance all from one unified Vibe Working Platform.
+                Build, orchestrate and scale AI agents with enterprise-grade
+                control, security and performance all from one unified Vibe
+                Working Platform.
               </p>
             </div>
 
@@ -58,8 +63,6 @@ export default function HomePage() {
               >
                 Talk to Sales
               </Link>
-
-              
             </div>
           </div>
 
@@ -71,7 +74,7 @@ export default function HomePage() {
           >
             <div className="relative aspect-3/2 overflow-hidden rounded-2xl shadow-[0_30px_90px_rgba(0,0,0,0.15)]">
               <Image
-                src="/image/World'sFirst/Depositphotos_212163096_S.jpg"
+                src="/Image/World'sFirst/Depositphotos_212163096_S.jpg"
                 alt="SuperManagerAGI autonomous enterprise platform visualization"
                 fill
                 priority

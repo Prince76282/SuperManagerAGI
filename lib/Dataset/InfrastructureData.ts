@@ -1,5 +1,3 @@
-
-
 export type InfrastructureCard = {
   id: string;
   image: string;
@@ -34,7 +32,7 @@ export const INFRASTRUCTURE_DATA = {
   cards: [
     {
       id: "private-deployment",
-      image: "/image/image2.6.png",
+      image: "/Image/image2.6.png",
       alt: "Private Deployment",
       title: "Private Deployment Within Your Infrastructure",
       tagline: "Your data. Your perimeter. Your control.",
@@ -82,7 +80,6 @@ export const INFRASTRUCTURE_DATA = {
       callout:
         "Organisations in regulated industries  financial services, healthcare, legal, government  require infrastructure that supports compliance by design, not by configuration. Private Deployment is the answer.",
       buttons: [
-       
         {
           label: "PRIVATE DEPLOYMENT",
           link: "/home/private-deployment",
@@ -93,7 +90,7 @@ export const INFRASTRUCTURE_DATA = {
 
     {
       id: "secure-cloud",
-      image: "/image/image2.7.png",
+      image: "/Image/image2.7.png",
       alt: "Secure Cloud Deployment",
       title: "Secure Managed Cloud Deployment",
       tagline: "Enterprise security. Zero infrastructure overhead.",
@@ -140,7 +137,6 @@ export const INFRASTRUCTURE_DATA = {
       callout:
         "When speed to value matters and internal infrastructure overhead is not an option, Secure Managed Cloud delivers enterprise-grade AI execution without the operational burden.",
       buttons: [
-        
         {
           label: "SECURE CLOUD DEPLOYMENT",
           link: "/home/secure-cloud",

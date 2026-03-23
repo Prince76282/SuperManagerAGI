@@ -49,7 +49,7 @@ function HomeArticleDetail({ data }: { data: homedata }) {
       <div className="space-y-8">
         {data.sections.map((section, i) => (
           <div key={i}>
-            <h2 className="text-2xl font-semibold mb-3">{section.heading}</h2>
+            <h2 className="text-2xl  mb-3">{section.heading}</h2>
             {section.content.map((para, j) => (
               <p key={j} className="text-gray-600 mb-2">
                 {para}
@@ -70,7 +70,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
       <section className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#625FD0]">
+            <p className="text-sm  uppercase tracking-[0.2em] text-[#625FD0]">
               Feature
             </p>
             <h1 className="text-4xl  tracking-tight text-gray-900 sm:text-5xl">
@@ -121,7 +121,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
             <div className="mt-6 space-y-5">
               {feature.benefits.map((benefit) => (
                 <div key={benefit.title}>
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg  text-gray-900">
                     {benefit.title}
                   </h3>
                   <p className="mt-2 text-sm leading-7 text-gray-600">
@@ -143,10 +143,10 @@ function FeatureDetail({ feature }: { feature: Feature }) {
                 key={useCase.role}
                 className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-100"
               >
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#625FD0]">
+                <p className="text-sm  uppercase tracking-[0.16em] text-[#625FD0]">
                   {useCase.role}
                 </p>
-                <p className="mt-4 text-lg font-semibold text-gray-900">
+                <p className="mt-4 text-lg  text-gray-900">
                   {useCase.scenario}
                 </p>
                 <p className="mt-4 text-sm leading-7 text-gray-600">
@@ -166,10 +166,10 @@ function FeatureDetail({ feature }: { feature: Feature }) {
               key={step.step}
               className="rounded-3xl border border-gray-200 p-6 shadow-sm"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#625FD0]">
+              <p className="text-sm  uppercase tracking-[0.16em] text-[#625FD0]">
                 Step {step.step}
               </p>
-              <h3 className="mt-3 text-xl font-semibold text-gray-900">
+              <h3 className="mt-3 text-xl  text-gray-900">
                 {step.title}
               </h3>
               <p className="mt-3 text-sm leading-7 text-gray-600">
@@ -185,7 +185,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
         <div className="mt-8 space-y-4">
           {feature.faq.map((item) => (
             <div key={item.question} className="rounded-3xl bg-[#F7FAFC] p-6">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg  text-gray-900">
                 {item.question}
               </h3>
               <p className="mt-3 text-sm leading-7 text-gray-600">
@@ -208,7 +208,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
       <section className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#625FD0]">
+            <p className="text-sm  uppercase tracking-[0.2em] text-[#625FD0]">
               Enterprise Infrastructure
             </p>
             <h1 className="text-4xl  tracking-tight text-gray-900 sm:text-5xl">
@@ -234,7 +234,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
         </div>
 
         <div className="mt-10 rounded-3xl bg-[#F7FAFC] p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#625FD0]">
+          <p className="text-sm  uppercase tracking-[0.16em] text-[#625FD0]">
             Why It Matters
           </p>
           <p className="mt-3 text-lg leading-8 text-gray-700">{card.callout}</p>
@@ -269,7 +269,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
                   key={useCase.label}
                   className="rounded-2xl bg-[#F7FAFC] p-5"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg  text-gray-900">
                     {useCase.label}
                   </h3>
                   <p className="mt-2 text-sm leading-7 text-gray-600">
@@ -297,7 +297,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
                 key={framework.name}
                 className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-100"
               >
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg  text-gray-900">
                   {framework.name}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-gray-600">
@@ -323,7 +323,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
               key={principle.title}
               className="rounded-3xl border border-gray-200 p-6 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg  text-gray-900">
                 {principle.title}
               </h3>
               <p className="mt-3 text-sm leading-7 text-gray-600">
@@ -350,7 +350,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
               <Link
                 key={button.label}
                 href={button.link}
-                className={`inline-flex items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold ${
+                className={`inline-flex items-center justify-center rounded-lg px-4 py-3 text-sm  ${
                   button.variant === "primary"
                     ? "bg-[#625FD0] text-white"
                     : "border bg-[#625FD0] border-white/30 text-white"

@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const companies = [
-  { name: "Adobe", src: "/image/newimage/Adobe.png", width: 100 },
-  { name: "BrowserStack", src: "/image/newimage/Browser1.png", width: 140 },
-  { name: "Zoho", src: "/image/newimage/Zoho.png", width: 140 },
-  { name: "Microsoft", src: "/image/newimage/Microsoft.png", width: 140 },
-  { name: "Sprinto", src: "/image/newimage/Sprinto.png", width: 150 },
-  { name: "Perplexity", src: "/image/newimage/perplexity.png", width: 140 },
-  { name: "Socket", src: "/image/newimage/Socket.png", width: 140 },
-  { name: "Nvidia", src: "/image/newimage/image.png", width: 140 },
+  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 100 },
+  { name: "BrowserStack", src: "/Image/newimage/Browser1.png", width: 140 },
+  { name: "Zoho", src: "/Image/newimage/Zoho.png", width: 140 },
+  { name: "Microsoft", src: "/Image/newimage/Microsoft.png", width: 140 },
+  { name: "Sprinto", src: "/Image/newimage/Sprinto.png", width: 150 },
+  { name: "Perplexity", src: "/Image/newimage/perplexity.png", width: 140 },
+  { name: "Socket", src: "/Image/newimage/Socket.png", width: 140 },
+  { name: "Nvidia", src: "/Image/newimage/image.png", width: 140 },
 ];
 
 export default function PartnersHero() {
@@ -44,14 +44,15 @@ export default function PartnersHero() {
               <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-5xl  text-black leading-[1.1] tracking-tight">
                 Our <span className=" text-[#625FD0] ">Partners</span>
               </h1>
-         
+
               <p className="text-base sm:text-lg text-slate-700 font-medium  max-w-xl">
-               Unlock enterprise value from the AI Vibe Working Platform with our global partner ecosystem. 
+                Unlock enterprise value from the AI Vibe Working Platform with
+                our global partner ecosystem.
               </p>
               <p className="text-slate-500 text-md sm:text-base max-w-xl">
-                Scale faster and achieve measurable outcomes with SuperManager AGI specialist agents implemented, configured and optimised by certified implementation partners across every industry.
-
-
+                Scale faster and achieve measurable outcomes with SuperManager
+                AGI specialist agents implemented, configured and optimised by
+                certified implementation partners across every industry.
               </p>
             </div>
 
@@ -63,13 +64,10 @@ export default function PartnersHero() {
               >
                 Find a Partner
               </Link>
-
-              
             </div>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-8 pt-6 border-slate-200">
-              
               {[
                 { value: "200+", label: "Certified Implementation Partners" },
                 { value: "50+", label: "Countries" },

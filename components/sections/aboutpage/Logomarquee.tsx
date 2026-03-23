@@ -5,14 +5,14 @@ import Image from "next/image";
 /* ---------------- LOGOS ---------------- */
 
 const logos = [
-  { name: "Adobe", src: "/image/newimage/Adobe.png" },
-  { name: "BrowserStack", src: "/image/newimage/Browser1.png" },
-  { name: "Zoho", src: "/image/newimage/Zoho.png" },
-  { name: "Microsoft", src: "/image/newimage/Microsoft.png" },
-  { name: "Sprinto", src: "/image/newimage/Sprinto.png" },
-  { name: "Perplexity", src: "/image/newimage/perplexity.png" },
-  { name: "Socket", src: "/image/newimage/Socket.png" },
-  { name: "Nvidia", src: "/image/newimage/image.png" },
+  { name: "Adobe", src: "/Image/newimage/Adobe.png" },
+  { name: "BrowserStack", src: "/Image/newimage/Browser1.png" },
+  { name: "Zoho", src: "/Image/newimage/Zoho.png" },
+  { name: "Microsoft", src: "/Image/newimage/Microsoft.png" },
+  { name: "Sprinto", src: "/Image/newimage/Sprinto.png" },
+  { name: "Perplexity", src: "/Image/newimage/perplexity.png" },
+  { name: "Socket", src: "/Image/newimage/Socket.png" },
+  { name: "Nvidia", src: "/Image/newimage/image.png" },
 ];
 
 /* ---------------- SECTION ---------------- */

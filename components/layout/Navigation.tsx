@@ -100,8 +100,8 @@ export default function Navigation() {
                 {/* LEFT */}
                 <div className="flex items-center gap-16">
                   <Link href="/" className="flex items-center">
-                    <Image src="/image/logo1.png" alt="logo icon" width={30} height={30}/>
-                    <Image src="/image/logo.png" alt="logo" width={170} height={60}/>
+                    <Image src="/Image/logo1.png" alt="logo icon" width={30} height={30}/>
+                    <Image src="/Image/logo.png" alt="logo" width={170} height={60}/>
                   </Link>
 
                   {/* DESKTOP NAV */}

@@ -1,27 +1,27 @@
 export type homedata = {
-  id: string
-  img: string
-  text: string
-  title: string
-  desc: string
-  author?: string
-  date: string
-  readTime: string
-  intro: string
-  tag?: string[]
+  id: string;
+  img: string;
+  text: string;
+  title: string;
+  desc: string;
+  author?: string;
+  date: string;
+  readTime: string;
+  intro: string;
+  tag?: string[];
   sections: {
-    heading: string
-    content: string[]
-  }[]
-}
-
+    heading: string;
+    content: string[];
+  }[];
+};
 
 export const HomeData: homedata[] = [
   {
     id: "automate",
-    img: "/image/ai-maannger.jpg",
+    img: "/Image/ai-maannger.jpg",
     text: "AUTOMATE DAILY OPS",
-    title: "Prompt and Execute Any Task One Prompt Executes Work Across Every Connected Application",
+    title:
+      "Prompt and Execute Any Task One Prompt Executes Work Across Every Connected Application",
     desc: "SuperManager AGI takes any natural language instruction and executes it end to end across every connected system. The Controller Agent orchestrates specialist agents in parallel, validates all outputs via evidence-majority voting and commits results with a full audit trail. No manual steps. No app switching. No waiting.",
     author: "SuperManager AGI Team",
     date: "March 12, 2025",
@@ -64,9 +64,10 @@ export const HomeData: homedata[] = [
 
   {
     id: "optimize",
-    img: "/image/image.png",
+    img: "/Image/image.png",
     text: "OPTIMIZE RESOURCES",
-    title: "Retrieve Data 1,000 Feet Deep Any Answer From the Actual Live Data Inside Your Enterprise",
+    title:
+      "Retrieve Data 1,000 Feet Deep Any Answer From the Actual Live Data Inside Your Enterprise",
     desc: "Ask anything about your enterprise and get a grounded, accurate answer retrieved directly from your live databases in under 65ms via the ADA layer. Financial analytics hallucination drops from 25.1% to 2.7%. Customer support hallucination drops from 12.4% to 3.8%. Operational data drops from 13.5% to 5.1%. Not approximations  actual data from actual databases.",
     author: "SuperManager AGI Research",
     date: "February 28, 2025",
@@ -108,9 +109,10 @@ export const HomeData: homedata[] = [
 
   {
     id: "predict",
-    img: "/image/World'sFirst/image1.webp",
+    img: "/Image/World'sFirst/image1.webp",
     text: "PREDICT PROBLEMS",
-    title: "Deploy Autonomous Agents Build an AI Workforce That Runs 24x7 Without Prompts",
+    title:
+      "Deploy Autonomous Agents Build an AI Workforce That Runs 24x7 Without Prompts",
     desc: "Configure specialist agents that monitor your connected systems continuously, detect conditions that require action and execute tasks autonomously. Each agent is purpose-built for its domain. All coordinated by the Beehive architecture. All auditable. All running whether or not anyone is watching.",
     author: "SuperManager AGI Engineering",
     date: "March 5, 2025",
@@ -153,16 +155,23 @@ export const HomeData: homedata[] = [
 
   {
     id: "protect",
-    img: "/image/image1.4.jpg",
+    img: "/Image/image1.4.jpg",
     text: "PROTECT YOUR TEAM",
-    title: "Live Org Intelligence for Every Leader Know What Is Happening Across Every Department, Live",
+    title:
+      "Live Org Intelligence for Every Leader Know What Is Happening Across Every Department, Live",
     desc: "Founders, COOs and department heads get a live view of every metric that matters  revenue, inventory, logistics, marketing spend, customer care, finance  updated in real time from every connected system. Not a report someone built last week. The actual live state of your organisation, visible in one place at 65ms.",
     author: "SuperManager AGI Product",
     date: "March 18, 2025",
     readTime: "5 min read",
     intro:
       "The quality of executive decisions is bounded by the quality of the information on which they are based. When that information is assembled manually, distributed across disparate systems, and delivered on a fixed reporting schedule, decision latency becomes a structural liability. Live Org Intelligence redefines the information architecture available to organisational leadership.",
-    tag: ["Live Data", "Leadership", "Org Intelligence", "Dashboard", "Enterprise"],
+    tag: [
+      "Live Data",
+      "Leadership",
+      "Org Intelligence",
+      "Dashboard",
+      "Enterprise",
+    ],
     sections: [
       {
         heading: "The Limitations of Report-Based Information Architecture",

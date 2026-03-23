@@ -3,14 +3,14 @@ import Link from "next/link";
 import { features } from "@/lib/Dataset/features";
 
 const companies = [
-  { name: "Adobe", src: "/image/newimage/Adobe.png", width: 120 },
-  { name: "BrowserStack", src: "/image/newimage/Browser1.png", width: 200 },
-  { name: "Zoho", src: "/image/newimage/Zoho.png", width: 120 },
-  { name: "Microsoft", src: "/image/newimage/Microsoft.png", width: 200 },
-  { name: "Sprinto", src: "/image/newimage/Sprinto.png", width: 120 },
-  { name: "Perplexity", src: "/image/newimage/perplexity.png", width: 200 },
-  { name: "Socket", src: "/image/newimage/Socket.png", width: 120 },
-  { name: "Nvidia", src: "/image/newimage/image.png", width: 200 },
+  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 120 },
+  { name: "BrowserStack", src: "/Image/newimage/Browser1.png", width: 200 },
+  { name: "Zoho", src: "/Image/newimage/Zoho.png", width: 120 },
+  { name: "Microsoft", src: "/Image/newimage/Microsoft.png", width: 200 },
+  { name: "Sprinto", src: "/Image/newimage/Sprinto.png", width: 120 },
+  { name: "Perplexity", src: "/Image/newimage/perplexity.png", width: 200 },
+  { name: "Socket", src: "/Image/newimage/Socket.png", width: 120 },
+  { name: "Nvidia", src: "/Image/newimage/image.png", width: 200 },
 ];
 
 export default function HeroSection() {
@@ -23,9 +23,9 @@ export default function HeroSection() {
         loop
         playsInline
         className="fixed inset-0 h-screen w-screen object-cover -z-10 pointer-events-none"
-        poster="/image/newimage/image2.png"
+        poster="/Image/newimage/image2.png"
       >
-        <source src="/image/World'sFirst/background.mp4" type="video/mp4" />
+        <source src="/Image/World'sFirst/background.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}

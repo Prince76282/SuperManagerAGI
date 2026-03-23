@@ -22,7 +22,7 @@ export const features: Feature[] = [
       "Type a natural language instruction and SuperManager AGI executes it across every connected application. The Controller Agent decomposes tasks into a DAG of subtasks, dispatches them to specialist agents in parallel using a work-stealing scheduler, and commits validated results. From creating tickets and sending updates to generating reports and reconciling settlements  one prompt, work done.",
     longDescription:
       "SuperManager AGI transforms the way enterprise work gets done. Instead of switching between a dozen applications, logging in, navigating menus, and executing repetitive steps  you simply describe what you need in plain English. The Controller Agent receives your instruction, understands intent using a context-aware LLM layer, and immediately decomposes it into a directed acyclic graph (DAG) of subtasks. Each node in the DAG is dispatched to a specialist agent best suited for that operation  whether it's writing to Jira, querying your ERP, sending a Slack message, or reconciling a payment ledger.\n\nThe work-stealing scheduler ensures no agent sits idle. Subtasks are distributed dynamically, so 10 agents can work simultaneously on different parts of a complex workflow. Before any result is committed back to your systems, a validation layer cross-checks outputs using evidence-majority voting  catching hallucinations and data errors before they propagate. The entire process, from your prompt to completed action, takes seconds  not hours of manual work.",
-    image: "/image/newimage/image1.1.png",
+    image: "/Image/newimage/image1.1.png",
     href: "/home/prompt-and-do-any-task",
     stats: [
       { value: "1 Prompt", label: "to trigger multi-system workflows" },
@@ -139,7 +139,7 @@ export const features: Feature[] = [
       "Access critical data across 8–12 disconnected tools instantly. The ADA Integration Layer connects agents natively to databases with 2–15ms latency  no slow APIs. Query operations, finances, inventory, pipeline, or customers and receive precise answers from live enterprise data in under 65ms. No cached summaries. No dashboard approximations.",
     longDescription:
       "Most enterprise dashboards show you a simplified, cached, 24-hour-old view of your business. SuperManager AGI gives you something fundamentally different: real-time access to the actual data living inside your operational databases  without the overhead of REST APIs, GraphQL layers, or rate-limited SaaS connectors.\n\nThe ADA (Agentic Data Architecture) Integration Layer establishes direct, permissioned connections to your databases  Postgres, MySQL, MongoDB, Snowflake, BigQuery, and others. When you ask a question, agents query the source of truth directly. Latency drops from 200–500ms (typical API-based retrieval) to 2–15ms. Answers aren't approximations pulled from a reporting layer  they reflect the state of your business right now.\n\nThis also fundamentally reduces hallucination. Rather than the LLM inferring or guessing values, agents retrieve exact figures from your data sources and ground every answer in evidence. Hallucination rates drop from 22.4% (typical RAG systems) to 4.2%  a 5x improvement that makes the difference between a tool you trust and one you constantly double-check.",
-    image: "/image/newimage/image1.2.png",
+    image: "/Image/newimage/image1.2.png",
     href: "/home/prompt-and-get-data",
     stats: [
       { value: "2–15ms", label: "database query latency" },
@@ -241,7 +241,8 @@ export const features: Feature[] = [
           "PostgreSQL, MySQL, MongoDB, Snowflake, BigQuery, Redshift, DynamoDB, and Elasticsearch are natively supported. Custom connectors can be configured for proprietary databases.",
       },
       {
-        question: "What if the question requires data from a system without direct DB access?",
+        question:
+          "What if the question requires data from a system without direct DB access?",
         answer:
           "The agent falls back to the optimized API connector for that system  with intelligent caching and request batching to minimize latency. You'll still receive an answer; the source metadata will indicate the retrieval method used.",
       },
@@ -256,7 +257,7 @@ export const features: Feature[] = [
       "Execute complex workflows across multiple applications automatically. The Beehive Architecture deploys specialist agents that run in parallel. Evidence-majority voting validates outputs before execution. Achieve 6.7x throughput with 10 parallel agents and 97% task execution accuracy.",
     longDescription:
       "Enterprise workflows are inherently multi-step and multi-system. A single business process  like onboarding a new vendor, closing a sales deal, or launching a product  might span 15 steps across 6 different tools. SuperManager's Beehive Architecture is purpose-built for this reality.\n\nRather than a single generalist agent handling everything sequentially, the Beehive deploys a coordinated swarm of specialist agents  each deeply capable within its domain (finance, CRM, logistics, communication, engineering). The orchestration layer assigns work dynamically, routes data between agents, manages dependencies, and ensures the overall workflow progresses correctly even when individual steps encounter errors or require retries.\n\nThe breakthrough is evidence-majority voting: before any specialist agent writes a result, at least 3 independent verification passes confirm the output is correct. This isn't just error-checking  it's a systematic approach to ensuring that the collective intelligence of the swarm produces more reliable outputs than any individual model could alone. The result: 97% task execution accuracy on complex, multi-step enterprise workflows.",
-    image: "/image/newimage/image1.5.png",
+    image: "/Image/newimage/image1.5.png",
     href: "/home/multi-action-agent-orchestration",
     stats: [
       { value: "6.7x", label: "throughput with 10 parallel agents" },
@@ -294,19 +295,22 @@ export const features: Feature[] = [
     useCases: [
       {
         role: "HR Operations",
-        scenario: "Automate the full employee onboarding workflow across HR, IT, Finance, and Facilities.",
+        scenario:
+          "Automate the full employee onboarding workflow across HR, IT, Finance, and Facilities.",
         outcome:
           "8 agents execute in parallel: provisioning accounts (IT), creating payroll records (Finance), assigning equipment (Facilities), enrolling in benefits (HR), creating Jira onboarding tasks, sending welcome communications, scheduling orientation, and notifying the manager  all triggered by a single HR form submission.",
       },
       {
         role: "E-commerce Operations",
-        scenario: "Process a flash sale across marketplace channels simultaneously.",
+        scenario:
+          "Process a flash sale across marketplace channels simultaneously.",
         outcome:
           "Agents update pricing on Shopify, Amazon, and Flipkart simultaneously, adjust inventory buffers in the WMS, notify the logistics partner, update ad bids in Google and Meta, and send push notifications to the customer app  in one orchestrated workflow.",
       },
       {
         role: "Engineering Lead",
-        scenario: "Automate post-incident response after a production alert fires.",
+        scenario:
+          "Automate post-incident response after a production alert fires.",
         outcome:
           "Agents create a Jira incident ticket, page the on-call engineer via PagerDuty, pull the relevant error logs from Datadog, draft an incident summary, notify the affected customer segment via Intercom, and schedule a post-mortem  within seconds of the alert.",
       },
@@ -350,7 +354,8 @@ export const features: Feature[] = [
           "The Beehive Architecture scales horizontally. Standard deployments support up to 10 parallel agents per workflow. Enterprise deployments can scale to 50+ concurrent agents on complex workflows, subject to your plan.",
       },
       {
-        question: "Can I define custom workflows, or are only templates available?",
+        question:
+          "Can I define custom workflows, or are only templates available?",
         answer:
           "Both. You can activate pre-built workflow templates immediately, customize them with drag-and-drop, or define new workflows entirely via natural language prompt or a YAML/JSON workflow specification.",
       },
@@ -370,7 +375,7 @@ export const features: Feature[] = [
       "Deploy always-on agents that monitor systems, detect triggers, and execute actions without prompts. Includes inventory agents, finance reconciliation agents, NDR management agents, campaign monitoring agents, and customer care agents  all autonomous, coordinated, and fully auditable.",
     longDescription:
       "Most automation tools run when you tell them to. SuperManager's 24x7 autonomous agents run continuously  monitoring your business systems in real time, detecting the conditions that matter, and taking action the moment a trigger fires. No cron jobs, no manual checks, no alerts that require human follow-up before anything happens.\n\nEach category of autonomous agent is purpose-built for its domain. Inventory agents watch stock levels, velocity trends, and supplier lead times  automatically triggering replenishment orders before a stockout occurs. Finance reconciliation agents compare settlement records against invoices in real time, flagging discrepancies the moment they appear. NDR (Non-Delivery Report) management agents monitor shipping exceptions, attempt re-engagement via SMS/WhatsApp/email, and rebook deliveries  dramatically improving last-mile success rates.\n\nAll agents operate within defined policy boundaries  configurable thresholds, escalation rules, and override mechanisms. Every action is logged with full context. Humans retain final authority at any point. The result: operational coverage that was previously impossible without large teams, running continuously without fatigue, at a fraction of the cost.",
-    image: "/image/newimage/image1.4.png",
+    image: "/Image/newimage/image1.4.png",
     href: "/home/autonomous-ai-agents",
     stats: [
       { value: "24x7", label: "continuous monitoring coverage" },
@@ -408,19 +413,22 @@ export const features: Feature[] = [
     useCases: [
       {
         role: "E-commerce Operations",
-        scenario: "Inventory agent monitors real-time stock levels across 3 warehouses.",
+        scenario:
+          "Inventory agent monitors real-time stock levels across 3 warehouses.",
         outcome:
           "When any SKU crosses the reorder threshold, the agent automatically creates a PO in the ERP, notifies the supplier via email, updates the expected restock date in the product catalog, and logs the action  without human intervention.",
       },
       {
         role: "Finance Team",
-        scenario: "Finance reconciliation agent runs continuously against Razorpay and SAP data.",
+        scenario:
+          "Finance reconciliation agent runs continuously against Razorpay and SAP data.",
         outcome:
           "Discrepancies between settlements and invoices are flagged within seconds of appearing, a Jira ticket is created with full context, and the relevant accountant is notified  average detection time drops from 3 days to under 1 minute.",
       },
       {
         role: "Logistics Team",
-        scenario: "NDR agent monitors all undelivered shipment events in real time.",
+        scenario:
+          "NDR agent monitors all undelivered shipment events in real time.",
         outcome:
           "For each NDR event, the agent sends a personalized re-engagement message (WhatsApp first, SMS fallback), attempts address confirmation, and schedules a re-delivery attempt  increasing delivery success rate by 31% on average.",
       },
@@ -459,7 +467,8 @@ export const features: Feature[] = [
     ],
     faq: [
       {
-        question: "How do I configure what an autonomous agent is allowed to do?",
+        question:
+          "How do I configure what an autonomous agent is allowed to do?",
         answer:
           "Each agent type has a policy configuration panel where you define: action thresholds (e.g., auto-approve POs up to ₹50,000), escalation rules (e.g., notify manager for actions above threshold), blackout windows (e.g., no actions during system maintenance), and required approval workflows for specific action types.",
       },
@@ -484,7 +493,7 @@ export const features: Feature[] = [
       "Connect 200+ applications including Shopify, Amazon, Flipkart, Shiprocket, Jira, Slack, Salesforce, HubSpot, GitHub, SAP, Workday, Razorpay, and more. Every app becomes a system agents can read, write, and execute tasks in  simultaneously and in the correct sequence.",
     longDescription:
       "Enterprise complexity doesn't come from any single tool  it comes from the sprawl of 15–30 applications that each team relies on, none of which talk to each other naturally. SuperManager AGI solves this at the infrastructure level by making every connected application a first-class citizen in the agent network.\n\nThe Universal Connectivity layer goes far beyond standard API integration. Each application connector is built with deep schema awareness  agents understand not just how to call an API, but what the data means, how entities relate across systems, and what operations are safe to perform autonomously. A Shopify product ID is automatically correlated with its counterpart in your ERP, WMS, and ad platform  without requiring you to build and maintain mapping tables.\n\nAgents can read from, write to, and execute actions within any connected application. They can also chain actions across applications in the correct sequence  updating CRM after a payment is confirmed, provisioning a Jira project when a Salesforce deal closes, or updating ad bids when inventory drops. The result is a business operating layer where data and actions flow freely between systems  orchestrated by agents that understand your entire technology stack.",
-    image: "/image/newimage/image1.8.png",
+    image: "/Image/newimage/image1.8.png",
     href: "/home/universal-application-connectivity",
     stats: [
       { value: "200+", label: "applications supported" },
@@ -522,19 +531,22 @@ export const features: Feature[] = [
     useCases: [
       {
         role: "Revenue Operations",
-        scenario: "Sync deal stages between Salesforce and Jira project creation automatically.",
+        scenario:
+          "Sync deal stages between Salesforce and Jira project creation automatically.",
         outcome:
           "When a deal moves to 'Closed Won' in Salesforce, an agent creates a Jira project with pre-populated epics, assigns the delivery team, notifies the account manager in Slack, and creates the initial invoice in Razorpay  all triggered by one CRM event.",
       },
       {
         role: "E-commerce Manager",
-        scenario: "Manage product listings across Shopify, Amazon, and Flipkart from one prompt.",
+        scenario:
+          "Manage product listings across Shopify, Amazon, and Flipkart from one prompt.",
         outcome:
           "An agent updates the product title, description, and price across all three channels simultaneously  adapting the listing format to each platform's schema and confirming all updates succeeded before returning.",
       },
       {
         role: "Engineering Manager",
-        scenario: "Connect GitHub events to Jira, Slack, and deployment pipelines.",
+        scenario:
+          "Connect GitHub events to Jira, Slack, and deployment pipelines.",
         outcome:
           "A merged PR automatically closes the linked Jira ticket, posts a release note to the engineering Slack channel, triggers a staging deployment, and notifies QA  with no manual steps.",
       },
@@ -583,7 +595,8 @@ export const features: Feature[] = [
           "All credentials are stored in an encrypted secrets vault, isolated per organization. They are never exposed in agent context windows, logs, or API responses. Credential rotation is supported and recommended.",
       },
       {
-        question: "Can different teams have access to different application connectors?",
+        question:
+          "Can different teams have access to different application connectors?",
         answer:
           "Yes. Connector access is managed at the team and role level. A logistics team can be granted access to WMS and Shiprocket connectors, while finance has access to SAP and Razorpay  with no cross-access unless explicitly configured.",
       },
@@ -598,7 +611,7 @@ export const features: Feature[] = [
       "Maintain full control with audit trails, approval gates, and override mechanisms. Critical decisions are routed to the right human before execution. AI handles operations while humans retain final authority.",
     longDescription:
       "Autonomy without accountability is a liability. SuperManager AGI is designed from the ground up with the understanding that enterprise AI systems must be fully governable  not just capable. Human in the Loop (HITL) controls give organizations a comprehensive framework for defining exactly where AI acts independently, where it pauses for review, and where humans must always decide.\n\nApproval gates can be inserted at any point in any workflow. Define thresholds by action type, value, risk category, or system  and the agent pauses, summarizes its proposed action with full context, and routes it to the right person for review. Approvers can approve, reject, modify, or escalate from a simple interface  on desktop or mobile.\n\nThe audit trail is comprehensive and immutable. Every agent action, approval decision, and override is logged with actor identity, timestamp, input context, and outcome. This isn't just for compliance  it's the foundation for continuous improvement, enabling teams to review agent behavior, refine policies, and build justified trust over time. Enterprises deploying SuperManager AGI can demonstrate exactly what the system did, why it did it, and who authorized it  for every action, ever.",
-    image: "/image/newimage/image1.6.png",
+    image: "/Image/newimage/image1.6.png",
     href: "/home/human-in-the-loop",
     stats: [
       { value: "100%", label: "actions logged with full context" },
@@ -636,13 +649,15 @@ export const features: Feature[] = [
     useCases: [
       {
         role: "CFO",
-        scenario: "All payment disbursements above ₹1,00,000 require CFO approval before execution.",
+        scenario:
+          "All payment disbursements above ₹1,00,000 require CFO approval before execution.",
         outcome:
           "The finance agent prepares the payment, generates a summary with invoice references, risk score, and vendor history, and routes it to the CFO's mobile app. One-tap approval releases the payment. Full audit trail captured.",
       },
       {
         role: "Legal / Compliance",
-        scenario: "Any external customer communication drafted by an agent requires legal review.",
+        scenario:
+          "Any external customer communication drafted by an agent requires legal review.",
         outcome:
           "The communication agent drafts the email, flags it for legal review, and pauses. Legal receives the draft with context and approves or edits directly in the approval interface. The agent sends the approved version.",
       },
@@ -687,12 +702,14 @@ export const features: Feature[] = [
     ],
     faq: [
       {
-        question: "Can I see a real-time view of all agent actions across my organization?",
+        question:
+          "Can I see a real-time view of all agent actions across my organization?",
         answer:
           "Yes. The Operations Dashboard provides a real-time feed of all agent actions  pending, in-progress, and completed  with filtering by team, workflow, agent type, action type, and time range. Anomalies are highlighted automatically.",
       },
       {
-        question: "What happens if an approved action fails after the human approves it?",
+        question:
+          "What happens if an approved action fails after the human approves it?",
         answer:
           "Execution failures after approval are logged with the error context and routed back to the approver and the system administrator. The agent does not retry automatically  a human decision is required to reattempt, modify, or cancel the action.",
       },
@@ -712,7 +729,7 @@ export const features: Feature[] = [
       "Powered by proprietary Agentic Data Architecture, enabling direct database access without APIs, MCP overhead, or rate limits. Achieves 2–15ms latency vs 200–500ms traditional systems. Reduces hallucination rates from 22.4% to 4.2% through evidence-grounded outputs. Peer-reviewed and runs on consumer hardware without GPUs.",
     longDescription:
       "The ADA (Agentic Data Architecture) Integration Layer is the core technical infrastructure that makes SuperManager AGI's data capabilities fundamentally different from every other enterprise AI platform. While competitors build on top of existing API layers  inheriting their latency, rate limits, and data staleness  ADA establishes direct, permissioned connections to your actual databases and data systems.\n\nThis architectural choice has cascading benefits. Latency drops by an order of magnitude: 2–15ms vs 200–500ms for API-based retrieval. Rate limits disappear  no more throttled queries or queued requests during peak hours. Data freshness goes from eventual consistency to real-time  you're always querying the live state of your systems, not a cached export.\n\nBut the most important benefit is epistemic: because agents retrieve actual data rather than relying on semantic search over summaries, hallucination rates drop dramatically  from 22.4% (measured in standard RAG systems on enterprise benchmarks) to 4.2% in ADA-powered agents. When your AI system tells you there are 847 units of SKU-4421 in warehouse B, that number came from a direct database query  not an inference from a document chunk.\n\nADA is also designed for deployment accessibility: peer-reviewed architecture that runs on consumer-grade hardware without requiring GPUs. Enterprise AI capability without enterprise infrastructure cost.",
-    image: "/image/newimage/image1.7.png",
+    image: "/Image/newimage/image1.7.png",
     href: "/home/ada-integration-layer",
     stats: [
       { value: "2–15ms", label: "query latency (vs 200–500ms APIs)" },
@@ -750,19 +767,22 @@ export const features: Feature[] = [
     useCases: [
       {
         role: "Data Engineering Team",
-        scenario: "Replace slow API-based data pipelines with ADA direct connections for real-time analytics.",
+        scenario:
+          "Replace slow API-based data pipelines with ADA direct connections for real-time analytics.",
         outcome:
           "Query latency for operational analytics drops from 340ms (API average) to 9ms (ADA direct). Dashboard refresh rates increase from 5-minute intervals to real-time. Data pipeline maintenance overhead eliminated.",
       },
       {
         role: "Enterprise Architect",
-        scenario: "Deploy SuperManager AGI on-premise without GPU infrastructure.",
+        scenario:
+          "Deploy SuperManager AGI on-premise without GPU infrastructure.",
         outcome:
           "ADA runs on standard server hardware  no NVIDIA cards, no cloud GPU instances. Full AI agent capability deployed within the organization's existing infrastructure budget.",
       },
       {
         role: "Compliance Officer",
-        scenario: "Audit AI decision-making with full data provenance for every agent output.",
+        scenario:
+          "Audit AI decision-making with full data provenance for every agent output.",
         outcome:
           "Every agent response includes a provenance record: the exact database query executed, the records retrieved, and how the output was constructed. Regulators can verify exactly what data drove each AI decision.",
       },

@@ -28,13 +28,13 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6 mb-12 pb-8 border-b border-gray-200">
             <Link href="/" className="flex items-center gap-1">
               <Image
-                src="/image/logo1.png"
+                src="/Image/logo1.png"
                 alt="Logo Icon"
                 width={30}
                 height={30}
               />
               <Image
-                src="/image/logo.png"
+                src="/Image/logo.png"
                 alt="Logo"
                 width={160}
                 height={50}
@@ -159,7 +159,7 @@ const Footer = () => {
                     target="_blank"
                   >
                     <Image
-                      src="/image/linkedin.png"
+                      src="/Image/linkedin.png"
                       alt="LinkedIn"
                       width={30}
                       height={30}
@@ -168,7 +168,7 @@ const Footer = () => {
 
                   <Link href="https://x.com/supermanageragi" target="_blank">
                     <Image
-                      src="/image/twitter.png"
+                      src="/Image/twitter.png"
                       alt="Twitter"
                       width={30}
                       height={30}

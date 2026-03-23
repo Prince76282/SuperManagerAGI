@@ -17,14 +17,14 @@ import {
 import Image from "next/image";
 
 const companies = [
-  { name: "Adobe", src: "/image/newimage/Adobe.png", width: 160 },
-  { name: "BrowserStack", src: "/image/newimage/Browser1.png", width: 160 },
-  { name: "Zoho", src: "/image/newimage/Zoho.png", width: 160 },
-  { name: "Microsoft", src: "/image/newimage/Microsoft.png", width: 160 },
-  { name: "Sprinto", src: "/image/newimage/Sprinto.png", width: 160},
-  { name: "Perplexity", src: "/image/newimage/perplexity.png", width: 160 },
-  { name: "Socket", src: "/image/newimage/Socket.png", width: 160 },
-  { name: "Nvidia", src: "/image/newimage/image.png", width: 160 },
+  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 160 },
+  { name: "BrowserStack", src: "/Image/newimage/Browser1.png", width: 160 },
+  { name: "Zoho", src: "/Image/newimage/Zoho.png", width: 160 },
+  { name: "Microsoft", src: "/Image/newimage/Microsoft.png", width: 160 },
+  { name: "Sprinto", src: "/Image/newimage/Sprinto.png", width: 160 },
+  { name: "Perplexity", src: "/Image/newimage/perplexity.png", width: 160 },
+  { name: "Socket", src: "/Image/newimage/Socket.png", width: 160 },
+  { name: "Nvidia", src: "/Image/newimage/image.png", width: 160 },
 ];
 
 const capabilities = [
@@ -81,8 +81,6 @@ export default function SuperManagerPage() {
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
-           
-
             <Link
               href="/get-in-touch"
               className="border-2 border-[#625FD0] px-4 py-3 text-[#625FD0]  rounded-lg font-semibold hover:text-white hover:bg-[#625FD0] transition"

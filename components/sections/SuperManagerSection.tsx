@@ -13,7 +13,7 @@ const tabs = [
       "From inventory intelligence and logistics automation to marketing attribution and customer care  AI agents handle every operational layer simultaneously. Sales, operations, marketing, finance, logistics, and customer care all coordinated by one AI workforce.",
     footer:
       "Trusted by D2C brands managing 50+ SKUs across 5 channels with 80% less operational overhead",
-    image: "/image/World'sFirst/Depositphotos_212163096_S.jpg",
+    image: "/Image/World'sFirst/Depositphotos_212163096_S.jpg",
   },
   {
     id: "consulting",
@@ -23,7 +23,7 @@ const tabs = [
       "Agents manage client deliverables, generate reports, track engagement timelines, coordinate workloads, and ensure every commitment is delivered on time. Get real-time visibility across 20+ engagements without manual status chasing.",
     footer:
       "Trusted by consulting principals managing 24 active engagements with the oversight that previously required 6 team members",
-    image: "/image/World'sFirst/image1.webp",
+    image: "/Image/World'sFirst/image1.webp",
   },
   {
     id: "engineering",
@@ -33,7 +33,7 @@ const tabs = [
       "From sprint planning to release coordination, AI agents manage operational work automatically so engineers focus on coding and delivery. Sprint intelligence, blocker detection, release notes, and stakeholder updates  all autonomous.",
     footer:
       "Trusted by engineering leaders shipping 3× faster with 95% less coordination overhead",
-    image: "/image/World'sFirst/image2.jpeg",
+    image: "/Image/World'sFirst/image2.jpeg",
   },
   {
     id: "enterprise",
@@ -52,7 +52,7 @@ const tabs = [
     description:
       "Operate like an 80-person company with a 30-person team. Agents handle vendor follow-ups, MIS reporting, escalation tracking, and operational workflows so founders focus on growth instead of firefighting.",
     footer: "Manage 10× more operational complexity with the same team",
-    image: "/image/World'sFirst/PLAN.jpg",
+    image: "/Image/World'sFirst/PLAN.jpg",
   },
   {
     id: "service",
@@ -71,21 +71,21 @@ const tabs = [
     description:
       "Always-on AI coordination across geographies with async standups, real-time updates, and seamless handoffs between distributed teams.",
     footer: "Trusted by global delivery organizations operating 24/7 at scale",
-    image: "/image/World'sFirst/scaled.webp",
+    image: "/Image/World'sFirst/scaled.webp",
     showEmail: true,
   },
 ];
 
 const companies = [
-  { name: "Adobe", src: "/image/newimage/Adobe1.png" },
-  { name: "BrowserStack", src: "/image/newimage/Browser.png" },
-  { name: "Zoho", src: "/image/newimage/Zoho1.png" },
-  { name: "Microsoft", src: "/image/newimage/Microsoft1.png" },
-  { name: "Sprinto", src: "/image/newimage/Sprinto1.png" },
-  { name: "Perplexity", src: "/image/newimage/perplexity1.png" },
-    { name: "Deloite", src: "/image/newimage/Deloite1.png" },
-  { name: "Socket", src: "/image/newimage/Socket1.png" },
-  { name: "Nvidia", src: "/image/newimage/nvida.png" },
+  { name: "Adobe", src: "/Image/newimage/Adobe1.png" },
+  { name: "BrowserStack", src: "/Image/newimage/Browser.png" },
+  { name: "Zoho", src: "/Image/newimage/Zoho1.png" },
+  { name: "Microsoft", src: "/Image/newimage/Microsoft1.png" },
+  { name: "Sprinto", src: "/Image/newimage/Sprinto1.png" },
+  { name: "Perplexity", src: "/Image/newimage/perplexity1.png" },
+  { name: "Deloite", src: "/Image/newimage/Deloite1.png" },
+  { name: "Socket", src: "/Image/newimage/Socket1.png" },
+  { name: "Nvidia", src: "/Image/newimage/nvida.png" },
 ];
 
 export default function SuperManagerSection() {
@@ -216,8 +216,8 @@ export default function SuperManagerSection() {
                                     <Image
                                       src={company.src}
                                       alt={company.name}
-                                      width={150}
-                                      height={80}
+                                      width={200}
+                                      height={150}
                                       loading="lazy"
                                       className="object-contain opacity-90 w-full h-full"
                                     />
@@ -234,7 +234,6 @@ export default function SuperManagerSection() {
               );
             })}
           </div>
-          {/* ── END RIGHT COLUMN ── */}
         </div>
       </div>
     </section>
