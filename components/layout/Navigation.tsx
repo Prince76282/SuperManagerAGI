@@ -118,7 +118,7 @@ export default function Navigation() {
                       <button
                         onClick={() => toggleDropdown("Platform")}
                         aria-expanded={openDropdown === "Platform"}
-                        className="flex items-center gap-1 text-[14px]  hover:text-[#625FD0]"
+                        className="flex items-center font-semibold gap-1 text-[14px]  hover:text-[#625FD0]"
                       >
                         Platform
                         <ChevronDown
@@ -136,7 +136,7 @@ export default function Navigation() {
                       <button
                         onClick={() => toggleDropdown("Agents")}
                         aria-expanded={openDropdown === "Agents"}
-                        className="flex items-center gap-1 text-[14px]  hover:text-[#625FD0]"
+                        className="flex items-center font-semibold gap-1 text-[14px]  hover:text-[#625FD0]"
                       >
                         Agents
                         <ChevronDown
@@ -152,7 +152,7 @@ export default function Navigation() {
                     {/* Pricing */}
                     <Link
                       href="/pricing/"
-                      className="text-[14px]  hover:text-[#625FD0]"
+                      className="text-[14px] font-semibold  hover:text-[#625FD0]"
                     >
                       Pricing
                     </Link>
@@ -162,7 +162,7 @@ export default function Navigation() {
                       <button
                         onClick={() => toggleDropdown("insights")}
                         aria-expanded={openDropdown === "insights"}
-                        className="flex items-center gap-1 text-[14px]  hover:text-[#625FD0]"
+                        className="flex items-center font-semibold gap-1 text-[14px]  hover:text-[#625FD0]"
                       >
                         Insights
                         <ChevronDown
@@ -181,14 +181,14 @@ export default function Navigation() {
                 <div className="flex items-center gap-4">
                   <Link
                     href="https://app.supermanager.co/login"
-                    className="hidden lg:flex py-[6px] px-2 border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white rounded-lg text-[14px] "
+                    className="hidden lg:flex font-semibold py-[6px] px-2 border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white rounded-lg text-[14px] "
                   >
                     OPEN APP
                   </Link>
 
                   <Link
                     href="/get-in-touch/"
-                    className="hidden lg:flex py-2 px-3 bg-[#625FD0] text-white hover:bg-[#4f4cb0] rounded-lg text-[14px] "
+                    className="hidden font-semibold lg:flex py-2 px-3 bg-[#625FD0] text-white hover:bg-[#4f4cb0] rounded-lg text-[14px] "
                   >
                     GET IN TOUCH
                   </Link>
@@ -222,7 +222,7 @@ export default function Navigation() {
                   <div className="space-y-1">
                     <button
                       onClick={() => setOpenDropdown(null)}
-                      className="flex items-center justify-center gap-5 text-base  text-[#625FD0]"
+                      className="flex items-center font-semibold justify-center gap-5 text-base  text-[#625FD0]"
                     >
                       <ChevronDown className="w-5 h-5 rotate-180" />
                       <span>{dropdownLabels[openDropdown]}</span>
@@ -284,7 +284,7 @@ function MobileMenuBtn({ label, onClick }: MobileMenuBtnProps) {
   return (
     <button
       onClick={onClick}
-      className="flex w-full justify-between items-center py-4 px-4 rounded-lg text-base font-medium hover:text-[#625FD0] hover:bg-gray-50"
+      className="flex w-full  justify-between items-center py-4 px-4 rounded-lg text-base font-medium hover:text-[#625FD0] hover:bg-gray-50"
     >
       {label}
       <ChevronDown className="w-5 h-5" />
