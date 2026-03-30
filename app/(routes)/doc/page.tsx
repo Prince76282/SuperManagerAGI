@@ -161,7 +161,7 @@ function ProductCard({ icon: Icon, title, description }: ProductCardProps) {
       </div>
       <div>
         <div className="mb-1 flex items-center justify-between">
-          <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+          <h3 className="text-2xl  text-gray-900">{title}</h3>
         </div>
         <p className="text-md leading-relaxed text-gray-600">{description}</p>
       </div>
@@ -176,7 +176,7 @@ function DocCard({ icon: Icon, title, description, links }: DocCardProps) {
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#625FD0]/10 text-[#625FD0]">
           <Icon size={17} />
         </div>
-        <span className="text-lg font-semibold text-gray-900">{title}</span>
+        <span className="text-lg  text-gray-900">{title}</span>
       </div>
       <p className="text-sm leading-relaxed text-gray-500">{description}</p>
       <ul className="mt-auto flex flex-col gap-1.5 border-t border-gray-100 pt-2">
@@ -216,13 +216,13 @@ export default function SuperManagerAGI() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="#"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 font-semibold text-white transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2  text-white transition-all duration-300"
             >
               Start for free
             </Link>
             <Link
               href="../doc/docviews"
-              className="inline-flex items-center rounded-lg border-2 border-[#625FD0] px-4 py-2 font-semibold text-[#625FD0] transition-all duration-300 hover:bg-[#625FD0] hover:text-white"
+              className="inline-flex items-center rounded-lg border-2 border-[#625FD0] px-4 py-2  text-[#625FD0] transition-all duration-300 hover:bg-[#625FD0] hover:text-white"
             >
               View documentation
             </Link>
@@ -283,13 +283,13 @@ export default function SuperManagerAGI() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="#"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 font-semibold text-white transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2  text-white transition-all duration-300"
             >
               Start for Free
             </Link>
             <Link
               href="/get-in-touch"
-              className="inline-flex items-center rounded-lg border-2 border-[#625FD0] px-4 py-2 font-semibold text-[#625FD0] transition-all duration-300 hover:bg-[#625FD0] hover:text-white"
+              className="inline-flex items-center rounded-lg border-2 border-[#625FD0] px-4 py-2  text-[#625FD0] transition-all duration-300 hover:bg-[#625FD0] hover:text-white"
             >
               Schedule a Demo
             </Link>

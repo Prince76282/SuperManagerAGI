@@ -179,7 +179,8 @@ const TABS: Tab[] = [
   {
     id: "executives",
     label: "For Founders and Executives",
-    heading: "Strategic Visibility Across Every Department Without Any Manual Gathering",
+    heading:
+      "Strategic Visibility Across Every Department Without Any Manual Gathering",
     subheading:
       "Founders and executives gain a live intelligence view of the entire organisation, including revenue, inventory, logistics, marketing, finance, customer care and engineering, updated continuously from every connected system via the ADA layer. Not a report someone built last week. Not a dashboard someone configured last month. The actual live state of the organisation at 65ms, grounded in evidence from the actual data in connected systems.",
     highlights: [
@@ -237,7 +238,7 @@ function VisualPanel({ visual }: { visual: TabVisual }) {
           <div className="h-2.5 w-2.5 rounded-full bg-green-300" />
         </div>
 
-        <div className="ml-3 flex items-center gap-2 rounded-full bg-[#625FD0]/10 px-3 py-1 text-xs font-semibold text-[#625FD0]">
+        <div className="ml-3 flex items-center gap-2 rounded-full bg-[#625FD0]/10 px-3 py-1 text-xs  text-[#625FD0]">
           <span className="h-1.5 w-1.5 rounded-full bg-[#625FD0] animate-pulse" />
           {visual.badge}
         </div>
@@ -290,7 +291,7 @@ export default function AutonomousTabs() {
             <button
               key={item.id}
               onClick={() => setActiveTab(index)}
-              className={`rounded-lg px-5 py-2.5 text-sm font-semibold transition ${
+              className={`rounded-lg px-5 py-2.5 text-sm  transition ${
                 activeTab === index
                   ? "bg-[#625FD0] text-white"
                   : "border border-gray-200 text-gray-700 hover:border-[#625FD0]"
@@ -321,7 +322,7 @@ export default function AutonomousTabs() {
                   </div>
 
                   <div>
-                    <h4 className="mb-1 text-sm font-semibold text-black">
+                    <h4 className="mb-1 text-sm  text-black">
                       {highlight.title}
                     </h4>
 

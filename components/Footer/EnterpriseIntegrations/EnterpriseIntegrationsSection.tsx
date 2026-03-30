@@ -49,7 +49,7 @@ export default function EnterpriseIntegrationsSection() {
               </div>
 
               {/* Tag */}
-              <p className="text-xs font-semibold tracking-wider uppercase text-[#625FD0] mb-3">
+              <p className="text-xs  tracking-wider uppercase text-[#625FD0] mb-3">
                 {card.tag}
               </p>
 

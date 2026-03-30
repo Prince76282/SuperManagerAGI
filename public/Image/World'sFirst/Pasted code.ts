@@ -131,7 +131,7 @@
 
 //   return (
 //     <span
-//       className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold ${
+//       className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs  ${
 //         trend === "up"
 //           ? "bg-emerald-50 text-emerald-600"
 //           : trend === "down"
@@ -187,7 +187,7 @@
 //           <div className="hidden items-center gap-2 text-xs text-slate-400 md:flex">
 //             <span>{section.title}</span>
 //             <ChevronRight size={12} />
-//             <span className="font-semibold text-slate-700">{item.title}</span>
+//             <span className=" text-slate-700">{item.title}</span>
 //           </div>
 
 //           <div className="flex items-center gap-3 text-sm">
@@ -223,13 +223,13 @@
 //         >
 //           <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
 //             <div>
-//               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+//               <p className="mb-3 text-xs  uppercase tracking-[0.3em] text-white/70">
 //                 {section.eyebrow}
 //               </p>
 //               <div className="mb-5 inline-flex rounded-2xl bg-white/15 p-3 backdrop-blur">
 //                 <Icon size={26} />
 //               </div>
-//               <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+//               <h1 className="max-w-3xl text-4xl  tracking-tight sm:text-5xl">
 //                 {item.title}
 //               </h1>
 //               <p className="mt-3 text-base text-white/80">{item.subtitle}</p>
@@ -239,10 +239,10 @@
 //             </div>
 
 //             <div className="rounded-[1.75rem] border border-white/15 bg-white/10 p-6 backdrop-blur">
-//               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/65">
+//               <p className="text-xs  uppercase tracking-[0.25em] text-white/65">
 //                 Module Focus
 //               </p>
-//               <p className="mt-3 text-2xl font-semibold text-white">{item.tagline}</p>
+//               <p className="mt-3 text-2xl  text-white">{item.tagline}</p>
 //               <p className="mt-4 text-sm leading-7 text-white/80">
 //                 {item.description}
 //               </p>
@@ -255,7 +255,7 @@
 //                     <p className="text-[11px] uppercase tracking-[0.22em] text-white/60">
 //                       {stat.label}
 //                     </p>
-//                     <p className="mt-2 text-2xl font-semibold text-white">
+//                     <p className="mt-2 text-2xl  text-white">
 //                       {stat.value}
 //                     </p>
 //                     <div className="mt-3">
@@ -272,12 +272,12 @@
 //       <section className="mx-auto grid max-w-[1200px] gap-6 px-6 pb-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
 //         <div className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm">
 //           <p
-//             className="mb-3 text-xs font-semibold uppercase tracking-[0.25em]"
+//             className="mb-3 text-xs  uppercase tracking-[0.25em]"
 //             style={{ color: section.accent }}
 //           >
 //             What&apos;s included
 //           </p>
-//           <h2 className="text-2xl font-semibold text-slate-950">
+//           <h2 className="text-2xl  text-slate-950">
 //             Core capabilities inside this module
 //           </h2>
 //           <ul className="mt-6 space-y-4">
@@ -300,17 +300,17 @@
 //           <div className="mb-5 flex items-center justify-between gap-4">
 //             <div>
 //               <p
-//                 className="text-xs font-semibold uppercase tracking-[0.25em]"
+//                 className="text-xs  uppercase tracking-[0.25em]"
 
 //               >
 //                 Performance trend
 //               </p>
-//               <h2 className="mt-2 text-2xl font-semibold text-slate-950">
+//               <h2 className="mt-2 text-2xl  text-slate-950">
 //                 Latest {item.chartData.length} checkpoints
 //               </h2>
 //             </div>
 //             <div
-//               className="rounded-full px-3 py-1 text-xs font-semibold"
+//               className="rounded-full px-3 py-1 text-xs "
 
 //             >
 //               Connected view
@@ -330,7 +330,7 @@
 //                 <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
 //                   P{index + 1}
 //                 </p>
-//                 <p className="mt-1 text-sm font-semibold text-slate-900">{value}</p>
+//                 <p className="mt-1 text-sm  text-slate-900">{value}</p>
 //               </div>
 //             ))}
 //           </div>
@@ -341,12 +341,12 @@
 //         <div className="mb-6 flex items-end justify-between gap-4">
 //           <div>
 //             <p
-//               className="mb-2 text-xs font-semibold uppercase tracking-[0.25em]"
+//               className="mb-2 text-xs  uppercase tracking-[0.25em]"
 //               style={{ color: section.accent }}
 //             >
 //               Related modules
 //             </p>
-//             <h2 className="text-2xl font-semibold text-slate-950">
+//             <h2 className="text-2xl  text-slate-950">
 //               More from {section.title}
 //             </h2>
 //           </div>
@@ -376,14 +376,14 @@
 //                 >
 //                   <RelatedIcon size={18} />
 //                 </div>
-//                 <h3 className="text-lg font-semibold text-slate-950">
+//                 <h3 className="text-lg  text-slate-950">
 //                   {relatedItem.title}
 //                 </h3>
 //                 <p className="mt-2 text-sm leading-6 text-slate-600">
 //                   {relatedItem.description}
 //                 </p>
 //                 <p
-//                   className="mt-4 text-xs font-semibold uppercase tracking-[0.22em]"
+//                   className="mt-4 text-xs  uppercase tracking-[0.22em]"
 //                   style={{ color: section.accent }}
 //                 >
 //                   {relatedItem.subtitle}

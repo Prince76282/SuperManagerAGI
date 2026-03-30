@@ -59,13 +59,16 @@ export default function SuperManagerUseCases() {
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
-            SuperManager AGI replaces manual coordination, reporting and tracking with autonomous execution intelligence  allowing every team to focus on strategy, growth and delivery instead of administrative overhead.
+              SuperManager AGI replaces manual coordination, reporting and
+              tracking with autonomous execution intelligence allowing every
+              team to focus on strategy, growth and delivery instead of
+              administrative overhead.
             </p>
           </div>
 
           <Link
             href="/"
-            className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+            className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
           >
             Explore Platform
           </Link>
@@ -80,9 +83,7 @@ export default function SuperManagerUseCases() {
             >
               <IconBox icon={item.icon} bg={item.bg} />
 
-              <h3 className="mt-5 text-lg font-semibold text-gray-900">
-                {item.title}
-              </h3>
+              <h3 className="mt-5 text-lg  text-gray-900">{item.title}</h3>
 
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">
                 {item.desc}

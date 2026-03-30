@@ -36,7 +36,7 @@ function Tag({ children, wide = false }: TagProps) {
 function LogoBadge({ label, wide = false }: LogoBadgeProps) {
   return (
     <div
-      className={`flex items-center justify-center px-3 py-2.5 rounded-lg border text-xs font-semibold tracking-wide transition hover:shadow-sm ${wide ? "col-span-2" : ""}`}
+      className={`flex items-center justify-center px-3 py-2.5 rounded-lg border text-xs  tracking-wide transition hover:shadow-sm ${wide ? "col-span-2" : ""}`}
       style={{
         background: "#fff",
         borderColor: "rgba(0,0,0,0.08)",
@@ -232,8 +232,6 @@ export default function ManagementUses() {
               </div>
             </ColumnSection>
 
-          
-
             <ColumnSection label="Security">
               <div className="grid grid-cols-3 gap-2">
                 {[
@@ -246,7 +244,7 @@ export default function ManagementUses() {
                 ].map((c) => (
                   <div
                     key={c}
-                    className="flex items-center justify-center px-2 py-2 rounded-lg text-xs font-semibold border border-gray-200"
+                    className="flex items-center justify-center px-2 py-2 rounded-lg text-xs  border border-gray-200"
                   >
                     {c}
                   </div>
@@ -293,7 +291,7 @@ export default function ManagementUses() {
               </div>
             </ColumnSection>
 
-              <ColumnSection label="Core Engine">
+            <ColumnSection label="Core Engine">
               <div className="grid grid-cols-2 gap-2">
                 <Tag wide>
                   Daily cross-channel performance report from every connected ad

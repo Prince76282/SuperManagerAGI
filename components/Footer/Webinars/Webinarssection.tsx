@@ -83,7 +83,7 @@ export default function WebinarsSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-zinc-900 mb-2 leading-snug group-hover:text-[#625FD0] transition">
+                <h3 className="text-lg  text-zinc-900 mb-2 leading-snug group-hover:text-[#625FD0] transition">
                   {webinar.title}
                 </h3>
 

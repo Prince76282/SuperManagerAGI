@@ -39,9 +39,7 @@ function ProblemCard({ icon, title, body }: Problem) {
       </div>
 
       <div>
-        <h3 className="text-base font-semibold text-black mb-2 leading-snug">
-          {title}
-        </h3>
+        <h3 className="text-base  text-black mb-2 leading-snug">{title}</h3>
 
         <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
       </div>
@@ -55,14 +53,14 @@ export default function ManagementProblems() {
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 lg:px-8 max-w-[1200px] mx-auto w-full py-16">
         <div className="max-w-2xl mb-14">
           <h2 className="text-3xl lg:text-5xl  text-black leading-tight">
-            AI Management Capabilities 
+            AI Management Capabilities
             <span className="text-[#625FD0]"> slows execution</span>
           </h2>
 
           <p className="text-gray-600 mt-4 text-base leading-relaxed">
             Many execution challenges inside organizations are not caused by
             lack of talent or effort. They come from the management layer itself
-             manual coordination, delayed decisions, and constant follow-ups
+            manual coordination, delayed decisions, and constant follow-ups
             required justtext-3xl work progressing. When execution depends on
             human management processes, teams spend more time organizing work
             than actually delivering results.

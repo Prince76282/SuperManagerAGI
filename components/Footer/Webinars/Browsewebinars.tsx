@@ -87,7 +87,7 @@ function WebinarCard({ title, type, date, image, href }: WebinarCardProps) {
 
         {/* CTA */}
         <div className="pt-2">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#625FD0] group-hover:text-[#625FD0] transition">
+          <span className="inline-flex items-center gap-2 text-xs  text-[#625FD0] group-hover:text-[#625FD0] transition">
             <span className="w-6 h-6 rounded-full border border-indigo-200 bg-gray-100 flex items-center justify-center transition">
               <Play className="w-4 h-4  text-[#625FD0] ml-px group-hover:text-[#625FD0] group-hover:fill-white" />
             </span>

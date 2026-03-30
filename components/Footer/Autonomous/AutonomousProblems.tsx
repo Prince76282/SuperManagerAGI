@@ -39,9 +39,7 @@ function ProblemCard({ icon, title, body }: Problem) {
       </div>
 
       <div>
-        <h3 className="mb-2 text-base font-semibold leading-snug text-black">
-          {title}
-        </h3>
+        <h3 className="mb-2 text-base  leading-snug text-black">{title}</h3>
 
         <p className="text-sm leading-relaxed text-gray-600">{body}</p>
       </div>

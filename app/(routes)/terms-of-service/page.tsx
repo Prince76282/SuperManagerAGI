@@ -21,7 +21,7 @@ export default function TermsOfService() {
           {/* Content */}
           <article className="prose prose-lg max-w-none">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 1. Agreement to Terms
               </h2>
               <p className="text-gray-700 mb-6">
@@ -32,7 +32,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 2. Use License
               </h2>
               <p className="text-gray-700 mb-4">
@@ -65,14 +65,13 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 3. Disclaimer
               </h2>
               <p className="text-gray-700 mb-6">
                 The materials on SuperManager AGI are provided <em>as is</em>.
                 We make no warranties, expressed or implied, and hereby disclaim
-                and
-                negate all other warranties including, without limitation,
+                and negate all other warranties including, without limitation,
                 implied warranties or conditions of merchantability, fitness for
                 a particular purpose, or non-infringement of intellectual
                 property or other violation of rights.
@@ -80,7 +79,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 4. Limitations
               </h2>
               <p className="text-gray-700 mb-6">
@@ -93,7 +92,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 5. Accuracy of Materials
               </h2>
               <p className="text-gray-700 mb-6">
@@ -105,9 +104,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                6. Links
-              </h2>
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">6. Links</h2>
               <p className="text-gray-700 mb-6">
                 SuperManager AGI has not reviewed all of the sites linked to its
                 platform and is not responsible for the contents of any such
@@ -118,7 +115,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 7. Modifications
               </h2>
               <p className="text-gray-700 mb-6">
@@ -130,7 +127,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              <h2 className="text-2xl  text-gray-900 mt-8 mb-4">
                 8. Governing Law
               </h2>
               <p className="text-gray-700 mb-6">

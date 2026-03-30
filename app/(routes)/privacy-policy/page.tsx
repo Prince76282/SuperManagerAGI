@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <main className="max-w-5xl mt-4 mx-auto px-6 py-14">
-      <h1 className="text-3xl font-semibold mb-2">Privacy Policy</h1>
+      <h1 className="text-3xl  mb-2">Privacy Policy</h1>
       <p className="text-gray-500 mb-10">Effective Date: January 30</p>
 
       <section className="space-y-8 bg-white shadow-sm border rounded-2xl p-8">
@@ -25,13 +25,13 @@ export default function PrivacyPolicy() {
         </p>
 
         <div>
-          <h3 className="text-xl font-semibold mb-2">Definitions</h3>
+          <h3 className="text-xl  mb-2">Definitions</h3>
 
           <p>
             <strong>Platform</strong> refers to Services provided by
-            SuperManager AGI (Company, We, Our, or Us), including
-            websites, dashboards, AI task automation systems, APIs, software
-            applications, collaboration tools, and related services.
+            SuperManager AGI (Company, We, Our, or Us), including websites,
+            dashboards, AI task automation systems, APIs, software applications,
+            collaboration tools, and related services.
           </p>
 
           <p>
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold">Data Use</h2>
+          <h2 className="text-2xl ">Data Use</h2>
           <p>
             SuperManager AGI is committed to protecting user privacy. Our
             platform provides AI-powered project management, workflow
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold">General Information</h3>
+          <h3 className="text-xl ">General Information</h3>
           <p>
             When registering or using our Services, you may be required to
             provide:
@@ -76,9 +76,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold">
-            Project Data and AGI Processing
-          </h2>
+          <h2 className="text-2xl ">Project Data and AGI Processing</h2>
 
           <p>
             SuperManager AGI processes project-related information to provide
@@ -119,7 +117,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold">User Analytics</h2>
+          <h2 className="text-2xl ">User Analytics</h2>
 
           <ul className="list-disc pl-6 space-y-1">
             <li>IP address and location</li>
@@ -137,7 +135,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold">Prohibited Disclosure</h2>
+          <h2 className="text-2xl ">Prohibited Disclosure</h2>
 
           <ul className="list-disc pl-6 space-y-1">
             <li>Racial or ethnic origin</li>
@@ -156,7 +154,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold">Your Rights</h2>
+          <h2 className="text-2xl ">Your Rights</h2>
 
           <ul className="list-disc pl-6 space-y-1">
             <li>Access your data</li>
@@ -174,7 +172,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold">Contact Us</h2>
+          <h2 className="text-2xl ">Contact Us</h2>
 
           <p>
             Email:{" "}

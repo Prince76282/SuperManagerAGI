@@ -18,9 +18,7 @@ type ListBlockProps = {
 function ListBlock({ title, items }: ListBlockProps) {
   return (
     <div>
-      <h4 className="mb-3 text-xs font-semibold uppercase text-[#625FD0]">
-        {title}
-      </h4>
+      <h4 className="mb-3 text-xs  uppercase text-[#625FD0]">{title}</h4>
 
       <ul className="space-y-2 text-sm text-gray-700">
         {(items || []).map((item, i) => (
@@ -34,9 +32,7 @@ function ListBlock({ title, items }: ListBlockProps) {
 function QuickLinks({ onClose }: { onClose: () => void }) {
   return (
     <div>
-      <h4 className="mb-3 text-md font-semibold uppercase text-[#625FD0]">
-        QUICK LINKS
-      </h4>
+      <h4 className="mb-3 text-md  uppercase text-[#625FD0]">QUICK LINKS</h4>
 
       <ul className="space-y-2 text-sm text-gray-700">
         {agiManagersDropdownData.quickLinks.map((link) => (
@@ -79,7 +75,7 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
                     <Link
                       href={section.href}
                       onClick={handleClose}
-                      className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 font-semibold text-white transition hover:bg-[#625FD0]/90"
+                      className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2  text-white transition hover:bg-[#625FD0]/90"
                     >
                       Learn More
                     </Link>
@@ -99,7 +95,7 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
 
           <div className="space-y-6 rounded-2xl bg-white p-6">
             <div className="rounded-xl bg-[#625FD0]/5 p-5">
-              <h4 className="mb-4 text-md font-semibold uppercase text-[#625FD0]">
+              <h4 className="mb-4 text-md  uppercase text-[#625FD0]">
                 TOP RESOURCES
               </h4>
 

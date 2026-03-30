@@ -10,7 +10,7 @@ export default function DecisionIntelligencePage() {
         <div className="container mx-auto px-4">
           <Link
             href="/intelligence"
-            className="inline-flex items-center gap-2 text-purple-600 font-semibold mb-6"
+            className="inline-flex items-center gap-2 text-purple-600  mb-6"
           >
             <ArrowLeft className="w-4 h-4" /> Back
           </Link>

@@ -33,7 +33,6 @@ export default function AutonomousAgent() {
   return (
     <section className="bg-white py-20">
       <div className="max-w-[1200px] mx-auto px-6">
-
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl lg:text-5xl text-black leading-tight">
@@ -55,13 +54,11 @@ export default function AutonomousAgent() {
               key={i}
               className="grid md:grid-cols-2 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition"
             >
-
               {/* Text */}
               <div className="flex flex-col justify-between p-8 lg:p-10">
                 <div className="space-y-5">
-
                   {/* Badge */}
-                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs font-semibold bg-[#625FD0]/10 text-[#625FD0]">
+                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs  bg-[#625FD0]/10 text-[#625FD0]">
                     {item.badge}
                   </span>
 
@@ -91,11 +88,9 @@ export default function AutonomousAgent() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

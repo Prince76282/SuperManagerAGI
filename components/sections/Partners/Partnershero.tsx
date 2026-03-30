@@ -60,7 +60,7 @@ export default function PartnersHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/aboutus/"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Find a Partner
               </Link>
@@ -74,7 +74,7 @@ export default function PartnersHero() {
                 { value: "99%", label: "Client Satisfaction" },
               ].map(({ value, label }) => (
                 <div key={label} className="flex flex-col min-w-[110px]">
-                  <span className="text-xl sm:text-2xl font-semibold text-slate-900">
+                  <span className="text-xl sm:text-2xl  text-slate-900">
                     {value}
                   </span>
                   <span className="text-xs sm:text-sm text-slate-500">
@@ -107,7 +107,7 @@ export default function PartnersHero() {
         </div>
 
         <div className="relative mt-20 text-center">
-          <h1 className="mb-10 text-3xl lg:text-5xl font-semibold  text-slate-900">
+          <h1 className="mb-10 text-3xl lg:text-5xl   text-slate-900">
             Trusted by 100+ Leading Companies
           </h1>
 

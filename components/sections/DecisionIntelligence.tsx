@@ -59,7 +59,6 @@ const DecisionIntelligence = () => {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col gap-6 sm:gap-8 py-10 sm:py-14 lg:py-16">
-
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-tight">
               What Sets SuperManager AGI Apart
@@ -67,14 +66,13 @@ const DecisionIntelligence = () => {
 
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-
               {/* Cards */}
               {CARDS.map((card) => (
                 <div
                   key={card.id}
                   className="bg-white rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-base sm:text-lg lg:text-xl  text-gray-900 mb-3">
                     {card.title}
                   </h3>
 
@@ -101,14 +99,14 @@ const DecisionIntelligence = () => {
                   <div className="flex flex-wrap gap-3 sm:gap-4">
                     <Link
                       href="get-in-touch"
-                      className="bg-[#625FD0] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#4f4cb8] transition"
+                      className="bg-[#625FD0] text-white px-4 py-2 rounded-lg  hover:bg-[#4f4cb8] transition"
                     >
                       REQUEST A DEMO
                     </Link>
 
                     <Link
                       href="https://app.supermanager.co/login"
-                      className="border-2 border-[#625FD0] text-[#625FD0] px-4 py-2 rounded-lg font-semibold hover:bg-[#625FD0] hover:text-white transition"
+                      className="border-2 border-[#625FD0] text-[#625FD0] px-4 py-2 rounded-lg  hover:bg-[#625FD0] hover:text-white transition"
                     >
                       OPEN APP
                     </Link>
@@ -116,7 +114,6 @@ const DecisionIntelligence = () => {
                 </div>
 
               </div> */}
-
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2">
               <Link
                 href="/contactus"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Talk to Sales
               </Link>

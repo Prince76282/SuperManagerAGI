@@ -225,7 +225,7 @@ function VisualPanel({ visual }: { visual: TabVisual }) {
           <div className="w-2.5 h-2.5 rounded-full bg-green-300" />
         </div>
 
-        <div className="ml-3 flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#625FD0]/10 text-[#625FD0]">
+        <div className="ml-3 flex items-center gap-2 px-3 py-1 rounded-full text-xs  bg-[#625FD0]/10 text-[#625FD0]">
           <span className="w-1.5 h-1.5 rounded-full bg-[#625FD0] animate-pulse" />
           {visual.badge}
         </div>
@@ -279,7 +279,7 @@ export default function ManagementTabs() {
             <button
               key={t.id}
               onClick={() => setActiveTab(i)}
-              className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition ${
+              className={`px-5 py-2.5 rounded-lg text-sm  transition ${
                 activeTab === i
                   ? "bg-[#625FD0] text-white"
                   : "border border-gray-200 text-gray-700 hover:border-[#625FD0]"
@@ -310,17 +310,13 @@ export default function ManagementTabs() {
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-semibold text-black mb-1">
-                      {h.title}
-                    </h4>
+                    <h4 className="text-sm  text-black mb-1">{h.title}</h4>
 
                     <p className="text-sm text-gray-600">{h.body}</p>
                   </div>
                 </div>
               ))}
             </div>
-
-            
           </div>
 
           <VisualPanel visual={tab.visual} />

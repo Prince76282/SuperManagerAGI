@@ -25,7 +25,7 @@ function StatCard({ value, label, delay }: StatCardProps) {
 
   return (
     <div className="rounded-xl border border-gray-200 px-4 py-4 sm:px-6 sm:py-5 bg-white hover:shadow-md transition">
-      <div className="text-lg sm:text-xl md:text-2xl font-semibold text-black mb-1">
+      <div className="text-lg sm:text-xl md:text-2xl  text-black mb-1">
         {value}
       </div>
       <div className="text-[10px] sm:text-xs uppercase tracking-wide text-gray-500">
@@ -43,9 +43,7 @@ function FeatureCard({ icon, title, body }: FeatureCardProps) {
         {icon}
       </div>
 
-      <h3 className="text-base sm:text-lg font-semibold text-black mb-2">
-        {title}
-      </h3>
+      <h3 className="text-base sm:text-lg  text-black mb-2">{title}</h3>
       <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
     </div>
   );
@@ -117,7 +115,7 @@ export default function ManagementHero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* LEFT */}
           <div>
-            <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-5 leading-tight font-semibold">
+            <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-5 leading-tight ">
               Operational Management No Longer Needs
               <br />
               <span className="text-[#625FD0]">

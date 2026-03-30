@@ -15,9 +15,11 @@ export default function AGIHeroSection() {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                Give founders, CEOs and C-suite leaders real-time intelligence across every department. 
-                Live revenue, inventory, risk signals, team performance and competitive intelligence 
-                updated automatically from every connected system without a single manual report.
+                Give founders, CEOs and C-suite leaders real-time intelligence
+                across every department. Live revenue, inventory, risk signals,
+                team performance and competitive intelligence updated
+                automatically from every connected system without a single
+                manual report.
               </p>
             </div>
 
@@ -25,14 +27,14 @@ export default function AGIHeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="https://www.youtube.com/watch?si=vt53Wy_LtuTqgzbX&v=nrNXqRT6ODY&feature=youtu.be"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Watch video
               </Link>
 
               <Link
                 href="/get-in-touch"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Request a demo
               </Link>

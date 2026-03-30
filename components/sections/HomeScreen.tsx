@@ -96,7 +96,7 @@ export default function HeroSection() {
               <Link
                 href="https://app.supermanager.co/login"
                 target="_blank"
-                className="rounded-lg bg-[#625FD0] text-white px-4 py-2 font-semibold"
+                className="rounded-lg bg-[#625FD0] text-white px-4 py-2 "
               >
                 OPEN APP
               </Link>
@@ -146,9 +146,7 @@ export default function HeroSection() {
                 {/* CONTENT */}
                 <div className="flex h-full flex-col">
                   <div className="p-6 flex-1">
-                    <h3 className="text-lg font-semibold mb-3">
-                      {feature.title}
-                    </h3>
+                    <h3 className="text-lg  mb-3">{feature.title}</h3>
                     <p className="text-sm text-gray-700">
                       {feature.description}
                     </p>

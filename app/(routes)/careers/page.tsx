@@ -6,10 +6,8 @@ export default function CareersPage() {
   return (
     <div className="bg-white text-black min-h-screen">
       {/* HERO */}
-      <section className="max-w-[1200px] mx-auto px-6 py-24 text-center">
-        <p className="text-[#625FD0] uppercase font-semibold tracking-wide">
-          Careers
-        </p>
+      <section className="np mx-auto px-6 py-24 text-center">
+        <p className="text-[#625FD0] uppercase  tracking-wide">Careers</p>
 
         <h1 className="text-5xl md:text-6xl font-bold mt-4 leading-tight">
           Build the Operating System for Enterprise AI
@@ -36,13 +34,13 @@ export default function CareersPage() {
 
       {/* CATEGORY SHIFT */}
       <section className="max-w-[1200px] mx-auto px-6 py-20 border-t">
-        <h2 className="text-3xl font-semibold mb-10">
+        <h2 className="text-3xl  mb-10">
           This is Not a Typical Software Company
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-xl font-semibold text-[#625FD0]">
+            <h3 className="text-xl  text-[#625FD0]">
               From Tools → Operating Systems
             </h3>
             <p className="text-gray-600 mt-3">
@@ -52,9 +50,7 @@ export default function CareersPage() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-[#625FD0]">
-              From Roles → Ownership
-            </h3>
+            <h3 className="text-xl  text-[#625FD0]">From Roles → Ownership</h3>
             <p className="text-gray-600 mt-3">
               You won’t just ship features. You will own outcomes across
               product, engineering, and real customer impact.
@@ -73,16 +69,14 @@ export default function CareersPage() {
         ].map((s, i) => (
           <div key={i} className="border rounded-xl p-6 text-center">
             <p className="text-sm text-gray-500 uppercase">{s.label}</p>
-            <p className="text-[#625FD0] font-semibold mt-2">{s.value}</p>
+            <p className="text-[#625FD0]  mt-2">{s.value}</p>
           </div>
         ))}
       </section>
 
       {/* CONTRIBUTION AREAS */}
       <section className="max-w-[1200px] mx-auto px-6 py-20">
-        <h2 className="text-3xl font-semibold mb-10">
-          Where You Can Contribute
-        </h2>
+        <h2 className="text-3xl  mb-10">Where You Can Contribute</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -103,7 +97,7 @@ export default function CareersPage() {
               key={i}
               className="border rounded-xl p-6 hover:shadow-md transition"
             >
-              <h3 className="font-semibold text-lg">{card.title}</h3>
+              <h3 className=" text-lg">{card.title}</h3>
               <p className="text-gray-600 mt-2">{card.desc}</p>
             </div>
           ))}
@@ -113,7 +107,7 @@ export default function CareersPage() {
       {/* PRINCIPLES */}
       <section className="bg-[#F8F7FF] py-20">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-3xl font-semibold mb-10">How We Work</h2>
+          <h2 className="text-3xl  mb-10">How We Work</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -135,7 +129,7 @@ export default function CareersPage() {
               },
             ].map((p, i) => (
               <div key={i} className="bg-white border rounded-xl p-6">
-                <h3 className="font-semibold text-[#625FD0]">{p.title}</h3>
+                <h3 className=" text-[#625FD0]">{p.title}</h3>
                 <p className="text-gray-600 mt-2">{p.desc}</p>
               </div>
             ))}
@@ -145,9 +139,7 @@ export default function CareersPage() {
 
       {/* WORKFLOW */}
       <section className="max-w-[1200px] mx-auto px-6 py-20">
-        <h2 className="text-3xl font-semibold mb-10">
-          What Your Journey Looks Like
-        </h2>
+        <h2 className="text-3xl  mb-10">What Your Journey Looks Like</h2>
 
         <div className="grid md:grid-cols-4 gap-6">
           {[
@@ -158,7 +150,7 @@ export default function CareersPage() {
           ].map((step, i) => (
             <div key={i} className="border rounded-xl p-6">
               <p className="text-sm text-gray-500">Step {i + 1}</p>
-              <p className="font-semibold mt-2">{step}</p>
+              <p className=" mt-2">{step}</p>
             </div>
           ))}
         </div>
@@ -166,7 +158,7 @@ export default function CareersPage() {
 
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">FAQ</h2>
+        <h2 className="text-3xl  mb-10 text-center">FAQ</h2>
 
         <div className="space-y-6">
           {[
@@ -180,7 +172,7 @@ export default function CareersPage() {
             },
           ].map((f, i) => (
             <div key={i} className="border rounded-xl p-6">
-              <h3 className="font-semibold">{f.q}</h3>
+              <h3 className="">{f.q}</h3>
               <p className="text-gray-600 mt-2">{f.a}</p>
             </div>
           ))}
@@ -189,9 +181,7 @@ export default function CareersPage() {
 
       {/* CTA */}
       <section className="bg-[#625FD0] text-white py-20 text-center">
-        <h2 className="text-3xl font-semibold">
-          Join the Team Defining Enterprise AI
-        </h2>
+        <h2 className="text-3xl ">Join the Team Defining Enterprise AI</h2>
 
         <p className="mt-4 text-white/80">
           This is not just a job. It’s a chance to shape how companies operate.

@@ -6,8 +6,6 @@ import Link from "next/link";
 import { featuredReport, reportsList } from "@/lib/Dataset/reportData";
 import type { ReportContent } from "@/lib/Dataset/reportData";
 
-
-
 function ReportCard({ report }: { report: ReportContent }) {
   return (
     <Link
@@ -21,8 +19,8 @@ function ReportCard({ report }: { report: ReportContent }) {
           fill
           className="object-cover group-hover:scale-105 transition duration-500"
         />
-    
-        <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[#625FD0] text-[11px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full border border-[#625FD0]/20">
+
+        <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[#625FD0] text-[11px]  uppercase tracking-widest px-2.5 py-1 rounded-full border border-[#625FD0]/20">
           {report.category}
         </span>
       </div>
@@ -34,7 +32,7 @@ function ReportCard({ report }: { report: ReportContent }) {
           <span>{report.readTime}</span>
         </div>
 
-        <h3 className="font-semibold text-black text-base sm:text-lg leading-snug group-hover:text-[#625FD0] transition">
+        <h3 className=" text-black text-base sm:text-lg leading-snug group-hover:text-[#625FD0] transition">
           {report.title}
         </h3>
 
@@ -44,13 +42,11 @@ function ReportCard({ report }: { report: ReportContent }) {
 
         <span className="inline-flex items-center gap-2 bg-[#625FD0] text-white px-5 py-2.5 rounded-lg text-sm font-medium w-fit group-hover:bg-[#4f4ca8] transition">
           Read Report
-          
         </span>
       </div>
     </Link>
   );
 }
-
 
 export default function AIResearchReports() {
   const [search, setSearch] = useState("");
@@ -69,7 +65,7 @@ export default function AIResearchReports() {
     <div className="bg-white min-h-screen py-16 sm:py-20">
       {/* ── Header ── */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mb-12 sm:mb-16">
-        <p className="text-xs font-semibold tracking-widest uppercase text-[#625FD0] mb-3">
+        <p className="text-xs  tracking-widest uppercase text-[#625FD0] mb-3">
           Research & Insights
         </p>
         <h1 className="text-3xl sm:text-3xl lg:text-5xl text-black leading-tight">
@@ -78,7 +74,7 @@ export default function AIResearchReports() {
         </h1>
         <p className="text-gray-500 mt-4 max-w-2xl text-sm sm:text-base">
           Deep research on AI operations, workflow automation, productivity, and
-          autonomous AI teams  written for leaders building the next generation
+          autonomous AI teams written for leaders building the next generation
           of companies.
         </p>
       </div>
@@ -102,7 +98,7 @@ export default function AIResearchReports() {
                     className="object-contain"
                   />
                 )}
-                <span className="text-[11px] font-semibold tracking-widest uppercase text-[#625FD0] bg-[#625FD0]/8 px-3 py-1 rounded-full border border-[#625FD0]/20">
+                <span className="text-[11px]  tracking-widest uppercase text-[#625FD0] bg-[#625FD0]/8 px-3 py-1 rounded-full border border-[#625FD0]/20">
                   {featuredReport.category}
                 </span>
               </div>
@@ -123,11 +119,9 @@ export default function AIResearchReports() {
 
               <span className="inline-flex items-center gap-2 bg-[#625FD0] text-white px-5 py-2.5 rounded-lg text-sm font-medium w-fit group-hover:bg-[#4f4ca8] transition">
                 Read Full Report
-                
               </span>
             </div>
 
-            
             <div className="relative h-[220px] sm:h-[280px] lg:h-auto min-h-[300px]">
               <Image
                 src={featuredReport.image}
@@ -140,8 +134,12 @@ export default function AIResearchReports() {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-5 grid grid-cols-2 gap-3">
                 {featuredReport.stats.slice(0, 2).map((s, i) => (
                   <div key={i} className="text-white">
-                    <div className="text-xl font-bold leading-none">{s.value}</div>
-                    <div className="text-xs text-white/70 mt-0.5">{s.label}</div>
+                    <div className="text-xl font-bold leading-none">
+                      {s.value}
+                    </div>
+                    <div className="text-xs text-white/70 mt-0.5">
+                      {s.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -152,9 +150,7 @@ export default function AIResearchReports() {
         <div>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <h2 className="text-xl sm:text-2xl text-black font-semibold">
-                All Reports
-              </h2>
+              <h2 className="text-xl sm:text-2xl text-black ">All Reports</h2>
               <p className="text-sm text-gray-400 mt-1">
                 {filteredReports.length} report
                 {filteredReports.length !== 1 ? "s" : ""}
@@ -169,8 +165,19 @@ export default function AIResearchReports() {
                 viewBox="0 0 16 16"
                 fill="none"
               >
-                <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M10 10l3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <circle
+                  cx="6.5"
+                  cy="6.5"
+                  r="5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M10 10l3.5 3.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
               </svg>
               <input
                 type="text"

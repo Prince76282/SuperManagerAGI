@@ -76,7 +76,7 @@ const TeamCard = React.memo(function TeamCard({
       <div className="flex flex-col gap-1.5">
         <div className="flex items-start justify-between gap-2">
           <div>
-            <p className="text-[18px] font-semibold text-black leading-tight">
+            <p className="text-[18px]  text-black leading-tight">
               {member.name}
             </p>
             <p className="text-[14px] text-black/50 mt-0.5">{member.role}</p>

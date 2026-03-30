@@ -34,9 +34,7 @@ function Field({ label, value, onChange, suffix }: FieldProps) {
           type="number"
           min="0"
           value={value}
-          onChange={(e) =>
-            onChange(parseNumericInput(e.target.value, value))
-          }
+          onChange={(e) => onChange(parseNumericInput(e.target.value, value))}
           className="w-full bg-transparent text-base text-gray-900 outline-none"
         />
 
@@ -60,18 +58,16 @@ export default function RoiCalculatorPanel() {
   const annualHoursRecovered = managerCount * hoursSavedPerWeek * weeksPerYear;
   const annualValueRecovered = annualHoursRecovered * blendedHourlyRate;
   const netImpact = annualValueRecovered - platformCost;
-  const roiPercentage =
-    platformCost > 0 ? (netImpact / platformCost) * 100 : 0;
+  const roiPercentage = platformCost > 0 ? (netImpact / platformCost) * 100 : 0;
   const paybackMonths =
     annualValueRecovered > 0 ? (platformCost / annualValueRecovered) * 12 : 0;
 
   return (
     <section className="rounded-[32px] border border-[#625FD0]/20 bg-gradient-to-br from-[#625FD0]/10 via-white to-white p-6 shadow-sm sm:p-8">
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        
         {/* LEFT */}
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#625FD0]">
+          <p className="text-sm  uppercase tracking-[0.24em] text-[#625FD0]">
             ROI Calculator
           </p>
 
@@ -80,26 +76,51 @@ export default function RoiCalculatorPanel() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
-            Model the operational upside from reducing manual work and improving efficiency.
+            Model the operational upside from reducing manual work and improving
+            efficiency.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <Field label="Managers impacted" value={managerCount} onChange={setManagerCount} suffix="people" />
-            <Field label="Hours saved/week" value={hoursSavedPerWeek} onChange={setHoursSavedPerWeek} suffix="hrs" />
-            <Field label="Hourly cost" value={blendedHourlyRate} onChange={setBlendedHourlyRate} suffix="USD" />
-            <Field label="Weeks/year" value={weeksPerYear} onChange={setWeeksPerYear} suffix="weeks" />
-            <Field label="Platform cost" value={platformCost} onChange={setPlatformCost} suffix="USD" />
+            <Field
+              label="Managers impacted"
+              value={managerCount}
+              onChange={setManagerCount}
+              suffix="people"
+            />
+            <Field
+              label="Hours saved/week"
+              value={hoursSavedPerWeek}
+              onChange={setHoursSavedPerWeek}
+              suffix="hrs"
+            />
+            <Field
+              label="Hourly cost"
+              value={blendedHourlyRate}
+              onChange={setBlendedHourlyRate}
+              suffix="USD"
+            />
+            <Field
+              label="Weeks/year"
+              value={weeksPerYear}
+              onChange={setWeeksPerYear}
+              suffix="weeks"
+            />
+            <Field
+              label="Platform cost"
+              value={platformCost}
+              onChange={setPlatformCost}
+              suffix="USD"
+            />
           </div>
         </div>
 
         {/* RIGHT PANEL */}
         <div className="rounded-[28px] border border-[#625FD0]/20 bg-white p-6 shadow-lg shadow-[#625FD0]/20">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#625FD0]">
+          <p className="text-sm  uppercase tracking-[0.2em] text-[#625FD0]">
             Estimated Impact
           </p>
 
           <div className="mt-6 grid gap-4">
-            
             {/* NET */}
             <div className="rounded-2xl bg-[#625FD0] p-5 text-white">
               <p className="text-sm text-white/80">Net annual impact</p>
@@ -142,7 +163,8 @@ export default function RoiCalculatorPanel() {
           </div>
 
           <p className="mt-6 text-sm text-gray-500">
-            Directional estimate. For deeper analysis include revenue lift & efficiency gains.
+            Directional estimate. For deeper analysis include revenue lift &
+            efficiency gains.
           </p>
         </div>
       </div>

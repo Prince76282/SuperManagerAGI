@@ -58,7 +58,7 @@ export default function EnterpriseSection() {
           <div className="shrink-0">
             <Link
               href="/managerplatform"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
             >
               Explore the platform
             </Link>
@@ -79,7 +79,7 @@ export default function EnterpriseSection() {
                 />
               </div>
 
-              <span className="text-lg ml-3 font-semibold text-black mb-3 tracking-tight font-syne">
+              <span className="text-lg ml-3  text-black mb-3 tracking-tight font-syne">
                 {title}
               </span>
 
@@ -99,7 +99,7 @@ export default function EnterpriseSection() {
             </p>
             <Link
               href="/get-in-touch"
-              className="inline-flex items-center justify-center mt-8 rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center justify-center mt-8 rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
             >
               Schedule a demo
             </Link>

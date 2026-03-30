@@ -102,7 +102,7 @@ export default function SuperManagerSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] xl:grid-cols-[340px_1fr] gap-8 lg:gap-10 items-start">
           {/* ── LEFT COLUMN ── */}
           <div className="lg:sticky lg:top-24 space-y-5 sm:space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-semibold leading-[1.2] tracking-[-0.02em]">
+            <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem]  leading-[1.2] tracking-[-0.02em]">
               The World's First AI Vibe Working Platform
             </h1>
 
@@ -127,13 +127,13 @@ export default function SuperManagerSection() {
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <Link
                 href="get-in-touch"
-                className="inline-flex items-center justify-center text-[13px] sm:text-[15px] rounded-lg bg-[#625FD0] px-4 py-2 sm:px-5 sm:py-2.5 text-white font-semibold transition hover:bg-[#4f4cb8]"
+                className="inline-flex items-center justify-center text-[13px] sm:text-[15px] rounded-lg bg-[#625FD0] px-4 py-2 sm:px-5 sm:py-2.5 text-white  transition hover:bg-[#4f4cb8]"
               >
                 REQUEST A DEMO
               </Link>
               <Link
                 href="https://app.supermanager.co/login"
-                className="inline-flex items-center justify-center text-[13px] sm:text-[14px] text-[#625FD0] hover:text-white py-2 px-3 sm:px-4 border-2 border-[#625FD0] hover:bg-[#625FD0] rounded-lg font-semibold transition"
+                className="inline-flex items-center justify-center text-[13px] sm:text-[14px] text-[#625FD0] hover:text-white py-2 px-3 sm:px-4 border-2 border-[#625FD0] hover:bg-[#625FD0] rounded-lg  transition"
               >
                 OPEN APP
               </Link>
@@ -185,7 +185,7 @@ export default function SuperManagerSection() {
                       <div className="relative h-full flex flex-col justify-between p-5 sm:p-8 lg:p-10 text-white">
                         {/* TOP */}
                         <div className="space-y-3 sm:space-y-4 max-w-[540px]">
-                          <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+                          <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl  leading-tight">
                             {tab.title}
                           </h2>
 

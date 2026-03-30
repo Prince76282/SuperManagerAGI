@@ -39,7 +39,7 @@ function Tag({ children, wide = false }: TagProps) {
 function LogoBadge({ label, wide = false }: LogoBadgeProps) {
   return (
     <div
-      className={`flex items-center justify-center px-3 py-2 rounded-lg border text-xs sm:text-sm font-semibold tracking-wide transition hover:shadow-sm ${
+      className={`flex items-center justify-center px-3 py-2 rounded-lg border text-xs sm:text-sm  tracking-wide transition hover:shadow-sm ${
         wide ? "col-span-2" : ""
       }`}
       style={{
@@ -86,7 +86,6 @@ export default function ProjectIntelligenceUses() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-white">
       <div className="relative z-10 flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto w-full py-10 sm:py-14">
-        
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 sm:gap-8 mb-10 sm:mb-14">
           <div className="max-w-2xl">
@@ -106,7 +105,7 @@ export default function ProjectIntelligenceUses() {
 
           <Link
             href="/get-in-touch"
-            className="w-full sm:w-auto text-center shrink-0 inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-lg text-sm font-semibold text-white bg-[#625FD0] hover:opacity-90 transition"
+            className="w-full sm:w-auto text-center shrink-0 inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-lg text-sm  text-white bg-[#625FD0] hover:opacity-90 transition"
           >
             Request a demo
           </Link>
@@ -114,37 +113,76 @@ export default function ProjectIntelligenceUses() {
 
         {/* Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          
           {/* COLUMN 1 */}
           <Column title="AGI Project Agents">
             <ColumnSection label="D2C and E-commerce Intelligence">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <Tag wide>Sell-through rate tracked by SKU, size, colour and channel from hour one of any launch</Tag>
-                <Tag wide>Revenue vs target by channel updated in real time from Shopify, Amazon and Flipkart</Tag>
-                <Tag wide>Return rate by product and traffic source tracked continuously</Tag>
-                <Tag wide>Promotional uplift calculated in real time during any active sale</Tag>
-                <Tag wide>Inventory coverage days calculated by SKU based on live velocity</Tag>
-                <Tag wide>Marketplace ranking and Buy Box status monitored continuously</Tag>
+                <Tag wide>
+                  Sell-through rate tracked by SKU, size, colour and channel
+                  from hour one of any launch
+                </Tag>
+                <Tag wide>
+                  Revenue vs target by channel updated in real time from
+                  Shopify, Amazon and Flipkart
+                </Tag>
+                <Tag wide>
+                  Return rate by product and traffic source tracked continuously
+                </Tag>
+                <Tag wide>
+                  Promotional uplift calculated in real time during any active
+                  sale
+                </Tag>
+                <Tag wide>
+                  Inventory coverage days calculated by SKU based on live
+                  velocity
+                </Tag>
+                <Tag wide>
+                  Marketplace ranking and Buy Box status monitored continuously
+                </Tag>
               </div>
             </ColumnSection>
 
             <ColumnSection label="Marketing and Growth Intelligence">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <Tag wide>Revenue per rupee of ad spend calculated by channel from actual purchases</Tag>
-                <Tag wide>New vs returning customer revenue split by campaign and channel</Tag>
-                <Tag wide>Customer acquisition cost by channel and cohort tracked continuously</Tag>
-                <Tag wide>Attribution window analysis for influencer and organic content</Tag>
-                <Tag wide>Audience overlap and frequency saturation by campaign detected early</Tag>
-                <Tag wide>Post-return ROAS calculated by feeding logistics data into attribution</Tag>
+                <Tag wide>
+                  Revenue per rupee of ad spend calculated by channel from
+                  actual purchases
+                </Tag>
+                <Tag wide>
+                  New vs returning customer revenue split by campaign and
+                  channel
+                </Tag>
+                <Tag wide>
+                  Customer acquisition cost by channel and cohort tracked
+                  continuously
+                </Tag>
+                <Tag wide>
+                  Attribution window analysis for influencer and organic content
+                </Tag>
+                <Tag wide>
+                  Audience overlap and frequency saturation by campaign detected
+                  early
+                </Tag>
+                <Tag wide>
+                  Post-return ROAS calculated by feeding logistics data into
+                  attribution
+                </Tag>
               </div>
             </ColumnSection>
 
             <ColumnSection label="Security">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {["SOC 2", "GDPR", "ISO 27001", "CCPA", "SSO", "Audit Logs"].map((c) => (
+                {[
+                  "SOC 2",
+                  "GDPR",
+                  "ISO 27001",
+                  "CCPA",
+                  "SSO",
+                  "Audit Logs",
+                ].map((c) => (
                   <div
                     key={c}
-                    className="flex items-center justify-center px-2 py-2 rounded-lg text-xs font-semibold border border-gray-200"
+                    className="flex items-center justify-center px-2 py-2 rounded-lg text-xs  border border-gray-200"
                   >
                     {c}
                   </div>
@@ -157,18 +195,44 @@ export default function ProjectIntelligenceUses() {
           <Column title="Logistics and Delivery Intelligence">
             <ColumnSection>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <Tag wide>Delivery success rate by courier, geography and product category</Tag>
-                <Tag wide>Average delivery time tracked against committed SLAs</Tag>
-                <Tag wide>NDR rate by reason, courier and geography analysed daily</Tag>
-                <Tag wide>Return pickup SLA compliance monitored from initiation to receipt</Tag>
-                <Tag wide>COD collection rate vs prepaid tracked by channel and geography</Tag>
-                <Tag wide>Effective cost per delivered order calculated from all logistics inputs</Tag>
+                <Tag wide>
+                  Delivery success rate by courier, geography and product
+                  category
+                </Tag>
+                <Tag wide>
+                  Average delivery time tracked against committed SLAs
+                </Tag>
+                <Tag wide>
+                  NDR rate by reason, courier and geography analysed daily
+                </Tag>
+                <Tag wide>
+                  Return pickup SLA compliance monitored from initiation to
+                  receipt
+                </Tag>
+                <Tag wide>
+                  COD collection rate vs prepaid tracked by channel and
+                  geography
+                </Tag>
+                <Tag wide>
+                  Effective cost per delivered order calculated from all
+                  logistics inputs
+                </Tag>
               </div>
             </ColumnSection>
 
             <ColumnSection label="Interfaces">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {["Slack","Teams","Web App","Email","SMS","Mobile","API","Dashboard","CLI"].map((ch) => (
+                {[
+                  "Slack",
+                  "Teams",
+                  "Web App",
+                  "Email",
+                  "SMS",
+                  "Mobile",
+                  "API",
+                  "Dashboard",
+                  "CLI",
+                ].map((ch) => (
                   <Tag key={ch}>{ch}</Tag>
                 ))}
               </div>
@@ -176,12 +240,26 @@ export default function ProjectIntelligenceUses() {
 
             <ColumnSection label="Finance and Commercial Intelligence">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <Tag wide>Settlement collection rate by platform tracked daily</Tag>
-                <Tag wide>Payment gateway success rates monitored in real time</Tag>
-                <Tag wide>Outstanding receivables aged by number of days automatically</Tag>
-                <Tag wide>Budget utilisation vs plan by department tracked continuously</Tag>
-                <Tag wide>Unit economics by channel calculated from live order and cost data</Tag>
-                <Tag wide>Working capital position updated daily from connected financial systems</Tag>
+                <Tag wide>
+                  Settlement collection rate by platform tracked daily
+                </Tag>
+                <Tag wide>
+                  Payment gateway success rates monitored in real time
+                </Tag>
+                <Tag wide>
+                  Outstanding receivables aged by number of days automatically
+                </Tag>
+                <Tag wide>
+                  Budget utilisation vs plan by department tracked continuously
+                </Tag>
+                <Tag wide>
+                  Unit economics by channel calculated from live order and cost
+                  data
+                </Tag>
+                <Tag wide>
+                  Working capital position updated daily from connected
+                  financial systems
+                </Tag>
               </div>
             </ColumnSection>
           </Column>
@@ -190,7 +268,20 @@ export default function ProjectIntelligenceUses() {
           <Column title="Integrations">
             <ColumnSection label="Project & Dev Tools">
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-2">
-                {["Jira","Linear","GitHub","GitLab","Notion","Confluence","Asana","ClickUp","Shortcut","Azure DevOps","Figma","Basecamp"].map((t) => (
+                {[
+                  "Jira",
+                  "Linear",
+                  "GitHub",
+                  "GitLab",
+                  "Notion",
+                  "Confluence",
+                  "Asana",
+                  "ClickUp",
+                  "Shortcut",
+                  "Azure DevOps",
+                  "Figma",
+                  "Basecamp",
+                ].map((t) => (
                   <LogoBadge key={t} label={t} />
                 ))}
               </div>
@@ -198,7 +289,14 @@ export default function ProjectIntelligenceUses() {
 
             <ColumnSection label="Enterprise Systems">
               <div className="grid grid-cols-2 gap-2">
-                {["Salesforce","Slack","Microsoft Teams","Google Workspace","HubSpot","Zapier"].map((t) => (
+                {[
+                  "Salesforce",
+                  "Slack",
+                  "Microsoft Teams",
+                  "Google Workspace",
+                  "HubSpot",
+                  "Zapier",
+                ].map((t) => (
                   <LogoBadge key={t} label={t} />
                 ))}
               </div>
@@ -206,15 +304,29 @@ export default function ProjectIntelligenceUses() {
 
             <ColumnSection label="Operations and Supply Chain Intelligence">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <Tag wide>Unified inventory position across all locations and channels one number per SKU</Tag>
-                <Tag wide>Vendor delivery performance tracked against committed timelines</Tag>
-                <Tag wide>Inward vs ordered reconciliation completed automatically on receipt</Tag>
-                <Tag wide>Procurement cycle time monitored from PO to deliveryQuality signal detection from customer return reason patterns</Tag>
-                <Tag wide>Overstock and understock positions calculated from live velocity data</Tag>
+                <Tag wide>
+                  Unified inventory position across all locations and channels
+                  one number per SKU
+                </Tag>
+                <Tag wide>
+                  Vendor delivery performance tracked against committed
+                  timelines
+                </Tag>
+                <Tag wide>
+                  Inward vs ordered reconciliation completed automatically on
+                  receipt
+                </Tag>
+                <Tag wide>
+                  Procurement cycle time monitored from PO to deliveryQuality
+                  signal detection from customer return reason patterns
+                </Tag>
+                <Tag wide>
+                  Overstock and understock positions calculated from live
+                  velocity data
+                </Tag>
               </div>
             </ColumnSection>
           </Column>
-
         </div>
       </div>
     </section>

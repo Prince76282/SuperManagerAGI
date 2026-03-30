@@ -43,7 +43,7 @@ function WebinarCard({
   return (
     <article className="group relative flex flex-col rounded-2xl overflow-hidden border border-zinc-200 bg-white shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       {/* Badge */}
-      <span className="absolute top-4 left-4 z-20 px-3 py-1 text-xs font-semibold rounded-full bg-[#625FD0] text-white shadow">
+      <span className="absolute top-4 left-4 z-20 px-3 py-1 text-xs  rounded-full bg-[#625FD0] text-white shadow">
         {badge}
       </span>
 
@@ -59,7 +59,7 @@ function WebinarCard({
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-6 gap-3">
-        <h3 className="text-lg font-semibold text-zinc-900 leading-snug line-clamp-3">
+        <h3 className="text-lg  text-zinc-900 leading-snug line-clamp-3">
           {title}
         </h3>
 

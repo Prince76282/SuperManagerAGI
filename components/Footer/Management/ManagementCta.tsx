@@ -44,9 +44,7 @@ function Accordion({
         className="flex w-full items-center justify-between gap-4 py-5 text-left"
         onClick={() => setOpenIndex(isOpen ? null : index)}
       >
-        <h4 className="text-base font-semibold leading-snug text-black">
-          {title}
-        </h4>
+        <h4 className="text-base  leading-snug text-black">{title}</h4>
 
         <div className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-300">
           <svg
@@ -98,11 +96,11 @@ export default function ManagementCTA() {
                 </h3>
 
                 <p className="text-sm leading-relaxed text-gray-600">
-                  Traditional management systems rely on meetings,
-                  coordination, and constant oversight to keep work moving.
-                  SuperManagerAGI replaces these operational processes with
-                  autonomous execution, enabling organizations to move faster
-                  while freeing leaders to focus on strategy and innovation.
+                  Traditional management systems rely on meetings, coordination,
+                  and constant oversight to keep work moving. SuperManagerAGI
+                  replaces these operational processes with autonomous
+                  execution, enabling organizations to move faster while freeing
+                  leaders to focus on strategy and innovation.
                 </p>
               </div>
 
@@ -130,7 +128,7 @@ export default function ManagementCTA() {
             </div>
 
             <div className="flex flex-col justify-center p-10 lg:p-14">
-              <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-gray-500">
+              <p className="mb-6 text-xs  uppercase tracking-widest text-gray-500">
                 Platform advantages
               </p>
 

@@ -52,7 +52,9 @@ function FeaturedCard({ featured }: { featured: Featured }) {
           {featured.title}
         </h2>
 
-        <p className="line-clamp-2 text-sm text-gray-500 sm:line-clamp-3">{featured.desc}</p>
+        <p className="line-clamp-2 text-sm text-gray-500 sm:line-clamp-3">
+          {featured.desc}
+        </p>
 
         <div className="mt-auto flex items-center justify-between pt-2">
           <div className="flex flex-wrap items-center gap-2 text-xs text-gray-400 sm:gap-3">
@@ -64,7 +66,7 @@ function FeaturedCard({ featured }: { featured: Featured }) {
             </span>
           </div>
 
-          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-[#625FD0] opacity-0 transition group-hover:opacity-100">
+          <span className="flex shrink-0 items-center gap-1 text-xs  text-[#625FD0] opacity-0 transition group-hover:opacity-100">
             Read <ArrowUpRight size={13} />
           </span>
         </div>
@@ -134,10 +136,14 @@ function ArticleCard({ post }: { post: Articles }) {
           {post.title}
         </span>
 
-        <p className="line-clamp-2 text-sm text-gray-500 sm:line-clamp-3">{post.desc}</p>
+        <p className="line-clamp-2 text-sm text-gray-500 sm:line-clamp-3">
+          {post.desc}
+        </p>
 
         <div className="mt-auto flex items-center justify-between pt-2">
-          <span className="mr-2 truncate text-sm text-[#625FD0]">{post.author}</span>
+          <span className="mr-2 truncate text-sm text-[#625FD0]">
+            {post.author}
+          </span>
 
           <ArrowUpRight
             size={14}
@@ -164,9 +170,10 @@ export default function BlogPage() {
           </h1>
 
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-gray-500 sm:mt-3 sm:text-base">
-            Insights on autonomous AI agents, the Vibe Working Platform, enterprise AI
-            architecture and the operational transformation happening across D2C,
-            consulting, engineering and enterprise organisations right now.
+            Insights on autonomous AI agents, the Vibe Working Platform,
+            enterprise AI architecture and the operational transformation
+            happening across D2C, consulting, engineering and enterprise
+            organisations right now.
           </p>
         </div>
 
@@ -193,7 +200,9 @@ export default function BlogPage() {
 
         <div>
           <div className="mb-5 flex items-center justify-between sm:mb-8">
-            <h4 className="text-lg text-gray-950 sm:text-xl lg:text-2xl">All Articles</h4>
+            <h4 className="text-lg text-gray-950 sm:text-xl lg:text-2xl">
+              All Articles
+            </h4>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
@@ -206,7 +215,7 @@ export default function BlogPage() {
             <div className="mt-8 flex justify-center sm:mt-12">
               <button
                 onClick={() => setVisibleCount((count) => count + 6)}
-                className="flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-violet-700 active:scale-95 sm:px-7"
+                className="flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm  text-white transition hover:bg-violet-700 active:scale-95 sm:px-7"
               >
                 Show more <Plus size={14} />
               </button>

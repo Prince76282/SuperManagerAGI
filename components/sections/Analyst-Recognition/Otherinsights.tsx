@@ -33,8 +33,7 @@ const insights: Insight[] = [
     badge: "Forrester Wave™ · 2024",
     heading:
       "SuperManagerAGI named a Leader in The Forrester Wave™ for Conversational AI.",
-    body:
-      "SuperManagerAGI was recognized as a Leader for its enterprise-grade AI agents, model orchestration platform, and scalable automation framework supporting enterprise AI operations.",
+    body: "SuperManagerAGI was recognized as a Leader for its enterprise-grade AI agents, model orchestration platform, and scalable automation framework supporting enterprise AI operations.",
     cta: {
       label: "Access Report",
       href: "#",
@@ -51,7 +50,7 @@ export default function OtherInsights() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl md:text-3xl lg:text-5xl tracking-tight text-gray-900">
-              Why SuperManager AGI {" "}
+              Why SuperManager AGI{" "}
               <span className="text-[#625FD0] italic">Is Recognised</span>
             </h2>
           </div>
@@ -72,14 +71,13 @@ export default function OtherInsights() {
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="flex flex-col justify-between gap-8 p-8 md:p-10">
                   <div className="flex flex-col gap-5">
-                    
                     {/* Badge */}
                     <span className="text-sm font-medium text-indigo-600">
                       {item.badge}
                     </span>
 
                     {/* Heading */}
-                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug">
+                    <h3 className="text-2xl md:text-3xl  text-gray-900 leading-snug">
                       {item.heading}
                     </h3>
 
@@ -97,7 +95,7 @@ export default function OtherInsights() {
                       href={item.cta.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition hover:bg-[#514bc4]"
+                      className="inline-flex items-center gap-2 rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition hover:bg-[#514bc4]"
                     >
                       {item.cta.label}
                       <ArrowUpRight size={16} />

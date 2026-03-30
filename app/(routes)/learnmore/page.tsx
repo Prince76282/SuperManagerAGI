@@ -5,7 +5,6 @@ import image from "@/public/Image/logo1.png";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 px-4 sm:px-6 lg:px-8 text-center">
-      
       {/* Logo */}
       <Image
         src={image}
@@ -22,14 +21,15 @@ export default function Home() {
       </h1>
 
       {/* Subtitle */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 sm:mb-6">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl  text-gray-900 mb-4 sm:mb-6">
         Coming Soon
       </h2>
 
       {/* Description */}
       <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed">
         SuperManager AGI replaces half your project managers with autonomous AI
-        agents—cutting costs, boosting productivity, and eliminating manual work.
+        agents—cutting costs, boosting productivity, and eliminating manual
+        work.
       </p>
 
       {/* CTA Button */}
@@ -39,7 +39,6 @@ export default function Home() {
       >
         Notify Me
       </Link>
-
     </main>
   );
 }

@@ -35,7 +35,10 @@ const managers = [
     stats: [
       { value: "100% ", label: "settlement reconciliation coverage" },
       { value: "85%", label: "reduction in manual finance overhead" },
-      { value: "Zero", label: " settlement discrepancies undetected beyond 7 days" },
+      {
+        value: "Zero",
+        label: " settlement discrepancies undetected beyond 7 days",
+      },
     ],
   },
   {
@@ -45,9 +48,15 @@ const managers = [
     title: "Autonomous Delivery Operations and Intelligence",
     desc: "Logistics AGI manages the full delivery lifecycle  NDR follow-ups, courier performance monitoring, return tracking, COD reconciliation and geo-targeting intelligence fed back to marketing agents.",
     stats: [
-      { value: "Daily automated NDR ", label: "follow-up across 100% of stuck orders" },
+      {
+        value: "Daily automated NDR ",
+        label: "follow-up across 100% of stuck orders",
+      },
       { value: "18% ", label: "average reduction in reverse logistics cost" },
-      { value: "Real-time courier", label: " performance monitoring across all partners" },
+      {
+        value: "Real-time courier",
+        label: " performance monitoring across all partners",
+      },
     ],
   },
   {
@@ -57,9 +66,18 @@ const managers = [
     title: "Autonomous Campaign Intelligence and Revenue Attribution",
     desc: "Marketing AGI monitors campaign performance across Meta, Google, Amazon and Flipkart Ads, attributes revenue to every creative and channel, detects fatigue and flags budget pacing issues before spend is wasted.",
     stats: [
-      { value: "Revenue attribution ", label: "within 24 hours of every influencer post" },
-      { value: "Campaign ROAS ", label: "alerts before weekly budget is consumed" },
-      { value: "Creative fatigue ", label: "detected before CTR drops compound" },
+      {
+        value: "Revenue attribution ",
+        label: "within 24 hours of every influencer post",
+      },
+      {
+        value: "Campaign ROAS ",
+        label: "alerts before weekly budget is consumed",
+      },
+      {
+        value: "Creative fatigue ",
+        label: "detected before CTR drops compound",
+      },
     ],
   },
   {
@@ -69,14 +87,21 @@ const managers = [
     title: "Autonomous Customer Query and Return Resolution",
     desc: "Customer Care AGI manages all queries across Shopify, WhatsApp, email and marketplace channels, tracks return journeys from initiation to resolution and detects negative reviews within hours of posting.",
     stats: [
-      { value: "Unified query", label: " visibility across all channels in real time" },
-      { value: "60%", label: "reduction in customer care coordination overhead" },
-      { value: "Return journey ", label: "tracking from initiation to warehouse receipt" },
+      {
+        value: "Unified query",
+        label: " visibility across all channels in real time",
+      },
+      {
+        value: "60%",
+        label: "reduction in customer care coordination overhead",
+      },
+      {
+        value: "Return journey ",
+        label: "tracking from initiation to warehouse receipt",
+      },
     ],
   },
 ];
-
-
 
 interface DashboardPreviewProps {
   icon: React.ComponentType<{ className: string }>;
@@ -90,7 +115,7 @@ function DashboardPreview({ icon: Icon, title }: DashboardPreviewProps) {
         <div className="rounded-xl border border-black/10 bg-white p-5">
           <div className="flex items-center gap-3 mb-4">
             <Icon className="w-5 h-5 text-[#625FD0]" />
-            <span className="font-semibold text-sm">{title}</span>
+            <span className=" text-sm">{title}</span>
           </div>
 
           <div className="space-y-3">
@@ -104,7 +129,7 @@ function DashboardPreview({ icon: Icon, title }: DashboardPreviewProps) {
                 className="flex justify-between text-sm border-b border-black/5 pb-2"
               >
                 <span className="text-black/50">{item.label}</span>
-                <span className="font-semibold">{item.value}</span>
+                <span className="">{item.value}</span>
               </div>
             ))}
           </div>
@@ -140,13 +165,15 @@ export default function PrebuiltManagersSection() {
       <div className="max-w-6xl mx-auto">
         {/* HEADER */}
         <div className="mb-12 max-w-2xl">
-          <h1 className="text-3xl sm:text-3xl md:text-5xl font-semibold leading-tight mb-4">
+          <h1 className="text-3xl sm:text-3xl md:text-5xl  leading-tight mb-4">
             Pre-Built Specialist AGI Agents
-          
           </h1>
 
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-          Deploy purpose-built AI agents that autonomously run every operational function across your organisation. Each agent is trained for its domain, connected to the right data sources via ADA and coordinated by the Beehive architecture.
+            Deploy purpose-built AI agents that autonomously run every
+            operational function across your organisation. Each agent is trained
+            for its domain, connected to the right data sources via ADA and
+            coordinated by the Beehive architecture.
           </p>
         </div>
 
@@ -182,7 +209,7 @@ export default function PrebuiltManagersSection() {
                 </span>
               </div>
 
-              <h2 className="text-2xl md:text-3xl lg:text-3xl font-semibold mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-3xl  mb-6">
                 {tab.title}
               </h2>
 
@@ -202,14 +229,14 @@ export default function PrebuiltManagersSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Explore Platform
               </Link>
 
               <Link
                 href="./get-in-touch"
-                className="inline-flex justify-center items-center px-6 py-3 rounded-lg text-md font-semibold border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
+                className="inline-flex justify-center items-center px-6 py-3 rounded-lg text-md  border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
               >
                 Book Demo
               </Link>

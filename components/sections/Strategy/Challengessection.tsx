@@ -93,7 +93,11 @@ export default function SuperManagerCapabilities() {
               SuperManager AGI Strategy Capabilities
             </h1>
             <p className="text-gray-500 text-md md:text-base leading-relaxed">
-           SuperManager AGI acts as an autonomous intelligence layer continuously retrieving enterprise data, surfacing strategic signals, monitoring OKR alignment and generating executive intelligence  so leadership operates on live reality, not stale reports.
+              SuperManager AGI acts as an autonomous intelligence layer
+              continuously retrieving enterprise data, surfacing strategic
+              signals, monitoring OKR alignment and generating executive
+              intelligence so leadership operates on live reality, not stale
+              reports.
             </p>
           </div>
 
@@ -130,9 +134,7 @@ export default function SuperManagerCapabilities() {
                 >
                   <Icon size={22} />
                 </div>
-                <h3 className="text-lg  text-gray-900 mb-2">
-                  {item.title}
-                </h3>
+                <h3 className="text-lg  text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-md leading-relaxed">
                   {item.description}
                 </p>
@@ -162,9 +164,7 @@ export default function SuperManagerCapabilities() {
                   >
                     <Icon size={22} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-lg  text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">
                     {item.description}
                   </p>

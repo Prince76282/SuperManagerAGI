@@ -58,7 +58,7 @@ export default function EnterpriseIntegrations() {
               <div className="flex flex-col justify-between p-8 lg:p-10">
                 <div className="space-y-5">
                   {/* Badge */}
-                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs font-semibold bg-[#625FD0]/10 text-[#625FD0]">
+                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs  bg-[#625FD0]/10 text-[#625FD0]">
                     {item.badge}
                   </span>
 
@@ -73,7 +73,7 @@ export default function EnterpriseIntegrations() {
 
                 <Link
                   href={item.ctaHref}
-                  className="inline-flex items-center mt-4 justify-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
+                  className="inline-flex items-center mt-4 justify-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white  hover:opacity-90 transition"
                 >
                   {item.ctaLabel}
                 </Link>

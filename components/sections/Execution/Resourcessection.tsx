@@ -118,7 +118,8 @@ export default function ResourcesSection() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
           <div className="max-w-2xl">
             <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl  leading-tight">
-              Learn How <span className="text-[#625FD0]">SuperManager AGI </span>
+              Learn How{" "}
+              <span className="text-[#625FD0]">SuperManager AGI </span>
               <br className="hidden md:block" />
               Powers the Vibe Working Platform
             </h1>
@@ -180,7 +181,7 @@ export default function ResourcesSection() {
               {/* Content */}
               <div className="p-5 flex flex-col gap-4 flex-1">
                 <div className="flex items-center justify-between">
-                  <h1 className="text-md font-semibold uppercase tracking-wide text-[#625FD0]">
+                  <h1 className="text-md  uppercase tracking-wide text-[#625FD0]">
                     {card.type}
                   </h1>
 

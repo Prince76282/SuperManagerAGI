@@ -4,7 +4,6 @@ import { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 type Testimonial = {
   industry: string;
   quote: string;
@@ -128,13 +127,14 @@ export default function TestimonialsSection() {
     <section className="bg-[#F0F6F9] py-10 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4">
         <h1 className="text-[2.5rem]  leading-[1.2] tracking-[-0.02em] flex-none  overflow-visible">
-       What Our Customers Say
+          What Our Customers Say
         </h1>
         {/* Header */}
         <div className="flex justify-between items-end mb-12">
           <div>
             <p className="text-base  text-gray-700 md:text-lg">
-             Real results from organisations using SuperManager AGI as their AI Vibe Working Platform.
+              Real results from organisations using SuperManager AGI as their AI
+              Vibe Working Platform.
             </p>
           </div>
 
@@ -186,12 +186,12 @@ export default function TestimonialsSection() {
 function Card({ industry, quote, name, title }: Testimonial) {
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition h-full flex flex-col">
-      <h3 className="text-xl font-semibold">{industry}</h3>
+      <h3 className="text-xl ">{industry}</h3>
 
       <p className="text-gray-600 mt-3 flex-1 leading-relaxed">“{quote}”</p>
 
       <div className="mt-6">
-        <p className="font-semibold">{name}</p>
+        <p className="">{name}</p>
         <p className="text-sm text-gray-500">{title}</p>
       </div>
     </div>

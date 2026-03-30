@@ -38,7 +38,7 @@ function Tag({ children, wide = false }: TagProps) {
 
 function LogoBadge({ label }: LogoBadgeProps) {
   return (
-    <div className="flex items-center justify-center px-3 py-2.5 rounded-md border text-xs font-semibold tracking-wide bg-white hover:shadow-sm transition text-gray-800">
+    <div className="flex items-center justify-center px-3 py-2.5 rounded-md border text-xs  tracking-wide bg-white hover:shadow-sm transition text-gray-800">
       {label}
     </div>
   );
@@ -62,7 +62,7 @@ function ColumnSection({ label, children }: ColumnSectionProps) {
   return (
     <div className="px-5 py-5 flex flex-col gap-4">
       {label && (
-        <p className="text-[11px] font-semibold uppercase tracking-widest text-gray-500">
+        <p className="text-[11px]  uppercase tracking-widest text-gray-500">
           {label}
         </p>
       )}
@@ -71,35 +71,33 @@ function ColumnSection({ label, children }: ColumnSectionProps) {
   );
 }
 
-
-
 export default function AutonomousUses() {
   return (
     <section className="relative py-10 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
-        
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <h2 className="text-3xl lg:text-5xl leading-tight text-black mb-4 font-semibold">
-             Work Moves Forward Automatically. {" "}
+            <h2 className="text-3xl lg:text-5xl leading-tight text-black mb-4 ">
+              Work Moves Forward Automatically.{" "}
               <span className="text-[#625FD0]">Without Anyone Asking.</span>
             </h2>
 
             <p className="text-gray-600 leading-relaxed">
-             SuperManager AGI’s autonomous execution layer continuously monitors every connected system, detects what needs to happen and executes it  without prompts, without manual triggers and without being asked. Instead of relying on constant human coordination, organisations gain an AI workforce that keeps every operational workflow moving forward at all times.
+              SuperManager AGI’s autonomous execution layer continuously
+              monitors every connected system, detects what needs to happen and
+              executes it without prompts, without manual triggers and without
+              being asked. Instead of relying on constant human coordination,
+              organisations gain an AI workforce that keeps every operational
+              workflow moving forward at all times.
             </p>
           </div>
-
-          
         </div>
 
         {/* Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          
           {/* COLUMN 1 */}
           <Column title="Autonomous Execution Agents">
-            
             <ColumnSection label="Finance & Operations">
               <div className="grid grid-cols-2 gap-2">
                 <Tag wide>
@@ -136,12 +134,10 @@ export default function AutonomousUses() {
                 <Tag wide>Stakeholder updates auto-sent</Tag>
               </div>
             </ColumnSection>
-
           </Column>
 
           {/* COLUMN 2 */}
           <Column title="SuperManager AGI Platform">
-            
             <ColumnSection>
               <div className="grid grid-cols-2 gap-2">
                 <Tag wide>Daily intelligence brief from all systems</Tag>
@@ -179,12 +175,10 @@ export default function AutonomousUses() {
                 <Tag wide>No-code agent builder</Tag>
               </div>
             </ColumnSection>
-
           </Column>
 
           {/* COLUMN 3 */}
           <Column title="Integrations & Security">
-            
             <ColumnSection label="Dev & Project Tools">
               <div className="grid grid-cols-2 gap-2">
                 {[
@@ -233,7 +227,6 @@ export default function AutonomousUses() {
                 ))}
               </div>
             </ColumnSection>
-
           </Column>
         </div>
       </div>

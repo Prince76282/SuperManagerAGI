@@ -9,7 +9,8 @@ const useCases = [
     title: "Morning Intelligence Brief",
     description:
       "Every morning, a structured executive intelligence brief is auto-generated from every connected system: revenue vs target by channel, inventory health, logistics performance, marketing ROAS, customer care backlog, engineering delivery status, finance reconciliation status. Distributed automatically. No meetings required to get this information.",
-    impact: "3 hours saved per leader per day previously spent gathering status information",
+    impact:
+      "3 hours saved per leader per day previously spent gathering status information",
     icon: Briefcase,
   },
   {
@@ -33,7 +34,8 @@ const useCases = [
     title: "Cross-Department Cost Intelligence",
     description:
       "Agents identify operational inefficiencies, redundant workflows and budget waste across every department using actual data from connected systems. Cost reduction opportunities surfaced with specific data  not general recommendations.",
-    impact: "Average 15 to 25% operational cost reduction identified in first 90 days",
+    impact:
+      "Average 15 to 25% operational cost reduction identified in first 90 days",
     icon: DollarSign,
   },
 ];
@@ -89,7 +91,7 @@ function UseCaseRow({
           obs.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     obs.observe(el);
@@ -120,9 +122,7 @@ function UseCaseRow({
           {item.description}
         </p>
 
-        <p className="text-sm font-semibold text-[#625FD0]">
-          Impact: {item.impact}
-        </p>
+        <p className="text-sm  text-[#625FD0]">Impact: {item.impact}</p>
       </div>
 
       <div className="hidden lg:block w-px h-full bg-slate-200" />
@@ -144,7 +144,10 @@ export default function SuperManagerUseCases() {
           </h1>
 
           <p className="text-slate-500 text-md md:text-md leading-relaxed">
-            Organisations deploy SuperManager AGI to give leadership real-time strategic intelligence, eliminate information latency and transform planning from a periodic exercise into a continuous, data-driven process.
+            Organisations deploy SuperManager AGI to give leadership real-time
+            strategic intelligence, eliminate information latency and transform
+            planning from a periodic exercise into a continuous, data-driven
+            process.
           </p>
         </div>
 

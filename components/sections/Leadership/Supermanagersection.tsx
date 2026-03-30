@@ -53,7 +53,10 @@ const Supermanagersection = () => {
         {/* Subheading */}
         <div className="max-w-2xl">
           <p className="text-lg text-gray-600">
-            Empower every role in your organisation with autonomous AI agents that do the work, surface the intelligence and coordinate across departments  so leaders focus on strategy and growth, not operational coordination.
+            Empower every role in your organisation with autonomous AI agents
+            that do the work, surface the intelligence and coordinate across
+            departments so leaders focus on strategy and growth, not operational
+            coordination.
           </p>
         </div>
       </div>
@@ -69,9 +72,7 @@ const Supermanagersection = () => {
             >
               <Icon className="w-8 h-8 text-black" />
 
-              <h2 className="text-xl font-semibold text-gray-900 mt-4 mb-2">
-                {item.title}
-              </h2>
+              <h2 className="text-xl  text-gray-900 mt-4 mb-2">{item.title}</h2>
 
               <p className="text-gray-600 text-sm leading-relaxed">
                 {item.desc}

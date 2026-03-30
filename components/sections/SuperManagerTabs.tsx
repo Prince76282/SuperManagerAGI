@@ -14,7 +14,6 @@ export default function SuperManagerTabs() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="bg-white rounded-2xl lg:p-4 overflow-hidden">
-
             {/* Tabs */}
             <div className="flex gap-2 px-3 pt-4 lg:px-8 overflow-x-auto scrollbar-hide">
               {HomeData.map((tab, index) => (
@@ -34,7 +33,6 @@ export default function SuperManagerTabs() {
 
             {/* Content */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 p-5 sm:p-8 lg:p-12">
-
               {/* Text */}
               <div className="flex flex-col justify-center space-y-4 sm:space-y-6">
                 <h3 className="text-2xl lg:text-4xl text-gray-900">
@@ -48,9 +46,9 @@ export default function SuperManagerTabs() {
                 <div className="pt-2">
                   <Link
                     href={`/home/${HomeData[activeTab].id}`}
-                    className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
+                    className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white "
                   >
-                    Learn More 
+                    Learn More
                   </Link>
                 </div>
               </div>
@@ -66,7 +64,6 @@ export default function SuperManagerTabs() {
                   />
                 </div>
               </div>
-
             </div>
           </div>
         </div>

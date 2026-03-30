@@ -83,7 +83,7 @@ export default function SuperManagerPage() {
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
               href="/get-in-touch"
-              className="border-2 border-[#625FD0] px-4 py-3 text-[#625FD0]  rounded-lg font-semibold hover:text-white hover:bg-[#625FD0] transition"
+              className="border-2 border-[#625FD0] px-4 py-3 text-[#625FD0]  rounded-lg  hover:text-white hover:bg-[#625FD0] transition"
             >
               Request Demo
             </Link>
@@ -177,28 +177,28 @@ export default function SuperManagerPage() {
 
           <div className="grid  md:grid-cols-4 gap-10 text-left">
             <div className="hover:border-r  border-[#625FD0]">
-              <h4 className="font-semibold text-2xl mb-3">Analyze</h4>
+              <h4 className=" text-2xl mb-3">Analyze</h4>
               <p className="text-gray-600 text-md">
                 Aggregates enterprise data, KPIs, constraints, and signals.
               </p>
             </div>
 
             <div className="hover:border-r border-[#625FD0]">
-              <h4 className="font-semibold text-2xl mb-3">Strategize</h4>
+              <h4 className=" text-2xl mb-3">Strategize</h4>
               <p className="text-gray-600 text-md">
                 Evaluates trade-offs and execution paths using reasoning models.
               </p>
             </div>
 
             <div className="hover:border-r border-[#625FD0]">
-              <h4 className="font-semibold text-2xl mb-3">Orchestrate</h4>
+              <h4 className=" text-2xl mb-3">Orchestrate</h4>
               <p className="text-gray-600 text-md">
                 Coordinates AGI agents across departments simultaneously.
               </p>
             </div>
 
             <div className="hover:border-r border-[#625FD0]">
-              <h4 className="font-semibold text-2xl mb-3">Optimize</h4>
+              <h4 className=" text-2xl mb-3">Optimize</h4>
               <p className="text-gray-600 text-md">
                 Continuously rebalances strategy based on performance feedback.
               </p>

@@ -16,23 +16,24 @@ export default function AGIHeroSection() {
 
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 SuperManager AGI operates as an autonomous execution layer that
-                plans, coordinates, monitors and optimises entire workflows across
-                every connected application eliminating manual overhead while
-                increasing delivery speed, accuracy and operational confidence.
+                plans, coordinates, monitors and optimises entire workflows
+                across every connected application eliminating manual overhead
+                while increasing delivery speed, accuracy and operational
+                confidence.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="https://youtu.be/mesaaTaZl3E?si=Vh8bOXA9ixENc-Fo"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Watch video
               </Link>
 
               <Link
                 href="/get-in-touch"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Request a demo
               </Link>

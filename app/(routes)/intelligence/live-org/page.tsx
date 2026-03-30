@@ -10,7 +10,7 @@ export default function LiveOrganizationIntelligencePage() {
         <div className="container mx-auto px-4">
           <Link
             href="/intelligence"
-            className="inline-flex items-center gap-2 text-[#625FD0] font-semibold mb-6"
+            className="inline-flex items-center gap-2 text-[#625FD0]  mb-6"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Intelligence
           </Link>
@@ -71,7 +71,7 @@ export default function LiveOrganizationIntelligencePage() {
               "Performance tracking",
             ].map((useCase, idx) => (
               <div key={idx} className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-900 font-semibold">{useCase}</p>
+                <p className="text-gray-900 ">{useCase}</p>
               </div>
             ))}
           </div>

@@ -15,11 +15,12 @@ export default function SupermanageResources() {
             </h2>
 
             <p className="text-black/70 text-lg mb-8 max-w-xl">
-              Explore platform documentation, ADA integration guides, specialist agent configuration, deployment frameworks, Beehive orchestration architecture and enterprise governance resources.
+              Explore platform documentation, ADA integration guides, specialist
+              agent configuration, deployment frameworks, Beehive orchestration
+              architecture and enterprise governance resources.
             </p>
           </div>
 
-     
           <div className="relative h-[420px] rounded-2xl overflow-hidden border-2 border-[#625FD0]">
             <Image
               src="/Image/support2.png"
@@ -30,7 +31,6 @@ export default function SupermanageResources() {
           </div>
         </div>
 
-        
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Academy */}
           <ResourceCard
@@ -57,7 +57,6 @@ export default function SupermanageResources() {
           />
         </div>
 
-    
         <div className="grid lg:grid-cols-2 gap-8">
           <LargeCard
             icon={<Layers size={22} />}
@@ -78,8 +77,6 @@ export default function SupermanageResources() {
   );
 }
 
-
-
 function ResourceCard({
   icon,
   title,
@@ -97,15 +94,12 @@ function ResourceCard({
         {icon}
       </div>
 
-      <h3 className="text-lg font-semibold mb-3">{title}</h3>
+      <h3 className="text-lg  mb-3">{title}</h3>
 
       <p className="text-black/70 mb-6">{description}</p>
-
     </div>
   );
 }
-
-
 
 function LargeCard({
   icon,
@@ -124,11 +118,9 @@ function LargeCard({
         {icon}
       </div>
 
-      <h3 className="text-xl font-semibold mb-4">{title}</h3>
+      <h3 className="text-xl  mb-4">{title}</h3>
 
       <p className="text-black/70 mb-8 max-w-lg">{description}</p>
-
-   
     </div>
   );
 }

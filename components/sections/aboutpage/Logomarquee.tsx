@@ -21,7 +21,7 @@ export default function LogoMarqueeSection() {
   return (
     <div className="mx-auto max-w-[1100px] px-5 pb-14 text-center py-16">
       {/* 🤝 Title */}
-      <h1 className="mb-4 text-black text-lg md:text-2xl font-semibold">
+      <h1 className="mb-4 text-black text-lg md:text-2xl ">
         Trusted by 100+ Leading Companies
       </h1>
 

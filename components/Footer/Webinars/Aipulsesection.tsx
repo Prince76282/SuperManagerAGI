@@ -19,7 +19,7 @@ export default function AIPulseSection() {
 
           <div className="relative flex flex-col lg:flex-row items-center gap-12 rounded-3xl border border-gray-300 overflow-hidden px-8 py-12 lg:px-14 lg:py-16 shadow-lg">
             <div className="relative z-10 flex flex-col gap-6 flex-1">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#625FD0]">
+              <span className="inline-flex items-center gap-2 text-xs  tracking-[0.2em] uppercase text-[#625FD0]">
                 <Zap className="w-4 h-4  text-[#625FD0]" />
                 Quarterly Briefing
               </span>
@@ -39,7 +39,7 @@ export default function AIPulseSection() {
 
               <Link
                 href="/#"
-                className="group inline-flex items-center gap-3 self-start mt-2 px-6 py-3 rounded-lg bg-[#625FD0]  text-white text-sm font-semibold transition-all "
+                className="group inline-flex items-center gap-3 self-start mt-2 px-6 py-3 rounded-lg bg-[#625FD0]  text-white text-sm  transition-all "
               >
                 Join the Next AI Pulse
               </Link>

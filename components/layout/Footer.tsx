@@ -40,7 +40,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-center text-base md:text-left lg:text-lg">
-              <span className="font-semibold text-gray-800">
+              <span className=" text-gray-800">
                 Reimagine Enterprise Execution{" "}
               </span>
               <span className="text-gray-700">with SuperManager AGI</span>
@@ -136,7 +136,7 @@ const Footer = () => {
 
                 <Link
                   href="/get-in-touch"
-                  className="block rounded-lg bg-[#625FD0] px-4 py-2 text-center font-semibold text-white"
+                  className="block rounded-lg bg-[#625FD0] px-4 py-2 text-center  text-white"
                 >
                   Submit RFP
                 </Link>

@@ -4,30 +4,37 @@ import Script from "next/script";
 export default function DemoSection() {
   return (
     <main className="max-w-[1200px] lg:mt-10 mt-20 mx-auto px-5 mt-5 grid grid-cols-1 lg:grid-cols-2 gap-[clamp(30px,5vw,60px)] items-center">
-
       {/* LEFT CONTENT */}
       <section className="w-full">
-        <span className="inline-block px-[14px] py-[8px] text-[13px] font-semibold border border-black rounded-[20px] mb-5">
+        <span className="inline-block px-[14px] py-[8px] text-[13px]  border border-black rounded-[20px] mb-5">
           REQUEST A DEMO
         </span>
 
-        <h1 className="text-[clamp(26px,4vw,44px)] font-semibold leading-[1.25] mb-5">
-         See Autonomous Project Management Running on Your Real Projects
+        <h1 className="text-[clamp(26px,4vw,44px)]  leading-[1.25] mb-5">
+          See Autonomous Project Management Running on Your Real Projects
         </h1>
 
         <p className="text-[clamp(15px,1.2vw,17px)]  leading-[1.7]  text-gray-900">
-          Experience autonomous project management in action. Use the form to request a demo from our team and discover how our platform removes manual PM work, safeguards your teams, and speeds up delivery.
-          We’ll demonstrate everything using your tools, workflows, and real project data so you can see exactly how it works in your environment.
+          Experience autonomous project management in action. Use the form to
+          request a demo from our team and discover how our platform removes
+          manual PM work, safeguards your teams, and speeds up delivery. We’ll
+          demonstrate everything using your tools, workflows, and real project
+          data so you can see exactly how it works in your environment.
         </p>
 
         <div className="mt-[30px] text-[13px] text-[#555] font-medium">
           <p>
-           We may request additional information to verify your identity and better understand your organization’s needs.
+            We may request additional information to verify your identity and
+            better understand your organization’s needs.
           </p>
 
           <p className="mt-3">
             Learn more in our
-            <a href="/learnmore" target="_blank" className="underline ml-1 mr-3">
+            <a
+              href="/learnmore"
+              target="_blank"
+              className="underline ml-1 mr-3"
+            >
               Documentation
             </a>
             <a href="/faq" target="_blank" className="underline mr-3">

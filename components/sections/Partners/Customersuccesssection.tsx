@@ -19,7 +19,7 @@ const cards = [
     href: "#",
     external: false,
   },
-   {
+  {
     tag: "Partner Type",
     icon: MdSearch,
     title: "Consulting Firm Specialists",
@@ -29,7 +29,7 @@ const cards = [
     href: "#",
     external: false,
   },
-   {
+  {
     tag: "Find a Partner",
     icon: MdSearch,
     title: "Explore the Partner Directory",
@@ -58,17 +58,22 @@ export default function CustomerSuccessSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-14">
           <div className="flex flex-col gap-3 max-w-xl">
-            <span className="inline-flex items-center w-fit gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#625FD0] border border-indigo-200 bg-indigo-50 px-3 py-1.5 rounded-full">
+            <span className="inline-flex items-center w-fit gap-1.5 text-xs  tracking-widest uppercase text-[#625FD0] border border-indigo-200 bg-indigo-50 px-3 py-1.5 rounded-full">
               Customer Success
             </span>
             <h2 className="text-3xl md:text-3xl  text-black leading-tight tracking-tight">
-              Partners Are Delivering {" "}
-              <span className="text-[#625FD0]">Real Vibe Working </span> Platform Results
+              Partners Are Delivering{" "}
+              <span className="text-[#625FD0]">Real Vibe Working </span>{" "}
+              Platform Results
             </h2>
           </div>
 
           <p className="text-base text-gray-600 leading-relaxed max-w-lg md:pt-10">
-            Our implementation partners are at the forefront of the AI Vibe Working Platform transformation  helping organisations across every industry deploy autonomous agent workforces that execute operational tasks, surface live enterprise intelligence and coordinate across departments without manual overhead.
+            Our implementation partners are at the forefront of the AI Vibe
+            Working Platform transformation helping organisations across every
+            industry deploy autonomous agent workforces that execute operational
+            tasks, surface live enterprise intelligence and coordinate across
+            departments without manual overhead.
           </p>
         </div>
 
@@ -88,7 +93,7 @@ export default function CustomerSuccessSection() {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#625FD0] via-[#625FD0] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Tag */}
-                <span className="inline-flex items-center w-fit gap-1.5 text-xs font-semibold tracking-widest uppercase text-[#625FD0] border border-indigo-200 bg-indigo-50 px-3 py-1.5 rounded-full">
+                <span className="inline-flex items-center w-fit gap-1.5 text-xs  tracking-widest uppercase text-[#625FD0] border border-indigo-200 bg-indigo-50 px-3 py-1.5 rounded-full">
                   {card.tag}
                 </span>
 
@@ -116,14 +121,14 @@ export default function CustomerSuccessSection() {
                     href={card.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                    className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
                   >
                     {card.linkLabel}
                   </Link>
                 ) : (
                   <Link
                     href={card.href}
-                    className="inline-flex items-center rounded-lg justify-center bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                    className="inline-flex items-center rounded-lg justify-center bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
                   >
                     {card.linkLabel}
                   </Link>

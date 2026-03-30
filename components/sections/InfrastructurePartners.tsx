@@ -40,9 +40,7 @@ export default function InfrastructureSection() {
                 {/* Content */}
                 <div className="flex flex-col space-y-6 p-6">
                   <div className="space-y-3 text-black text-sm md:text-base leading-relaxed">
-                    <p className="font-semibold text-base md:text-lg">
-                      {card.title}
-                    </p>
+                    <p className=" text-base md:text-lg">{card.title}</p>
 
                     <p>{card.description}</p>
 
@@ -61,7 +59,7 @@ export default function InfrastructureSection() {
                       <Link
                         key={btn.label}
                         href={btn.href}
-                        className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold"
+                        className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white "
                       >
                         {btn.label}
                       </Link>

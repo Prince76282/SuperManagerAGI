@@ -59,7 +59,7 @@ export default function AutonomousAgentTabs() {
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10 lg:mb-14">
           <div className="max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-3 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-black mb-3 leading-tight">
               Build and Orchestrate
               <span className="text-[#625FD0]"> Autonomous AI Agents</span>
             </h2>
@@ -102,7 +102,7 @@ export default function AutonomousAgentTabs() {
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
             {/* TEXT */}
             <div>
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-black mb-3">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-black mb-3">
                 {active.heading}
               </h3>
 

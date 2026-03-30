@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-
 type Story = {
   tag: string;
   title: string;
@@ -20,8 +19,6 @@ type Company = {
   src: string;
   width: number;
 };
-
-
 
 const STORIES: Story[] = [
   {
@@ -100,12 +97,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
       {/* TEXT SIDE */}
       <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-12">
         <div className="space-y-6">
-          <div
-            className="text-xs font-semibold tracking-widest uppercase"
-         
-          >
-            {story.tag}
-          </div>
+          <div className="text-xs  tracking-widest uppercase">{story.tag}</div>
 
           <h2 className="text-2xl sm:text-3xl  text-black leading-tight">
             {story.title}
@@ -127,8 +119,6 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
             ))}
           </div>
         </div>
-
-        
       </div>
 
       {/* IMAGE SIDE */}
@@ -187,9 +177,12 @@ export default function CustomerStories() {
           <h1 className="text-3xl sm:text-5xl  tracking-tight">
             Customer <span className="text-[#625FD0]">Stories</span>
           </h1>
-  
+
           <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
-            SuperManager AGI delivers the Vibe Working Platform experience that transforms how organisations operate  giving every team an AI workforce that executes tasks autonomously, surfaces live intelligence and coordinates across every department.
+            SuperManager AGI delivers the Vibe Working Platform experience that
+            transforms how organisations operate giving every team an AI
+            workforce that executes tasks autonomously, surfaces live
+            intelligence and coordinates across every department.
           </p>
         </div>
 

@@ -70,26 +70,20 @@ export default function AIWorkforceGuidesPage() {
 
   return (
     <div className="bg-white text-black min-h-screen">
-
       {/* HERO */}
       <section className="px-6 md:px-12 lg:px-24 py-24 ">
         <div className="max-w-6xl mx-auto">
-
-          <p className="text-[#625FD0] uppercase tracking-widest text-sm font-semibold">
+          <p className="text-[#625FD0] uppercase tracking-widest text-sm ">
             {data.eyebrow}
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold mt-6">
-            {data.title}
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mt-6">{data.title}</h1>
 
           <p className="text-xl text-gray-700 mt-6 max-w-3xl">
             {data.subtitle}
           </p>
 
-          <p className="text-gray-500 mt-4 max-w-2xl">
-            {data.description}
-          </p>
+          <p className="text-gray-500 mt-4 max-w-2xl">{data.description}</p>
 
           <div className="flex gap-4 mt-8">
             <Link
@@ -98,10 +92,7 @@ export default function AIWorkforceGuidesPage() {
             >
               Explore Guide
             </Link>
-            <Link
-              href="/get-in-touch"
-              className="border px-6 py-3 rounded-lg"
-            >
+            <Link href="/get-in-touch" className="border px-6 py-3 rounded-lg">
               Talk to Expert
             </Link>
           </div>
@@ -111,29 +102,22 @@ export default function AIWorkforceGuidesPage() {
       {/* INSIGHT GRID */}
       <section className="px-6 md:px-12 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
-
           {data.insights.map((item, i) => (
             <div
               key={i}
               className="border rounded-xl p-6 hover:border-[#625FD0] transition"
             >
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="text-gray-600 text-sm mt-3">
-                {item.desc}
-              </p>
+              <h3 className="">{item.title}</h3>
+              <p className="text-gray-600 text-sm mt-3">{item.desc}</p>
             </div>
           ))}
-
         </div>
       </section>
 
       {/* SYSTEM FLOW (HORIZONTAL VISUAL STYLE) */}
       <section className="px-6 md:px-12 lg:px-24 py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-3xl font-semibold mb-12">
-            AI Workforce Execution Model
-          </h2>
+          <h2 className="text-3xl  mb-12">AI Workforce Execution Model</h2>
 
           <div className="flex flex-wrap gap-4 items-center">
             {data.model.map((step, i) => (
@@ -147,64 +131,49 @@ export default function AIWorkforceGuidesPage() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* ROLES */}
       <section className="px-6 md:px-12 lg:px-24 py-20">
         <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-3xl font-semibold mb-12">
-            Workforce Roles
-          </h2>
+          <h2 className="text-3xl  mb-12">Workforce Roles</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {data.roles.map((r, i) => (
               <div key={i} className="border p-6 rounded-xl">
-                <h3 className="font-semibold text-lg">{r.role}</h3>
-                <p className="text-gray-600 mt-3 text-sm">
-                  {r.desc}
-                </p>
+                <h3 className=" text-lg">{r.role}</h3>
+                <p className="text-gray-600 mt-3 text-sm">{r.desc}</p>
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* IMPLEMENTATION STEPS */}
       <section className="px-6 md:px-12 lg:px-24 py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-
-          <h2 className="text-3xl font-semibold mb-10">
-            Implementation Path
-          </h2>
+          <h2 className="text-3xl  mb-10">Implementation Path</h2>
 
           <ol className="space-y-6">
             {data.steps.map((step, i) => (
               <li key={i} className="flex gap-4">
-                <span className="text-[#625FD0] font-bold">
-                  {i + 1}.
-                </span>
+                <span className="text-[#625FD0] font-bold">{i + 1}.</span>
                 <p className="text-gray-700">{step}</p>
               </li>
             ))}
           </ol>
-
         </div>
       </section>
 
       {/* CTA */}
       <section className="px-6 md:px-12 lg:px-24 py-24 text-center ">
         <div className="max-w-3xl mx-auto">
-
-          <h2 className="text-3xl font-semibold">
-            Build your AI workforce with control
-          </h2>
+          <h2 className="text-3xl ">Build your AI workforce with control</h2>
 
           <p className="text-gray-600 mt-4">
-            Move beyond automation and design a system where AI and humans work together with clarity and accountability.
+            Move beyond automation and design a system where AI and humans work
+            together with clarity and accountability.
           </p>
 
           <div className="mt-8 flex justify-center gap-4">
@@ -215,14 +184,10 @@ export default function AIWorkforceGuidesPage() {
               Start Building
             </Link>
 
-            <Link
-              href="/get-in-touch"
-              className="border px-6 py-3 rounded-lg"
-            >
+            <Link href="/get-in-touch" className="border px-6 py-3 rounded-lg">
               Contact Team
             </Link>
           </div>
-
         </div>
       </section>
     </div>

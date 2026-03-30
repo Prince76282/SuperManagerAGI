@@ -2,7 +2,6 @@
 
 import type { ReactNode } from "react";
 
-
 const solutions = [
   {
     title: "AI for Every Operation",
@@ -124,7 +123,7 @@ type InfoBlockProps = {
 
 function SectionLabel({ children }: SectionLabelProps) {
   return (
-    <div className="text-[11px] font-semibold uppercase tracking-wider text-[#625FD0] mb-2">
+    <div className="text-[11px]  uppercase tracking-wider text-[#625FD0] mb-2">
       {children}
     </div>
   );
@@ -133,7 +132,7 @@ function SectionLabel({ children }: SectionLabelProps) {
 function FeatureCard({ title, body }: FeatureCardProps) {
   return (
     <div className="border rounded-xl p-5 bg-white hover:border-[#625FD0] transition">
-      <h4 className="font-semibold text-black mb-2">{title}</h4>
+      <h4 className=" text-black mb-2">{title}</h4>
       <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
     </div>
   );
@@ -157,7 +156,7 @@ function ChipGrid({ items }: ChipGridProps) {
 function InfoBlock({ title, items }: InfoBlockProps) {
   return (
     <div className="border rounded-xl p-5 bg-white">
-      <h4 className="font-semibold text-black mb-2">{title}</h4>
+      <h4 className=" text-black mb-2">{title}</h4>
       <ChipGrid items={items} />
     </div>
   );
@@ -165,14 +164,12 @@ function InfoBlock({ title, items }: InfoBlockProps) {
 
 // --- Main Component ---
 export default function PlatformOverview() {
-
-
   return (
     <section className="bg-white py-16">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[#625FD0]">
+          <span className="text-xs  uppercase tracking-wider text-[#625FD0]">
             Platform Overview
           </span>
 
@@ -187,15 +184,13 @@ export default function PlatformOverview() {
             executing any business workflow across any application, any
             department and any industry.
           </p>
-
-          
         </div>
 
         {/* Solutions */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {solutions.map((sol) => (
             <div key={sol.title} className="border rounded-xl p-6 bg-white">
-              <h3 className="font-semibold text-lg mb-4">{sol.title}</h3>
+              <h3 className=" text-lg mb-4">{sol.title}</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 {sol.items.map((item) => (
                   <li key={item}>• {item}</li>

@@ -80,7 +80,7 @@ export default function ROICalculatorPage() {
       <div className="max-w-[1200px] mx-auto px-6 py-16">
         {/* HERO */}
         <section className="text-center mb-20">
-          <p className="text-[#625FD0] font-semibold uppercase tracking-wide">
+          <p className="text-[#625FD0]  uppercase tracking-wide">
             {data.eyebrow}
           </p>
 
@@ -110,23 +110,19 @@ export default function ROICalculatorPage() {
           {data.stats.map((stat, i) => (
             <div key={i} className="border rounded-xl p-6 text-center">
               <p className="text-sm text-gray-500 uppercase">{stat.label}</p>
-              <p className="text-xl font-semibold mt-2 text-[#625FD0]">
-                {stat.value}
-              </p>
+              <p className="text-xl  mt-2 text-[#625FD0]">{stat.value}</p>
             </div>
           ))}
         </section>
 
         {/* PILLARS */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">Key Value Drivers</h2>
+          <h2 className="text-3xl  mb-10">Key Value Drivers</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {data.pillars.map((p, i) => (
               <div key={i} className="border rounded-xl p-6">
-                <h3 className="font-semibold text-lg text-[#625FD0]">
-                  {p.title}
-                </h3>
+                <h3 className=" text-lg text-[#625FD0]">{p.title}</h3>
                 <p className="text-gray-600 mt-2">{p.description}</p>
               </div>
             ))}
@@ -135,13 +131,13 @@ export default function ROICalculatorPage() {
 
         {/* WORKFLOW */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">How It Works</h2>
+          <h2 className="text-3xl  mb-10">How It Works</h2>
 
           <div className="grid md:grid-cols-4 gap-6">
             {data.workflow.map((step, i) => (
               <div key={i} className="border rounded-xl p-6">
                 <p className="text-sm text-gray-500">Step {i + 1}</p>
-                <h3 className="font-semibold mt-2">{step.title}</h3>
+                <h3 className=" mt-2">{step.title}</h3>
                 <p className="text-gray-600 mt-2">{step.detail}</p>
               </div>
             ))}
@@ -150,12 +146,12 @@ export default function ROICalculatorPage() {
 
         {/* FAQ */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">FAQ</h2>
+          <h2 className="text-3xl  mb-10">FAQ</h2>
 
           <div className="space-y-6">
             {data.faq.map((f, i) => (
               <div key={i} className="border rounded-xl p-6">
-                <h3 className="font-semibold">{f.q}</h3>
+                <h3 className="">{f.q}</h3>
                 <p className="text-gray-600 mt-2">{f.a}</p>
               </div>
             ))}
@@ -164,7 +160,7 @@ export default function ROICalculatorPage() {
 
         {/* CTA */}
         <section className="text-center border rounded-2xl p-12 bg-[#F8F7FF]">
-          <h2 className="text-3xl font-semibold">Start with the right pilot</h2>
+          <h2 className="text-3xl ">Start with the right pilot</h2>
 
           <p className="text-gray-600 mt-4 max-w-xl mx-auto">
             Use ROI to identify the best starting workflow and validate quickly.

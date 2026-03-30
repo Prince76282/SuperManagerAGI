@@ -7,13 +7,19 @@ import Link from "next/link";
 const tabs = [
   { id: "Founder and Leadership AI", label: "Founder and Leadership AI" },
   { id: "Sales and Revenue AI", label: "Sales and Revenue AI" },
-  { id: "Operations and Supply Chain AI", label: "Operations and Supply Chain AI" },
+  {
+    id: "Operations and Supply Chain AI",
+    label: "Operations and Supply Chain AI",
+  },
   { id: "Finance and Accounts AI", label: "Finance and Accounts AI" },
   { id: "Logistics and Delivery AI", label: "Logistics and Delivery AI" },
   { id: "Marketing and Growth AI", label: "Marketing and Growth AI" },
   { id: "Customer Care AI", label: "Customer Care AI" },
   { id: "Engineering and Product AI", label: "Engineering and Product AI" },
-  { id: "Clerical and Administrative AI", label: "Clerical and Administrative AI" },
+  {
+    id: "Clerical and Administrative AI",
+    label: "Clerical and Administrative AI",
+  },
 ] as const;
 
 type TabId = (typeof tabs)[number]["id"];
@@ -120,20 +126,25 @@ export default function EnterpriseFeatures() {
         {/* HERO */}
         <div className="grid lg:grid-cols-2 gap-10 items-start mb-16">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-3xl lg:text-5xl leading-tight font-semibold">
+            <h2 className="text-3xl md:text-3xl lg:text-5xl leading-tight ">
               AI Agents for Every Department
             </h2>
 
             <Link
               href="/get-in-touch"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-5 py-2.5 text-white font-semibold shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-5 py-2.5 text-white  shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
             >
               Get in touch
             </Link>
           </div>
 
           <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-            SuperManager AGI deploys autonomous specialist agents across every function inside any organisation. From founders and the C-suite to operations, finance, logistics, marketing, customer care and engineering every role gains an AI workforce that fetches data, executes tasks, generates reports and coordinates across departments 24x7.
+            SuperManager AGI deploys autonomous specialist agents across every
+            function inside any organisation. From founders and the C-suite to
+            operations, finance, logistics, marketing, customer care and
+            engineering every role gains an AI workforce that fetches data,
+            executes tasks, generates reports and coordinates across departments
+            24x7.
           </p>
         </div>
 
@@ -165,13 +176,11 @@ export default function EnterpriseFeatures() {
             >
               {/* TEXT */}
               <div className="flex-1">
-                <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-slate-500 bg-slate-100 rounded-full uppercase mb-5">
+                <span className="inline-block px-3 py-1 text-xs  tracking-wider text-slate-500 bg-slate-100 rounded-full uppercase mb-5">
                   {data.badge}
                 </span>
 
-                <h3 className="text-2xl md:text-3xl font-semibold mb-5">
-                  {data.title}
-                </h3>
+                <h3 className="text-2xl md:text-3xl  mb-5">{data.title}</h3>
 
                 <p className="text-gray-600 leading-relaxed">{data.desc}</p>
               </div>
@@ -197,9 +206,7 @@ export default function EnterpriseFeatures() {
                   className="bg-slate-50 rounded-xl p-6 border border-transparent hover:border-slate-200 hover:shadow-md transition-all duration-300"
                 >
                   <div className="border-l-2 border-dotted border-slate-400 pl-4">
-                    <h4 className="text-lg font-semibold mb-2">
-                      {item.title}
-                    </h4>
+                    <h4 className="text-lg  mb-2">{item.title}</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {item.description}
                     </p>

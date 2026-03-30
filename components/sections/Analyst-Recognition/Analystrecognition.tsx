@@ -56,12 +56,17 @@ export default function AnalystRecognition() {
       {/* HERO */}
       <section className="pt-20 pb-12 px-4 sm:px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto text-center flex flex-col items-center gap-5">
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl ">
             Industry <span className="text-[#625FD0]">Recognition</span>
           </h1>
 
           <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
-            Discover how SuperManager AGI is pioneering the AI Vibe Working Platform category  the world’s first architecture that eliminates the network boundary assumption from enterprise AI agent deployment. Recognised for the ADA Integration Layer, Beehive Agentic Architecture and the first peer-reviewed framework for hallucination-free, sub-100ms autonomous enterprise AI.
+            Discover how SuperManager AGI is pioneering the AI Vibe Working
+            Platform category the world’s first architecture that eliminates the
+            network boundary assumption from enterprise AI agent deployment.
+            Recognised for the ADA Integration Layer, Beehive Agentic
+            Architecture and the first peer-reviewed framework for
+            hallucination-free, sub-100ms autonomous enterprise AI.
           </p>
 
           <Link
@@ -99,7 +104,7 @@ export default function AnalystRecognition() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* TEXT */}
             <div className="flex flex-col gap-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+              <h2 className="text-xl sm:text-2xl md:text-3xl ">
                 {active.heading}
               </h2>
 
@@ -122,7 +127,7 @@ export default function AnalystRecognition() {
                   { num: "24/7", label: "Autonomous Ops" },
                 ].map((s) => (
                   <div key={s.label} className="flex flex-col">
-                    <span className="text-xl sm:text-2xl text-[#625FD0] font-semibold">
+                    <span className="text-xl sm:text-2xl text-[#625FD0] ">
                       {s.num}
                     </span>
                     <span className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wide">

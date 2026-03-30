@@ -110,7 +110,7 @@ function FeaturedCard({ item }: { item: FeaturedNewsItem }) {
 
             <Link
               href={item.href}
-              className="px-3 py-2 bg-[#625FD0] text-white rounded-lg text-sm font-semibold"
+              className="px-3 py-2 bg-[#625FD0] text-white rounded-lg text-sm "
             >
               Read more
             </Link>
@@ -153,7 +153,7 @@ function MediaCard({ item }: { item: MediaItem }) {
 
             <Link
               href={item.href}
-              className="px-3 py-2 bg-[#625FD0] text-white rounded-lg text-sm font-semibold"
+              className="px-3 py-2 bg-[#625FD0] text-white rounded-lg text-sm "
             >
               Read more
             </Link>
@@ -177,7 +177,7 @@ function PressCard({ item }: { item: PressRelease }) {
 
           <Link
             href={item.href}
-            className="px-3 py-2 bg-[#625FD0] text-white rounded-lg text-sm font-semibold"
+            className="px-3 py-2 bg-[#625FD0] text-white rounded-lg text-sm "
           >
             Read more
           </Link>

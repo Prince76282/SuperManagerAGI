@@ -7,9 +7,7 @@ export default function PressPage() {
     <div className="bg-white text-black min-h-screen">
       {/* HERO */}
       <section className="max-w-[1200px] mx-auto px-6 py-24 text-center">
-        <p className="text-[#625FD0] font-semibold uppercase tracking-wide">
-          Press & Media
-        </p>
+        <p className="text-[#625FD0]  uppercase tracking-wide">Press & Media</p>
 
         <h1 className="text-5xl md:text-6xl font-bold mt-4 leading-tight">
           The Operating System for Autonomous Work
@@ -36,13 +34,11 @@ export default function PressPage() {
 
       {/* CATEGORY EXPLANATION */}
       <section className="max-w-[1200px] mx-auto px-6 py-20 border-t">
-        <h2 className="text-3xl font-semibold mb-10">
-          What Category Are We Creating?
-        </h2>
+        <h2 className="text-3xl  mb-10">What Category Are We Creating?</h2>
 
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-xl font-semibold text-[#625FD0]">
+            <h3 className="text-xl  text-[#625FD0]">
               From AI Tools → AI Systems
             </h3>
             <p className="text-gray-600 mt-3">
@@ -53,9 +49,7 @@ export default function PressPage() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-[#625FD0]">
-              From Prompts → Outcomes
-            </h3>
+            <h3 className="text-xl  text-[#625FD0]">From Prompts → Outcomes</h3>
             <p className="text-gray-600 mt-3">
               Instead of generating answers, the platform turns intent into
               execution — triggering workflows, managing dependencies, and
@@ -68,7 +62,7 @@ export default function PressPage() {
       {/* KEY POSITIONING BLOCK */}
       <section className="bg-[#F8F7FF] py-20">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-3xl font-semibold mb-12">Why This Matters Now</h2>
+          <h2 className="text-3xl  mb-12">Why This Matters Now</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -86,7 +80,7 @@ export default function PressPage() {
               },
             ].map((item, i) => (
               <div key={i} className="bg-white p-6 rounded-xl border">
-                <h3 className="font-semibold text-lg">{item.title}</h3>
+                <h3 className=" text-lg">{item.title}</h3>
                 <p className="text-gray-600 mt-2">{item.desc}</p>
               </div>
             ))}
@@ -96,9 +90,7 @@ export default function PressPage() {
 
       {/* MEDIA PATHWAYS */}
       <section className="max-w-[1200px] mx-auto px-6 py-20">
-        <h2 className="text-3xl font-semibold mb-10">
-          Suggested Media Pathways
-        </h2>
+        <h2 className="text-3xl  mb-10">Suggested Media Pathways</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -123,7 +115,7 @@ export default function PressPage() {
               href={card.href}
               className="border rounded-xl p-6 hover:shadow-md transition"
             >
-              <h3 className="font-semibold text-lg">{card.title}</h3>
+              <h3 className=" text-lg">{card.title}</h3>
               <p className="text-gray-600 mt-2">{card.desc}</p>
             </Link>
           ))}
@@ -132,9 +124,7 @@ export default function PressPage() {
 
       {/* CORE PRINCIPLES */}
       <section className="max-w-[1200px] mx-auto px-6 py-20 border-t">
-        <h2 className="text-3xl font-semibold mb-10">
-          Core Narrative Principles
-        </h2>
+        <h2 className="text-3xl  mb-10">Core Narrative Principles</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           {[
@@ -153,7 +143,7 @@ export default function PressPage() {
       {/* WORKFLOW STORY */}
       <section className="bg-[#F8F7FF] py-20">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-3xl font-semibold mb-10">
+          <h2 className="text-3xl  mb-10">
             How Media Should Approach This Story
           </h2>
 
@@ -166,7 +156,7 @@ export default function PressPage() {
             ].map((step, i) => (
               <div key={i} className="bg-white border rounded-xl p-6">
                 <p className="text-sm text-gray-500">Step {i + 1}</p>
-                <p className="font-semibold mt-2">{step}</p>
+                <p className=" mt-2">{step}</p>
               </div>
             ))}
           </div>
@@ -175,7 +165,7 @@ export default function PressPage() {
 
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">FAQ</h2>
+        <h2 className="text-3xl  mb-10 text-center">FAQ</h2>
 
         <div className="space-y-6">
           {[
@@ -189,7 +179,7 @@ export default function PressPage() {
             },
           ].map((f, i) => (
             <div key={i} className="border rounded-xl p-6">
-              <h3 className="font-semibold">{f.q}</h3>
+              <h3 className="">{f.q}</h3>
               <p className="text-gray-600 mt-2">{f.a}</p>
             </div>
           ))}
@@ -198,7 +188,7 @@ export default function PressPage() {
 
       {/* CTA */}
       <section className="bg-[#625FD0] text-white py-20 text-center">
-        <h2 className="text-3xl font-semibold">Talk to the Team</h2>
+        <h2 className="text-3xl ">Talk to the Team</h2>
 
         <p className="mt-4 text-white/80">
           Get deeper context, briefings, and company insights.

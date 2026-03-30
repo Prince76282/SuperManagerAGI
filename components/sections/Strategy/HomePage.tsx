@@ -15,7 +15,10 @@ export default function AGIHeroSection() {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                Give every leader in your organisation a live, grounded view of what is actually happening across every department retrieved from actual live data across every connected system and the autonomous agent workforce to act on it immediately.
+                Give every leader in your organisation a live, grounded view of
+                what is actually happening across every department retrieved
+                from actual live data across every connected system and the
+                autonomous agent workforce to act on it immediately.
               </p>
             </div>
 
@@ -23,14 +26,14 @@ export default function AGIHeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="https://youtu.be/nrNXqRT6ODY?si=vt53Wy_LtuTqgzbX"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Watch video
               </Link>
 
               <Link
                 href="/get-in-touch"
-                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+                className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
               >
                 Request a demo
               </Link>

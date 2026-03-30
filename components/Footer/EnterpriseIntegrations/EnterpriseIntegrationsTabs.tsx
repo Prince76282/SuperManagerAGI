@@ -74,7 +74,7 @@ export default function EnterpriseIntegrationsTabs() {
 
           <Link
             href="get-in-touch"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white  hover:opacity-90 transition"
           >
             Request a Demo
           </Link>
@@ -114,7 +114,7 @@ export default function EnterpriseIntegrationsTabs() {
 
               <Link
                 href={active.href}
-                className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
+                className="inline-flex justify-center items-center gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white  hover:opacity-90 transition"
               >
                 Learn more
               </Link>

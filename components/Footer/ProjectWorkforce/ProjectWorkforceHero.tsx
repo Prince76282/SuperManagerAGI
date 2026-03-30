@@ -129,7 +129,7 @@ type InfoBlockProps = {
 
 function SectionLabel({ children }: SectionLabelProps) {
   return (
-    <div className="text-[11px] font-semibold uppercase tracking-wider text-[#625FD0] mb-3">
+    <div className="text-[11px]  uppercase tracking-wider text-[#625FD0] mb-3">
       {children}
     </div>
   );
@@ -138,7 +138,7 @@ function SectionLabel({ children }: SectionLabelProps) {
 function FeatureCard({ title, body }: FeatureCardProps) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:border-[#625FD0] transition">
-      <h4 className="font-semibold text-black mb-3">{title}</h4>
+      <h4 className=" text-black mb-3">{title}</h4>
       <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
     </div>
   );
@@ -162,7 +162,7 @@ function ChipGrid({ items }: ChipGridProps) {
 function InfoBlock({ title, items }: InfoBlockProps) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h4 className="font-semibold text-black mb-2">{title}</h4>
+      <h4 className=" text-black mb-2">{title}</h4>
       <ChipGrid items={items} />
     </div>
   );
@@ -177,7 +177,7 @@ export default function ProjectWorkforceHero() {
         {/* Header */}
 
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[#625FD0]">
+          <span className="text-xs  uppercase tracking-wider text-[#625FD0]">
             Project & Workforce Intelligence
           </span>
 
@@ -199,7 +199,7 @@ export default function ProjectWorkforceHero() {
             href="get-in-touch"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
+            className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-lg bg-[#625FD0] text-white  hover:opacity-90 transition"
           >
             Request a Demo
           </a>
@@ -213,7 +213,7 @@ export default function ProjectWorkforceHero() {
               key={sol.title}
               className="border border-gray-200 rounded-xl p-6 bg-white"
             >
-              <h3 className="font-semibold text-lg mb-4">{sol.title}</h3>
+              <h3 className=" text-lg mb-4">{sol.title}</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 {sol.items.map((item) => (
                   <li key={item}>• {item}</li>

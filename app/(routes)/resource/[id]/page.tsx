@@ -64,7 +64,7 @@ export default async function ResourcePage({ params }: PageProps) {
       <div className="space-y-10">
         {resource.sections.map((section) => (
           <section key={section.heading} className="py-6">
-            <h2 className="mb-4 text-2xl font-semibold">{section.heading}</h2>
+            <h2 className="mb-4 text-2xl ">{section.heading}</h2>
 
             <div className="space-y-4 text-lg leading-relaxed text-gray-700">
               {section.content.map((paragraph, index) => (

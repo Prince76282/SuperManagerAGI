@@ -53,10 +53,8 @@ export default function WhitepaperSlider() {
   return (
     <section className="py-14 sm:py-16 lg:py-20 bg-[#F0F6F9]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-
           <div>
             <h2 className="text-2xl sm:text-3xl lg:text-5xl text-gray-900">
               Executive Whitepapers
@@ -70,7 +68,6 @@ export default function WhitepaperSlider() {
 
           {/* Controls */}
           <div className="flex gap-3">
-
             <button
               onClick={() => scroll(-1)}
               className="w-10 h-10 border-2 border-[#625FD0] text-[#625FD0] rounded-full flex items-center justify-center hover:bg-[#625FD0] hover:text-white transition"
@@ -84,7 +81,6 @@ export default function WhitepaperSlider() {
             >
               <ChevronRight size={18} />
             </button>
-
           </div>
         </div>
 
@@ -103,7 +99,6 @@ export default function WhitepaperSlider() {
               flex flex-col"
             >
               <div className="p-6 sm:p-7 flex flex-col gap-4 flex-1">
-
                 <h3 className="text-base sm:text-lg leading-snug text-gray-900 hover:text-[#625FD0] transition">
                   {paper.title}
                 </h3>
@@ -113,7 +108,6 @@ export default function WhitepaperSlider() {
                 </p>
 
                 <div className="flex items-center justify-between pt-4">
-
                   <span className="text-xs text-gray-400 uppercase tracking-wider">
                     {paper.pages}
                   </span>
@@ -123,11 +117,10 @@ export default function WhitepaperSlider() {
                     href={paper.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center bg-[#625FD0] px-4 sm:px-5 py-2 text-white text-xs sm:text-sm font-semibold rounded-md hover:opacity-90 transition"
+                    className="flex items-center bg-[#625FD0] px-4 sm:px-5 py-2 text-white text-xs sm:text-sm  rounded-md hover:opacity-90 transition"
                   >
                     Download
                   </Link>
-
                 </div>
               </div>
             </article>

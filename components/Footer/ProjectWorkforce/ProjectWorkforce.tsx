@@ -75,7 +75,7 @@ export default function ProjectWorkforce() {
                 <div className="space-y-5">
                   {/* Badge */}
 
-                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs font-semibold bg-[#625FD0]/10 text-[#625FD0]">
+                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs  bg-[#625FD0]/10 text-[#625FD0]">
                     {item.badge}
                   </span>
 
@@ -90,7 +90,7 @@ export default function ProjectWorkforce() {
 
                 {/* <Link
                   href={item.ctaHref}
-                  className="inline-flex items-center justify-center mt-4 gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white font-semibold hover:opacity-90 transition"
+                  className="inline-flex items-center justify-center mt-4 gap-2 px-6 py-3 rounded-lg bg-[#625FD0] text-white  hover:opacity-90 transition"
                 >
                   {item.ctaLabel}
                 </Link> */}

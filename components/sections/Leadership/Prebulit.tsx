@@ -111,12 +111,15 @@ export default function PrebuiltAGIPage() {
   return (
     <div className="min-h-screen bg-[#f4f6f8] text-gray-800">
       <section className="text-center py-16 px-6">
-        <h1 className="text-3xl md:text-5xl font-semibold mb-5">
-         Deploy Autonomous AGI <br/> Systems Across Your Organisation
+        <h1 className="text-3xl md:text-5xl  mb-5">
+          Deploy Autonomous AGI <br /> Systems Across Your Organisation
         </h1>
 
         <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed mb-8">
-         Launch production-ready AI agent systems that manage data retrieval, task execution, cross-department orchestration and autonomous operations  enabling any organisation to run at AI speed regardless of size or industry.
+          Launch production-ready AI agent systems that manage data retrieval,
+          task execution, cross-department orchestration and autonomous
+          operations enabling any organisation to run at AI speed regardless of
+          size or industry.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3">
@@ -142,7 +145,7 @@ export default function PrebuiltAGIPage() {
         <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-sm border p-8 grid md:grid-cols-2 gap-10">
           {/* LEFT */}
           <div>
-            <h2 className="text-2xl font-semibold  mb-4">{tab.title}</h2>
+            <h2 className="text-2xl   mb-4">{tab.title}</h2>
             <p className="text-gray-600 mb-8">{tab.desc}</p>
 
             {tab.features.map((f, i) => (
@@ -197,7 +200,7 @@ function Feature({
     <div className="flex gap-4  mb-6">
       <div className="bg-gray-100  p-3 rounded-lg">{icon}</div>
       <div>
-        <h3 className="font-semibold mb-1">{title}</h3>
+        <h3 className=" mb-1">{title}</h3>
         <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
       </div>
     </div>

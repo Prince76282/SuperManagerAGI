@@ -18,11 +18,11 @@ export default function IntelligenceSignalPage({
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* LEFT */}
             <div>
-              <span className="inline-flex text-[#625FD0] px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-[#625FD0]/30">
+              <span className="inline-flex text-[#625FD0] px-4 py-2 rounded-full text-xs  uppercase tracking-wider border border-[#625FD0]/30">
                 {page.eyebrow}
               </span>
 
-              <h1 className="mt-6 text-6xl font-semibold leading-tight text-black">
+              <h1 className="mt-6 text-6xl  leading-tight text-black">
                 {page.title}
               </h1>
 
@@ -63,9 +63,7 @@ export default function IntelligenceSignalPage({
                       <p className="text-xs uppercase text-[#625FD0]">
                         {stat.label}
                       </p>
-                      <p className="mt-3 text-2xl font-semibold text-black">
-                        {stat.value}
-                      </p>
+                      <p className="mt-3 text-2xl  text-black">{stat.value}</p>
                     </div>
                   ))}
                 </div>
@@ -85,7 +83,7 @@ export default function IntelligenceSignalPage({
           <div className="rounded-3xl border border-black/10 p-6 bg-white">
             <div className="flex items-center gap-2">
               <Activity className="text-[#625FD0]" />
-              <h2 className="text-xl font-semibold text-black">Signal Map</h2>
+              <h2 className="text-xl  text-black">Signal Map</h2>
             </div>
 
             <div className="mt-6 space-y-4">
@@ -104,15 +102,13 @@ export default function IntelligenceSignalPage({
           <div className="rounded-3xl border border-black/10 p-6 bg-white">
             <div className="flex items-center gap-2">
               <BrainCircuit className="text-[#625FD0]" />
-              <h2 className="text-xl font-semibold text-black">
-                Decision Loop
-              </h2>
+              <h2 className="text-xl  text-black">Decision Loop</h2>
             </div>
 
             <div className="mt-6 space-y-5">
               {page.workflow.map((step, index) => (
                 <div key={`${step.title}-${index}`} className="flex gap-4">
-                  <div className="h-10 w-10 rounded-full bg-[#625FD0] text-white flex items-center justify-center text-sm font-semibold">
+                  <div className="h-10 w-10 rounded-full bg-[#625FD0] text-white flex items-center justify-center text-sm ">
                     {index + 1}
                   </div>
                   <div>
@@ -134,9 +130,7 @@ export default function IntelligenceSignalPage({
                 key={`${pillar.title}-${index}`}
                 className="rounded-3xl border border-black/10 p-6 bg-white hover:border-[#625FD0] transition"
               >
-                <h3 className="text-xl font-semibold text-black">
-                  {pillar.title}
-                </h3>
+                <h3 className="text-xl  text-black">{pillar.title}</h3>
                 <p className="text-black/70 text-sm mt-2">
                   {pillar.description}
                 </p>
@@ -151,12 +145,10 @@ export default function IntelligenceSignalPage({
                 key={`${useCase.role}-${useCase.scenario}-${index}`}
                 className="rounded-2xl border border-black/10 p-5 bg-white hover:border-[#625FD0] transition"
               >
-                <p className="text-xs text-[#625FD0] uppercase font-semibold">
+                <p className="text-xs text-[#625FD0] uppercase ">
                   {useCase.role}
                 </p>
-                <h3 className="mt-2 font-semibold text-black">
-                  {useCase.scenario}
-                </h3>
+                <h3 className="mt-2  text-black">{useCase.scenario}</h3>
                 <p className="text-black/70 text-sm mt-2">{useCase.outcome}</p>
               </div>
             ))}
@@ -164,7 +156,7 @@ export default function IntelligenceSignalPage({
 
           {/* FAQ */}
           <div className="rounded-3xl border border-black/10 p-6 bg-white">
-            <h2 className="text-xl font-semibold text-black">Questions</h2>
+            <h2 className="text-xl  text-black">Questions</h2>
 
             <div className="mt-6 grid md:grid-cols-3 gap-5">
               {page.faq.map((item, index) => (
@@ -181,7 +173,7 @@ export default function IntelligenceSignalPage({
 
           {/* RELATED */}
           <div className="rounded-3xl border border-black/10 p-6 bg-white">
-            <h2 className="text-xl font-semibold text-black">Explore Next</h2>
+            <h2 className="text-xl  text-black">Explore Next</h2>
 
             <div className="mt-6 grid md:grid-cols-3 gap-5">
               {page.relatedLinks.map((link, index) => (
@@ -190,7 +182,7 @@ export default function IntelligenceSignalPage({
                   href={link.href ?? "#"}
                   className="border border-black/10 rounded-xl p-5 hover:border-[#625FD0] transition"
                 >
-                  <h3 className="font-semibold text-black">{link.title}</h3>
+                  <h3 className=" text-black">{link.title}</h3>
                   <p className="text-sm text-black/70 mt-2">
                     {link.description}
                   </p>

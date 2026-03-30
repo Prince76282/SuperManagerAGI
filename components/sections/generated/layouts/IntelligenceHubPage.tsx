@@ -21,13 +21,11 @@ export default function IntelligenceHubPage({
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* LEFT */}
             <div>
-              <span className="inline-flex bg-[#625FD0]/10 text-[#625FD0] px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex bg-[#625FD0]/10 text-[#625FD0] px-4 py-2 rounded-full text-xs  uppercase tracking-wider">
                 {page.eyebrow}
               </span>
 
-              <h1 className="mt-6 text-6xl font-semibold leading-tight">
-                {page.title}
-              </h1>
+              <h1 className="mt-6 text-6xl  leading-tight">{page.title}</h1>
 
               <p className="mt-6 text-lg text-gray-600 max-w-xl">
                 {page.description}
@@ -63,7 +61,7 @@ export default function IntelligenceHubPage({
                   <p className="text-xs uppercase text-[#625FD0]">
                     {stat.label}
                   </p>
-                  <p className="mt-3 text-3xl font-semibold">{stat.value}</p>
+                  <p className="mt-3 text-3xl ">{stat.value}</p>
                 </div>
               ))}
             </div>
@@ -83,11 +81,11 @@ export default function IntelligenceHubPage({
               {/* Glow effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-[#625FD0]/10 to-transparent" />
 
-              <p className="text-sm text-[#625FD0] font-semibold uppercase">
+              <p className="text-sm text-[#625FD0]  uppercase">
                 {card.kicker ?? "Explore"}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold">{card.title}</h2>
+              <h2 className="mt-4 text-3xl ">{card.title}</h2>
 
               <p className="mt-4 text-gray-600 text-sm">{card.description}</p>
 
@@ -106,7 +104,7 @@ export default function IntelligenceHubPage({
         <div className="rounded-3xl border border-gray-200 p-8 bg-gradient-to-br from-gray-50 to-white">
           <div className="flex items-center gap-2">
             <Radar className="text-[#625FD0]" />
-            <h2 className="text-2xl font-semibold">Signals</h2>
+            <h2 className="text-2xl ">Signals</h2>
           </div>
 
           <div className="mt-6 space-y-4">
@@ -123,7 +121,7 @@ export default function IntelligenceHubPage({
           <div className="grid md:grid-cols-2 gap-6">
             {page.pillars?.map((pillar) => (
               <div className="rounded-3xl border border-gray-200 p-6 hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold">{pillar.title}</h3>
+                <h3 className="text-xl ">{pillar.title}</h3>
                 <p className="text-gray-600 mt-2 text-sm">
                   {pillar.description}
                 </p>
@@ -134,16 +132,16 @@ export default function IntelligenceHubPage({
           <div className="rounded-3xl border border-gray-200 p-8">
             <div className="flex items-center gap-2">
               <Layers3 className="text-[#625FD0]" />
-              <h2 className="text-2xl font-semibold">Use Cases</h2>
+              <h2 className="text-2xl ">Use Cases</h2>
             </div>
 
             <div className="mt-6 grid md:grid-cols-3 gap-5">
               {page.useCases.map((useCase) => (
                 <div className="bg-gray-50 rounded-xl p-5 hover:shadow-md transition">
-                  <p className="text-xs text-[#625FD0] uppercase font-semibold">
+                  <p className="text-xs text-[#625FD0] uppercase ">
                     {useCase.role}
                   </p>
-                  <h3 className="mt-2 font-semibold">{useCase.scenario}</h3>
+                  <h3 className="mt-2 ">{useCase.scenario}</h3>
                   <p className="text-gray-600 text-sm mt-2">
                     {useCase.outcome}
                   </p>
@@ -159,10 +157,8 @@ export default function IntelligenceHubPage({
         <div className="grid md:grid-cols-4 gap-6">
           {page.workflow.map((step, index) => (
             <div className="rounded-3xl border border-gray-200 p-6 hover:shadow-xl transition">
-              <span className="text-xs text-[#625FD0] font-semibold">
-                Step {index + 1}
-              </span>
-              <h3 className="mt-3 font-semibold text-lg">{step.title}</h3>
+              <span className="text-xs text-[#625FD0] ">Step {index + 1}</span>
+              <h3 className="mt-3  text-lg">{step.title}</h3>
               <p className="text-gray-600 text-sm mt-2">{step.detail}</p>
             </div>
           ))}
@@ -174,7 +170,7 @@ export default function IntelligenceHubPage({
         <div className="rounded-3xl border border-gray-200 p-10 bg-gradient-to-br from-gray-50 to-white">
           <div className="flex items-center gap-2">
             <Sparkles className="text-[#625FD0]" />
-            <h2 className="text-2xl font-semibold">Explore More</h2>
+            <h2 className="text-2xl ">Explore More</h2>
           </div>
 
           <div className="mt-8 grid md:grid-cols-3 gap-6">
@@ -184,7 +180,7 @@ export default function IntelligenceHubPage({
                 href={link.href ?? "#"}
                 className="bg-white border rounded-2xl p-6 hover:shadow-lg transition"
               >
-                <h3 className="font-semibold">{link.title}</h3>
+                <h3 className="">{link.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{link.description}</p>
               </Link>
             ))}

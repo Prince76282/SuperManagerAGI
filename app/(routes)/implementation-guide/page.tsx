@@ -91,7 +91,7 @@ export default function ImplementationGuide() {
       <div className="max-w-[1200px] mx-auto px-6 py-16">
         {/* HERO */}
         <section className="text-center mb-20">
-          <p className="text-[#625FD0] uppercase font-semibold tracking-wide">
+          <p className="text-[#625FD0] uppercase  tracking-wide">
             {data.eyebrow}
           </p>
 
@@ -118,18 +118,14 @@ export default function ImplementationGuide() {
           {data.stats.map((s, i) => (
             <div key={i} className="border rounded-xl p-6 text-center">
               <p className="text-gray-500 text-sm uppercase">{s.label}</p>
-              <p className="text-[#625FD0] font-semibold mt-2 text-lg">
-                {s.value}
-              </p>
+              <p className="text-[#625FD0]  mt-2 text-lg">{s.value}</p>
             </div>
           ))}
         </section>
 
         {/* FEATURED PHASES */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">
-            Recommended Rollout Sequence
-          </h2>
+          <h2 className="text-3xl  mb-10">Recommended Rollout Sequence</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {data.featured.map((f, i) => (
@@ -137,10 +133,8 @@ export default function ImplementationGuide() {
                 key={i}
                 className="border rounded-xl p-6 hover:shadow-md transition"
               >
-                <p className="text-sm text-[#625FD0] font-semibold">
-                  {f.phase}
-                </p>
-                <h3 className="text-xl font-semibold mt-2">{f.title}</h3>
+                <p className="text-sm text-[#625FD0] ">{f.phase}</p>
+                <h3 className="text-xl  mt-2">{f.title}</h3>
                 <p className="text-gray-600 mt-2">{f.desc}</p>
               </div>
             ))}
@@ -149,12 +143,12 @@ export default function ImplementationGuide() {
 
         {/* PILLARS */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">Core Principles</h2>
+          <h2 className="text-3xl  mb-10">Core Principles</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {data.pillars.map((p, i) => (
               <div key={i} className="border p-6 rounded-xl">
-                <h3 className="text-[#625FD0] font-semibold">{p.title}</h3>
+                <h3 className="text-[#625FD0] ">{p.title}</h3>
                 <p className="text-gray-600 mt-2">{p.desc}</p>
               </div>
             ))}
@@ -163,13 +157,13 @@ export default function ImplementationGuide() {
 
         {/* WORKFLOW */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">Step-by-Step Rollout</h2>
+          <h2 className="text-3xl  mb-10">Step-by-Step Rollout</h2>
 
           <div className="grid md:grid-cols-4 gap-6">
             {data.workflow.map((w, i) => (
               <div key={i} className="border rounded-xl p-6">
                 <p className="text-sm text-gray-500">Step {i + 1}</p>
-                <h3 className="font-semibold mt-2">{w.title}</h3>
+                <h3 className=" mt-2">{w.title}</h3>
                 <p className="text-gray-600 mt-2">{w.desc}</p>
               </div>
             ))}
@@ -178,12 +172,12 @@ export default function ImplementationGuide() {
 
         {/* FAQ */}
         <section className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">FAQ</h2>
+          <h2 className="text-3xl  mb-10">FAQ</h2>
 
           <div className="space-y-6">
             {data.faq.map((f, i) => (
               <div key={i} className="border p-6 rounded-xl">
-                <h3 className="font-semibold">{f.q}</h3>
+                <h3 className="">{f.q}</h3>
                 <p className="text-gray-600 mt-2">{f.a}</p>
               </div>
             ))}
@@ -192,9 +186,7 @@ export default function ImplementationGuide() {
 
         {/* CTA */}
         <section className="bg-[#F8F7FF] rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-semibold">
-            Move from exploration to execution
-          </h2>
+          <h2 className="text-3xl ">Move from exploration to execution</h2>
 
           <p className="text-gray-600 mt-4">
             Align your team and launch your first AI workflow with confidence.

@@ -15,13 +15,11 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* LEFT */}
           <div>
-            <span className="inline-flex rounded-full bg-[#625FD0]/10 text-[#625FD0] px-4 py-2 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex rounded-full bg-[#625FD0]/10 text-[#625FD0] px-4 py-2 text-xs  uppercase tracking-wider">
               {page.eyebrow}
             </span>
 
-            <h1 className="mt-6 text-5xl font-semibold leading-tight">
-              {page.title}
-            </h1>
+            <h1 className="mt-6 text-5xl  leading-tight">{page.title}</h1>
 
             <p className="mt-5 text-lg text-gray-600 max-w-2xl">
               {page.description}
@@ -52,7 +50,7 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
           <div className="rounded-3xl border border-gray-200 p-8 shadow-sm">
             <div className="flex items-center gap-2">
               <Sparkles className="text-[#625FD0]" size={18} />
-              <h2 className="text-xl font-semibold">Guide Focus</h2>
+              <h2 className="text-xl ">Guide Focus</h2>
             </div>
 
             <p className="mt-4 text-gray-600 text-sm leading-6">{page.intro}</p>
@@ -77,7 +75,7 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
                   <p className="text-xs text-gray-400 uppercase">
                     {stat.label}
                   </p>
-                  <p className="mt-2 text-lg font-semibold">{stat.value}</p>
+                  <p className="mt-2 text-lg ">{stat.value}</p>
                 </div>
               ))}
             </div>
@@ -91,14 +89,12 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
         <aside className="space-y-6">
           {/* WORKFLOW */}
           <div className="border border-gray-200 rounded-3xl p-6">
-            <p className="text-sm font-semibold text-[#625FD0] uppercase">
-              Reading Path
-            </p>
+            <p className="text-sm  text-[#625FD0] uppercase">Reading Path</p>
 
             <div className="mt-6 space-y-5">
               {page.workflow.map((step, index) => (
                 <div key={`${step.title}-${index}`} className="flex gap-4">
-                  <div className="h-9 w-9 flex items-center justify-center rounded-full bg-[#625FD0] text-white text-sm font-semibold">
+                  <div className="h-9 w-9 flex items-center justify-center rounded-full bg-[#625FD0] text-white text-sm ">
                     {index + 1}
                   </div>
                   <div>
@@ -112,7 +108,7 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
 
           {/* FAQ */}
           <div className="border border-gray-200 rounded-3xl p-6 bg-gray-50">
-            <p className="text-sm font-semibold text-[#625FD0] uppercase">
+            <p className="text-sm  text-[#625FD0] uppercase">
               Common Questions
             </p>
 
@@ -131,14 +127,14 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
         <div className="space-y-10">
           {/* PILLARS */}
           <section className="border border-gray-200 rounded-3xl p-8">
-            <p className="text-sm font-semibold text-[#625FD0] uppercase">
+            <p className="text-sm  text-[#625FD0] uppercase">
               What Teams Learn
             </p>
 
             <div className="mt-6 space-y-6">
               {page.pillars?.map((pillar) => (
                 <div key={pillar.title}>
-                  <h2 className="text-2xl font-semibold">{pillar.title}</h2>
+                  <h2 className="text-2xl ">{pillar.title}</h2>
                   <p className="text-gray-600 mt-2">{pillar.description}</p>
                 </div>
               ))}
@@ -152,12 +148,10 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
                 key={`${useCase.role}-${useCase.scenario}`}
                 className="border border-gray-200 rounded-3xl p-6 hover:shadow-md transition"
               >
-                <p className="text-sm text-[#625FD0] font-semibold uppercase">
+                <p className="text-sm text-[#625FD0]  uppercase">
                   {useCase.role}
                 </p>
-                <h3 className="text-xl font-semibold mt-2">
-                  {useCase.scenario}
-                </h3>
+                <h3 className="text-xl  mt-2">{useCase.scenario}</h3>
                 <p className="text-gray-600 text-sm mt-2">{useCase.outcome}</p>
               </div>
             ))}
@@ -165,9 +159,7 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
 
           {/* RELATED */}
           <section className="border border-gray-200 rounded-3xl p-8 bg-gray-50">
-            <p className="text-sm font-semibold text-[#625FD0] uppercase">
-              Related Reading
-            </p>
+            <p className="text-sm  text-[#625FD0] uppercase">Related Reading</p>
 
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               {page.relatedLinks.map((link) => (
@@ -176,7 +168,7 @@ export default function GuideEditorialPage({ page }: GuideEditorialPageProps) {
                   href={link.href ?? "#"}
                   className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition"
                 >
-                  <h3 className="text-lg font-semibold">{link.title}</h3>
+                  <h3 className="text-lg ">{link.title}</h3>
                   <p className="text-gray-600 text-sm mt-2">
                     {link.description}
                   </p>

@@ -60,14 +60,14 @@ export default function IntelligenceDropdown({ onClose }: Props) {
               <Link
                 href={intelligenceDropdownData.hero.href}
                 onClick={handleClick}
-                className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 font-semibold text-white transition hover:bg-[#625FD0]/90"
+                className="inline-flex items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2  text-white transition hover:bg-[#625FD0]/90"
               >
                 {intelligenceDropdownData.hero.ctaLabel}
               </Link>
             </div>
 
             <div>
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-[#625FD0]">
+              <h4 className="mb-3 text-xs  uppercase tracking-wider text-[#625FD0]">
                 CAPABILITIES
               </h4>
 
@@ -136,7 +136,9 @@ export default function IntelligenceDropdown({ onClose }: Props) {
 
           <div className="space-y-6 rounded-2xl bg-white p-4 sm:p-6">
             <div className="overflow-hidden rounded-xl bg-[linear-gradient(135deg,#625FD0_0%,rgba(98,95,208,0.82)_100%)] p-5 text-white">
-              <h1 className="mb-4 text-lg">{intelligenceDropdownData.cta.title}</h1>
+              <h1 className="mb-4 text-lg">
+                {intelligenceDropdownData.cta.title}
+              </h1>
 
               <p className="mb-4 text-sm text-white/85">
                 {intelligenceDropdownData.cta.description}
@@ -145,14 +147,14 @@ export default function IntelligenceDropdown({ onClose }: Props) {
               <Link
                 href={intelligenceDropdownData.cta.href}
                 onClick={handleClick}
-                className="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 font-semibold text-[#625FD0]"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2  text-[#625FD0]"
               >
                 {intelligenceDropdownData.cta.ctaLabel}
               </Link>
             </div>
 
             <div>
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#625FD0]">
+              <h4 className="mb-4 text-xs  uppercase tracking-wider text-[#625FD0]">
                 RECENT INSIGHTS
               </h4>
 
