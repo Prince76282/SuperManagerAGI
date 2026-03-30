@@ -123,7 +123,7 @@ export const agiManagersDropdownData = {
       title: "AI Strategy & Command Center",
       description:
         "A centralized AI-powered command center for strategy teams to plan, orchestrate, and control execution across the organization. Move from static planning to dynamic, real-time strategy with full visibility and control.",
-      href: "/strategy",
+      href: "/strategy-Ai",
       categories: [
         {
           title: "STRATEGY WORKSPACE",

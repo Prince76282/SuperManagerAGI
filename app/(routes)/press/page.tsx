@@ -26,9 +26,7 @@ export default function PressPage() {
           >
             About Company
           </Link>
-          <Link href="/news-room" className="border px-6 py-3 rounded-lg">
-            Newsroom
-          </Link>
+          
         </div>
       </section>
 
@@ -201,12 +199,7 @@ export default function PressPage() {
           >
             Contact
           </Link>
-          <Link
-            href="/news-room"
-            className="border border-white px-6 py-3 rounded-lg"
-          >
-            Newsroom
-          </Link>
+          
         </div>
       </section>
     </div>
