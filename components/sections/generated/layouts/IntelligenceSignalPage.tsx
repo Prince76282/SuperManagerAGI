@@ -83,7 +83,7 @@ export default function IntelligenceSignalPage({
           <div className="rounded-3xl border border-black/10 p-6 bg-white">
             <div className="flex items-center gap-2">
               <Activity className="text-[#625FD0]" />
-              <h2 className="text-xl  text-black">Signal Map</h2>
+              <p className="text-xl  text-black">Signal Map</p>
             </div>
 
             <div className="mt-6 space-y-4">
@@ -102,7 +102,7 @@ export default function IntelligenceSignalPage({
           <div className="rounded-3xl border border-black/10 p-6 bg-white">
             <div className="flex items-center gap-2">
               <BrainCircuit className="text-[#625FD0]" />
-              <h2 className="text-xl  text-black">Decision Loop</h2>
+              <p className="text-xl  text-black">Decision Loop</p>
             </div>
 
             <div className="mt-6 space-y-5">
@@ -112,7 +112,7 @@ export default function IntelligenceSignalPage({
                     {index + 1}
                   </div>
                   <div>
-                    <h3 className="font-medium text-black">{step.title}</h3>
+                    <p className="font-medium text-black">{step.title}</p>
                     <p className="text-sm text-black/70 mt-1">{step.detail}</p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export default function IntelligenceSignalPage({
                 key={`${pillar.title}-${index}`}
                 className="rounded-3xl border border-black/10 p-6 bg-white hover:border-[#625FD0] transition"
               >
-                <h3 className="text-xl  text-black">{pillar.title}</h3>
+                <p className="text-xl  text-black">{pillar.title}</p >
                 <p className="text-black/70 text-sm mt-2">
                   {pillar.description}
                 </p>
@@ -148,7 +148,7 @@ export default function IntelligenceSignalPage({
                 <p className="text-xs text-[#625FD0] uppercase ">
                   {useCase.role}
                 </p>
-                <h3 className="mt-2  text-black">{useCase.scenario}</h3>
+                <p className="mt-2 text-xl text-black">{useCase.scenario}</p>
                 <p className="text-black/70 text-sm mt-2">{useCase.outcome}</p>
               </div>
             ))}
@@ -164,7 +164,7 @@ export default function IntelligenceSignalPage({
                   key={`${item.question}-${index}`}
                   className="bg-white border border-black/10 p-4 rounded-xl"
                 >
-                  <h3 className="font-medium text-black">{item.question}</h3>
+                  <p className="font-medium text-[18px] text-black">{item.question}</p>
                   <p className="text-sm text-black/70 mt-2">{item.answer}</p>
                 </div>
               ))}
@@ -182,7 +182,7 @@ export default function IntelligenceSignalPage({
                   href={link.href ?? "#"}
                   className="border border-black/10 rounded-xl p-5 hover:border-[#625FD0] transition"
                 >
-                  <h3 className=" text-black">{link.title}</h3>
+                  <p className=" text-[18px] text-black">{link.title}</p>
                   <p className="text-sm text-black/70 mt-2">
                     {link.description}
                   </p>

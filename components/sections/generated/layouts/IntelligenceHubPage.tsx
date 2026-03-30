@@ -25,7 +25,7 @@ export default function IntelligenceHubPage({
                 {page.eyebrow}
               </span>
 
-              <h1 className="mt-6 text-6xl  leading-tight">{page.title}</h1>
+              <h1 className="mt-6 text-3xl lg:text-5xl  leading-tight">{page.title}</h1>
 
               <p className="mt-6 text-lg text-gray-600 max-w-xl">
                 {page.description}
@@ -121,7 +121,7 @@ export default function IntelligenceHubPage({
           <div className="grid md:grid-cols-2 gap-6">
             {page.pillars?.map((pillar) => (
               <div className="rounded-3xl border border-gray-200 p-6 hover:shadow-lg transition">
-                <h3 className="text-xl ">{pillar.title}</h3>
+                <p className="text-xl ">{pillar.title}</p>
                 <p className="text-gray-600 mt-2 text-sm">
                   {pillar.description}
                 </p>
@@ -141,7 +141,7 @@ export default function IntelligenceHubPage({
                   <p className="text-xs text-[#625FD0] uppercase ">
                     {useCase.role}
                   </p>
-                  <h3 className="mt-2 ">{useCase.scenario}</h3>
+                  <p className="mt-2 text-xl text-black">{useCase.scenario}</p>
                   <p className="text-gray-600 text-sm mt-2">
                     {useCase.outcome}
                   </p>
@@ -158,7 +158,7 @@ export default function IntelligenceHubPage({
           {page.workflow.map((step, index) => (
             <div className="rounded-3xl border border-gray-200 p-6 hover:shadow-xl transition">
               <span className="text-xs text-[#625FD0] ">Step {index + 1}</span>
-              <h3 className="mt-3  text-lg">{step.title}</h3>
+              <p className="mt-3  text-lg">{step.title}</p>
               <p className="text-gray-600 text-sm mt-2">{step.detail}</p>
             </div>
           ))}
@@ -180,7 +180,7 @@ export default function IntelligenceHubPage({
                 href={link.href ?? "#"}
                 className="bg-white border rounded-2xl p-6 hover:shadow-lg transition"
               >
-                <h3 className="">{link.title}</h3>
+                <p className="text-[18px] text-black">{link.title}</p>
                 <p className="text-gray-600 text-sm mt-2">{link.description}</p>
               </Link>
             ))}

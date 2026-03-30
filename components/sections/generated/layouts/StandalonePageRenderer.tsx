@@ -107,7 +107,7 @@ function DataHubLayout({ page }: { page: DropdownContentPage }) {
           {page.featuredCards?.map((card) => (
             <Card key={card.title}>
               <p className="text-[#625FD0] text-sm uppercase ">{card.kicker}</p>
-              <h3 className="mt-2 text-xl ">{card.title}</h3>
+              <p className="mt-2 text-xl ">{card.title}</p>
               <p className="mt-2 text-gray-600 text-sm">{card.description}</p>
             </Card>
           ))}
@@ -120,7 +120,7 @@ function DataHubLayout({ page }: { page: DropdownContentPage }) {
           {page.workflow.map((step, index) => (
             <Card key={index}>
               <span className="text-[#625FD0] text-sm ">Step {index + 1}</span>
-              <h3 className="mt-2 ">{step.title}</h3>
+              <p className="mt-2 text-xl">{step.title}</p>
               <p className="text-sm text-gray-600 mt-1">{step.detail}</p>
             </Card>
           ))}
@@ -163,7 +163,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
           {page.stats?.map((stat: any, i: number) => (
             <Card key={i}>
               <p className="text-xs uppercase text-gray-500">{stat.label}</p>
-              <h3 className="text-lg  mt-2">{stat.value}</h3>
+              <p className="text-lg  mt-2">{stat.value}</p>
             </Card>
           ))}
         </div>
@@ -180,7 +180,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
                 <p className="text-xs text-[#625FD0] uppercase">
                   {card.kicker}
                 </p>
-                <h3 className="mt-2 ">{card.title}</h3>
+                <p className="mt-2 ">{card.title}</p>
                 <p className="text-sm text-gray-600 mt-2">{card.description}</p>
               </Card>
             </Link>
@@ -195,7 +195,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
         <div className="grid md:grid-cols-2 gap-6">
           {page.pillars?.map((pillar: any, i: number) => (
             <Card key={i}>
-              <h3 className="">{pillar.title}</h3>
+              <p className="text-xl text-[#625FD0]">{pillar.title}</p>
               <p className="text-sm text-gray-600 mt-2">{pillar.description}</p>
             </Card>
           ))}
@@ -208,7 +208,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
           {page.useCases?.map((useCase: any) => (
             <Card key={useCase.scenario}>
               <p className="text-[#625FD0] text-xs uppercase">{useCase.role}</p>
-              <h3 className="mt-2 ">{useCase.scenario}</h3>
+              <p className="mt-2 ">{useCase.scenario}</p>
               <p className="text-sm text-gray-600 mt-1">{useCase.outcome}</p>
             </Card>
           ))}
@@ -222,9 +222,9 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
         <div className="space-y-4">
           {page.workflow?.map((step: any, i: number) => (
             <Card key={i}>
-              <h3 className="">
+              <p className="text-lg font-semibold text-[#625FD0]">
                 {i + 1}. {step.title}
-              </h3>
+              </p>
               <p className="text-sm text-gray-600 mt-2">{step.detail}</p>
             </Card>
           ))}
@@ -238,7 +238,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
         <div className="space-y-4">
           {page.faq?.map((item: any, i: number) => (
             <Card key={i}>
-              <h3 className="">{item.question}</h3>
+              <p className="text-lg font-semibold text-[#625FD0]">{item.question}</p>
               <p className="text-sm text-gray-600 mt-2">{item.answer}</p>
             </Card>
           ))}
@@ -253,7 +253,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
           {page.relatedLinks?.map((link: any, i: number) => (
             <Link key={i} href={link.href}>
               <Card>
-                <h3 className="">{link.title}</h3>
+                <p className="text-lg font-semibold text-[#625FD0]">{link.title}</p>
                 <p className="text-sm text-gray-600 mt-2">{link.description}</p>
               </Card>
             </Link>
@@ -264,7 +264,7 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
       {/* CTA */}
       <Section>
         <Card className="text-center">
-          <h2 className="text-2xl ">{page.ctaTitle}</h2>
+          <p className="text-2xl ">{page.ctaTitle}</p>
           <p className="text-gray-600 mt-3 max-w-xl mx-auto">
             {page.ctaDescription}
           </p>

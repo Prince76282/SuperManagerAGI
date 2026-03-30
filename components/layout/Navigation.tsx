@@ -188,7 +188,7 @@ export default function Navigation() {
 
                   <Link
                     href="/get-in-touch/"
-                    className="hidden font-semibold lg:flex py-2 px-3 bg-[#625FD0] text-white hover:bg-[#4f4cb0] rounded-lg text-[14px] "
+                    className="hidden font-semibold lg:flex py-2 px-3 bg-[#625FD0] text-white hover:bg-[#625FD0] rounded-lg text-[14px] "
                   >
                     GET IN TOUCH
                   </Link>

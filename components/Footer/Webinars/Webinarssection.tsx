@@ -56,7 +56,7 @@ export default function WebinarsSection() {
 
           <Link
             href="/#"
-            className="inline-flex justify-center px-5 py-3 text-white  items-center gap-2 text-sm font-medium bg-[#625FD0] rounded-lg hover:bg-indigo-700 transition"
+            className="inline-flex justify-center px-5 py-3 text-white  items-center gap-2 text-sm font-medium bg-[#625FD0] rounded-lg hover:bg-[#625FD0] transition"
           >
             View all webinars
           </Link>

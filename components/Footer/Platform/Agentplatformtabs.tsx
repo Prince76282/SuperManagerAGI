@@ -72,7 +72,7 @@ export default function AgentPlatformTabs() {
 
           <Link
             href="/get-in-touch"
-            className="w-full sm:w-auto text-center px-6 py-3 rounded-lg bg-[#625FD0] text-white font-medium hover:bg-indigo-700 transition"
+            className="w-full sm:w-auto text-center px-6 py-3 rounded-lg bg-[#625FD0] text-white font-medium hover:bg-[#625FD0] transition"
           >
             Request a Demo
           </Link>
