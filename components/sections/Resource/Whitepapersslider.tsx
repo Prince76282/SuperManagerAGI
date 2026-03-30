@@ -20,13 +20,7 @@ const whitepapers = [
     pages: "18 Pages",
     href: "/pdf/Responsible_Management.pdf",
   },
-  {
-    title: "Management 101: What Works, What Doesn't, and What's Next",
-    excerpt:
-      "Research-backed insights that separate great managers from average ones and how to apply them today.",
-    pages: "16 Pages",
-    href: "/pdf/Management_101.pdf",
-  },
+
   {
     title: "Reimagining Manager Development in the Modern Enterprise",
     excerpt:

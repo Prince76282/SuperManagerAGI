@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
         <p>
           This Privacy Policy describes what information we collect when you use
           our websites, applications, AI services, and project management tools
-          (collectively referred to as the "Services"). It also explains how we
+          (collectively referred to as the Services). It also explains how we
           store, transfer, use, and delete that information, and what choices
           you have regarding your data. This policy is designed to ensure that
           your information is handled safely and in accordance with applicable
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           you agree to the terms outlined in this policy. This policy applies to
           our websites, project management dashboards, AI automation tools,
           integrations, and applications (collectively referred to as the
-          "Platform"), as well as other interactions such as customer support
+          Platform), as well as other interactions such as customer support
           communications.
         </p>
 
@@ -28,16 +28,16 @@ export default function PrivacyPolicy() {
           <h3 className="text-xl font-semibold mb-2">Definitions</h3>
 
           <p>
-            <strong>"Platform"</strong> refers to Services provided by
-            SuperManager AGI ("Company", "We", "Our", or "Us"), including
+            <strong>Platform</strong> refers to Services provided by
+            SuperManager AGI (Company, We, Our, or Us), including
             websites, dashboards, AI task automation systems, APIs, software
             applications, collaboration tools, and related services.
           </p>
 
           <p>
-            <strong>"User" or "You"</strong> refers to any individual, team
-            member, administrator, organization, or business entity accessing or
-            using the Platform.
+            <strong>User</strong> or <strong>You</strong> refers to any
+            individual, team member, administrator, organization, or business
+            entity accessing or using the Platform.
           </p>
         </div>
 

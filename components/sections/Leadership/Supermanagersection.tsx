@@ -44,7 +44,7 @@ const features = [
 const Supermanagersection = () => {
   return (
     <div className="max-w-[1230px] py-12 mx-auto px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         {/* Heading */}
         <h1 className="text-3xl lg:text-5xl  text-gray-900 leading-tight mb-4">
           SuperManager AGI Capabilities
@@ -59,7 +59,7 @@ const Supermanagersection = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-7xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-[1200px] mx-auto">
         {features.map((item, index) => {
           const Icon = item.icon;
           return (

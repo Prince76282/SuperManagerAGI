@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const metadata = {
   title: "Terms of Service | SuperManager AGI",
   description:
@@ -60,8 +58,8 @@ export default function TermsOfService() {
                   materials
                 </li>
                 <li>
-                  Transmit the materials to anyone or "mirror" the materials on
-                  any other server
+                  Transmit the materials to anyone or <em>mirror</em> the
+                  materials on any other server
                 </li>
               </ul>
             </section>
@@ -71,8 +69,9 @@ export default function TermsOfService() {
                 3. Disclaimer
               </h2>
               <p className="text-gray-700 mb-6">
-                The materials on SuperManager AGI are provided "as is". We make
-                no warranties, expressed or implied, and hereby disclaim and
+                The materials on SuperManager AGI are provided <em>as is</em>.
+                We make no warranties, expressed or implied, and hereby disclaim
+                and
                 negate all other warranties including, without limitation,
                 implied warranties or conditions of merchantability, fitness for
                 a particular purpose, or non-infringement of intellectual
@@ -114,7 +113,7 @@ export default function TermsOfService() {
                 platform and is not responsible for the contents of any such
                 linked site. The inclusion of any link does not imply
                 endorsement by SuperManager AGI of the site. Use of any such
-                linked website is at the user's own risk.
+                linked website is at the user&apos;s own risk.
               </p>
             </section>
 

@@ -1,23 +1,17 @@
+import type { Stat, QuoteBlock } from "./types/shared";
 
-
-export type Stat = {
-  value: string;
-  label: string;
-};
-
-export type Section = {
+/**
+ * ReportSection: Section structure for research reports (body format)
+ * Different from standard Section: uses single `body` string instead of content[]
+ */
+type ReportSection = {
   heading: string;
   body: string;
 };
 
-export type QuoteBlock = {
-  quote: string;
-  author: string;
-  role: string;
-};
+
 
 export type ReportContent = {
-
   id: string;
   title: string;
   tagline: string;
@@ -26,24 +20,18 @@ export type ReportContent = {
   category: string;
   readTime: string;
   publishedDate: string;
-  
   featured?: boolean;
-
   logo?: string;
   stats: Stat[];
- 
   intro: string;
-  sections: Section[];
+  sections: ReportSection[];
   quote: QuoteBlock;
   keyTakeaways: string[];
   ctaHeading: string;
   ctaBody: string;
 };
 
-
-
 export const allReports: ReportContent[] = [
-
   {
     id: "state-of-ai-driven-operations",
     featured: true,
@@ -110,7 +98,6 @@ export const allReports: ReportContent[] = [
       "See how SuperManager can deploy a coordinated AI team across your business in under 30 days.",
   },
 
- 
   {
     id: "ai-for-ecommerce-operations",
     title: "AI for Ecommerce Operations",
@@ -174,7 +161,6 @@ export const allReports: ReportContent[] = [
       "Deploy SuperManager AGI across your order management and support stack  and watch return rates fall.",
   },
 
- 
   {
     id: "building-autonomous-ai-teams",
     title: "Building Autonomous AI Teams",
@@ -379,8 +365,14 @@ export const allReports: ReportContent[] = [
     stats: [
       { value: "2.1×", label: "Productivity increase (median)" },
       { value: "47%", label: "Reduction in time on repetitive tasks" },
-      { value: "88%", label: "Employee satisfaction with AI-assisted workflows" },
-      { value: "6 weeks", label: "Median time to measurable productivity gains" },
+      {
+        value: "88%",
+        label: "Employee satisfaction with AI-assisted workflows",
+      },
+      {
+        value: "6 weeks",
+        label: "Median time to measurable productivity gains",
+      },
     ],
     intro:
       "Knowledge workers spend an estimated 40–60% of their time on tasks that are repetitive, low-judgment, or purely coordinative. This isn't a people problem  it's a system design problem. AI-powered workforce automation targets exactly this gap, absorbing volume work so employees can focus on the high-judgment tasks that actually require them. This report, based on a longitudinal study of 150 organisations across six industry verticals over 12 months, documents the mechanisms by which AI automation produces 2× productivity improvements that are now reproducible across company sizes, industries, and functions.",

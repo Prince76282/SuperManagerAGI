@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import image1 from "@/public/Image/newimage/o9-platform.webp";
 
 export default function AGIHeroSection() {
   return (
@@ -13,11 +11,14 @@ export default function AGIHeroSection() {
           <div className="text-center max-w-4xl mb-12">
             <div className="mb-8">
               <h1 className="text-3xl md:text-5xl lg:text-5xl mb-6 animate-fade-in">
-               Vibe Working Platform for Execution
+                Vibe Working Platform for Execution
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
-               SuperManager AGI operates as an autonomous execution layer that plans, coordinates, monitors and optimises entire workflows across every connected application  eliminating manual overhead while increasing delivery speed, accuracy and operational confidence.
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                SuperManager AGI operates as an autonomous execution layer that
+                plans, coordinates, monitors and optimises entire workflows across
+                every connected application eliminating manual overhead while
+                increasing delivery speed, accuracy and operational confidence.
               </p>
             </div>
 
@@ -38,14 +39,18 @@ export default function AGIHeroSection() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Video */}
           <div className="w-full max-w-5xl">
-            <Image
-              src={image1}
-              alt="AGI Leadership Dashboard"
-              className="w-full h-auto rounded-2xl shadow-xl"
-              priority
-            />
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-video">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/mesaaTaZl3E"
+                title="Execution Platform Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -7,7 +7,13 @@ export default function PricingPage() {
 
   useEffect(() => {
     const stored = localStorage.getItem("proBought");
-    if (stored) setBought(true);
+    if (!stored) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      setBought(true);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   const handleBuyPro = () => {

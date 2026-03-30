@@ -1,3 +1,10 @@
+import type { Section } from "./types/shared";
+
+/**
+ * HomeData: Featured content items for home page tabs/sections
+ * Used in: Home page tabbed interface (Automate, Optimize sections)
+ * Extends: Shows featured content with metadata and detailed sections
+ */
 export type homedata = {
   id: string;
   img: string;
@@ -9,10 +16,7 @@ export type homedata = {
   readTime: string;
   intro: string;
   tag?: string[];
-  sections: {
-    heading: string;
-    content: string[];
-  }[];
+  sections: Section[];
 };
 
 export const HomeData: homedata[] = [
@@ -21,42 +25,42 @@ export const HomeData: homedata[] = [
     img: "/Image/ai-maannger.jpg",
     text: "AUTOMATE DAILY OPS",
     title:
-      "Prompt and Execute Any Task One Prompt Executes Work Across Every Connected Application",
-    desc: "SuperManager AGI takes any natural language instruction and executes it end to end across every connected system. The Controller Agent orchestrates specialist agents in parallel, validates all outputs via evidence-majority voting and commits results with a full audit trail. No manual steps. No app switching. No waiting.",
+      "Prompt and Execute Any Task One Prompt Executes Work Across Every Connected Application ",
+    desc: "Modern organizations operate across dozens of systems:  CRM, ERP, finance, logistics, project tools, communication platforms, and internal databases. Most work today is not complex because of the task itself, but because execution requires coordinating across multiple systems manually. SuperManager AGI was built to convert instructions into execution across systems. Instead of teams moving data between tools, triggering workflows, updating systems, and generating reports manually, a single instruction can now trigger execution across the entire company software stack.",
     author: "SuperManager AGI Team",
     date: "March 12, 2025",
     readTime: "6 min read",
     intro:
-      "Enterprise operations have long been defined by fragmentation: tasks distributed across multiple platforms, teams functioning as manual connectors between systems, and execution cycles measured in hours rather than seconds. SuperManager AGI was purpose-built to consolidate that complexity into a single, auditable instruction.",
+      "Enterprise operations have long been defined by fragmentation  tasks spread across platforms, teams acting as manual connectors, and execution cycles measured in hours. SuperManager AGI consolidates that complexity into a single, auditable instruction.",
     tag: ["Automation", "Multi-Agent", "Operations", "Enterprise"],
     sections: [
       {
-        heading: "The Structural Cost of Manual Operations",
+        heading: "The Hidden Cost of Manual Operations",
         content: [
-          "Modern enterprise systems were not designed to communicate with one another. CRMs, ERPs, procurement platforms, and finance tools each operate within their own data boundaries, requiring human effort to bridge every transition.",
-          "The consequences extend beyond inefficiency. Each manual handoff introduces latency, version inconsistency, and audit exposure  risks that accumulate silently until they materialise as operational failures or compliance gaps.",
+          "Enterprise systems were not built to communicate with each other. CRMs, ERPs, procurement tools, and finance platforms each operate in silos  requiring human effort to bridge every transition.",
+          "Each manual handoff introduces latency, data inconsistency, and compliance risk  accumulating silently until they surface as operational failures or audit gaps.",
         ],
       },
       {
         heading: "Controller Agent: Orchestration at Scale",
         content: [
-          "Upon receiving an instruction, SuperManager AGI's Controller Agent performs intent resolution  decomposing the request into discrete sub-tasks and assigning each to the specialist agent best qualified to execute it.",
-          "Specialist agents operate concurrently across all connected systems, committing updates, triggering downstream workflows, and synchronising state in a single execution cycle.",
-          "Every output is subject to Evidence-Majority Voting prior to commitment. No change is written to any system until independent agent consensus has been established and recorded.",
+          "When an instruction is received, SuperManager AGI's Controller Agent resolves intent  decomposing the request into sub-tasks and routing each to the most qualified specialist agent.",
+          "Specialist agents execute concurrently across all connected systems, committing updates, triggering workflows, and synchronizing state in a single cycle.",
+          "All outputs pass through Evidence-Majority Voting before any change is committed  ensuring no action is written to any system without verified agent consensus.",
         ],
       },
       {
-        heading: "Evidence-Majority Voting: Structural Validation by Design",
+        heading: "Evidence-Majority Voting: Validation by Design",
         content: [
-          "Unvalidated AI output presents a material risk in enterprise environments. A syntactically correct response that is factually inaccurate will propagate through connected systems without detection  unless a structural validation layer intervenes.",
-          "Evidence-Majority Voting requires independent agent agreement before any output is accepted. Discrepancies are surfaced as explicit flags for human review, not absorbed silently into downstream records.",
+          "Unvalidated AI output is a material risk in enterprise environments. A syntactically correct but factually wrong response will propagate through connected systems undetected  unless a structural validation layer intervenes.",
+          "Evidence-Majority Voting requires independent agent agreement before any output is accepted. Discrepancies are flagged for human review, never silently absorbed into downstream records.",
         ],
       },
       {
-        heading: "Operational Implications for Enterprise Teams",
+        heading: "What This Means for Enterprise Teams",
         content: [
-          "Operational staff are no longer responsible for routing work between systems. Instruction issuance and outcome review replace the manual coordination that previously defined their role.",
-          "Every executed task generates a complete audit record  agent identity, trigger condition, decision path, and committed outcome  available in real time to compliance, operations, and executive stakeholders without manual compilation.",
+          "Operational staff shift from routing work between systems to issuing instructions and reviewing outcomes  eliminating the manual coordination that previously defined execution.",
+          "Every task generates a complete audit record  agent identity, trigger condition, decision path, and committed outcome  available in real time to compliance, operations, and leadership without manual compilation.",
         ],
       },
     ],
@@ -68,7 +72,7 @@ export const HomeData: homedata[] = [
     text: "OPTIMIZE RESOURCES",
     title:
       "Retrieve Data 1,000 Feet Deep Any Answer From the Actual Live Data Inside Your Enterprise",
-    desc: "Ask anything about your enterprise and get a grounded, accurate answer retrieved directly from your live databases in under 65ms via the ADA layer. Financial analytics hallucination drops from 25.1% to 2.7%. Customer support hallucination drops from 12.4% to 3.8%. Operational data drops from 13.5% to 5.1%. Not approximations  actual data from actual databases.",
+    desc: "Most AI systems generate answers based on documents, text, and probability. But enterprise decisions cannot be based on probable answers they must be based on actual data from actual systems.  SuperManager AGI was built with a direct enterprise data access architecture that allows AI agents to retrieve information directly from live databases, enterprise systems, and operational tools instead of relying on document indexing or cached data.",
     author: "SuperManager AGI Research",
     date: "February 28, 2025",
     readTime: "7 min read",
@@ -113,7 +117,7 @@ export const HomeData: homedata[] = [
     text: "PREDICT PROBLEMS",
     title:
       "Deploy Autonomous Agents Build an AI Workforce That Runs 24x7 Without Prompts",
-    desc: "Configure specialist agents that monitor your connected systems continuously, detect conditions that require action and execute tasks autonomously. Each agent is purpose-built for its domain. All coordinated by the Beehive architecture. All auditable. All running whether or not anyone is watching.",
+    desc: "Most enterprise systems generate alerts, dashboards, and reports, but execution still depends on humans to review information, decide what to do, and manually execute actions across systems. SuperManager AGI introduces autonomous agents that monitor systems, detect conditions, make decisions using enterprise data, and execute workflows automatically without waiting for human prompts. Instead of software that requires constant human interaction, organizations can deploy AI agents that continuously run operational workflows across systems.",
     author: "SuperManager AGI Engineering",
     date: "March 5, 2025",
     readTime: "8 min read",
@@ -156,49 +160,73 @@ export const HomeData: homedata[] = [
   {
     id: "protect",
     img: "/Image/image1.4.jpg",
-    text: "PROTECT YOUR TEAM",
+    text: "LIVE ORG INTELLIGENCE",
     title:
       "Live Org Intelligence for Every Leader Know What Is Happening Across Every Department, Live",
-    desc: "Founders, COOs and department heads get a live view of every metric that matters  revenue, inventory, logistics, marketing spend, customer care, finance  updated in real time from every connected system. Not a report someone built last week. The actual live state of your organisation, visible in one place at 65ms.",
+    desc: "SuperManager AGI gives founders, COOs, and department leaders a continuous, real-time view of their entire organization  revenue, operations, inventory, logistics, marketing, customer experience, and finance  all unified into a single live interface. No reports. No delays. No manual aggregation. Just the exact current state of your business, updated in milliseconds.",
+
     author: "SuperManager AGI Product",
     date: "March 18, 2025",
     readTime: "5 min read",
+
     intro:
-      "The quality of executive decisions is bounded by the quality of the information on which they are based. When that information is assembled manually, distributed across disparate systems, and delivered on a fixed reporting schedule, decision latency becomes a structural liability. Live Org Intelligence redefines the information architecture available to organisational leadership.",
+      "Modern organizations do not suffer from lack of data  they suffer from delayed visibility. When critical information is fragmented across systems and delivered through periodic reports, leadership operates on outdated context. Live Org Intelligence replaces static reporting with continuous, real-time awareness  enabling leaders to act on what is happening now, not what happened last week.",
+
     tag: [
-      "Live Data",
-      "Leadership",
-      "Org Intelligence",
-      "Dashboard",
-      "Enterprise",
+      "Real-Time Intelligence",
+      "Leadership Visibility",
+      "Decision Systems",
+      "Enterprise AI",
+      "Live Operations",
     ],
+
     sections: [
       {
-        heading: "The Limitations of Report-Based Information Architecture",
+        heading: "The Problem: Leadership Operating on Delayed Reality",
         content: [
-          "A report is not a representation of current organisational state. It is a curated snapshot of a past state, filtered through the constraints of the source system's export capability and delivered on a schedule determined by operational convention rather than decision need.",
-          "By the time a weekly operations summary reaches executive leadership, the conditions it describes have changed. Decisions informed by that summary are, by definition, decisions made on outdated information.",
+          "Most executive decisions today are made on top of reports  dashboards built on scheduled pipelines, manually compiled data, and delayed system syncs. These reports are not real-time representations of the business; they are historical snapshots of a state that no longer exists.",
+          "As organizations scale, this delay compounds. By the time leadership reviews performance, identifies issues, and initiates action, the underlying conditions have already shifted  creating a continuous lag between reality and response.",
         ],
       },
+
       {
-        heading: "Live Org Intelligence: Continuous State Aggregation",
+        heading:
+          "Live Org Intelligence: A Continuous View of Organizational State",
         content: [
-          "Every system connected to SuperManager AGI streams state changes to the Aggregation Engine as they occur. Revenue figures, inventory levels, logistics status, marketing spend, customer care queue depth, and finance positions are normalised into a unified interface, refreshed continuously at 65ms.",
-          "There is no export process. There is no scheduled data pull. The interface reflects the actual current state of the organisation at the moment it is viewed.",
+          "SuperManager AGI replaces report-based visibility with a continuously updating intelligence layer. Every connected system streams live data directly into a unified interface, where all critical business metrics are synchronized and updated in real time.",
+          "Revenue movements, operational workflows, inventory changes, logistics status, marketing performance, and financial positions are not periodically refreshed  they are continuously reflected as they happen.",
         ],
       },
+
       {
-        heading: "Designed for Executive Decision Velocity",
+        heading: "Unified Visibility Across Every Department",
         content: [
-          "Live Org Intelligence is not an analytics tool for data teams. It is an operational interface designed for founders, Chief Operating Officers, and department heads who require immediate situational awareness and cannot afford to wait for analyst-mediated reporting cycles.",
-          "Cross-departmental anomaly detection identifies and surfaces emerging signals at the moment of detection  not at the next scheduled review, and not after an analyst has had the opportunity to investigate.",
+          "Instead of navigating multiple tools, dashboards, and reporting systems, leaders get a single, consolidated view of the entire organization. Every department operates within the same intelligence layer, ensuring alignment and eliminating data silos.",
+          "This unified visibility enables leaders to understand not just isolated metrics, but the relationships between them  how marketing impacts revenue, how operations affect customer experience, and how finance reflects overall business health.",
         ],
       },
+
       {
-        heading: "Complete Organisational Visibility. Zero Manual Compilation.",
+        heading: "Designed for Decision Velocity, Not Analysis Overhead",
         content: [
-          "The foundational promise of Live Org Intelligence is the elimination of information latency at the leadership level. No metric that matters should require a request, a report, or a waiting period to access.",
-          "Every material indicator across every department is visible in one place, updated in real time, and sourced directly from every connected system  without any human effort required to assemble, maintain, or deliver it.",
+          "Live Org Intelligence is built for decision-makers, not analysts. It removes the need for manual data interpretation and eliminates dependency on reporting teams. Leaders can instantly understand the current state of the business and act without delay.",
+          "The system highlights critical changes, anomalies, and emerging patterns in real time  enabling faster, more confident decisions at every level of the organization.",
+        ],
+      },
+
+      {
+        heading: "Zero Reports. Zero Waiting. Zero Manual Effort.",
+        content: [
+          "There are no reports to generate, no dashboards to maintain, and no data pipelines to manage. The system automatically aggregates, structures, and presents information without human intervention.",
+          "Every key metric is always available, always up to date, and always accurate  eliminating the operational overhead traditionally required to achieve organizational visibility.",
+        ],
+      },
+
+      {
+        heading: "From Visibility to Action",
+        content: [
+          "Visibility alone is not enough. Live Org Intelligence is tightly integrated with execution capabilities, allowing leaders not only to see what is happening, but to act on it immediately.",
+          "Decisions can be translated into actions across systems in real time  closing the loop between awareness and execution, and transforming how organizations operate at scale.",
         ],
       },
     ],

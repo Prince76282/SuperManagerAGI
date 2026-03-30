@@ -42,12 +42,12 @@ const CARDS = [
 export default function WhyEnterprises() {
   return (
     <section className="py-20 px-4 md:px-8 bg-white font-sans">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col justify-between gap-8 p-8 rounded-2xl border border-gray-100 bg-[#F9FAFB]">
             <div>
               <h1 className="text-3xl md:text-3xl lg:text-5xl text-slate-900 leading-[1.1] tracking-tight">
-                Why Enterprises Choose the {" "}
+                Why Enterprises Choose the{" "}
                 <span className="  bg-gradient-to-r from-[#625FD0] to-[#625FD0] bg-clip-text text-transparent">
                   AI Vibe Working Platform
                 </span>

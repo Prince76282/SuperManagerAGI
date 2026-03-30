@@ -1,3 +1,12 @@
+import type { Button, UseCaseItem } from "./types/shared";
+
+/**
+ * InfrastructureCard: Infrastructure deployment option card
+ * Used in: Infrastructure Partners section
+ *
+ * Represents deployment options (private, managed cloud, etc.) with
+ * features, use cases, and call-to-action buttons
+ */
 export type InfrastructureCard = {
   id: string;
   image: string;
@@ -7,18 +16,10 @@ export type InfrastructureCard = {
   description: string;
   extendedDescription: string;
   features: string[];
-  useCases: {
-    icon: string;
-    label: string;
-    description: string;
-  }[];
+  useCases: UseCaseItem[];
   footer: string;
   callout: string;
-  buttons: {
-    label: string;
-    link: string;
-    variant: string;
-  }[];
+  buttons: Button[];
 };
 
 export const INFRASTRUCTURE_DATA = {
@@ -32,7 +33,7 @@ export const INFRASTRUCTURE_DATA = {
   cards: [
     {
       id: "private-deployment",
-      image: "/Image/image2.6.png",
+      image: "/Image/Private.jpeg",
       alt: "Private Deployment",
       title: "Private Deployment Within Your Infrastructure",
       tagline: "Your data. Your perimeter. Your control.",
@@ -82,15 +83,15 @@ export const INFRASTRUCTURE_DATA = {
       buttons: [
         {
           label: "PRIVATE DEPLOYMENT",
-          link: "/home/private-deployment",
-          variant: "primary",
+          href: "/home/private-deployment",
+          variant: "primary" as const,
         },
       ],
     },
 
     {
       id: "secure-cloud",
-      image: "/Image/image2.7.png",
+      image: "/Image/secure-cloud.webp",
       alt: "Secure Cloud Deployment",
       title: "Secure Managed Cloud Deployment",
       tagline: "Enterprise security. Zero infrastructure overhead.",
@@ -139,8 +140,8 @@ export const INFRASTRUCTURE_DATA = {
       buttons: [
         {
           label: "SECURE CLOUD DEPLOYMENT",
-          link: "/home/secure-cloud",
-          variant: "primary",
+          href: "/home/secure-cloud",
+          variant: "primary" as const,
         },
       ],
     },
@@ -229,17 +230,19 @@ export const INFRASTRUCTURE_DATA = {
     buttons: [
       {
         label: "Book an Infrastructure Review",
-        link: "/",
-        variant: "primary",
+        href: "/",
+        variant: "primary" as const,
       },
       {
         label: "Download Security Whitepaper",
-        link: "/",
-        variant: "secondary",
+        href: "/",
+        variant: "secondary" as const,
       },
     ],
   },
 };
 
-export const getInfrastructureCardById = (id: string) =>
+export const getInfrastructureCardById = (
+  id: string,
+): InfrastructureCard | undefined =>
   INFRASTRUCTURE_DATA.cards.find((card) => card.id === id);

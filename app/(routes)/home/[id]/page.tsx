@@ -43,6 +43,7 @@ function HomeArticleDetail({ data }: { data: homedata }) {
       <div className="relative w-full h-72 lg:h-96 mb-8 rounded-xl overflow-hidden">
         <Image src={data.img} alt={data.title} fill className="object-cover" />
       </div>
+      <p className="text-lg text-gray-700 mb-6">{data.desc}</p>
 
       <p className="text-lg text-gray-700 mb-6">{data.intro}</p>
 
@@ -121,9 +122,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
             <div className="mt-6 space-y-5">
               {feature.benefits.map((benefit) => (
                 <div key={benefit.title}>
-                  <h3 className="text-lg  text-gray-900">
-                    {benefit.title}
-                  </h3>
+                  <h3 className="text-lg  text-gray-900">{benefit.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-gray-600">
                     {benefit.description}
                   </p>
@@ -169,9 +168,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
               <p className="text-sm  uppercase tracking-[0.16em] text-[#625FD0]">
                 Step {step.step}
               </p>
-              <h3 className="mt-3 text-xl  text-gray-900">
-                {step.title}
-              </h3>
+              <h3 className="mt-3 text-xl  text-gray-900">{step.title}</h3>
               <p className="mt-3 text-sm leading-7 text-gray-600">
                 {step.detail}
               </p>
@@ -185,9 +182,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
         <div className="mt-8 space-y-4">
           {feature.faq.map((item) => (
             <div key={item.question} className="rounded-3xl bg-[#F7FAFC] p-6">
-              <h3 className="text-lg  text-gray-900">
-                {item.question}
-              </h3>
+              <h3 className="text-lg  text-gray-900">{item.question}</h3>
               <p className="mt-3 text-sm leading-7 text-gray-600">
                 {item.answer}
               </p>
@@ -244,9 +239,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <h2 className="text-3xl  text-gray-900">
-              Deployment Capabilities
-            </h2>
+            <h2 className="text-3xl  text-gray-900">Deployment Capabilities</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {card.features.map((feature) => (
                 <div
@@ -260,18 +253,14 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
           </div>
 
           <div>
-            <h2 className="text-3xl  text-gray-900">
-              Where Teams Use It
-            </h2>
+            <h2 className="text-3xl  text-gray-900">Where Teams Use It</h2>
             <div className="mt-6 space-y-4">
               {card.useCases.map((useCase) => (
                 <div
                   key={useCase.label}
                   className="rounded-2xl bg-[#F7FAFC] p-5"
                 >
-                  <h3 className="text-lg  text-gray-900">
-                    {useCase.label}
-                  </h3>
+                  <h3 className="text-lg  text-gray-900">{useCase.label}</h3>
                   <p className="mt-2 text-sm leading-7 text-gray-600">
                     {useCase.description}
                   </p>
@@ -284,9 +273,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
 
       <section className="bg-[#F8FAFC]">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-3xl  text-gray-900">
-            {complianceSection.title}
-          </h2>
+          <h2 className="text-3xl  text-gray-900">{complianceSection.title}</h2>
           <p className="mt-4 max-w-4xl text-base leading-8 text-gray-600">
             {complianceSection.description}
           </p>
@@ -297,9 +284,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
                 key={framework.name}
                 className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-100"
               >
-                <h3 className="text-lg  text-gray-900">
-                  {framework.name}
-                </h3>
+                <h3 className="text-lg  text-gray-900">{framework.name}</h3>
                 <p className="mt-3 text-sm leading-7 text-gray-600">
                   {framework.description}
                 </p>
@@ -310,9 +295,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-3xl  text-gray-900">
-          {securityPrinciples.title}
-        </h2>
+        <h2 className="text-3xl  text-gray-900">{securityPrinciples.title}</h2>
         <p className="mt-4 max-w-4xl text-base leading-8 text-gray-600">
           {securityPrinciples.description}
         </p>
@@ -323,9 +306,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
               key={principle.title}
               className="rounded-3xl border border-gray-200 p-6 shadow-sm"
             >
-              <h3 className="text-lg  text-gray-900">
-                {principle.title}
-              </h3>
+              <h3 className="text-lg  text-gray-900">{principle.title}</h3>
               <p className="mt-3 text-sm leading-7 text-gray-600">
                 {principle.description}
               </p>
@@ -349,7 +330,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
             {cta.buttons.map((button) => (
               <Link
                 key={button.label}
-                href={button.link}
+                href={button.href}
                 className={`inline-flex items-center justify-center rounded-lg px-4 py-3 text-sm  ${
                   button.variant === "primary"
                     ? "bg-[#625FD0] text-white"

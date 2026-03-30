@@ -1,5 +1,6 @@
 "use client";
 
+import { report } from "process";
 import { useState } from "react";
 
 const tabsData = [
@@ -12,24 +13,19 @@ const tabsData = [
 
 const decisionIntelligenceFeatures = [
   {
-    title: "Prompt and Execute  ",
+    title: "Prompt → Execution",
     description:
-      "any natural language instruction executed across every connected app simultaneously",
+      "Give a natural language instruction and AI agents execute tasks across all connected applications, databases, and workflows simultaneously updating systems, generating reports, moving data, and completing operational tasks end-to-end.",
   },
   {
-    title: "Multi-Action Orchestration ",
+    title: "Cross-System Workflow Orchestration",
     description:
-      "complex workflows decomposed into parallel subtasks in the right order",
+      "Complex workflows are automatically decomposed into subtasks and executed across multiple systems in the correct sequence CRM updates, invoice generation, project creation, notifications, reporting, and system updates handled automatically.",
   },
   {
-    title: "	Evidence Validation ",
+    title: "Evidence-Grounded Execution",
     description:
-      "every output verified via evidence-majority voting before any system is updated",
-  },
-  {
-    title: "Autonomous Triggers ",
-    description:
-      "agents detect conditions and execute without prompts, 24 hours a day",
+      "Every action and system update is validated using real data from connected systems before execution. Outputs are traceable, verifiable, and auditable before",
   },
 ];
 
@@ -38,26 +34,25 @@ const pmProtectionFeatures = {
     {
       title: "ADA Direct Access ",
       description:
-        "native database connections at 2 to 15ms, no API round-trip, no hallucination from data gaps",
+        "Agents connect directly to databases and enterprise systems without APIs, middleware, or data exports enabling real-time data access with ultra-low latency and no data staleness.",
     },
 
     {
-      title: "Per-Subtask RAG Grounding ",
+      title: "Evidence-Grounded Intelligence ",
 
       description:
-        "every agent response grounded in retrieved evidence before generation",
+        "Evidence-Grounded IntelligenceEvery answer, report, and decision is grounded in retrieved system data before generation eliminating hallucinations and ensuring traceable, verifiable outputs.",
     },
     {
       title: "Cross-System Intelligence ",
 
       description:
-        "inventory, revenue, logistics, pipeline, customers pulled simultaneously",
+        "Cross-System Intelligence Combine data across CRM, ERP, finance, logistics, HRMS, and internal systems to generate unified reports, insights, and operational intelligence across your entire organization.",
     },
     {
-      title: "Live Data ",
+      title: "Live Operational Data ",
 
-      description:
-        "actual live data from your actual systems at 65ms average latency",
+      description: "Live Operation",
     },
   ],
 };
@@ -66,17 +61,15 @@ const eventWorkspaceFeatures = [
   {
     Highlight: "Commitment Model",
     description: [
-      " •	  Inventory agents that reorder before stock-outs based on live velocity data",
+      " •	 Inventory agents reorder products before stock-outs based on live sales velocity and inventory levels",
       <br />,
-      " •	  Finance agents that reconcile settlements overnight across every channel",
+      " •	 Finance agents reconcile payments, settlements, and transactions across channels automatically",
       <br />,
-      " •	  Logistics agents that manage NDR follow-ups every morning autonomously",
+      " •	  Logistics agents monitor shipments, delays, and delivery exceptions and trigger actions",
       <br />,
-      " •	  Marketing agents that pause underperforming spend when ROAS drops below threshold",
+      " •	  Marketing agents monitor campaign performance and pause or adjust spend when ROAS drops below threshold",
       <br />,
-      " •	  Customer care agents that track returns from initiation to resolution",
-      <br />,
-      " •	  Operations agents that generate MIS reports automatically in the right format",
+      " •	  Customer support agents track tickets from creation to resolution and escalate when",
     ],
   },
 ];
@@ -84,112 +77,22 @@ const eventWorkspaceFeatures = [
 const enterpriseIntegrationFeatures = {
   mainFeatures: [
     {
-      Highlight: "E-commerce and D2C",
+      Highlight: "800+ applications. One AI operating layer.",
       description: [
-        "•	Shopify",
-        ,
-        <br />,
-        "•	Amazon Seller Central",
-        ,
-        <br />,
-        "•	Flipkart Seller Hub",
-        ,
-        <br />,
-        "•	Meesho",
-        ,
-        <br />,
-        "•	Blinkit, Zepto, Swiggy Instamart",
-        ,
-        <br />,
-        "•	50+ marketplace tools",
+        "Instead of integrations that move data between tools, SuperManager AGI enables agents to operate across systems and execute workflows end-to-end.",
+      ],
+    },
+    {
+      Highlight:
+        "Integration Categories (Use Cards Like Your UI)E-commerce and Commerce Platforms",
+      description: [
+        "Connect storefronts, marketplaces, inventory systems, order management systems, and commerce tools.AI agents manage orders, inventory, logistics, marketing performance, customer support, and finance workflows across your entire commerce stack.",
       ],
     },
     {
       Highlight: "Logistics and Delivery",
       description: [
-        "•	Shiprocket ",
-        <br />,
-        "•	Delhivery",
-        <br />,
-        "•	BlueDart ",
-        <br />,
-        "•	Xpressbees, Ecom Express, FedEx, DHL  ",
-        <br />,
-      ],
-    },
-
-    {
-     Highlight: "Work Management and Engineering",
-      description: [
-        "• Jira ",
-        <br />,
-        "• Linear, Asana, Monday.com, ClickUp ",
-        <br />,
-        "• GitHub, GitLab, Azure DevOps ",
-        <br />,
-        "• Notion, Confluence, Figma ",
-        <br />,
-        "• 50+ work management tools ",
-        <br />,
-      ],
-    },
-    {
-Highlight: "Communication Platforms",
-      description: [
-        "• Slack ",
-        <br />,
-        "• Microsoft Teams ",
-        <br />,
-        "• WhatsApp Business ",
-        <br />,
-        "• Email systems ",
-        <br />,
-      ],
-    },
-    {
-      Highlight: "CRM and Sales",
-      description: [
-        "• Salesforce ",
-        <br />,
-        "• HubSpot, Pipedrive, Zoho CRM ",
-        <br />,
-        "• Freshsales ",
-        <br />,
-      ],
-    },
-    {
-     Highlight: "Finance and Payments",
-      description: [
-        "• Razorpay, PayU, Stripe ",
-        <br />,
-        "• QuickBooks, Tally, Zoho Books ",
-        <br />,
-      ],
-    },
-    {
-      Highlight: "ERP and Enterprise Systems",
-      description: [
-        "• SAP, Oracle, Workday, ServiceNow ",
-        <br />,
-        "• Microsoft Dynamics, NetSuite ",
-        <br />,
-        "• Sellerware, Genesis ERP ",
-        <br />,
-      ],
-    },
-    {
-      Highlight: "AI Model Integrations",
-      description: [
-        "• Anthropic Claude ",
-        <br />,
-        "• OpenAI GPT ",
-        <br />,
-        "• Azure OpenAI ",
-        <br />,
-        "• Google Vertex AI ",
-        <br />,
-        "• AWS Bedrock ",
-        <br />,
+        "Connect shipment providers, tracking systems, warehouse tools, and delivery platforms. AI agents create shipments, track deliveries, monitor delays, manage returns, and update systems automatically.",
       ],
     },
   ],
@@ -200,15 +103,31 @@ const WorkspaceFeatures = {
     {
       Highlight: "Features",
       description: [
-        "• Natural language command interface ",<br />,,
-        "• Live autonomous action feed ",<br />,,
-        "• Approval and override controls ",<br />,
-        "• Cross-department execution dashboard ",<br />,
-        "• Audit trail and decision traceability ",<br />,
-        "• Agent configuration and deployment console ",<br />,
-      ]
-    }
-  ]
+        "• Natural language command interface to instruct AI agents",
+        <br />,
+        ,
+        "• Live autonomous execution feed showing agent actions across systems ",
+        <br />,
+        ,
+        "• Approval and override controls for critical actions and workflows",
+        <br />,
+        "• Cross-department execution dashboard and operational visibility",
+        <br />,
+        "• Audit trail and decision traceability for every agent action",
+        <br />,
+        "• Agent deployment, configuration, and workflow management console",
+        <br />,
+        "• Live reports, dashboards, and operational intelligence",
+        <br />,
+        "• Workflow execution monitoring and performance tracking",
+        <br />,
+        "• Role-based permissions and access control",
+        <br />,
+        "• Notifications, alerts, and escalation management",
+        <br />,
+      ],
+    },
+  ],
 };
 
 const ProjectManagementPlatform = () => {
@@ -256,12 +175,13 @@ const ProjectManagementPlatform = () => {
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Autonomous Task Execution
+                    The Autonomous Execution Engine
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Protect Budget, Scope, and Timelines by Making Every
-                    Critical Project Decision Explicit, Traceable, and Context
-                    Aware.
+                    The execution layer where AI agents plan, coordinate, and
+                    execute work across your entire company software stack not
+                    just generate answers, but complete real operational tasks
+                    across systems.
                   </p>
                 </div>
 
@@ -288,11 +208,12 @@ const ProjectManagementPlatform = () => {
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Get Any Answer From 1,000 Feet Deep Inside Your Enterprise
+                    Enterprise Data Intelligence
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Eliminate the information gap between what your organisation
-                    knows and what your decision-makers can access.
+                    Access answers, insights, reports, and operational
+                    intelligence directly from live company data across all
+                    systems not dashboards, not exports, but real system data.
                   </p>
                 </div>
 
@@ -324,11 +245,11 @@ const ProjectManagementPlatform = () => {
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Deploy Agents That Work 24x7 Without Being Prompted
+                   Deploy Agents That Work 24×7 Without Being Prompted
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Build a specialist AI workforce that monitors your connected
-                    systems and executes tasks continuously.
+                    Deploy specialist AI agents that continuously monitor your systems, make decisions using live data, and execute operational workflows across your organization without manual triggers or supervision.
+
                   </p>
                 </div>
 
@@ -357,12 +278,10 @@ const ProjectManagementPlatform = () => {
               <div className="space-y-6 md:space-y-8">
                 <div className="mb-6 md:mb-8">
                   <div className="text-2xl md:text-3xl  text-gray-900 mb-3 md:mb-4">
-                    Integrations
+                    Universal Integrations Layer
                   </div>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    SuperManager AGI integrates with every application your
-                    organisation uses. Agents work across all connected systems
-                    simultaneously.
+                    SuperManager AGI connects to your entire company software stack and allows AI agents to read data, write updates, and execute actions across all connected systems simultaneously.
                   </p>
                 </div>
 
@@ -410,9 +329,7 @@ const ProjectManagementPlatform = () => {
                     >
                       <div className="space-y-3 md:space-y-4">
                         <h4 className="text-xl md:text-2xl lg:text-3xl  mb-3 md:mb-4">
-                          
-                            {item.Highlight}
-                          
+                          {item.Highlight}
                         </h4>
                         <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                           {item.description}

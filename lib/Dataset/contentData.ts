@@ -1,24 +1,37 @@
-type ResourceSection = {
-  heading: string;
-  content: string[];
-};
+import type { Section } from "./types/shared";
 
+/**
+ * ResourceEntry: Base structure for guides, insights, and manager content
+ * Used in: Resource library, navigation dropdowns
+ */
 type ResourceEntry = {
   id: string;
   img: string;
   text: string;
   title: string;
   intro: string;
-  sections: ResourceSection[];
+  sections: Section[];
 };
 
+/**
+ * GuideItem: Educational guide or how-to playbook
+ * Extends: ResourceEntry
+ */
 export type GuideItem = ResourceEntry;
 
+/**
+ * Insight: Market insight or analysis piece
+ * Extends: ResourceEntry with publication metadata
+ */
 export type Insight = ResourceEntry & {
   date: string;
   href: string;
 };
 
+/**
+ * Manager: Manager-focused guide and leadership content
+ * Extends: ResourceEntry
+ */
 export type Manager = ResourceEntry;
 
 export const managers: Manager[] = [

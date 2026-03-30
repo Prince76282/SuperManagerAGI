@@ -2,7 +2,6 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
-import Link from "next/link";
 
 const PRIMARY = "#625FD0";
 
@@ -14,7 +13,7 @@ const blogs = [
       "The question defining 2026 is not which tasks AI can assist humans with  it is which workflows AI agents can own end to end. Not assist. Not suggest. Own, execute and deliver. This article explains the architectural and organisational shift that makes the Vibe Working Platform possible and why it is irreversible.",
   tag: "Leadership",
     readTime: "6 min read",
-    href: "#",
+  
   },
   {
     title:
@@ -23,7 +22,7 @@ const blogs = [
       "Every AI agent system built on MCP, CLI wrappers or direct REST APIs shares one unexamined assumption: data must be accessed through a network boundary. This piece explains why that assumption is the structural root cause of hallucination, latency and throughput failures in enterprise AI  and how ADA eliminates it.",
   tag: "Management",
     readTime: "5 min read",
-    href: "#",
+  
   },
   {
     title: "The Consulting Firm of the Future: AI Agents as the Operational Backbone",
@@ -31,7 +30,7 @@ const blogs = [
       "Consulting firms that deploy engagement management agents are discovering a structural advantage: principals manage 24 active client engagements with the oversight that previously required 6 team members. This piece explains how specialist agents transform consulting operations without changing client relationships.",
   tag: "Productivity",
     readTime: "7 min read",
-    href: "#",
+  
   },
   {
     title: "Why the MCP Debate Misses the Point: The Real Problem Is the Network Boundary",
@@ -39,7 +38,7 @@ const blogs = [
       "In early 2026, Garry Tan said MCP eats too much context window. The Perplexity CTO announced moving away from MCP toward CLIs. Security researchers immediately showed CLIs are structurally broken for agent identity. Both sides were fighting over the wrong layer. The real problem is the network boundary that every protocol presupposes. This is why SuperManager AGI built ADA.",
   tag: "Strategy",
     readTime: "5 min read",
-    href: "#",
+  
   },
   {
     title: "The Value a Vibe Working Platform Creates: Time, Money and Competitive Advantage",
@@ -47,7 +46,7 @@ const blogs = [
       "Settlement reconciliation that runs overnight instead of taking 2 days. Stock-out prediction 14 days in advance. NDR automation reducing reverse logistics cost by 18%. Sprint planning prep from 3 hours to 20 minutes. This piece quantifies the specific value SuperManager AGI delivers across every operational function.",
   tag: "Leadership",
     readTime: "8 min read",
-    href: "#",
+  
   },
 ];
 
@@ -78,7 +77,8 @@ export default function BlogSlider() {
             </h2>
 
             <p className="text-gray-500 mt-3 max-w-xl text-sm sm:text-base">
-              Practical frameworks, research, and strategies used by the world's
+              Practical frameworks, research, and strategies used by the
+              world&apos;s
               best managers to build high-performance teams.
             </p>
           </div>
@@ -136,18 +136,7 @@ export default function BlogSlider() {
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center justify-between pt-6 mt-6">
-
                 
-
-                  <Link
-                    href={post.href}
-                    className="flex items-center bg-[#625FD0] px-5 py-2.5 text-white text-sm font-semibold rounded-md hover:opacity-90 transition"
-                  >
-                    Read Article
-                  </Link>
-
-                </div>
 
               </div>
 

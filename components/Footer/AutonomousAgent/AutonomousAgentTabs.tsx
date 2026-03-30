@@ -7,8 +7,7 @@ import { useState } from "react";
 const tabs = [
   {
     label: "Autonomous Agent Orchestration",
-    heading:
-      "Coordinate autonomous AI agents to execute complex workflows",
+    heading: "Coordinate autonomous AI agents to execute complex workflows",
     body: "SuperManager AGI orchestrates multiple specialized AI agents...",
     href: "/learnmore",
     imgSrc: "/Image/ConnectSystems.jpg",
@@ -56,8 +55,7 @@ export default function AutonomousAgentTabs() {
 
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10 lg:mb-14">
           <div className="max-w-2xl">
@@ -67,7 +65,8 @@ export default function AutonomousAgentTabs() {
             </h2>
 
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
-              SuperManager AGI is an enterprise platform designed to build, orchestrate, and scale intelligent AI agents.
+              SuperManager AGI is an enterprise platform designed to build,
+              orchestrate, and scale intelligent AI agents.
             </p>
           </div>
 
@@ -81,7 +80,6 @@ export default function AutonomousAgentTabs() {
 
         {/* MAIN */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          
           {/* TABS */}
           <nav className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible lg:w-72 pb-2 scrollbar-hide">
             {tabs.map((tab, i) => (
@@ -102,7 +100,6 @@ export default function AutonomousAgentTabs() {
 
           {/* CONTENT */}
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
-            
             {/* TEXT */}
             <div>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-black mb-3">

@@ -1,8 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+type FeaturedNewsItem = {
+  tag: string;
+  title: string;
+  date: string;
+  href: string;
+  img: string;
+};
+
+type MediaItem = {
+  id: number;
+  title: string;
+  date: string;
+  img: string;
+  href: string;
+};
+
+type PressRelease = {
+  id: number;
+  title: string;
+  date: string;
+  href: string;
+};
+
+type SearchBarProps = {
+  value: string;
+  onChange: (value: string) => void;
+  placeholder: string;
+};
 
 const featured = {
   tag: "FEATURED",
@@ -11,9 +40,9 @@ const featured = {
   date: "March 1, 2026",
   href: "/learnmore/",
   img: "/Image/101.png",
-};
+} satisfies FeaturedNewsItem;
 
-const mediaCoverage = [
+const mediaCoverage: MediaItem[] = [
   {
     id: 1,
 
@@ -43,7 +72,7 @@ const mediaCoverage = [
   },
 ];
 
-const pressReleases = [
+const pressReleases: PressRelease[] = [
   {
     id: 1,
     title:
@@ -67,7 +96,7 @@ const pressReleases = [
   },
 ];
 
-function FeaturedCard({ item }: any) {
+function FeaturedCard({ item }: { item: FeaturedNewsItem }) {
   return (
     <div>
       <div className="grid md:grid-cols-2 rounded-3xl border border-gray-200 overflow-hidden bg-white hover:shadow-xl transition">
@@ -101,7 +130,7 @@ function FeaturedCard({ item }: any) {
   );
 }
 
-function MediaCard({ item }: any) {
+function MediaCard({ item }: { item: MediaItem }) {
   return (
     <div>
       <div className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
@@ -135,7 +164,7 @@ function MediaCard({ item }: any) {
   );
 }
 
-function PressCard({ item }: any) {
+function PressCard({ item }: { item: PressRelease }) {
   return (
     <div>
       <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-xl transition">
@@ -158,11 +187,11 @@ function PressCard({ item }: any) {
   );
 }
 
-function SearchBar({ value, onChange, placeholder }: any) {
+function SearchBar({ value, onChange, placeholder }: SearchBarProps) {
   return (
     <input
       value={value}
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
       placeholder={placeholder}
       className="w-full md:w-72 px-4 py-2 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#625FD0]"
     />

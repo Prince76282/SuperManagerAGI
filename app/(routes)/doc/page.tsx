@@ -1,9 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import {
-  Search,
-  Cpu,
   Network,
   Wrench,
   ClipboardList,
@@ -14,12 +11,24 @@ import {
   Code2,
   MessageSquare,
   RefreshCw,
+  type LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
 
-const NAV_LINKS = ["Docs", "API", "Community", "Changelog"];
+type ProductCardProps = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+};
 
-const CORE_PRODUCTS = [
+type DocCardProps = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  links: string[];
+};
+
+const CORE_PRODUCTS: ProductCardProps[] = [
   {
     icon: ClipboardList,
     title: "Prompt and Execute",
@@ -36,7 +45,7 @@ const CORE_PRODUCTS = [
     icon: BarChart3,
     title: "Autonomous 24x7 Execution",
     description:
-      "Specialist agents monitor connected systems continuously, detect conditions and execute tasks without prompts. Inventory agents, finance agents, logistics agents, marketing agents, customer care agents  all running whether or not anyone is watching. All auditable. All configurable.",
+      "Specialist agents monitor connected systems continuously, detect conditions and execute tasks without prompts. Inventory agents, finance agents, logistics agents, marketing agents, customer care agents all running whether or not anyone is watching. All auditable. All configurable.",
   },
   {
     icon: ShieldCheck,
@@ -46,7 +55,7 @@ const CORE_PRODUCTS = [
   },
 ];
 
-const DOC_SECTIONS = [
+const DOC_SECTIONS: DocCardProps[] = [
   {
     icon: BookOpen,
     title: "Getting Started",
@@ -110,7 +119,7 @@ const DOC_SECTIONS = [
       "Schedule-Based Autonomous Execution",
       "Event-Driven Agent Triggers from Connected Systems",
       "Human-in-the-Loop Approval Gate Setup",
-      "Escalation Workflow Configuration"
+      "Escalation Workflow Configuration",
     ],
   },
   {
@@ -120,65 +129,64 @@ const DOC_SECTIONS = [
       "Connect SuperManager AGI to every application your organisation uses. Every connected app becomes a system agents can read from, write to and execute tasks within simultaneously.",
     links: [
       "Shopify, Amazon and Marketplace Integrations",
-       "Shiprocket, Delhivery and Logistics Platform Setup",
-        "Razorpay, PayU and Payment Gateway Configuration",
+      "Shiprocket, Delhivery and Logistics Platform Setup",
+      "Razorpay, PayU and Payment Gateway Configuration",
       "Jira, Linear and Engineering Tool Sync",
       "Slack, Teams and WhatsApp Business Notifications",
       "SAP, Oracle and ERP Connectivity",
       "Salesforce, HubSpot and CRM Integration",
-      "Webhook Events and Custom Integrations"
+      "Webhook Events and Custom Integrations",
     ],
   },
   {
     icon: RefreshCw,
     title: "Beehive Agent Orchestration",
     description:
-      "Advanced documentation for configuring the Beehive multi-agent orchestration layer  including Controller Agent setup, work-stealing scheduler tuning, evidence-majority voting thresholds and parallel agent scaling.",
+      "Advanced documentation for configuring the Beehive multi-agent orchestration layer including Controller Agent setup, work-stealing scheduler tuning, evidence-majority voting thresholds and parallel agent scaling.",
     links: [
       "Controller Agent Configuration",
-       "Specialist Agent Topology and Scaling",
-        "Work-Stealing Scheduler Tuning  Optimal agent count per query complexity",
+      "Specialist Agent Topology and Scaling",
+      "Work-Stealing Scheduler Tuning: Optimal agent count per query complexity",
       "Evidence-Majority Voting Threshold Configuration",
       "DAG Task Decomposition Settings",
-     
     ],
   },
 ];
 
-function ProductCard({ icon: Icon, title, description }: any) {
+function ProductCard({ icon: Icon, title, description }: ProductCardProps) {
   return (
-    <div className="group flex flex-col gap-4 p-6 rounded-2xl border border-gray-200 bg-gray-50 hover:bg-white transition-all duration-300">
-      <div className="w-10 h-10 rounded-xl bg-[#625FD0] flex items-center justify-center text-white shadow-md">
+    <div className="group flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-6 transition-all duration-300 hover:bg-white">
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#625FD0] text-white shadow-md">
         <Icon size={18} />
       </div>
       <div>
-        <div className="flex items-center justify-between mb-1">
-          <h3 className="font-semibold text-2xl text-gray-900">{title}</h3>
+        <div className="mb-1 flex items-center justify-between">
+          <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
         </div>
-        <p className="text-gray-600 text-md leading-relaxed">{description}</p>
+        <p className="text-md leading-relaxed text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
 
-function DocCard({ icon: Icon, title, description, links }: any) {
+function DocCard({ icon: Icon, title, description, links }: DocCardProps) {
   return (
-    <div className="group flex flex-col gap-4 p-6 rounded-2xl border border-gray-200 bg-white hover:border-[#625FD0]/40 hover:shadow-md transition-all duration-300">
+    <div className="group flex flex-col gap-4 rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#625FD0]/40 hover:shadow-md">
       <div className="flex items-center gap-3">
-        <div className="w-9 h-9 rounded-lg bg-[#625FD0]/10 flex items-center justify-center text-[#625FD0]">
+        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#625FD0]/10 text-[#625FD0]">
           <Icon size={17} />
         </div>
-        <span className="font-semibold text-lg text-gray-900">{title}</span>
+        <span className="text-lg font-semibold text-gray-900">{title}</span>
       </div>
-      <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
-      <ul className="flex flex-col gap-1.5 mt-auto pt-2 border-t border-gray-100">
-        {links.map((link: string) => (
+      <p className="text-sm leading-relaxed text-gray-500">{description}</p>
+      <ul className="mt-auto flex flex-col gap-1.5 border-t border-gray-100 pt-2">
+        {links.map((link) => (
           <li key={link}>
             <Link
               href="#"
-              className="text-sm text-[#625FD0] hover:underline underline-offset-2"
+              className="text-sm text-[#625FD0] underline-offset-2 hover:underline"
             >
-              → {link}
+              -&gt; {link}
             </Link>
           </li>
         ))}
@@ -188,26 +196,17 @@ function DocCard({ icon: Icon, title, description, links }: any) {
 }
 
 export default function SuperManagerAGI() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", fn);
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-white text-gray-900 ">
-      {/* Hero */}
-      <section className="relative pt-20 pb-16 px-6 overflow-hidden grid-bg">
-        <div className="relative max-w-2xl mx-auto text-center">
-          <h1 className="  text-3xl md:text-3xl lg:text-5xl leading-tight mb-6">
+    <div className="min-h-screen bg-white text-gray-900">
+      <section className="relative overflow-hidden px-6 pb-16 pt-20 grid-bg">
+        <div className="relative mx-auto max-w-2xl text-center">
+          <h1 className="mb-6 text-3xl leading-tight md:text-3xl lg:text-5xl">
             SuperManager AGI{" "}
             <span className="text-[#625FD0]">The AI Vibe Working Platform</span>
           </h1>
 
-          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            SuperManager AGI is the world’s first and most advanced AI Vibe
+          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-600">
+            SuperManager AGI is the world&apos;s first and most advanced AI Vibe
             Working Platform. Prompt and do any task. Prompt and get data 1,000
             feet deep inside your enterprise. Deploy autonomous AI agents that
             work 24x7 across every application, every department and every
@@ -217,13 +216,13 @@ export default function SuperManagerAGI() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="#"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 font-semibold text-white transition-all duration-300"
             >
               Start for free
             </Link>
             <Link
               href="../doc/docviews"
-              className="inline-flex items-center border-2 border-[#625FD0] text-[#625FD0] rounded-lg hover:bg-[#625FD0] px-4 py-2 hover:text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center rounded-lg border-2 border-[#625FD0] px-4 py-2 font-semibold text-[#625FD0] transition-all duration-300 hover:bg-[#625FD0] hover:text-white"
             >
               View documentation
             </Link>
@@ -231,39 +230,38 @@ export default function SuperManagerAGI() {
         </div>
       </section>
 
-      {/* Core Capabilities */}
-      <section className="px-6 ">
-        <div className="max-w-[1200px] mx-auto">
-          <h2 className="sg text-2xl lg:text-3xl text-gray-900 mb-3">
+      <section className="px-6">
+        <div className="mx-auto max-w-[1200px]">
+          <h2 className="sg mb-3 text-2xl text-gray-900 lg:text-3xl">
             Four Pillars of the Vibe Working Platform
           </h2>
-          <p className="text-gray-500 text-md mb-10 max-w-xl">
+          <p className="text-md mb-10 max-w-xl text-gray-500">
             Everything your organisation needs to build, deploy and run an
             autonomous AI agent workforce.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {CORE_PRODUCTS.map((p) => (
-              <ProductCard key={p.title} {...p} />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {CORE_PRODUCTS.map((product) => (
+              <ProductCard key={product.title} {...product} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-10 bg-gray-50">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+      <section className="bg-gray-50 px-6 py-10">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="sg text-2xl lg:text-3xl text-gray-900 mb-2">
+              <h2 className="sg mb-2 text-2xl text-gray-900 lg:text-3xl">
                 Documentation
               </h2>
-              <p className="text-gray-500 text-md max-w-lg">
+              <p className="text-md max-w-lg text-gray-500">
                 Everything you need to configure, deploy and extend SuperManager
                 AGI across your organisation.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {DOC_SECTIONS.map((doc) => (
               <DocCard key={doc.title} {...doc} />
             ))}
@@ -271,25 +269,27 @@ export default function SuperManagerAGI() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="px-6 py-10">
-        <div className="max-w-[1200px] mx-auto text-center rounded-3xl border border-[#625FD0]/20 bg-[#625FD0]/5 p-14">
-          <h2 className="sg text-3xl md:text-3xl lg:text-5xl mb-4">
+        <div className="mx-auto max-w-[1200px] rounded-3xl border border-[#625FD0]/20 bg-[#625FD0]/5 p-14 text-center">
+          <h2 className="sg mb-4 text-3xl md:text-3xl lg:text-5xl">
             Ready to Deploy Your AI Vibe Working Platform?
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto mb-8">
-           Connect your applications, configure your specialist agents and let SuperManager AGI execute the operational work your team currently does manually  while you focus on strategy, growth and the decisions that actually require human judgment.
+          <p className="mx-auto mb-8 max-w-xl text-gray-600">
+            Connect your applications, configure your specialist agents and let
+            SuperManager AGI execute the operational work your team currently
+            does manually while you focus on strategy, growth and the decisions
+            that actually require human judgment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="#"
-              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold transition-all duration-300"
+              className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 font-semibold text-white transition-all duration-300"
             >
               Start for Free
             </Link>
             <Link
-              href="#"
-              className="inline-flex items-center border-2 border-[#625FD0] text-[#625FD0] rounded-lg hover:bg-[#625FD0] px-4 py-2 hover:text-white font-semibold transition-all duration-300"
+              href="/get-in-touch"
+              className="inline-flex items-center rounded-lg border-2 border-[#625FD0] px-4 py-2 font-semibold text-[#625FD0] transition-all duration-300 hover:bg-[#625FD0] hover:text-white"
             >
               Schedule a Demo
             </Link>

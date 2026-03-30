@@ -101,9 +101,7 @@ function ActivityTicker() {
               <p className="text-xs text-gray-500">{e.team}</p>
             </div>
 
-            <span className="text-xs text-gray-400 sm:ml-4">
-              {e.time}
-            </span>
+            <span className="text-xs text-gray-400 sm:ml-4">{e.time}</span>
           </div>
         ))}
       </div>
@@ -114,11 +112,9 @@ function ActivityTicker() {
 export default function ManagementHero() {
   return (
     <section className="relative  min-h-screen flex flex-col overflow-hidden bg-white py-20 sm:py-16">
-      <div className="relative max-w-[1200px] z-10 flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        
+      <div className="relative max-w-[1200px] z-10 flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto w-full">
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          
           {/* LEFT */}
           <div>
             <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-5 leading-tight font-semibold">
@@ -130,13 +126,22 @@ export default function ManagementHero() {
             </h1>
 
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl">
-              SuperManager AGI replaces the coordination layer of operational management...
+              SuperManager AGI replaces the coordination layer of operational
+              management...
             </p>
 
             {/* STATS */}
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-8">
-              <StatCard value="92%" label="Tasks handled autonomously" delay={200} />
-              <StatCard value="3×" label="Faster execution cycles" delay={350} />
+              <StatCard
+                value="92%"
+                label="Tasks handled autonomously"
+                delay={200}
+              />
+              <StatCard
+                value="3×"
+                label="Faster execution cycles"
+                delay={350}
+              />
               <StatCard value="65%" label="Reduced overhead" delay={500} />
               <StatCard value="20+ hrs" label="Saved per week" delay={650} />
             </div>

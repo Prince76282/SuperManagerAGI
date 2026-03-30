@@ -3,76 +3,81 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const tabs = [
-  {
-    id: "d2c",
-    label: "D2C & E-COMMERCE BRANDS",
-    title: "Your Entire Brand Operation on Autopilot",
-    description:
-      "From inventory intelligence and logistics automation to marketing attribution and customer care  AI agents handle every operational layer simultaneously. Sales, operations, marketing, finance, logistics, and customer care all coordinated by one AI workforce.",
-    footer:
-      "Trusted by D2C brands managing 50+ SKUs across 5 channels with 80% less operational overhead",
-    image: "/Image/World'sFirst/Depositphotos_212163096_S.jpg",
-  },
-  {
-    id: "consulting",
-    label: "CONSULTING FIRMS",
-    title: "Deliver Client Outcomes Faster",
-    description:
-      "Agents manage client deliverables, generate reports, track engagement timelines, coordinate workloads, and ensure every commitment is delivered on time. Get real-time visibility across 20+ engagements without manual status chasing.",
-    footer:
-      "Trusted by consulting principals managing 24 active engagements with the oversight that previously required 6 team members",
-    image: "/Image/World'sFirst/image1.webp",
-  },
-  {
-    id: "engineering",
-    label: "PRODUCT & ENGINEERING COMPANIES",
-    title: "AI Handles the Process. Engineers Ship.",
-    description:
-      "From sprint planning to release coordination, AI agents manage operational work automatically so engineers focus on coding and delivery. Sprint intelligence, blocker detection, release notes, and stakeholder updates  all autonomous.",
-    footer:
-      "Trusted by engineering leaders shipping 3× faster with 95% less coordination overhead",
-    image: "/Image/World'sFirst/image2.jpeg",
-  },
-  {
-    id: "enterprise",
-    label: "ENTERPRISE COMPANIES",
-    title: "Autonomous Portfolio Intelligence at Scale",
-    description:
-      "Orchestrate 100+ initiatives with real-time risk intelligence, cross-department coordination, and enterprise-grade governance. Strategy, resource allocation, and execution monitoring handled by AI agents with full audit trails.",
-    footer:
-      "Cuts coordination overhead by up to 85% across enterprise portfolios",
-    image: "/Image/World'sFirst/platform.webp",
-  },
+export const tabs = [
   {
     id: "startups",
     label: "HIGH-GROWTH STARTUPS",
     title: "Scale Operations Without Scaling Headcount",
     description:
-      "Operate like an 80-person company with a 30-person team. Agents handle vendor follow-ups, MIS reporting, escalation tracking, and operational workflows so founders focus on growth instead of firefighting.",
+      "AI agents handle CRM updates, reporting, support workflows, hiring coordination, vendor follow-ups, and finance trackingenabling startups to scale operations without increasing team size.",
     footer: "Manage 10× more operational complexity with the same team",
     image: "/Image/World'sFirst/PLAN.jpg",
   },
+
+  {
+    id: "d2c",
+    label: "D2C & E-COMMERCE BRANDS",
+    title: "Your Entire Brand Operations Run by an AI Operations Engine",
+    description:
+      "From Shopify, Shiprocket, Razorpay, Meta Ads, Google Ads, CRM, and support tools, AI agents execute workflows across your entire commerce stackorders, marketing, logistics, and support.",
+    footer:
+      "Trusted by D2C brands managing 50+ SKUs across 5 channels with 80% less operational overhead",
+    image: "/Image/World'sFirst/PHOTO.webp",
+  },
+
   {
     id: "service",
     label: "SERVICE-BASED COMPANIES",
-    title: "Every Workflow Automated. Teams Focus on Delivery.",
+    title: "Run Service Delivery with an AI Operations Engine",
     description:
-      "Agents coordinate client communication, project tracking, billing, vendor management, and reporting. Every service delivery workflow is automated so teams focus on relationships and quality execution.",
+      "AI agents manage client communication, project tracking, billing, vendor coordination, and reportingallowing teams to focus on delivery while operations run automatically.",
     footer:
       "Trusted by service organizations running continuous delivery across multiple clients",
     image: "/Image/World'sFirst/scaled.webp",
   },
+
+  {
+    id: "consulting",
+    label: "CONSULTING FIRMS",
+    title: "Run Your Consulting Delivery with an AI Operations Engine",
+    description:
+      "AI agents manage project tracking, reporting, billing, documentation, and client communicationso consultants can focus on strategy and client outcomes.",
+    footer:
+      "Trusted by consulting principals managing 24 active engagements with the oversight that previously required 6 team members",
+    image: "/Image/World'sFirst/image1.webp",
+  },
+
+  {
+    id: "engineering",
+    label: "PRODUCT & ENGINEERING COMPANIES",
+    title: "AI Handles the Process. Engineers Ship.",
+    description:
+      "AI agents manage sprint planning, tracking, releases, documentation, and reporting across your development stackso engineers stay focused on building and shipping.",
+    footer:
+      "Trusted by engineering leaders shipping 3× faster with 95% less coordination overhead",
+    image: "/Image/World'sFirst/financial.jpg",
+  },
+
   {
     id: "global",
     label: "GLOBAL DELIVERY TEAMS",
     title: "24/7 Autonomous Coordination Across Time Zones",
     description:
-      "Always-on AI coordination across geographies with async standups, real-time updates, and seamless handoffs between distributed teams.",
+      "AI agents coordinate async standups, reporting, task tracking, client communication, and cross-timezone handoffsenabling continuous global delivery without delays.",
     footer: "Trusted by global delivery organizations operating 24/7 at scale",
-    image: "/Image/World'sFirst/scaled.webp",
+    image: "/Image/World'sFirst/The-ERP-.webp",
     showEmail: true,
+  },
+
+  {
+    id: "enterprise",
+    label: "ENTERPRISE COMPANIES",
+    title: "AI Operations Engine for Enterprise Execution",
+    description:
+      "AI agents execute workflows across ERP, CRM, HRMS, finance, and internal systemscoordinating operations, generating reports, tracking execution, and managing cross-department workflows.",
+    footer:
+      "Cuts coordination overhead by up to 85% across enterprise portfolios",
+    image: "/Image/World'sFirst/platform.webp",
   },
 ];
 
@@ -93,7 +98,7 @@ export default function SuperManagerSection() {
 
   return (
     <section className="relative bg-white py-12 sm:py-16 lg:py-18 lg:min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] xl:grid-cols-[340px_1fr] gap-8 lg:gap-10 items-start">
           {/* ── LEFT COLUMN ── */}
           <div className="lg:sticky lg:top-24 space-y-5 sm:space-y-6">

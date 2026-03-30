@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const ACCORDIONS = [
   {
@@ -37,26 +37,18 @@ function Accordion({
   setOpenIndex,
 }: AccordionProps) {
   const isOpen = openIndex === index;
-  const bodyRef = useRef<HTMLDivElement | null>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (bodyRef.current) {
-      setHeight(isOpen ? bodyRef.current.scrollHeight : 0);
-    }
-  }, [isOpen]);
 
   return (
     <div className="border-b border-gray-200 last:border-b-0">
       <button
-        className="w-full flex items-center justify-between gap-4 py-5 text-left"
+        className="flex w-full items-center justify-between gap-4 py-5 text-left"
         onClick={() => setOpenIndex(isOpen ? null : index)}
       >
-        <h4 className="text-base font-semibold text-black leading-snug">
+        <h4 className="text-base font-semibold leading-snug text-black">
           {title}
         </h4>
 
-        <div className="w-7 h-7 rounded-full flex items-center justify-center border border-gray-300">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-300">
           <svg
             className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
             width="14"
@@ -73,14 +65,14 @@ function Accordion({
       </button>
 
       <div
-        style={{
-          height,
-          overflow: "hidden",
-          transition: "height 0.3s ease",
-        }}
+        className={`grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out ${
+          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
       >
-        <div ref={bodyRef} className="pb-5">
-          <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
+        <div className="overflow-hidden">
+          <div className="pb-5">
+            <p className="text-sm leading-relaxed text-gray-600">{body}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -89,22 +81,20 @@ function Accordion({
 
 export default function ProjectIntelligenceCTA() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const ref = useRef<HTMLElement | null>(null);
 
   return (
-    <section className="bg-white py-24 px-6" ref={ref}>
-      <div className="max-w-[1200px] mx-auto">
-        <div className="relative rounded-2xl border border-gray-200 bg-white overflow-hidden">
+    <section className="bg-white px-6 py-24">
+      <div className="mx-auto max-w-[1200px]">
+        <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* LEFT */}
-            <div className="flex flex-col justify-between gap-10 p-10 lg:p-14 lg:border-r border-gray-200">
+            <div className="flex flex-col justify-between gap-10 border-gray-200 p-10 lg:border-r lg:p-14">
               <div>
-                <h3 className="text-3xl lg:text-5xl  text-black leading-tight mb-5">
+                <h3 className="mb-5 text-3xl leading-tight text-black lg:text-5xl">
                   Why teams choose
                   <span className="text-[#625FD0]"> SuperManagerAGI</span>
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-600">
                   Built for modern teams that move fast and work across many
                   tools. SuperManagerAGI transforms scattered project signals
                   into clear, actionable intelligence.
@@ -112,20 +102,18 @@ export default function ProjectIntelligenceCTA() {
               </div>
 
               <div className="flex flex-col gap-7">
-                
-
-                <div className="flex gap-8 pt-2 border-t border-gray-200">
+                <div className="flex gap-8 border-t border-gray-200 pt-2">
                   {[
                     { value: "94%", label: "On-time delivery" },
-                    { value: "3×", label: "Faster risk detection" },
+                    { value: "3x", label: "Faster risk detection" },
                     { value: "60%", label: "Less manual tracking" },
-                  ].map((s) => (
-                    <div key={s.label}>
+                  ].map((stat) => (
+                    <div key={stat.label}>
                       <div className="text-2xl font-bold text-black">
-                        {s.value}
+                        {stat.value}
                       </div>
-                      <div className="text-xs mt-0.5 text-gray-500">
-                        {s.label}
+                      <div className="mt-0.5 text-xs text-gray-500">
+                        {stat.label}
                       </div>
                     </div>
                   ))}
@@ -133,18 +121,17 @@ export default function ProjectIntelligenceCTA() {
               </div>
             </div>
 
-            {/* RIGHT */}
             <div className="flex flex-col justify-center p-10 lg:p-14">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">
+              <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-gray-500">
                 Platform advantages
               </p>
 
-              {ACCORDIONS.map((item, i) => (
+              {ACCORDIONS.map((item, index) => (
                 <Accordion
                   key={item.title}
                   title={item.title}
                   body={item.body}
-                  index={i}
+                  index={index}
                   openIndex={openIndex}
                   setOpenIndex={setOpenIndex}
                 />

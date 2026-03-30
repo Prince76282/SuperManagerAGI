@@ -1,16 +1,8 @@
 "use client";
 
-import React from "react";
 import Script from "next/script";
 import Link from "next/link";
-import {
-  MessageCircle,
-  Newspaper,
-  Handshake,
-  HelpCircle,
-  FileText,
-  ArrowRight,
-} from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const ContactPage = () => {
   return (
@@ -22,7 +14,8 @@ const ContactPage = () => {
             Ways to reach us
           </h1>
           <p className="text-gray-500 text-md sm:text-md">
-            Have questions or need personalized assistance? We're here to help.
+            Have questions or need personalized assistance? We&apos;re here to
+            help.
           </p>
         </div>
 

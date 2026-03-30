@@ -12,20 +12,20 @@ type Testimonial = {
   title: string;
 };
 
-const testimonials: Testimonial[] = [
+export const testimonials: Testimonial[] = [
   {
-    industry: "D2C Fashion",
+    industry: "Startup",
+    quote:
+      "We operate like an 80-person company with a team of 30. Agents handle MIS, vendor follow-ups, and escalations. I focus purely on growth and strategy.",
+    name: "Founder & CEO",
+    title: "Series B Startup",
+  },
+  {
+    industry: "D2C Brand",
     quote:
       "We launched 3 collections without a single stock-out or delay. Inventory, logistics, marketing, and support now run on one AI layer. The reconciliation agent alone paid for the platform in the first month.",
     name: "COO",
     title: "Fashion D2C Brand",
-  },
-  {
-    industry: "Management Consulting",
-    quote:
-      "We now have live visibility across 24 client engagements. Reports and tracking are fully automated. Internal meetings dropped by 70% while client satisfaction reached an all-time high.",
-    name: "Managing Partner",
-    title: "Consulting Firm",
   },
   {
     industry: "SaaS Company",
@@ -35,18 +35,18 @@ const testimonials: Testimonial[] = [
     title: "SaaS Product Company",
   },
   {
-    industry: "Global Enterprise",
+    industry: "Consulting Firm",
     quote:
-      "For the first time, leadership has real-time visibility across finance, operations, sales, and HR. Decision-making is 3x faster with dramatically lower coordination overhead.",
-    name: "Chief Operating Officer",
-    title: "Enterprise (5000+ employees)",
+      "We now have live visibility across 24 client engagements. Reports and tracking are fully automated. Internal meetings dropped by 70% while client satisfaction reached an all-time high.",
+    name: "Managing Partner",
+    title: "Consulting Firm",
   },
   {
-    industry: "Startup",
+    industry: "Logistics Company",
     quote:
-      "We operate like an 80-person company with a team of 30. Agents handle MIS, vendor follow-ups, and escalations. I focus purely on growth and strategy.",
-    name: "Founder & CEO",
-    title: "Series B Startup",
+      "NDR follow-ups, courier tracking, and COD reconciliation are fully autonomous. Our team focuses only on exceptions, not routine operations.",
+    name: "Director of Operations",
+    title: "Logistics Company",
   },
   {
     industry: "Consumer Electronics",
@@ -54,13 +54,6 @@ const testimonials: Testimonial[] = [
       "Stock-out risks are flagged 12–14 days in advance. Reverse logistics costs dropped 18% in two months. Zero settlement discrepancies in six months.",
     name: "Head of Operations",
     title: "Electronics D2C",
-  },
-  {
-    industry: "Logistics",
-    quote:
-      "NDR follow-ups, courier tracking, and COD reconciliation are fully autonomous. Our team focuses only on exceptions, not routine operations.",
-    name: "Director of Operations",
-    title: "Logistics Company",
   },
   {
     industry: "Healthcare",
@@ -77,11 +70,11 @@ const testimonials: Testimonial[] = [
     title: "Financial Services",
   },
   {
-    industry: "Manufacturing",
+    industry: "Global Enterprise",
     quote:
-      "We detected a supply chain risk 3 weeks early through AI signals. Production planning, vendor management, and dispatch now run autonomously.",
-    name: "Head of Supply Chain",
-    title: "Manufacturing",
+      "For the first time, leadership has real-time visibility across finance, operations, sales, and HR. Decision-making is 3x faster with dramatically lower coordination overhead.",
+    name: "Chief Operating Officer",
+    title: "Enterprise (5000+ employees)",
   },
 ];
 

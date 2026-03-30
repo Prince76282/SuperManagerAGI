@@ -1,18 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
-
-
-
 const DocViews = () => {
-  const [active, setActive] = useState("overview")
-
-  const handleNav = (id: string) => {
-    setActive(id)
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
-  }
-
   return (
     <div className="flex flex-col mt-10 lg:flex-row min-h-screen bg-gray-50">
 
@@ -67,7 +55,12 @@ const DocViews = () => {
           <SectionHeading number="2" title="Core Features" />
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            SuperManagerAGI's capabilities are organized into six core functional areas, each addressing a distinct dimension of the operational management challenge. Together they form a comprehensive management intelligence layer that handles the operational complexity that would otherwise require significant manual management effort.
+            SuperManagerAGI&apos;s capabilities are organized into six core
+            functional areas, each addressing a distinct dimension of the
+            operational management challenge. Together they form a comprehensive
+            management intelligence layer that handles the operational
+            complexity that would otherwise require significant manual
+            management effort.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -355,7 +348,14 @@ const DocViews = () => {
           <SectionHeading number="8" title="API Reference" />
 
           <p className="text-gray-600 leading-relaxed mb-4">
-            The SuperManagerAGI REST API provides programmatic access to all platform capabilities  enabling organizations to build custom integrations, embed SuperManagerAGI intelligence into proprietary tools and dashboards, automate administrative workflows, and extend the platform's capabilities to meet specific organizational requirements. The API is versioned and designed for stability  breaking changes are never introduced without a deprecation notice and migration period of at least six months.
+            The SuperManagerAGI REST API provides programmatic access to all
+            platform capabilities enabling organizations to build custom
+            integrations, embed SuperManagerAGI intelligence into proprietary
+            tools and dashboards, automate administrative workflows, and extend
+            the platform&apos;s capabilities to meet specific organizational
+            requirements. The API is versioned and designed for stability
+            breaking changes are never introduced without a deprecation notice
+            and migration period of at least six months.
           </p>
           <p className="text-gray-600 leading-relaxed mb-8">
             All API requests require authentication using an API key issued through the SuperManagerAGI admin console. API keys can be scoped to specific capabilities and rate-limited to specific request volumes. The API is available over HTTPS only and enforces TLS 1.2 minimum for all connections.

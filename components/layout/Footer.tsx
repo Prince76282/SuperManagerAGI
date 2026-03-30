@@ -1,10 +1,8 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import img1 from "@/public/Image/newimage/image1.png";
 import img2 from "@/public/Image/newimage/image3.png";
 
 type FooterLink = {
@@ -15,17 +13,16 @@ type FooterLink = {
 const Footer = () => {
   return (
     <footer className="relative">
-      <div className="bg-[#F6F7FE] relative">
+      <div className="relative bg-[#F6F7FE]">
         <Image
           src={img2}
           alt="Background"
           fill
-          className="object-cover opacity-5 pointer-events-none"
+          className="pointer-events-none object-cover opacity-5"
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          {/* TOP */}
-          <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-6 mb-12 pb-8 border-b border-gray-200">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="mb-12 flex flex-col items-center gap-4 border-b border-gray-200 pb-8 md:flex-row lg:gap-6">
             <Link href="/" className="flex items-center gap-1">
               <Image
                 src="/Image/logo1.png"
@@ -38,11 +35,11 @@ const Footer = () => {
                 alt="Logo"
                 width={160}
                 height={50}
-                className="w-auto h-auto"
+                className="h-auto w-auto"
               />
             </Link>
 
-            <p className="text-center md:text-left text-base lg:text-lg">
+            <p className="text-center text-base md:text-left lg:text-lg">
               <span className="font-semibold text-gray-800">
                 Reimagine Enterprise Execution{" "}
               </span>
@@ -50,11 +47,9 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* MAIN GRID */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
             <div className="flex-1">
-              {/* TOP GRID */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <div className="mb-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <FooterCol
                   title="Get Started"
                   links={[
@@ -97,8 +92,7 @@ const Footer = () => {
                 />
               </div>
 
-              {/* BOTTOM GRID */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <FooterCol
                   title="Company"
                   links={[
@@ -129,31 +123,29 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className="lg:w-70 flex flex-col gap-6">
-              <div className="p-4 rounded-lg">
-                <h3 className="text-2xl mb-3 text-gray-900">
-                  Let's Build Autonomous Execution
+            <div className="flex flex-col gap-6 lg:w-70">
+              <div className="rounded-lg p-4">
+                <h3 className="mb-3 text-2xl text-gray-900">
+                  Let&apos;s Build Autonomous Execution
                 </h3>
 
-                <p className="text-gray-600 text-sm mb-6">
+                <p className="mb-6 text-sm text-gray-600">
                   Get Answers, Deployment Guidance, and a Customized Plan for
                   Replacing Manual Project Management.
                 </p>
 
                 <Link
                   href="/get-in-touch"
-                  className="block text-center rounded-lg bg-[#625FD0] px-4 py-2 text-white font-semibold"
+                  className="block rounded-lg bg-[#625FD0] px-4 py-2 text-center font-semibold text-white"
                 >
                   Submit RFP
                 </Link>
               </div>
 
-              {/* SOCIAL */}
               <div>
-                <h4 className="text-md uppercase mb-5">Follow us on</h4>
+                <h4 className="mb-5 text-md uppercase">Follow us on</h4>
 
-                <div className="flex gap-4 mb-8">
+                <div className="mb-8 flex gap-4">
                   <Link
                     href="https://www.linkedin.com/company/supermanagerai/"
                     target="_blank"
@@ -176,7 +168,7 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                <p className="text-sm mb-2">
+                <p className="mb-2 text-sm">
                   <b>Email:</b>{" "}
                   <Link href="mailto:support@supermanager.co">
                     support@supermanager.co
@@ -191,34 +183,33 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* BOTTOM */}
-          <div className="mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="mt-16 flex flex-col items-center justify-between gap-6 pt-8 md:flex-row">
             <p className="text-sm text-gray-600">
-              © 2026 SuperManager AGI. All rights reserved.
+              &copy; 2026 SuperManager AGI. All rights reserved.
             </p>
 
-            <div className="flex flex-wrap gap-4 text-sm ">
-              <Link className="hover:text-[#625FD0] " href="/privacy-policy">
+            <div className="flex flex-wrap gap-4 text-sm">
+              <Link className="hover:text-[#625FD0]" href="/privacy-policy">
                 Privacy Policy
               </Link>
-              <Link className="hover:text-[#625FD0] " href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/learnmore">
                 Terms of Service
               </Link>
-              <Link className="hover:text-[#625FD0] " href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/learnmore">
                 Acceptable Use Policy
               </Link>
-              <Link className="hover:text-[#625FD0] " href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/learnmore">
                 Cookie Policy
               </Link>
-              <Link className="hover:text-[#625FD0] " href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/learnmore">
                 Intellectual Property Rights
               </Link>
 
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="ml-4 w-10 h-10 rounded-full text-2xl bg-[#625FD0] text-white"
+                className="ml-4 h-10 w-10 rounded-full bg-[#625FD0] text-2xl text-white"
               >
-                ↑
+                &uarr;
               </button>
             </div>
           </div>
@@ -238,14 +229,14 @@ const FooterCol = ({
   links: FooterLink[];
 }) => (
   <div>
-    <h4 className="text-md uppercase mb-5 pb-2 inline-block">{title}</h4>
+    <h4 className="mb-5 inline-block pb-2 text-md uppercase">{title}</h4>
 
     <ul className="space-y-3">
       {links.map((link) => (
         <li key={link.label}>
           <Link
             href={link.href}
-            className="text-gray-600 hover:text-[#625FD0] text-md transition"
+            className="text-md text-gray-600 transition hover:text-[#625FD0]"
           >
             {link.label}
           </Link>

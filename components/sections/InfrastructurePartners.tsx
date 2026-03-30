@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -12,7 +11,6 @@ export default function InfrastructureSection() {
     <section className="bg-[#F0F6F9] py-10">
       <div className="px-4 md:px-6 lg:px-8">
         <div className="container max-w-[1200px] mx-auto">
-
           {/* Header */}
           <div className="mb-12 max-w-3xl space-y-4">
             <h3 className="text-4xl md:text-5xl text-gray-900 leading-tight">
@@ -28,15 +26,14 @@ export default function InfrastructureSection() {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="flex flex-col overflow-hidden rounded-lg bg-white shadow-md"
+                className="flex flex-col p-2 overflow-hidden rounded-lg bg-white shadow-md"
               >
-                {/* Image */}
-                <div className="relative h-64 w-full">
+                <div className="relative h-64 w-full overflow-hidden rounded-3xl">
                   <Image
                     src={card.image}
                     alt={card.alt}
                     fill
-                    className="object-contain"
+                    className="object-contain rounded-2xl"
                   />
                 </div>
 
@@ -63,7 +60,7 @@ export default function InfrastructureSection() {
                     {card.buttons.map((btn) => (
                       <Link
                         key={btn.label}
-                        href={btn.link}
+                        href={btn.href}
                         className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white font-semibold"
                       >
                         {btn.label}
@@ -74,7 +71,6 @@ export default function InfrastructureSection() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

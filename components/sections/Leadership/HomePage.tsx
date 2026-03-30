@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import image1 from "@/public/Image/newimage/image1.webp";
 
 export default function AGIHeroSection() {
   return (
@@ -16,9 +14,10 @@ export default function AGIHeroSection() {
                 AI Vibe Working Platform for Leadership
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
-                Give founders, CEOs and C-suite leaders real-time intelligence across every department. Live revenue, inventory, risk signals, team performance and competitive intelligence  updated automatically from every connected system without a single manual report.
-                
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                Give founders, CEOs and C-suite leaders real-time intelligence across every department. 
+                Live revenue, inventory, risk signals, team performance and competitive intelligence 
+                updated automatically from every connected system without a single manual report.
               </p>
             </div>
 
@@ -40,14 +39,18 @@ export default function AGIHeroSection() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Video */}
           <div className="w-full max-w-5xl">
-            <Image
-              src={image1}
-              alt="AGI Leadership Dashboard"
-              className="w-full h-auto rounded-2xl shadow-xl"
-              priority
-            />
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-video">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/nrNXqRT6ODY"
+                title="AGI Leadership Platform Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>

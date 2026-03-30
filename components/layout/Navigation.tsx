@@ -5,12 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import AGIManagersDropdown from "./navigation-dropdowns/AGIManagersDropdown";
-import IntelligenceDropdown from "./navigation-dropdowns/IntelligenceDropdown";
+import AgentsDropdown from "./navigation-dropdowns/IntelligenceDropdown";
 import InsightsDropdown from "./navigation-dropdowns/InsightsDropdown";
 
 /* ---------- TYPES ---------- */
 
-type DropdownName = "agi-managers" | "intelligence" | "insights";
+type DropdownName = "Platform" | "Agents" | "insights";
 
 type MobileMenuBtnProps = {
   label: string;
@@ -23,8 +23,8 @@ export default function Navigation() {
   const navRef = useRef<HTMLDivElement | null>(null);
 
   const dropdownLabels: Record<DropdownName, string> = {
-    "agi-managers": "AGI Managers",
-    intelligence: "Intelligence",
+    "Platform": "AGI Managers",
+    Agents: "Agents",
     insights: "Insights",
   };
 
@@ -72,7 +72,7 @@ export default function Navigation() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  /* ---------- LOCK BODY SCROLL ---------- */
+
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
@@ -110,32 +110,32 @@ export default function Navigation() {
                     {/* AGI Managers */}
                     <div className="relative">
                       <button
-                        onClick={() => toggleDropdown("agi-managers")}
-                        aria-expanded={openDropdown === "agi-managers"}
+                        onClick={() => toggleDropdown("Platform")}
+                        aria-expanded={openDropdown === "Platform"}
                         className="flex items-center gap-1 text-[14px] font-semibold hover:text-[#625FD0]"
                       >
-                        AGI Managers
-                        <ChevronDown className={`w-4 h-4 transition ${openDropdown === "agi-managers" ? "rotate-180" : ""}`} />
+                        Platform
+                        <ChevronDown className={`w-4 h-4 transition ${openDropdown === "Platform" ? "rotate-180" : ""}`} />
                       </button>
 
-                      {openDropdown === "agi-managers" && (
+                      {openDropdown === "Platform" && (
                         <AGIManagersDropdown onClose={closeDropdown} />
                       )}
                     </div>
 
-                    {/* Intelligence */}
+                    {/* Agents */}
                     <div className="relative">
                       <button
-                        onClick={() => toggleDropdown("intelligence")}
-                        aria-expanded={openDropdown === "intelligence"}
+                        onClick={() => toggleDropdown("Agents")}
+                        aria-expanded={openDropdown === "Agents"}
                         className="flex items-center gap-1 text-[14px] font-semibold hover:text-[#625FD0]"
                       >
-                        Intelligence
-                        <ChevronDown className={`w-4 h-4 transition ${openDropdown === "intelligence" ? "rotate-180" : ""}`} />
+                        Agents
+                        <ChevronDown className={`w-4 h-4 transition ${openDropdown === "Agents" ? "rotate-180" : ""}`} />
                       </button>
 
-                      {openDropdown === "intelligence" && (
-                        <IntelligenceDropdown onClose={closeDropdown} />
+                      {openDropdown === "Agents" && (
+                        <AgentsDropdown onClose={closeDropdown} />
                       )}
                     </div>
 
@@ -195,24 +195,24 @@ export default function Navigation() {
 
           {/* MOBILE MENU */}
           {isMenuOpen && (
-            <div className="lg:hidden mx-4 mt-2 mb-4 rounded-2xl bg-white shadow-lg max-h-[80vh] overflow-y-auto">
+            <div className="lg:hidden mx-4 mt-2 mb-2 rounded-2xl bg-white shadow-lg max-h-[80vh] overflow-y-auto">
               <div className="p-2 space-y-2">
 
                 {openDropdown ? (
-                  <div className="space-y-4">
+                  <div className="space-y-1">
                     <button
                       onClick={() => setOpenDropdown(null)}
-                      className="flex items-center gap-2 text-base font-semibold text-[#625FD0]"
+                      className="flex items-center justify-center gap-5 text-base font-semibold text-[#625FD0]"
                     >
-                      <ChevronDown className="w-4 h-4 rotate-90" />
+                      <ChevronDown className="w-5 h-5 rotate-180" />
                       <span>{dropdownLabels[openDropdown]}</span>
                     </button>
 
-                    {openDropdown === "agi-managers" && (
+                    {openDropdown === "Platform" && (
                       <AGIManagersDropdown onClose={closeMobileMenu} />
                     )}
-                    {openDropdown === "intelligence" && (
-                      <IntelligenceDropdown onClose={closeMobileMenu} />
+                    {openDropdown === "Agents" && (
+                      <AgentsDropdown onClose={closeMobileMenu} />
                     )}
                     {openDropdown === "insights" && (
                       <InsightsDropdown onClose={closeMobileMenu} />
@@ -220,13 +220,13 @@ export default function Navigation() {
                   </div>
                 ) : (
                   <div className="space-y-1">
-                    <MobileMenuBtn label="AGI Managers" onClick={() => toggleDropdown("agi-managers")} />
-                    <MobileMenuBtn label="Intelligence" onClick={() => toggleDropdown("intelligence")} />
+                    <MobileMenuBtn label="AGI Managers" onClick={() => toggleDropdown("Platform")} />
+                    <MobileMenuBtn label="Agents" onClick={() => toggleDropdown("Agents")} />
 
                     <Link
                       href="/pricing/"
                       onClick={closeMobileMenu}
-                      className="flex w-full justify-between items-center py-3 px-2 rounded-lg text-base font-medium hover:text-[#625FD0]"
+                      className="flex w-full justify-between items-center py-3 px-4 rounded-lg text-base font-medium hover:text-[#625FD0]"
                     >
                       Pricing
                     </Link>
@@ -251,13 +251,13 @@ export default function Navigation() {
   );
 }
 
-/* ---------- MOBILE BUTTON ---------- */
+
 
 function MobileMenuBtn({ label, onClick }: MobileMenuBtnProps) {
   return (
     <button
       onClick={onClick}
-      className="flex w-full justify-between items-center py-3 px-2 rounded-lg text-base font-medium hover:text-[#625FD0] hover:bg-gray-50"
+      className="flex w-full justify-between items-center py-4 px-4 rounded-lg text-base font-medium hover:text-[#625FD0] hover:bg-gray-50"
     >
       {label}
       <ChevronDown className="w-5 h-5" />

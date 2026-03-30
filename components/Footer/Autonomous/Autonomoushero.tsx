@@ -98,9 +98,7 @@ function ActivityTicker() {
               <p className="text-xs text-gray-500">{e.team}</p>
             </div>
 
-            <span className="text-xs text-gray-400 sm:ml-4">
-              {e.time}
-            </span>
+            <span className="text-xs text-gray-400 sm:ml-4">{e.time}</span>
           </div>
         ))}
       </div>
@@ -111,28 +109,29 @@ function ActivityTicker() {
 export default function AutonomousHero() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden py-24 sm:py-16 bg-white">
-      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        
+      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto w-full">
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          
           {/* LEFT */}
           <div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-5 leading-tight font-semibold">
               Work Moves Forward Automatically.
               <br />
-              <span className="text-[#625FD0]">
-                Without Anyone Asking.
-              </span>
+              <span className="text-[#625FD0]">Without Anyone Asking.</span>
             </h1>
 
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-8 max-w-xl">
-              SuperManager AGI’s autonomous execution layer continuously monitors every connected system...
+              SuperManager AGI’s autonomous execution layer continuously
+              monitors every connected system...
             </p>
 
             {/* STATS */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-8">
-              <StatCard value="97%" label="Task execution accuracy" delay={200} />
+              <StatCard
+                value="97%"
+                label="Task execution accuracy"
+                delay={200}
+              />
               <StatCard value="65ms" label="Avg latency" delay={350} />
               <StatCard value="6.5x" label="Throughput boost" delay={500} />
               <StatCard value="4.2%" label="Hallucination rate" delay={650} />

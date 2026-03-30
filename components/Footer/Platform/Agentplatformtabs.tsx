@@ -11,7 +11,7 @@ const tabs = [
       "Coordinate Specialist Agents Across Every Department Simultaneously",
     body: "The Controller Agent manages task decomposition and parallel execution across specialist agents...",
     
-    imgSrc: "/Image/Coordinate-intelligent.jpg",
+    imgSrc: "/Image/World'sFirst/Autopilot.jpg",
   },
   {
     label: "ADA Integration Layer",
@@ -32,7 +32,7 @@ const tabs = [
     heading: "Live Visibility Across Every Agent, Every Workflow",
     body: "Full observability into agent activity...",
     
-    imgSrc: "/Image/Monitor.jpg",
+    imgSrc: "/Image/World'sFirst/The-ERP-.webp",
   },
   {
     label: "Enterprise Security and Governance",
@@ -46,7 +46,7 @@ const tabs = [
     heading: "Connect Any Application Seamlessly",
     body: "200+ integrations across enterprise systems.",
     
-    imgSrc: "/Image/Monitor.jpg",
+    imgSrc: "/Image/World'sFirst/financial-management.jpg",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function AgentPlatformTabs() {
 
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10 lg:mb-14">

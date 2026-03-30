@@ -96,7 +96,7 @@ const TeamCard = React.memo(function TeamCard({
 export default function TeamSection() {
   return (
     <section id="leadership" className="bg-[#F0F6F9] py-16 md:py-16">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 md:px-12">
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
           <div className="max-w-xl">

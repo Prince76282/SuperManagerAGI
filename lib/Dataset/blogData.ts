@@ -1,3 +1,9 @@
+import type { Section } from "./types/shared";
+
+/**
+ * Featured: Featured/hero blog post
+ * Used in: Blog page featured section
+ */
 export type Featured = {
   id: string;
   img: string;
@@ -9,10 +15,7 @@ export type Featured = {
   readTime: string;
   intro: string;
   tag?: string[];
-  sections: {
-    heading: string;
-    content: string[];
-  }[];
+  sections: Section[];
 };
 
 export const featured: Featured = {
@@ -88,10 +91,7 @@ export type Latest = {
   readTime: string;
   intro: string;
   tag?: string[];
-  sections: {
-    heading: string;
-    content: string[];
-  }[];
+  sections: Section[];
 };
 export const latest: Latest[] = [
   {
@@ -187,7 +187,7 @@ export const latest: Latest[] = [
 
   {
     id: "deploy-vibe-working-platform-90-days",
-    img: "/Image/managers-ai-adoption.jpg",
+    img: "/Image/Toolkit-Enterprise.jpg",
 
     text: "From Pilot to Full Org: How to Deploy the Vibe Working Platform in 90 Days",
 
@@ -218,7 +218,7 @@ export const latest: Latest[] = [
 
   {
     id: "manus-copilot-mcp-enterprise-operations",
-    img: "/Image/managers-ai-adoption.jpg",
+    img: "/Image/Powering-workforces.jpg",
 
     text: "Why Manus, Copilot and MCP-Based Systems Cannot Deliver Autonomous Enterprise Operations",
 
@@ -249,7 +249,7 @@ export const latest: Latest[] = [
 
   {
     id: "beehive-architecture-work-stealing-throughput",
-    img: "/Image/managers-ai-adoption.jpg",
+    img: "/Image/Transform-insights.jpg",
 
     text: "The Beehive Architecture: How Work-Stealing Parallel Execution Achieves 6.7x Throughput",
 
@@ -298,7 +298,7 @@ export interface Articles {
 export const articles: Articles[] = [
   {
     id: "supermanageragi-team-orchestration",
-    img: "/Image/introducing-super.jpg",
+    img: "/Image/Transform-insights.jpg",
 
     text: "How Logistics Intelligence Feeds Marketing: The Cross-Department Agent Coordination Loop",
 

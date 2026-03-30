@@ -1,23 +1,43 @@
-import { Target, Layers, Brain, Zap, Shield, BarChart2, Users, GitBranch } from "lucide-react";
+import {
+  Target,
+  Layers,
+  Brain,
+  Zap,
+  Shield,
+  BarChart2,
+  Users,
+  GitBranch,
+} from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import type { Section } from "./types/shared";
 
+/**
+ * Whitepaper: Research whitepaper with sections
+ * Used in: White papers page, resource library
+ *
+ * Fields:
+ * - id: Unique identifier
+ * - tag: Category (Guide, Research, Strategy, etc.)
+ * - title: Whitepaper title
+ * - icon: Lucide React icon for visual representation
+ * - intro: Abstract or introduction
+ * - sections: Detailed sections with headings and content
+ */
 export type Whitepaper = {
   id: string;
   tag: string;
   title: string;
   icon: LucideIcon;
   intro: string;
-  sections: {
-    heading: string;
-    content: string[];
-  }[];
+  sections: Section[];
 };
 
 export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "ai-augmented-management-playbook",
     tag: "Guide",
-    title: "Agentic Data Architecture (ADA): Eliminating the API Layer for Hallucination-Free, Sub-100ms Enterprise AI Agents",
+    title:
+      "Agentic Data Architecture (ADA): Eliminating the API Layer for Hallucination-Free, Sub-100ms Enterprise AI Agents",
     icon: Target,
     intro:
       "The foundational research paper behind SuperManager AGI’s ADA Integration Layer. Documents the MCP and CLI trilemma, the network boundary proposition, all three ADA mechanisms (direct polyglot DB connectivity, per-subtask RAG grounding, hierarchical multi-agent orchestration) and full evaluation results across 10,000 enterprise queries. All configurations and hyperparameters published for reproducibility.",
@@ -78,7 +98,8 @@ export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "ai-native-people-operations",
     tag: "Strategy",
-    title: "The Vibe Working Platform: The Operating Model Powered by Autonomous AI Agent Workforces",
+    title:
+      "The Vibe Working Platform: The Operating Model Powered by Autonomous AI Agent Workforces",
     icon: Layers,
     intro:
       "A strategic guide to understanding, evaluating and deploying the AI Vibe Working Platform across an organisation. Covers the three pillars (Prompt and Do, 1,000 Feet Deep, Autonomous 24x7), competitive differentiation from MCP-based platforms, deployment sequencing by company type and a 90-day implementation framework.",
@@ -180,7 +201,8 @@ export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "agentic-ai-team-workflows",
     tag: "Framework",
-    title: "Enterprise AI Governance: Deploying Autonomous Agent Workforces With Full Control and Compliance",
+    title:
+      "Enterprise AI Governance: Deploying Autonomous Agent Workforces With Full Control and Compliance",
     icon: Zap,
     intro:
       "A governance framework for enterprise AI agent deployment covering human-in-the-loop control design, audit trail requirements, role-based access control, data sovereignty architecture and compliance mapping for regulated industries including BFSI, healthcare and legal.",
@@ -231,7 +253,8 @@ export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "ai-ethics-enterprise",
     tag: "Policy",
-    title: "Why the Network Boundary Is the Root Cause of Enterprise AI Failure: A Technical Analysis",
+    title:
+      "Why the Network Boundary Is the Root Cause of Enterprise AI Failure: A Technical Analysis",
     icon: Shield,
     intro:
       "A technical analysis of the MCP, CLI and direct API approaches to agent-data integration, formal proof that each fails on at least one critical constraint (latency, security or hallucination), and a detailed explanation of how ADA eliminates the shared root cause by removing the network boundary assumption.",
@@ -282,7 +305,8 @@ export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "data-driven-org-design",
     tag: "Research",
-    title: "The Consulting Firm AI Playbook: Deploying Engagement Intelligence Across Every Client",
+    title:
+      "The Consulting Firm AI Playbook: Deploying Engagement Intelligence Across Every Client",
     icon: BarChart2,
     intro:
       "A deployment guide for consulting firm leaders covering engagement management agent configuration, client reporting automation, utilisation intelligence and knowledge management. Includes ROI model showing principal time recovered per engagement and client satisfaction impact metrics.",
@@ -333,7 +357,8 @@ export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "ai-leadership-development",
     tag: "Guide",
-    title: "Scaling Autonomous AI Operations: From First Agent to Full Organisational Deployment",
+    title:
+      "Scaling Autonomous AI Operations: From First Agent to Full Organisational Deployment",
     icon: Users,
     intro:
       "The operational framework for scaling SuperManager AGI from first pilot agent to full organisational deployment. Covers agent sequencing by department, ADA integration priority, change management for teams transitioning from manual workflows and governance milestones at each deployment stage.",
@@ -384,7 +409,8 @@ export const WHITEPAPERS: Whitepaper[] = [
   {
     id: "ai-change-management",
     tag: "Framework",
-    title: "The CXO AI Toolkit: Deploying the Vibe Working Platform Across the Enterprise",
+    title:
+      "The CXO AI Toolkit: Deploying the Vibe Working Platform Across the Enterprise",
     icon: GitBranch,
     intro:
       "Strategic guidance for CXOs leading AI Vibe Working Platform adoption. Covers the five strategic decisions every executive must make, the governance framework for autonomous agent deployment, how to measure success in business outcome terms and how to build organisational readiness alongside technical deployment.",
