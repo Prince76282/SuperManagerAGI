@@ -10,7 +10,7 @@ export const tabs = [
     label: "HIGH-GROWTH STARTUPS",
     title: "Scale Operations Without Scaling Headcount",
     description:
-      "AI agents handle CRM updates, reporting, support workflows, hiring coordination, vendor follow-ups, and finance tracking—enabling startups to scale operations without increasing team size.",
+      "AI agents handle CRM updates, reporting, support workflows, hiring coordination, vendor follow-ups, and finance trackingenabling startups to scale operations without increasing team size.",
     footer: "Manage 10× more operational complexity with the same team",
     image: "/Image/World'sFirst/PLAN.jpg",
   },
@@ -19,7 +19,7 @@ export const tabs = [
     label: "D2C & E-COMMERCE BRANDS",
     title: "Your Entire Brand Operations Run by an AI Operations Engine",
     description:
-      "From Shopify, Shiprocket, Razorpay, Meta Ads, Google Ads, CRM, and support tools, AI agents execute workflows across your entire commerce stack—orders, marketing, logistics, and support.",
+      "From Shopify, Shiprocket, Razorpay, Meta Ads, Google Ads, CRM, and support tools, AI agents execute workflows across your entire commerce stackorders, marketing, logistics, and support.",
     footer:
       "Trusted by D2C brands managing 50+ SKUs across 5 channels with 80% less operational overhead",
     image: "/Image/World'sFirst/PHOTO.webp",
@@ -29,7 +29,7 @@ export const tabs = [
     label: "SERVICE-BASED COMPANIES",
     title: "Run Service Delivery with an AI Operations Engine",
     description:
-      "AI agents manage client communication, project tracking, billing, vendor coordination, and reporting—allowing teams to focus on delivery while operations run automatically.",
+      "AI agents manage client communication, project tracking, billing, vendor coordination, and reportingallowing teams to focus on delivery while operations run automatically.",
     footer: "Trusted by service organizations running continuous delivery across multiple clients",
     image: "/Image/World'sFirst/scaled.webp",
   },
@@ -38,7 +38,7 @@ export const tabs = [
     label: "CONSULTING FIRMS",
     title: "Run Your Consulting Delivery with an AI Operations Engine",
     description:
-      "AI agents manage project tracking, reporting, billing, documentation, and client communication—so consultants can focus on strategy and client outcomes.",
+      "AI agents manage project tracking, reporting, billing, documentation, and client communicationso consultants can focus on strategy and client outcomes.",
     footer:
       "Trusted by consulting principals managing 24 active engagements with the oversight that previously required 6 team members",
     image: "/Image/World'sFirst/image1.webp",
@@ -48,7 +48,7 @@ export const tabs = [
     label: "PRODUCT & ENGINEERING COMPANIES",
     title: "AI Handles the Process. Engineers Ship.",
     description:
-      "AI agents manage sprint planning, tracking, releases, documentation, and reporting across your development stack—so engineers stay focused on building and shipping.",
+      "AI agents manage sprint planning, tracking, releases, documentation, and reporting across your development stackso engineers stay focused on building and shipping.",
     footer: "Trusted by engineering leaders shipping 3× faster with 95% less coordination overhead",
     image: "/Image/World'sFirst/financial.jpg",
   },
@@ -57,7 +57,7 @@ export const tabs = [
     label: "GLOBAL DELIVERY TEAMS",
     title: "24/7 Autonomous Coordination Across Time Zones",
     description:
-      "AI agents coordinate async standups, reporting, task tracking, client communication, and cross-timezone handoffs—enabling continuous global delivery without delays.",
+      "AI agents coordinate async standups, reporting, task tracking, client communication, and cross-timezone handoffsenabling continuous global delivery without delays.",
     footer: "Trusted by global delivery organizations operating 24/7 at scale",
     image: "/Image/World'sFirst/The-ERP-.webp",
     showEmail: true,
@@ -67,7 +67,7 @@ export const tabs = [
     label: "ENTERPRISE COMPANIES",
     title: "AI Operations Engine for Enterprise Execution",
     description:
-      "AI agents execute workflows across ERP, CRM, HRMS, finance, and internal systems—coordinating operations, generating reports, tracking execution, and managing cross-department workflows.",
+      "AI agents execute workflows across ERP, CRM, HRMS, finance, and internal systemscoordinating operations, generating reports, tracking execution, and managing cross-department workflows.",
     footer: "Cuts coordination overhead by up to 85% across enterprise portfolios",
     image: "/Image/World'sFirst/platform.webp",
   },
@@ -167,7 +167,9 @@ export default function SuperManagerSection() {
                   {tabs.map((tab, i) => (
                     <button
                       key={tab.id}
-                      ref={(el) => (tabRefs.current[i] = el)}
+                      ref={(el) => {
+                        tabRefs.current[i] = el;
+                      }}
                       onClick={() => setActiveTab(i)}
                       className={`px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs rounded-full uppercase font-medium whitespace-nowrap transition ${
                         activeTab === i
