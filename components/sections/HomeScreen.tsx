@@ -80,16 +80,12 @@ export default function HeroSection() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-[900px] text-center text-base md:text-lg">
-              SuperManager AGI is not a chatbot, not a workflow automation tool,
-              and not another SaaS dashboard. It is the AI Vibe Working Platform
-              where autonomous AI agents actually do work.
-              <br /> Powered by Agentic Data Architecture (ADA), agents don’t
-              rely on APIs or MCP servers. They access live company data
-              directly, understand your systems, and execute work across your
-              entire organization. <br /> They can go 1000 feet deep into your
-              company data, operate your software, coordinate workflows across
-              systems, and complete tasks automatically.
-              <br /> Prompt once. Agents execute. Work gets done.
+              <strong> SuperManager AGI </strong> isn't a chatbot, workflow
+              tool, or SaaS dashboard. It's the{" "}
+              <strong>AI Vibe Working Platform </strong> where autonomous
+              agents, powered by <strong>ADA </strong>, access live company data
+              1000 feet deep with no APIs, no MCP servers, fully automatic.
+              Prompt once. Work gets done.
             </p>
 
             <div className="mt-8 flex justify-center">
@@ -128,7 +124,7 @@ export default function HeroSection() {
         </div>
 
         {/* FEATURES */}
-        <div className="relative">
+        <div className="relative" >
           {/* Gradient edges */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10" />

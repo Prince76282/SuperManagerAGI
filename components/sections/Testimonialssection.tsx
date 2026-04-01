@@ -12,6 +12,13 @@ type Testimonial = {
 };
 
 export const testimonials: Testimonial[] = [
+   {
+    industry: "Consulting Firm",
+    quote:
+      "We now have live visibility across 24 client engagements. Reports and tracking are fully automated. Internal meetings dropped by 70% while client satisfaction reached an all-time high.",
+    name: "Managing Partner",
+    title: "Consulting Firm",
+  },
   {
     industry: "Startup",
     quote:
@@ -33,13 +40,7 @@ export const testimonials: Testimonial[] = [
     name: "VP Engineering",
     title: "SaaS Product Company",
   },
-  {
-    industry: "Consulting Firm",
-    quote:
-      "We now have live visibility across 24 client engagements. Reports and tracking are fully automated. Internal meetings dropped by 70% while client satisfaction reached an all-time high.",
-    name: "Managing Partner",
-    title: "Consulting Firm",
-  },
+ 
   {
     industry: "Logistics Company",
     quote:

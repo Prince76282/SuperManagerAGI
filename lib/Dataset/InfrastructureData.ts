@@ -230,14 +230,10 @@ export const INFRASTRUCTURE_DATA = {
     buttons: [
       {
         label: "Book an Infrastructure Review",
-        href: "/",
+        href: "/get-in-touch",
         variant: "primary" as const,
       },
-      {
-        label: "Download Security Whitepaper",
-        href: "/",
-        variant: "secondary" as const,
-      },
+      
     ],
   },
 };

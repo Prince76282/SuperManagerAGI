@@ -2,9 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-/* =========================
-   CARD DATA (EDIT HERE ONLY)
-========================= */
+
 const CARDS = [
   {
     id: 1,

@@ -18,7 +18,7 @@ const gartnerReviews: Review[] = [
       "We deployed SuperManager AGI across operations, finance and logistics simultaneously. Every morning our founding team gets a live intelligence brief from every connected system. We have not needed a manual status report in four months.",
     role: "Chief Operating Officer",
     company: "D2C Brand, 200+ SKUs",
-    rating: 3,
+    rating: 5,
   },
   {
     title: "True specialist agent intelligence per department",
@@ -34,7 +34,7 @@ const gartnerReviews: Review[] = [
       "Weekly MIS, monthly P and L, quarterly board reports, OKR tracking, competitor monitoring  all running autonomously. Leadership now operates on live data, not reports that were accurate last Tuesday.",
     role: "VP of Strategy",
     company: "Enterprise, 2,000+ employees",
-    rating: 4,
+    rating: 4.5,
   },
   {
     title: "Data sovereignty was the deciding factor",
@@ -50,7 +50,7 @@ const gartnerReviews: Review[] = [
       "When our NDR rate spiked in tier-2 cities, the logistics agent automatically fed that data to the marketing agent, which adjusted our geo-targeting within 24 hours. That cross-department coordination happened without a single meeting.",
     role: "Chief of Staff",
     company: "D2C Brand, 1,500+ employees",
-    rating: 3,
+    rating: 4.5,
   },
 ];
 
@@ -61,7 +61,7 @@ const g2Reviews: Review[] = [
       "SuperManager AGI connected 11 disconnected tools under one intelligent agent workforce that understands our actual business context  not generic AI responses but grounded outputs from our actual live data",
     role: "Chief of Staff",
     company: "Head of Operations, D2C Brand",
-    rating: 3,
+    rating: 5,
   },
   {
     title: "Settlement reconciliation that actually works",
@@ -69,7 +69,7 @@ const g2Reviews: Review[] = [
       "Finance reconciliation that took 2 days every month now runs overnight automatically. The agent caught 12 settlement discrepancies in the first month that would have gone undetected for 60 days under our old process.",
     role: "Chief of Staff",
     company: "Finance Head, E-commerce Brand",
-    rating: 3,
+    rating: 5,
   },
   {
     title: "Scales with complexity without scaling headcount",
@@ -77,7 +77,7 @@ const g2Reviews: Review[] = [
       "As our SKU count went from 50 to 200 and our channel count doubled, the operational complexity would have required hiring 4 additional team members. Instead we deployed 3 more specialist agents. Same quality. Fraction of the cost.",
     role: "Chief of Staff",
     company: "Founder, Series B D2C Brand",
-    rating: 3,
+    rating: 4.5,
   },
   {
     title: "Not a chatbot  an autonomous operational workforce",
@@ -85,7 +85,7 @@ const g2Reviews: Review[] = [
       "Agents proactively detect stock-out risk, reorder at the right threshold, reconcile finance overnight, manage NDR follow-ups and generate our weekly board pack. This is not AI answering questions. This is AI doing the work.",
     role: "Chief of Staff",
     company: "D2C Brand, 1,500+ employees",
-    rating: 3,
+    rating: 4.5,
   },
   {
     title: "Finally, AI that executes  not just suggests",
@@ -93,7 +93,7 @@ const g2Reviews: Review[] = [
       "Every other AI tool gave us recommendations and left us to implement them manually. SuperManager AGI executes. The agent does not suggest drafting a PO  it drafts the PO, sends it for approval and after approval sends it to the vendor.",
     role: "Chief of Staff",
     company: "D2C Brand, 1,500+ employees",
-    rating: 3,
+    rating: 5,
   },
 ];
 
@@ -119,7 +119,7 @@ function ReviewCard({ review }: { review: Review }) {
   return (
     <article className="flex-shrink-0 w-[85%] sm:w-[300px] lg:w-[360px] bg-white rounded-2xl p-5 sm:p-6 flex flex-col gap-4 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 snap-start">
       <div className="flex items-start justify-between gap-2">
-        <span className="text-xs tracking-widest text-[#625FD0] uppercase">
+        <span className="text-sm font-semibold tracking-widest text-[#625FD0] uppercase">
           Verified Review
         </span>
         <StarRating rating={review.rating} />

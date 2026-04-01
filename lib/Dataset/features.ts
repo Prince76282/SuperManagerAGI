@@ -46,11 +46,11 @@ export const features: Feature[] = [
     image: "/Image/newimage/ai11.png",
     href: "/home/ada-integration-layer",
     stats: [
-      { value: "2–15ms", label: "query latency (vs 200–500ms APIs)" },
-      { value: "4.2%", label: "hallucination rate (vs 22.4% RAG)" },
-      { value: "0", label: "GPU requirement for deployment" },
-      { value: "5x", label: "improvement in data accuracy" },
-    ],
+  { value: "2–15 ms", label: "Query latency (vs. 200–500 ms APIs)" },
+  { value: "4.2%", label: "Hallucination rate (vs. 22.4% RAG)" },
+  { value: "0", label: "GPU requirement for deployment" },
+  { value: "5×", label: "Improvement in data accuracy" },
+],
     benefits: [
       {
         title: "Direct Database Access",
@@ -164,11 +164,11 @@ export const features: Feature[] = [
     image: "/Image/newimage/Prompt-Get.png",
     href: "/home/prompt-and-get-data",
     stats: [
-      { value: "2–15ms", label: "database query latency" },
-      { value: "<65ms", label: "full answer delivery time" },
-      { value: "5x", label: "reduction in hallucination rate" },
-      { value: "8–12", label: "disconnected tools unified" },
-    ],
+  { value: "2–15 ms", label: "Database query latency" },
+  { value: "<65 ms", label: "Full answer delivery time" },
+  { value: "5×", label: "Reduction in hallucination rate" },
+  { value: "8–12", label: "Disconnected tools unified" },
+],
     benefits: [
       {
         title: "Live Data, Not Cached Summaries",
@@ -283,11 +283,11 @@ export const features: Feature[] = [
     image: "/Image/newimage/Universal-Application .png",
     href: "/home/universal-application-connectivity",
     stats: [
-      { value: "800+", label: "applications supported" },
-      { value: "3", label: "access modes: read, write, execute" },
-      { value: "<24h", label: "typical connector activation time" },
-      { value: "0", label: "manual API mapping required" },
-    ],
+  { value: "800+", label: "Applications supported" },
+  { value: "3", label: "Access modes: read, write, execute" },
+  { value: "<24 h", label: "Typical connector activation time" },
+  { value: "0", label: "Manual API mapping required" },
+],
     benefits: [
       {
         title: "Deep Schema Awareness",
@@ -408,12 +408,12 @@ export const features: Feature[] = [
       "Enterprise workflows are inherently multi-step and multi-system. A single business process  like onboarding a new vendor, closing a sales deal, or launching a product  might span 15 steps across 6 different tools. SuperManager's Beehive Architecture is purpose-built for this reality.\n\nRather than a single generalist agent handling everything sequentially, the Beehive deploys a coordinated swarm of specialist agents  each deeply capable within its domain (finance, CRM, logistics, communication, engineering). The orchestration layer assigns work dynamically, routes data between agents, manages dependencies, and ensures the overall workflow progresses correctly even when individual steps encounter errors or require retries.\n\nThe breakthrough is evidence-majority voting: before any specialist agent writes a result, at least 3 independent verification passes confirm the output is correct. This isn't just error-checking  it's a systematic approach to ensuring that the collective intelligence of the swarm produces more reliable outputs than any individual model could alone. The result: 97% task execution accuracy on complex, multi-step enterprise workflows.",
     image: "/Image/newimage/Multi-Action.png",
     href: "/home/multi-action-agent-orchestration",
-    stats: [
-      { value: "6.7x", label: "throughput with 10 parallel agents" },
-      { value: "97%", label: "task execution accuracy" },
-      { value: "3+", label: "verification passes per output" },
-      { value: "15+", label: "step workflows automated" },
-    ],
+   stats: [
+  { value: "6.7×", label: "Throughput with 10 parallel agents" },
+  { value: "97%", label: "Task execution accuracy" },
+  { value: "3+", label: "Verification passes per output" },
+  { value: "15+", label: "Step workflows automated" },
+],
     benefits: [
       {
         title: "Specialist Agents, Not Generalists",
@@ -528,11 +528,11 @@ export const features: Feature[] = [
     image: "/Image/newimage/human-in-the-loop.png",
     href: "/home/human-in-the-loop",
     stats: [
-      { value: "100%", label: "actions logged with full context" },
-      { value: "Custom", label: "approval thresholds by action type" },
-      { value: "<30s", label: "average approval turnaround (mobile)" },
-      { value: "0", label: "irreversible actions without audit trail" },
-    ],
+  { value: "100%", label: "Actions logged with full context" },
+  { value: "Custom", label: "Approval thresholds by action type" },
+  { value: "<30 s", label: "Average approval turnaround (mobile)" },
+  { value: "0", label: "Irreversible actions without audit trail" },
+],
     benefits: [
       {
         title: "Granular Approval Gates",
@@ -647,11 +647,11 @@ export const features: Feature[] = [
     image: "/Image/newimage/Autonomous-AI.png",
     href: "/home/autonomous-ai-agents",
     stats: [
-      { value: "24x7", label: "continuous monitoring coverage" },
-      { value: "5+", label: "specialist autonomous agent types" },
-      { value: "<2s", label: "trigger-to-action latency" },
-      { value: "100%", label: "actions logged and auditable" },
-    ],
+  { value: "24×7", label: "Continuous monitoring coverage" },
+  { value: "5+", label: "Specialist autonomous agent types" },
+  { value: "<2 s", label: "Trigger-to-action latency" },
+  { value: "100%", label: "Actions logged and auditable" },
+],
     benefits: [
       {
         title: "Zero Monitoring Overhead",
@@ -765,12 +765,12 @@ export const features: Feature[] = [
       "SuperManager AGI transforms the way enterprise work gets done. Instead of switching between a dozen applications, logging in, navigating menus, and executing repetitive steps  you simply describe what you need in plain English. The Controller Agent receives your instruction, understands intent using a context-aware LLM layer, and immediately decomposes it into a directed acyclic graph (DAG) of subtasks. Each node in the DAG is dispatched to a specialist agent best suited for that operation  whether it's writing to Jira, querying your ERP, sending a Slack message, or reconciling a payment ledger.\n\nThe work-stealing scheduler ensures no agent sits idle. Subtasks are distributed dynamically, so 10 agents can work simultaneously on different parts of a complex workflow. Before any result is committed back to your systems, a validation layer cross-checks outputs using evidence-majority voting  catching hallucinations and data errors before they propagate. The entire process, from your prompt to completed action, takes seconds  not hours of manual work.",
     image: "/Image/newimage/prompt-and-do-any-task.png",
     href: "/home/prompt-and-do-any-task",
-    stats: [
-      { value: "1 Prompt", label: "to trigger multi-system workflows" },
-      { value: "6.7x", label: "throughput vs manual execution" },
-      { value: "97%", label: "task execution accuracy" },
-      { value: "<65ms", label: "end-to-end response time" },
-    ],
+   stats: [
+  { value: "1 Prompt", label: "To trigger multi-system workflows" },
+  { value: "6.7×", label: "Throughput vs. manual execution" },
+  { value: "97%", label: "Task execution accuracy" },
+  { value: "<65 ms", label: "End-to-end response time" },
+],
     benefits: [
       {
         title: "No Tool-Switching Overhead",

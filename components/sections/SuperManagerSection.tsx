@@ -74,7 +74,7 @@ export const tabs = [
 ];
 
 const companies = [
-  { name: "Adobe", src: "/Image/newimage/Adobe1.png" },
+  { name: "Adobe", src: "/Image/newimage/adobe1.png" },
   { name: "BrowserStack", src: "/Image/newimage/Browser.png" },
   { name: "Zoho", src: "/Image/newimage/Zoho1.png" },
   { name: "Microsoft", src: "/Image/newimage/Microsoft1.png" },

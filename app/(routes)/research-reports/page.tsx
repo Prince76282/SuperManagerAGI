@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { featuredReport, reportsList } from "@/lib/Dataset/reportData";
 import type { ReportContent } from "@/lib/Dataset/reportData";
+import PDFPage from "./pdf/page";
+import PdfViewer from "./pdf/page";
 
 function ReportCard({ report }: { report: ReportContent }) {
   return (
@@ -62,10 +64,11 @@ export default function AIResearchReports() {
   );
 
   return (
+    <>
     <div className="bg-white min-h-screen py-16 sm:py-20">
       {/* ── Header ── */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mb-12 sm:mb-16">
-        <p className="text-xs  tracking-widest uppercase text-[#625FD0] mb-3">
+        <p className="text-sm font-semibold  tracking-widest uppercase text-[#625FD0] mb-3">
           Research & Insights
         </p>
         <h1 className="text-3xl sm:text-3xl lg:text-5xl text-black leading-tight">
@@ -202,6 +205,10 @@ export default function AIResearchReports() {
           )}
         </div>
       </div>
+
+
     </div>
+   <PdfViewer pdfPath="/pdf/page.pdf" title="User Manual" height="700px" />
+    </>
   );
 }

@@ -123,16 +123,16 @@ type InfoBlockProps = {
 
 function SectionLabel({ children }: SectionLabelProps) {
   return (
-    <div className="text-[11px]  uppercase tracking-wider text-[#625FD0] mb-2">
+    <h1 className="text-[18px] font-semibold  uppercase tracking-wider text-[#625FD0] mb-2">
       {children}
-    </div>
+    </h1>
   );
 }
 
 function FeatureCard({ title, body }: FeatureCardProps) {
   return (
     <div className="border rounded-xl p-5 bg-white hover:border-[#625FD0] transition">
-      <h4 className=" text-black mb-2">{title}</h4>
+      <p className=" text-black text-lg mb-2">{title}</p>
       <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
     </div>
   );
@@ -144,7 +144,7 @@ function ChipGrid({ items }: ChipGridProps) {
       {items.map((item) => (
         <span
           key={item}
-          className="text-xs px-3 py-1 rounded-full border border-gray-200 bg-gray-50"
+          className="text-sm px-3 py-1 rounded-full border border-gray-200 bg-gray-50"
         >
           {item}
         </span>
@@ -156,7 +156,7 @@ function ChipGrid({ items }: ChipGridProps) {
 function InfoBlock({ title, items }: InfoBlockProps) {
   return (
     <div className="border rounded-xl p-5 bg-white">
-      <h4 className=" text-black mb-2">{title}</h4>
+      <p className=" text-black text-lg mb-2">{title}</p>
       <ChipGrid items={items} />
     </div>
   );
@@ -169,7 +169,7 @@ export default function PlatformOverview() {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs  uppercase tracking-wider text-[#625FD0]">
+          <span className="text-sm font-semibold  uppercase tracking-wider text-[#625FD0]">
             Platform Overview
           </span>
 
@@ -190,7 +190,7 @@ export default function PlatformOverview() {
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {solutions.map((sol) => (
             <div key={sol.title} className="border rounded-xl p-6 bg-white">
-              <h3 className=" text-lg mb-4">{sol.title}</h3>
+              <p className="  text-lg mb-4">{sol.title}</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 {sol.items.map((item) => (
                   <li key={item}>• {item}</li>
@@ -201,7 +201,7 @@ export default function PlatformOverview() {
         </div>
 
         {/* How the Vibe Working Platform Works */}
-        <SectionLabel>How the Vibe Working Platform Works</SectionLabel>
+        <SectionLabel >How the Vibe Working Platform Works</SectionLabel>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {agentPlatformFeatures.map((feat) => (
             <FeatureCard key={feat.title} {...feat} />

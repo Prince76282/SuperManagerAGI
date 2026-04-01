@@ -26,21 +26,24 @@ export default function InfrastructureSection() {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="flex flex-col p-2 overflow-hidden rounded-lg bg-white shadow-md"
+                className="flex flex-col h-full rounded-xl bg-white shadow-md overflow-hidden"
               >
-                <div className="relative h-64 w-full overflow-hidden rounded-3xl">
+                {/* Image */}
+                <div className="relative w-full h-60">
                   <Image
                     src={card.image}
                     alt={card.alt}
                     fill
-                    className="object-contain rounded-2xl"
+                    className="object-cover"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col space-y-6 p-6">
-                  <div className="space-y-3 text-black text-sm md:text-base leading-relaxed">
-                    <p className=" text-base md:text-lg">{card.title}</p>
+                <div className="flex flex-col flex-grow p-6">
+                  <div className="space-y-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                    <h4 className="text-xl md:text-2xl font-semibold text-gray-900">
+                      {card.title}
+                    </h4>
 
                     <p>{card.description}</p>
 
@@ -53,13 +56,13 @@ export default function InfrastructureSection() {
                     <p className="font-medium">{card.footer}</p>
                   </div>
 
-                  {/* Buttons */}
-                  <div className="flex flex-wrap gap-4">
+                  {/* Buttons at bottom */}
+                  <div className="mt-auto pt-6 flex flex-wrap gap-4">
                     {card.buttons.map((btn) => (
                       <Link
                         key={btn.label}
                         href={btn.href}
-                        className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-3 py-2 text-white "
+                        className="inline-flex text-sm items-center justify-center rounded-lg bg-[#625FD0] px-4 py-2 text-white hover:opacity-90 transition"
                       >
                         {btn.label}
                       </Link>

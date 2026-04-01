@@ -156,6 +156,11 @@ export const standalonePages: Record<string, DropdownContentPage> = {
       href: "/architecture-guides",
     },
   },
+
+
+
+
+  
   "case-studies": {
     theme: "emerald",
     eyebrow: "Proof & Outcomes",
@@ -479,11 +484,16 @@ export const standalonePages: Record<string, DropdownContentPage> = {
       "Explore the unified intelligence layer that transforms live enterprise data into domain visibility, predictive signals, and decision-ready recommendations.",
     intro:
       "This page sits above the individual intelligence routes and gives visitors a clear overview of how the platform connects data access, operating insight, prediction, and decision support into one system.",
-    highlights: [
-      "Understand the difference between raw reporting and intelligence that can guide execution.",
-      "See how domain intelligence, predictive intelligence, and decision intelligence connect together.",
-      "Use the page as the main jump-off point for the full intelligence route tree in navigation.",
-    ],
+   highlights: [
+  "Understand the difference between raw reporting and intelligence that can guide execution.",
+  "See how domain intelligence, predictive intelligence, and decision intelligence connect together.",
+  "Use the page as the main jump-off point for the full intelligence route tree in navigation.",
+  "Learn how intelligence layers are structured to support different levels of decision-making across the organization.",
+  "Explore how signals are collected, processed, and surfaced as actionable insights within each intelligence type.",
+  "Understand how confidence scores and thresholds influence which intelligence surfaces to decision-makers.",
+  "See how intelligence outputs feed into downstream workflows, alerts, and automated triggers.",
+  "Recognize when to escalate from domain-level intelligence to cross-domain or enterprise-wide intelligence views.",
+],
     stats: [
       { label: "coverage", value: "Enterprise-wide" },
       { label: "decision speed", value: "Real-time" },
