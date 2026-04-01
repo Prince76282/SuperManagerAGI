@@ -181,7 +181,7 @@ const faqs = [
 ];
 
 export default function CareersPage() {
-  const [openFaq, setOpenFaq] = useState(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeTeam, setActiveTeam] = useState("All");
 
   const teams = ["All", "Engineering", "Product & Design", "Go-To-Market", "AI Research", "Marketing"];

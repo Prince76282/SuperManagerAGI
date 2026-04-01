@@ -117,7 +117,7 @@ const mediaAssets = [
 ];
 
 export default function PressPage() {
-  const [openFaq, setOpenFaq] = useState(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="bg-white text-black min-h-screen font-sans">
