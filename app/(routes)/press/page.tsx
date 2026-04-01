@@ -335,12 +335,7 @@ export default function PressPage() {
                 href: "/analyst-recognition",
                 icon: Award,
               },
-              {
-                title: "Newsroom",
-                desc: "Peer-reviewed publications, partnership announcements, and product releases",
-                href: "/news-room",
-                icon: Newspaper,
-              },
+            
               {
                 title: "Platform Overview",
                 desc: "Beehive orchestration, ADA layer, and the 2–15ms data connection that competitors can't match",
