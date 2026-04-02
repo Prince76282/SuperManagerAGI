@@ -215,7 +215,7 @@ export default function SuperManagerAGI() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="#"
+              href="https://app.supermanager.co/login"
               className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2  text-white transition-all duration-300"
             >
               Start for free

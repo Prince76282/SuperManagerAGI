@@ -96,7 +96,7 @@ export default function Navigation() {
               <div className="max-w-[1240px] h-[62px] mx-auto bg-white rounded-b-2xl px-4 lg:px-6 py-2 flex items-center justify-between">
                 {/* LEFT */}
                 <div className="flex items-center gap-16">
-                  <Link href="/" className="flex items-center">
+                  <Link href="/" onClick={closeDropdown} className="flex items-center">
                     <Image
                       src="/Image/logo1.png"
                       alt="logo icon"

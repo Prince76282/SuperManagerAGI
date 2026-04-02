@@ -250,7 +250,7 @@ export default function IntelligenceHubPage({ page }: IntelligenceHubPageProps) 
 
       {/* FAQ (if exists) */}
       {hasFaq && (
-        <section className="mx-auto max-w-4xl px-6 py-16">
+        <section className="mx-auto max-w-[1200px] px-6 py-16">
           <h2 className="text-3xl  text-center text-gray-800 mb-12">
             Frequently Asked Questions
           </h2>

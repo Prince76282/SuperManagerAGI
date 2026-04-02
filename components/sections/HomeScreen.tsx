@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { features } from "@/lib/Dataset/features";
+
 import { useEffect, useRef } from "react";
+import { features } from "@/lib/Dataset/features";
 
 const companies = [
   { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 120 },
@@ -124,8 +125,8 @@ export default function HeroSection() {
         </div>
 
         {/* FEATURES */}
-        <div className="relative" >
-          {/* Gradient edges */}
+ <div className="relative" >
+        
           <div className="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10" />
 
@@ -143,7 +144,7 @@ export default function HeroSection() {
                 <div className="flex h-full flex-col">
                   <div className="p-6 flex-1">
                     <h3 className="text-lg  mb-3">{feature.title}</h3>
-                    <p className="text-sm text-gray-700">
+                    <p className="text-sm group-hover:text-[#625FD0] text-gray-700">
                       {feature.description}
                     </p>
                   </div>
@@ -159,7 +160,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* HOVER OVERLAY */}
-                <div className="absolute inset-0 rounded-2xl bg-[#625FD0]/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 rounded-2xl bg-[#625FD0]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                   <span className="px-4 py-2 bg-[#625FD0] text-white rounded-full text-sm font-medium shadow-md">
                     Explore
                   </span>
@@ -168,6 +169,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
+       
       </div>
     </section>
   );

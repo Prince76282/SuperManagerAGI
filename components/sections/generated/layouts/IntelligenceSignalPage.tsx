@@ -276,7 +276,7 @@ export default function IntelligenceSignalPage({
       
       {/* FAQ ACCORDION */}
       <section className="bg-indigo-100 py-16">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-[1200px] px-6">
           <h2 className="text-3xl  text-center text-slate-800 mb-12">
             Frequently Asked Questions
           </h2>

@@ -1,168 +1,159 @@
+import { readdirSync } from "node:fs";
+import { dirname, join, relative, sep } from "node:path";
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.supermanager.co";
+import { getAllBlogIds } from "@/lib/Dataset/blogData";
+import { guides, insights, managers } from "@/lib/Dataset/contentData";
+import {
+  intelligencePageSlugs,
+  standalonePageSlugs,
+} from "@/lib/Dataset/dropdownRouteContent";
+import { features } from "@/lib/Dataset/features";
+import { HomeData } from "@/lib/Dataset/homedata";
+import { INFRASTRUCTURE_DATA } from "@/lib/Dataset/InfrastructureData";
+import { getAllReportIds } from "@/lib/Dataset/reportData";
+import { WHITEPAPERS } from "@/lib/Dataset/whitepapersData";
+
+const BASE_URL = "https://www.supermanager.co";
+const APP_DIR = join(process.cwd(), "app");
+const PAGE_FILE_PATTERN = /^page\.(js|jsx|ts|tsx)$/;
+const ROUTE_GROUP_PATTERN = /^\(.*\)$/;
+
+function toRoutePath(segments: string[]) {
+  if (segments.length === 0) {
+    return "/";
+  }
+
+  return `/${segments.join("/")}`;
+}
+
+function getStaticRoutes(
+  rootDir: string,
+  currentDir: string = rootDir,
+): string[] {
+  const routes: string[] = [];
+
+  for (const entry of readdirSync(currentDir, { withFileTypes: true })) {
+    const entryPath = join(currentDir, entry.name);
+
+    if (entry.isDirectory()) {
+      routes.push(...getStaticRoutes(rootDir, entryPath));
+      continue;
+    }
+
+    if (!PAGE_FILE_PATTERN.test(entry.name)) {
+      continue;
+    }
+
+    const routeDir = dirname(entryPath);
+    const relativeDir = relative(rootDir, routeDir);
+    const segments =
+      relativeDir === ""
+        ? []
+        : relativeDir
+            .split(sep)
+            .filter(Boolean)
+            .filter((segment) => !ROUTE_GROUP_PATTERN.test(segment));
+
+    if (segments.some((segment) => segment.startsWith("["))) {
+      continue;
+    }
+
+    routes.push(toRoutePath(segments));
+  }
+
+  return routes;
+}
+
+function getHomeDetailRoutes() {
+  return Array.from(
+    new Set([
+      ...HomeData.map(({ id }) => id),
+      ...features.map(({ id }) => id),
+      ...INFRASTRUCTURE_DATA.cards.map(({ id }) => id),
+    ]),
+  ).map((id) => `/home/${id}`);
+}
+
+function getResourceRoutes() {
+  return [...managers, ...guides, ...insights].map(({ id }) => `/resource/${id}`);
+}
+
+function getDynamicRoutes() {
+  const rootStandaloneRoutes = standalonePageSlugs
+    .filter((slug) => slug !== "intelligence")
+    .map((slug) => `/${slug}`);
+
+  const intelligenceRoutes = intelligencePageSlugs.map(
+    (slug) => `/intelligence/${slug}`,
+  );
+  const blogRoutes = getAllBlogIds().map((id) => `/blog/${id}`);
+  const researchReportRoutes = getAllReportIds().map(
+    (id) => `/research-reports/${id}`,
+  );
+  const whitepaperRoutes = WHITEPAPERS.map((paper) => `/white-papers/${paper.id}`);
 
   return [
-    {
-      url: `${base}/`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${base}/aboutus`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/learnmore`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-  
-    {
-      url: `${base}/get-in-touch`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/contactus`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-     {
-      url: `${base}/leadership`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-     {
-      url: `${base}/strategy`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    }, {
-      url: `${base}/execution`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/privacy-policy`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
-    {
-      url: `${base}/analyst-recognition`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/autonomous`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/autonomousagent`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-  
-    {
-      url: `${base}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/customer-stories`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-     {
-      url: `${base}/doc`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-     {
-      url: `${base}/enterprise-integrations`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    }, {
-      url: `${base}/events`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-
-    {
-      url: `${base}/partners`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${base}/platform`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-  
-    {
-      url: `${base}/project-intelligence`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/research-reports`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-     {
-      url: `${base}/resource`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-     {
-      url: `${base}/support`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    }, {
-      url: `${base}/white-papers`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-{
-      url: `${base}/management`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-
-
-  
+    ...rootStandaloneRoutes,
+    ...intelligenceRoutes,
+    ...blogRoutes,
+    ...getResourceRoutes(),
+    ...researchReportRoutes,
+    ...whitepaperRoutes,
+    ...getHomeDetailRoutes(),
   ];
+}
+
+function getPriority(route: string) {
+  if (route === "/") {
+    return 1;
+  }
+
+  const depth = route.split("/").filter(Boolean).length;
+
+  if (depth === 1) {
+    return 0.8;
+  }
+
+  if (depth === 2) {
+    return 0.7;
+  }
+
+  return 0.6;
+}
+
+function getChangeFrequency(
+  route: string,
+): MetadataRoute.Sitemap[number]["changeFrequency"] {
+  const depth = route.split("/").filter(Boolean).length;
+
+  if (route === "/" || depth <= 1) {
+    return "weekly";
+  }
+
+  return "monthly";
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+  const allRoutes = Array.from(
+    new Set([...getStaticRoutes(APP_DIR), ...getDynamicRoutes()]),
+  ).sort((left, right) => {
+    if (left === "/") {
+      return -1;
+    }
+
+    if (right === "/") {
+      return 1;
+    }
+
+    return left.localeCompare(right);
+  });
+
+  return allRoutes.map((route) => ({
+    url: `${BASE_URL}${route}`,
+    lastModified,
+    changeFrequency: getChangeFrequency(route),
+    priority: getPriority(route),
+  }));
 }

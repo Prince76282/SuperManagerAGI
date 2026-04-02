@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/sections/Leadership/Prebuilt AGI Agents"  ],
+, "components/sections/Leadership/Prebuilt AGI Agents", "components/sections/HorizontalScroll/HorizontalScroll.tsx"  ],
   "exclude": ["node_modules"]
 }

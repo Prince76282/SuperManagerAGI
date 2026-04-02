@@ -5,7 +5,7 @@ const DocViews = () => {
     <div className="flex flex-col mt-10 lg:flex-row min-h-screen bg-gray-50">
       <main className="flex-1 px-6 md:px-10 lg:px-16 py-12 max-w-[1200px] mx-auto w-full">
         <div className="mb-12">
-          <span className="text-xs  uppercase tracking-widest text-gray-400">
+          <span className="text-sm font-semibold  uppercase tracking-widest text-[#625FD0]">
             Technical Documentation
           </span>
           <h1 className="text-3xl md:text-5xl  mt-2 text-gray-900">
@@ -17,7 +17,7 @@ const DocViews = () => {
           </p>
         </div>
 
-        <section id="overview" className="mb-20 scroll-mt-8">
+        <section id="overview" className="mb-20 text-[#625FD0] scroll-mt-8">
           <SectionHeading number="1" title="Overview" />
 
           <p className="text-gray-600 leading-relaxed mb-4">
@@ -455,48 +455,7 @@ const DocViews = () => {
             ))}
           </div>
 
-          <div className="bg-gray-900 text-gray-100 rounded-xl p-6">
-            <p className="text-xs  uppercase tracking-widest text-gray-400 mb-4">
-              Quick Start
-            </p>
-            <div className="space-y-3 text-sm font-mono">
-              <p>
-                <span className="text-gray-400">
-                  # Install the SuperManagerAGI CLI
-                </span>
-              </p>
-              <p>
-                <span className="text-green-400">npm</span> install -g
-                @supermanager/cli
-              </p>
-              <p className="pt-2">
-                <span className="text-gray-400">
-                  # Authenticate with your organization
-                </span>
-              </p>
-              <p>
-                <span className="text-green-400">supermanager</span> auth login
-              </p>
-              <p className="pt-2">
-                <span className="text-gray-400">
-                  # Initialize a new project
-                </span>
-              </p>
-              <p>
-                <span className="text-green-400">supermanager</span> init
-                --project my-project
-              </p>
-              <p className="pt-2">
-                <span className="text-gray-400">
-                  # Connect your first integration
-                </span>
-              </p>
-              <p>
-                <span className="text-green-400">supermanager</span> connect
-                jira --workspace my-workspace
-              </p>
-            </div>
-          </div>
+        
         </section>
 
         <section id="api" className="mb-20 scroll-mt-8">
@@ -520,86 +479,7 @@ const DocViews = () => {
             for all connections.
           </p>
 
-          <div className="space-y-3">
-            {[
-              {
-                method: "GET",
-                path: "/v1/projects",
-                desc: "List all active projects with current health scores and summary metrics",
-              },
-              {
-                method: "GET",
-                path: "/v1/projects/:id",
-                desc: "Retrieve full project details including task breakdown, team allocation, and risk assessments",
-              },
-              {
-                method: "POST",
-                path: "/v1/projects",
-                desc: "Create a new project and initialize the AI operational model",
-              },
-              {
-                method: "GET",
-                path: "/v1/projects/:id/risks",
-                desc: "Retrieve current risk assessments with confidence scores and recommended interventions",
-              },
-              {
-                method: "GET",
-                path: "/v1/projects/:id/tasks",
-                desc: "List all tasks with current assignments, statuses, and dependency relationships",
-              },
-              {
-                method: "POST",
-                path: "/v1/tasks/:id/assign",
-                desc: "Manually assign a task to a specific team member, overriding the AI allocation recommendation",
-              },
-              {
-                method: "GET",
-                path: "/v1/teams/:id/capacity",
-                desc: "Retrieve current capacity model including individual availability and workload distribution",
-              },
-              {
-                method: "GET",
-                path: "/v1/insights/briefing",
-                desc: "Generate an on-demand manager briefing for the specified scope and time period",
-              },
-              {
-                method: "GET",
-                path: "/v1/integrations",
-                desc: "List all configured integrations with connection status and last sync timestamps",
-              },
-              {
-                method: "POST",
-                path: "/v1/integrations/:tool/sync",
-                desc: "Trigger a manual data sync for a specific integration",
-              },
-              {
-                method: "GET",
-                path: "/v1/audit-log",
-                desc: "Retrieve audit log entries with filtering by date range, user, and event type",
-              },
-            ].map((endpoint) => (
-              <div
-                key={`${endpoint.method}-${endpoint.path}`}
-                className="flex items-start gap-4 bg-white border border-gray-200 rounded-lg px-5 py-4"
-              >
-                <span
-                  className={`text-xs font-bold shrink-0 px-2 py-1 rounded font-mono ${
-                    endpoint.method === "GET"
-                      ? "bg-blue-50 text-blue-600"
-                      : "bg-green-50 text-green-600"
-                  }`}
-                >
-                  {endpoint.method}
-                </span>
-                <div>
-                  <code className="text-sm text-gray-800 font-mono">
-                    {endpoint.path}
-                  </code>
-                  <p className="text-xs text-gray-500 mt-1">{endpoint.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          
         </section>
 
         <section id="future" className="mb-20 scroll-mt-8">

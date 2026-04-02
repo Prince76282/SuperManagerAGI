@@ -162,7 +162,7 @@ export default function WorkspaceControlPage({
                 className="p-6 rounded-xl border border-black/10 hover:border-[#625FD0] hover:shadow-md transition"
               >
                 <p className=" text-lg">{link.title}</p>
-                <p className="mt-2 text-sm text-black/60">{link.description}</p>
+                <p className="mt-2 text-md text-black/60">{link.description}</p>
               </Link>
             ))}
           </div>

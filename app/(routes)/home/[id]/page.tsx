@@ -71,10 +71,10 @@ function FeatureDetail({ feature }: { feature: Feature }) {
       <section className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
-            <p className="text-sm  uppercase tracking-[0.2em] text-[#625FD0]">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#625FD0]">
               Feature
             </p>
-            <h1 className="text-4xl  tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-3xl lg:text-5xl  tracking-tight text-gray-900 sm:text-5xl">
               {feature.title}
             </h1>
             <p className="text-xl text-gray-600">{feature.tagline}</p>
@@ -99,7 +99,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
               key={stat.label}
               className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
             >
-              <p className="text-3xl  text-gray-900">{stat.value}</p>
+              <p className="text-3xl   text-gray-900">{stat.value}</p>
               <p className="mt-2 text-sm text-gray-600">{stat.label}</p>
             </div>
           ))}
@@ -109,7 +109,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="space-y-6">
-            <h2 className="text-3xl  text-gray-900">Overview</h2>
+            <h2 className="text-3xl lg:text-5xl  text-gray-900">Overview</h2>
             {overviewParagraphs.map((paragraph) => (
               <p key={paragraph} className="text-base leading-8 text-gray-600">
                 {paragraph}
@@ -118,11 +118,11 @@ function FeatureDetail({ feature }: { feature: Feature }) {
           </div>
 
           <div className="rounded-3xl bg-[#F7FAFC] p-8">
-            <h2 className="text-3xl  text-gray-900">Benefits</h2>
+            <h2 className="text-3xl lg:text-5xl  text-gray-900">Benefits</h2>
             <div className="mt-6 space-y-5">
               {feature.benefits.map((benefit) => (
                 <div key={benefit.title}>
-                  <h3 className="text-lg  text-gray-900">{benefit.title}</h3>
+                  <p className="text-lg  text-gray-900">{benefit.title}</p>
                   <p className="mt-2 text-sm leading-7 text-gray-600">
                     {benefit.description}
                   </p>
@@ -133,7 +133,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
         </div>
       </section>
 
-      <section className="bg-[#F8FAFC]">
+      <section className="bg-indigo-100">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="text-3xl  text-gray-900">Use Cases</h2>
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
@@ -142,10 +142,10 @@ function FeatureDetail({ feature }: { feature: Feature }) {
                 key={useCase.role}
                 className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-100"
               >
-                <p className="text-sm  uppercase tracking-[0.16em] text-[#625FD0]">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#625FD0]">
                   {useCase.role}
                 </p>
-                <p className="mt-4 text-lg  text-gray-900">
+                <p className="mt-4  text-lg  text-gray-900">
                   {useCase.scenario}
                 </p>
                 <p className="mt-4 text-sm leading-7 text-gray-600">
@@ -158,14 +158,14 @@ function FeatureDetail({ feature }: { feature: Feature }) {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-3xl  text-gray-900">How It Works</h2>
+        <h2 className="text-3xl lg:text-5xl  text-gray-900">How It Works</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {feature.howItWorks.map((step) => (
             <div
               key={step.step}
               className="rounded-3xl border border-gray-200 p-6 shadow-sm"
             >
-              <p className="text-sm  uppercase tracking-[0.16em] text-[#625FD0]">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#625FD0]">
                 Step {step.step}
               </p>
               <h3 className="mt-3 text-xl  text-gray-900">{step.title}</h3>
@@ -177,13 +177,13 @@ function FeatureDetail({ feature }: { feature: Feature }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 pb-20 sm:px-6 lg:px-8">
-        <h2 className="text-3xl  text-gray-900">FAQ</h2>
+      <section className="mx-auto max-w-[1200px] px-4 pb-20 sm:px-6 lg:px-8">
+        <h2 className="text-3xl lg:text-5xl  text-gray-900">FAQ</h2>
         <div className="mt-8 space-y-4">
           {feature.faq.map((item) => (
             <div key={item.question} className="rounded-3xl bg-[#F7FAFC] p-6">
-              <h3 className="text-lg  text-gray-900">{item.question}</h3>
-              <p className="mt-3 text-sm leading-7 text-gray-600">
+              <p className="text-lg font-semibold text-gray-900">{item.question}</p>
+              <p className="mt-3 text-md leading-7 text-gray-600">
                 {item.answer}
               </p>
             </div>
