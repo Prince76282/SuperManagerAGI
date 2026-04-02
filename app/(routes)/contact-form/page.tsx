@@ -1,47 +1,50 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
-    const formData = new FormData(e.target);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
-      await fetch("https://formsubmit.co/482c6f30a24b979d50aa7f1e5d81c888", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://formsubmit.co/482c6f30a24b979d50aa7f1e5d81c888",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
 
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      form.reset();
       setSubmitted(true);
-      e.target.reset();
-    } catch (err) {
-      alert("❌ Failed to send message");
+    } catch {
+      alert("Failed to send message");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4">
-
-      {/* THANK YOU SCREEN */}
       {submitted ? (
         <div className="w-full max-w-md bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 text-center space-y-4">
-          <div className="text-5xl">🎉</div>
+          <div className="text-5xl">Success</div>
 
-          <h1 className="text-2xl font-bold text-gray-900">
-            Thank You!
-          </h1>
+          <h1 className="text-2xl font-bold text-gray-900">Thank You!</h1>
 
           <p className="text-gray-600">
-            Your message has been sent successfully.  
-            We will contact you soon.
+            Your message has been sent successfully. We will contact you soon.
           </p>
 
           <button
@@ -52,20 +55,14 @@ export default function ContactPage() {
           </button>
         </div>
       ) : (
-
-        /* FORM */
         <div className="w-full max-w-xl bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 space-y-5">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Contact Us
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900">Contact Us</h1>
 
           <p className="text-gray-600">
-            Send us a message and we’ll get back to you.
+            Send us a message and we will get back to you.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-
-            {/* Name */}
             <input
               type="text"
               name="name"
@@ -74,7 +71,6 @@ export default function ContactPage() {
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#625FD0]"
             />
 
-            {/* Phone */}
             <input
               type="tel"
               name="phone"
@@ -83,7 +79,6 @@ export default function ContactPage() {
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#625FD0]"
             />
 
-            {/* Email */}
             <input
               type="email"
               name="email"
@@ -92,25 +87,22 @@ export default function ContactPage() {
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#625FD0]"
             />
 
-            {/* Message */}
             <textarea
               name="message"
               placeholder="Your Message"
-              rows="4"
+              rows={4}
               required
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#625FD0]"
             />
 
-            {/* Hidden config */}
             <input type="hidden" name="_captcha" value="false" />
             <input
               type="hidden"
               name="_subject"
-              value="New Message from Website 🚀"
+              value="New Message from Website"
             />
             <input type="hidden" name="_template" value="table" />
 
-            {/* Button */}
             <button
               type="submit"
               disabled={loading}
