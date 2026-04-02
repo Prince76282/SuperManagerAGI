@@ -52,15 +52,15 @@ export default function AnalystRecognition() {
               <div className="flex flex-col justify-between p-8 lg:p-10">
                 <div className="space-y-5">
                   {/* Badge */}
-                  <span className="inline-flex self-start px-3 py-1 rounded-full text-xs  bg-[#625FD0]/10 text-[#625FD0]">
+                  <span className="inline-flex self-start px-3 py-1 rounded-full text-sm  bg-[#625FD0]/10 text-[#625FD0]">
                     {item.badge}
                   </span>
 
-                  <h3 className="text-xl lg:text-2xl  text-black leading-snug">
+                  <p className="text-xl lg:text-2xl  text-black leading-snug">
                     {item.heading}
-                  </h3>
+                  </p>
 
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 lg:text-md text-sm leading-relaxed">
                     {item.body}
                   </p>
                 </div>

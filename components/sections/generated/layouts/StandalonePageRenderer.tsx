@@ -19,7 +19,9 @@ const PRIMARY = "#625FD0";
 
 function Section({ children }: { children: ReactNode }) {
   return (
-    <section className="mx-auto max-w-[1200px] px-6 py-16">{children}</section>
+    <section className="mx-auto max-w-[1200px] px-4 sm:px-6 py-10 sm:py-16">
+      {children}
+    </section>
   );
 }
 
@@ -33,7 +35,7 @@ function Card({
   return (
     <div
       className={cn(
-        "rounded-3xl border border-gray-200 bg-white p-6 transition hover:shadow-xl",
+        "rounded-3xl border border-gray-200 bg-white p-5 sm:p-6 transition hover:shadow-xl",
         className,
       )}
     >
@@ -47,7 +49,7 @@ function ActionButtons({ page }: { page: DropdownContentPage }) {
     <div className="mt-8 flex flex-wrap gap-4">
       <Link
         href={page.primaryCta.href}
-        className="inline-flex items-center gap-2 rounded-full bg-[#625FD0] px-6 py-3 text-sm  text-white hover:shadow-lg transition"
+        className="inline-flex items-center gap-2 rounded-full bg-[#625FD0] px-6 py-3 text-sm text-white hover:shadow-lg transition"
       >
         {page.primaryCta.label}
         <ArrowRight className="h-4 w-4" />
@@ -56,7 +58,7 @@ function ActionButtons({ page }: { page: DropdownContentPage }) {
       {page.secondaryCta && (
         <Link
           href={page.secondaryCta.href}
-          className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-6 py-3 text-sm  hover:bg-gray-50 transition"
+          className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-6 py-3 text-sm hover:bg-gray-50 transition"
         >
           {page.secondaryCta.label}
         </Link>
@@ -68,24 +70,28 @@ function ActionButtons({ page }: { page: DropdownContentPage }) {
 // 🔹 DATA HUB
 function DataHubLayout({ page }: { page: DropdownContentPage }) {
   return (
-    <div className="min-h-screen min-w-[1200px] bg-white text-black">
+    <div className="min-h-screen w-full py-16 bg-white text-black">
       {/* HERO */}
       <Section>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <span className="text-[#625FD0] text-sm  uppercase">
+            <span className="text-[#625FD0] text-sm uppercase">
               {page.eyebrow}
             </span>
 
-            <h1 className="mt-4 text-5xl  leading-tight">{page.title}</h1>
+            <h1 className="mt-4 text-3xl lg:text-5xl leading-tight">
+              {page.title}
+            </h1>
 
-            <p className="mt-4 text-lg text-gray-600">{page.description}</p>
+            <p className="mt-4 text-base sm:text-lg text-gray-600">
+              {page.description}
+            </p>
 
             <ActionButtons page={page} />
           </div>
 
           <Card>
-            <h3 className="text-xl ">Key Metrics</h3>
+            <h3 className="text-xl">Key Metrics</h3>
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               {page.stats.map((stat) => (
@@ -93,7 +99,7 @@ function DataHubLayout({ page }: { page: DropdownContentPage }) {
                   <p className="text-xs text-[#625FD0] uppercase">
                     {stat.label}
                   </p>
-                  <p className="text-xl  mt-1">{stat.value}</p>
+                  <p className="text-lg sm:text-xl mt-1">{stat.value}</p>
                 </div>
               ))}
             </div>
@@ -103,11 +109,11 @@ function DataHubLayout({ page }: { page: DropdownContentPage }) {
 
       {/* FEATURE CARDS */}
       <Section>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {page.featuredCards?.map((card) => (
             <Card key={card.title}>
-              <p className="text-[#625FD0] text-sm uppercase ">{card.kicker}</p>
-              <p className="mt-2 text-xl ">{card.title}</p>
+              <p className="text-[#625FD0] text-sm uppercase">{card.kicker}</p>
+              <p className="mt-2 text-lg sm:text-xl">{card.title}</p>
               <p className="mt-2 text-gray-600 text-sm">{card.description}</p>
             </Card>
           ))}
@@ -116,11 +122,11 @@ function DataHubLayout({ page }: { page: DropdownContentPage }) {
 
       {/* WORKFLOW */}
       <Section>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {page.workflow.map((step, index) => (
             <Card key={index}>
-              <span className="text-[#625FD0] text-sm ">Step {index + 1}</span>
-              <p className="mt-2 text-xl">{step.title}</p>
+              <span className="text-[#625FD0] text-sm">Step {index + 1}</span>
+              <p className="mt-2 text-lg sm:text-xl">{step.title}</p>
               <p className="text-sm text-gray-600 mt-1">{step.detail}</p>
             </Card>
           ))}
@@ -133,18 +139,22 @@ function DataHubLayout({ page }: { page: DropdownContentPage }) {
 // 🔹 EDITORIAL / CASE STUDY
 function EditorialLayout({ page }: { page: DropdownContentPage }) {
   return (
-    <div className="min-h-screen min-w-[1200px] bg-white text-black">
+    <div className="min-h-screen w-full py-16 bg-white text-black">
       {/* HERO */}
       <Section>
         <Card>
           <div className="flex items-center gap-2 text-[#625FD0]">
-            <Sparkles />
-            <span className="uppercase text-sm ">{page.eyebrow}</span>
+            <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="uppercase text-sm">{page.eyebrow}</span>
           </div>
 
-          <h1 className="mt-4 text-4xl ">{page.title}</h1>
+          <h1 className="mt-4 text-2xl sm:text-3xl lg:text-4xl">
+            {page.title}
+          </h1>
 
-          <p className="mt-4 text-gray-600 max-w-2xl">{page.description}</p>
+          <p className="mt-4 text-gray-600 max-w-2xl text-sm sm:text-base">
+            {page.description}
+          </p>
 
           {/* Highlights */}
           <ul className="mt-6 space-y-2">
@@ -159,11 +169,11 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 
       {/* STATS */}
       <Section>
-        <div className="grid md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {page.stats?.map((stat: any, i: number) => (
             <Card key={i}>
               <p className="text-xs uppercase text-gray-500">{stat.label}</p>
-              <p className="text-lg  mt-2">{stat.value}</p>
+              <p className="text-base sm:text-lg mt-2">{stat.value}</p>
             </Card>
           ))}
         </div>
@@ -171,16 +181,14 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 
       {/* FEATURED CARDS */}
       <Section>
-        <h2 className="text-2xl  mb-6">{page.featuredCardsTitle}</h2>
+        <h2 className="text-xl sm:text-2xl mb-6">{page.featuredCardsTitle}</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {page.featuredCards?.map((card: any, i: number) => (
             <Link key={i} href={card.href}>
               <Card>
-                <p className="text-xs text-[#625FD0] uppercase">
-                  {card.kicker}
-                </p>
-                <p className="mt-2 ">{card.title}</p>
+                <p className="text-xs text-[#625FD0] uppercase">{card.kicker}</p>
+                <p className="mt-2 text-sm sm:text-base">{card.title}</p>
                 <p className="text-sm text-gray-600 mt-2">{card.description}</p>
               </Card>
             </Link>
@@ -190,25 +198,25 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 
       {/* PILLARS */}
       <Section>
-        <h2 className="text-2xl  mb-6">Key Principles</h2>
+        <h2 className="text-xl sm:text-2xl mb-6">Key Principles</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {page.pillars?.map((pillar: any, i: number) => (
             <Card key={i}>
-              <p className="text-xl text-[#625FD0]">{pillar.title}</p>
+              <p className="text-lg sm:text-xl text-[#625FD0]">{pillar.title}</p>
               <p className="text-sm text-gray-600 mt-2">{pillar.description}</p>
             </Card>
           ))}
         </div>
       </Section>
 
-      {/* USE CASES (already you had) */}
+      {/* USE CASES */}
       <Section>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {page.useCases?.map((useCase: any) => (
             <Card key={useCase.scenario}>
               <p className="text-[#625FD0] text-xs uppercase">{useCase.role}</p>
-              <p className="mt-2 ">{useCase.scenario}</p>
+              <p className="mt-2 text-sm sm:text-base">{useCase.scenario}</p>
               <p className="text-sm text-gray-600 mt-1">{useCase.outcome}</p>
             </Card>
           ))}
@@ -217,12 +225,12 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 
       {/* WORKFLOW */}
       <Section>
-        <h2 className="text-2xl  mb-6">How to Apply This</h2>
+        <h2 className="text-xl sm:text-2xl mb-6">How to Apply This</h2>
 
         <div className="space-y-4">
           {page.workflow?.map((step: any, i: number) => (
             <Card key={i}>
-              <p className="text-lg font-semibold text-[#625FD0]">
+              <p className="text-base sm:text-lg font-semibold text-[#625FD0]">
                 {i + 1}. {step.title}
               </p>
               <p className="text-sm text-gray-600 mt-2">{step.detail}</p>
@@ -233,12 +241,14 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 
       {/* FAQ */}
       <Section>
-        <h2 className="text-2xl  mb-6">FAQs</h2>
+        <h2 className="text-xl sm:text-2xl mb-6">FAQs</h2>
 
         <div className="space-y-4">
           {page.faq?.map((item: any, i: number) => (
             <Card key={i}>
-              <p className="text-lg font-semibold text-[#625FD0]">{item.question}</p>
+              <p className="text-base sm:text-lg font-semibold text-[#625FD0]">
+                {item.question}
+              </p>
               <p className="text-sm text-gray-600 mt-2">{item.answer}</p>
             </Card>
           ))}
@@ -247,13 +257,15 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 
       {/* RELATED LINKS */}
       <Section>
-        <h2 className="text-2xl  mb-6">Related</h2>
+        <h2 className="text-xl sm:text-2xl mb-6">Related</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {page.relatedLinks?.map((link: any, i: number) => (
             <Link key={i} href={link.href}>
               <Card>
-                <p className="text-lg font-semibold text-[#625FD0]">{link.title}</p>
+                <p className="text-base sm:text-lg font-semibold text-[#625FD0]">
+                  {link.title}
+                </p>
                 <p className="text-sm text-gray-600 mt-2">{link.description}</p>
               </Card>
             </Link>
@@ -264,21 +276,21 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
       {/* CTA */}
       <Section>
         <Card className="text-center">
-          <p className="text-2xl ">{page.ctaTitle}</p>
-          <p className="text-gray-600 mt-3 max-w-xl mx-auto">
+          <p className="text-xl sm:text-2xl">{page.ctaTitle}</p>
+          <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm sm:text-base">
             {page.ctaDescription}
           </p>
 
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
             <Link href={page.primaryCta.href}>
-              <button className="bg-[#625FD0] text-white px-6 py-2 rounded-lg">
+              <button className="bg-[#625FD0] text-white px-6 py-2 rounded-lg text-sm sm:text-base">
                 {page.primaryCta.label}
               </button>
             </Link>
 
             {page.secondaryCta && (
               <Link href={page.secondaryCta.href}>
-                <button className="border px-6 py-2 rounded-lg">
+                <button className="border px-6 py-2 rounded-lg text-sm sm:text-base">
                   {page.secondaryCta.label}
                 </button>
               </Link>
@@ -293,11 +305,13 @@ function EditorialLayout({ page }: { page: DropdownContentPage }) {
 // 🔹 SIMPLE FALLBACK
 function DefaultLayout({ page }: { page: DropdownContentPage }) {
   return (
-    <div className="min-h-screen min-w-[1200px] bg-white">
+    <div className="min-h-screen w-full bg-white">
       <Section>
-        <h1 className="text-5xl ">{page.title}</h1>
+        <h1 className="text-3xl lg:text-5xl">{page.title}</h1>
 
-        <p className="mt-4 text-gray-600 max-w-2xl">{page.description}</p>
+        <p className="mt-4 text-gray-600 max-w-2xl text-sm sm:text-base">
+          {page.description}
+        </p>
 
         <ActionButtons page={page} />
       </Section>

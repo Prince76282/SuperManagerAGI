@@ -179,14 +179,14 @@ export default function BlogPage() {
 
         <div className="mb-10 grid grid-cols-1 gap-6 sm:mb-14 sm:gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <p className="mb-3 text-xs uppercase tracking-widest text-[#625FD0] sm:text-sm">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#625FD0] sm:text-sm">
               Featured Article
             </p>
             <FeaturedCard featured={featured} />
           </div>
 
           <aside className="sm:mt-10 lg:col-span-2">
-            <p className="mb-3 mt-10 text-xs uppercase tracking-widest text-[#625FD0] sm:text-sm">
+            <p className="mb-3 mt-10 text-sm font-semibold uppercase tracking-widest text-[#625FD0] sm:text-sm">
               Latest Articles
             </p>
 

@@ -15,7 +15,7 @@ export default function ContactPage() {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/482c6f30a24b979d50aa7f1e5d81c888",
+        "https://formsubmit.co/d4b7b222da87bade2682555c1a9d631b",
         {
           method: "POST",
           body: formData,

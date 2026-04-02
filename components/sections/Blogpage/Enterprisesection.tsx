@@ -57,7 +57,7 @@ export default function EnterpriseSection() {
 
           <div className="shrink-0">
             <Link
-              href="/managerplatform"
+              href="/platform"
               className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
             >
               Explore the platform
@@ -79,11 +79,11 @@ export default function EnterpriseSection() {
                 />
               </div>
 
-              <span className="text-lg ml-3  text-black mb-3 tracking-tight font-syne">
+              <span className="text-lg ml-3  text-black mb-3 tracking-tight ">
                 {title}
               </span>
 
-              <p className="text-sm leading-relaxed text-black/50 group-hover:text-black/70 transition-colors duration-300">
+              <p className="text-sm leading-relaxed text-gray-600 group-hover:text-black/70 transition-colors duration-300">
                 {description}
               </p>
 

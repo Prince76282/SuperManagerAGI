@@ -80,7 +80,7 @@ export default function Home() {
 
         {/* Features */}
         <section className="py-12">
-          <h2 className="text-3xl  lg:text-5xl font-bold text-center">Core superpowers</h2>
+          <h2 className="text-3xl  lg:text-5xl  text-center">Core superpowers</h2>
           <p className="text-gray-500 text-center max-w-2xl mx-auto mt-3 mb-12">
             Deep AGI cognition meets real-world execution  every management layer, automated.
           </p>
@@ -114,7 +114,7 @@ export default function Home() {
                 <div className="bg-[#f4f3fe] w-14 h-14 flex items-center justify-center rounded-2xl mb-5 text-[#625FD0]">
                   <feat.icon className="w-7 h-7" />
                 </div>
-                <p className="text-lg font-bold mb-2">{feat.title}</p>
+                <p className="text-lg  mb-2">{feat.title}</p>
                 <p className="text-gray-600">{feat.desc}</p>
               </div>
             ))}
@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* How it works */}
         <section className="py-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-center">How SupermanagerAGI transforms management</h2>
+          <h2 className="text-3xl md:text-5xl  text-center">How SupermanagerAGI transforms management</h2>
           <p className="text-gray-500 text-center max-w-2xl mx-auto mt-3 mb-12">
             No complex setup  AGI adapts to your culture, language, and goals.
           </p>
@@ -134,10 +134,10 @@ export default function Home() {
               { step: '3', title: 'Continuous optimization', desc: 'Real-time feedback loops improve decision accuracy, resource allocation, and team alignment. You supervise at strategic level  AGI handles the rest.' },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="bg-[#625FD0] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="bg-[#625FD0] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl  mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <h3 className="text-xl  mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
@@ -146,7 +146,7 @@ export default function Home() {
 
         {/* Detailed description block */}
         <section className="my-12 bg-[#FEFCF5] rounded-3xl p-6 md:p-10 border-l-8 border-[#625FD0]">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">Beyond traditional AI assistants</h3>
+          <h3 className="text-2xl md:text-3xl  mb-3">Beyond traditional AI assistants</h3>
           <p className="text-gray-700 text-lg mb-3">
             Unlike rule-based automation or narrow AI copilots, SupermanagerAGI leverages recursive reasoning, long-term memory, and meta-cognition. It doesn't just schedule meetings  it rethinks entire project roadmaps, reallocates budgets, and negotiates cross-department dependencies. Built on a novel multi-agent architecture, it mirrors the cognitive flexibility of a top-tier executive but operates 24/7 at machine speed.
           </p>
@@ -157,18 +157,18 @@ export default function Home() {
 
         {/* FAQ Accordion */}
         <section className="py-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">Frequently asked questions</h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mt-3 mb-10">
+          <h2 className="text-3xl md:text-4xl  text-center">Frequently asked questions</h2>
+          <p className="text-gray-500 text-lg text-center max-w-6xl mx-auto mt-3 mb-10">
             Everything you need to know about SupermanagerAGI
           </p>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {faqs.map((faq, idx) => (
               <div key={idx} className="border-b border-gray-200 last:border-0">
                 <button
                   onClick={() => toggleFaq(idx)}
                   className="flex justify-between items-center w-full py-5 text-left font-semibold text-gray-800 hover:text-[#625FD0] transition"
                 >
-                  <span>{faq.q}</span>
+                  <span className='text-lg'>{faq.q}</span>
                   <PlusCircle
                     className={`w-5 h-5 text-[#625FD0] transition-transform duration-200 ${
                       openFaq === idx ? 'rotate-45' : ''

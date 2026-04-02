@@ -34,7 +34,8 @@ export default function HeroSection() {
       if (!isHovered) {
         container.scrollLeft += speed;
 
-        if (container.scrollLeft >= container.scrollWidth / 2) {
+        // FIX 4: subtract 1 to handle floating-point imprecision
+        if (container.scrollLeft >= container.scrollWidth / 2 - 1) {
           container.scrollLeft = 0;
         }
       }
@@ -93,7 +94,7 @@ export default function HeroSection() {
               <Link
                 href="https://app.supermanager.co/login"
                 target="_blank"
-                className="rounded-lg bg-[#625FD0] text-white px-4 py-2 "
+                className="rounded-lg bg-[#625FD0] text-white px-4 py-2"
               >
                 OPEN APP
               </Link>
@@ -103,7 +104,7 @@ export default function HeroSection() {
 
         {/* TRUSTED BY */}
         <div className="mx-auto max-w-[1100px] px-5 pb-14 text-center">
-          <h1 className="mb-4 text-xl md:text-2xl font-bold">
+          <h1 className="mb-4 text-2xl md:text-4xl ">
             Trusted by 100+ Leading Companies
           </h1>
 
@@ -125,26 +126,28 @@ export default function HeroSection() {
         </div>
 
         {/* FEATURES */}
- <div className="relative" >
-        
+        <div className="relative">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10" />
 
+          {/* FIX 2: removed snap-x snap-mandatory */}
           <div
             ref={scrollRef}
-            className="mx-auto max-w-[1200px] px-4 pb-20 flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+            className="mx-auto max-w-[1200px] px-4 pb-20 flex gap-6 overflow-x-auto scrollbar-hide"
           >
-            {[...features].map((feature, index) => (
+            {/* FIX 1: duplicated features for seamless infinite loop */}
+            {[...features, ...features].map((feature, index) => (
               <Link
                 key={index}
                 href={feature.href}
-                className="group relative snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] rounded-2xl bg-white/10 backdrop-blur-md border border-gray-300/40 text-black transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                // FIX 3: removed snap-start
+                className="group relative flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] rounded-2xl bg-white/10 backdrop-blur-md border border-gray-300/40 text-black transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
               >
                 {/* CONTENT */}
                 <div className="flex h-full flex-col">
                   <div className="p-6 flex-1">
-                    <h3 className="text-lg  mb-3">{feature.title}</h3>
-                    <p className="text-sm group-hover:text-[#625FD0] text-gray-700">
+                    <h3 className="text-2xl mb-3">{feature.title}</h3>
+                    <p className="text-md group-hover:text-[#625FD0] text-gray-700">
                       {feature.description}
                     </p>
                   </div>
@@ -169,7 +172,6 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-       
       </div>
     </section>
   );

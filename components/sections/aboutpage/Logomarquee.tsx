@@ -21,7 +21,7 @@ export default function LogoMarqueeSection() {
   return (
     <div className="mx-auto max-w-[1100px] px-5 pb-14 text-center py-16">
       {/* 🤝 Title */}
-      <h1 className="mb-4 text-black text-lg md:text-2xl ">
+      <h1 className="mb-4 text-black text-3xl md:text-5xl ">
         Trusted by 100+ Leading Companies
       </h1>
 
@@ -39,7 +39,7 @@ export default function LogoMarqueeSection() {
                 alt={company.name}
                 width={140}
                 height={80}
-                className="h-[80px] md:h-[100px] w-auto object-contain opacity-80 hover:opacity-100 transition"
+                className="h-[80px] md:h-[100px] w-auto object-contain  hover:opacity-100 transition"
               />
             </div>
           ))}

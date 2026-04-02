@@ -8,7 +8,7 @@ const ContactPage = () => {
   const [calLoaded, setCalLoaded] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#F4F3FC] px-4 py-16 sm:py-24">
+    <div className="min-h-screen bg-[#F4F3FC] px-4 py-20 sm:py-24">
       <div className="max-w-[1200px] mx-auto">
 
         {/* Header */}

@@ -74,7 +74,7 @@ export default function HomePage() {
           >
             <div className="relative aspect-3/2 overflow-hidden rounded-2xl shadow-[0_30px_90px_rgba(0,0,0,0.15)]">
               <Image
-                src="/Image/World'sFirst/Depositphotos_212163096_S.jpg"
+                src="/Image/World'sFirst/image3.webp"
                 alt="SuperManagerAGI autonomous enterprise platform visualization"
                 fill
                 priority

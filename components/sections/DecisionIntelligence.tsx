@@ -70,7 +70,7 @@ const DecisionIntelligence = () => {
                   key={card.id}
                   className="bg-white rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
                 >
-                  <h3 className="text-base sm:text-lg lg:text-xl  text-gray-900 mb-3">
+                  <h3 className="text-xl sm:text-lg lg:text-2xl  text-gray-900 mb-3">
                     {card.title}
                   </h3>
 

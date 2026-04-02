@@ -157,7 +157,7 @@ const ProjectManagementPlatform = () => {
                       className={`whitespace-nowrap text-left md:text-center px-4 py-3 rounded-xl md:rounded-2xl text-sm md:text-base transition-all duration-200 ${
                         activeTab === tab.id
                           ? "bg-[#625FD0] text-white font-medium shadow-md"
-                          : "text-gray-900 hover:text-white border-2 border-black/10 hover:bg-[#625FD0] hover:border-[#625FD0] bg-white"
+                          : "text-[#625FD0] font-semibold hover:text-white border-2 border-[#625FD0] hover:bg-[#625FD0] hover:border-[#625FD0] bg-white"
                       }`}
                     >
                       {tab.label}

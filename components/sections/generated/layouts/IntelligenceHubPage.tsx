@@ -228,7 +228,7 @@ export default function IntelligenceHubPage({ page }: IntelligenceHubPageProps) 
           <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-[#625FD0]" />
-              <h2 className="text-2xl font-semibold text-gray-800">Explore More</h2>
+              <h2 className="text-3xl lg:text-5xl font-semibold text-gray-800">Explore More</h2>
             </div>
             <div className="mt-8 grid md:grid-cols-3 gap-6">
               {page.relatedLinks.map((link, idx) => (

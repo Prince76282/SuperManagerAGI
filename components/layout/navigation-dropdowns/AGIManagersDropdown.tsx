@@ -55,10 +55,10 @@ export default function AGIManagersDropdown({ onClose }: DropdownProps) {
   const handleClose = () => onClose?.();
 
   return (
-    <div className="absolute left-0 top-full z-50 w-full dropdown-open md:mt-2 lg:left-1/2 lg:ml-74 lg:w-screen lg:max-w-322.5 lg:-translate-x-1/2">
-      <div className="max-h-[90vh] overflow-y-auto p-4 scrollbar-hide sm:p-6 lg:p-8">
-        <div className="mb-25 grid grid-cols-1 gap-5 lg:grid-cols-3">
-          <div className="space-y-4 rounded-2xl bg-white p-6 lg:col-span-2">
+    <div className="absolute  left-0 top-full z-50 w-full dropdown-open md:mt-2 lg:left-1/2 lg:ml-74 lg:w-screen lg:max-w-322.5 lg:-translate-x-1/2">
+      <div className="max-h-[90vh]   overflow-y-auto p-4 scrollbar-hide sm:p-6 lg:p-8">
+        <div className="mb-25 grid   grid-cols-1 gap-5 lg:grid-cols-3">
+          <div className="space-y-4  rounded-2xl bg-white p-6 lg:col-span-2">
             {agiManagersDropdownData.sections.map((section) => (
               <div
                 key={section.href}

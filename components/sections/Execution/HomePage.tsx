@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AGIHeroSection() {
   return (
-    <section className="py-24 md:py-24 lg:py-32 bg-white transition-colors">
+    <section className=" py-24 lg:py-32 bg-white transition-colors">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           {/* Hero Content */}

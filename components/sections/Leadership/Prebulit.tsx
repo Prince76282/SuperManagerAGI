@@ -161,8 +161,8 @@ export default function PrebuiltAGIPage() {
           </div>
 
           {/* RIGHT DEMO PANEL */}
-          <div className="rounded-2xl bg-gradient-to-br from-indigo-200 to-purple-200 p-6 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-md p-6 w-full max-w-sm space-y-4">
+          <div className="rounded-2xl border-2 border-[#625FD0]/50 flex items-center justify-center">
+            <div className="bg-white rounded-xl p-2 shadow-md w-full max-w-sm space-y-4">
               <DemoBubble side="left">
                 Strategy AGI has identified a revenue growth opportunity in Q3.
               </DemoBubble>

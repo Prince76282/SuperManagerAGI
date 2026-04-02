@@ -156,11 +156,11 @@ export default function EnterpriseFeatures() {
               <button
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
-                className={`px-4 py-2 text-sm font-medium rounded-lg uppercase transition-all duration-300 whitespace-nowrap
+                className={`px-4 py-2 text-sm font-medium rounded-2xl uppercase transition-all duration-300 whitespace-nowrap
                 ${
                   active === tab.id
                     ? "bg-[#625FD0] text-white shadow-md"
-                    : "bg-white border border-gray-200 hover:bg-[#625FD0] hover:text-white hover:shadow-sm"
+                    : "bg-white border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white hover:shadow-sm"
                 }`}
               >
                 {tab.label}

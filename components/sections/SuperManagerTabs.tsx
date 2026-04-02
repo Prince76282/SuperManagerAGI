@@ -23,7 +23,7 @@ export default function SuperManagerTabs() {
                   className={`shrink-0 px-4 py-2 text-xs sm:text-sm rounded-full uppercase transition whitespace-nowrap ${
                     activeTab === index
                       ? "bg-[#625FD0] text-white shadow-md"
-                      : "bg-white border hover:bg-[#625FD0] hover:text-white"
+                      : "bg-white text-[#625FD0] font-semibold border-2 border-[#625FD0] hover:bg-[#625FD0] hover:text-white"
                   }`}
                 >
                   {tab.text}

@@ -17,7 +17,7 @@ export default function HeroSection() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-[1.1] tracking-tight mb-6">
           Enterprise-Grade Autonomous AI
           <br />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#625FD0] to-[#8A84FF] px-2">
+          <span className="bg-clip-text   text-[#625FD0] px-2">
             Powered by SuperManagerAGI
           </span>
         </h1>

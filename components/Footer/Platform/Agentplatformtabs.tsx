@@ -79,11 +79,11 @@ export default function AgentPlatformTabs() {
               <button
                 key={tab.label}
                 onClick={() => setActiveIndex(i)}
-                className={`text-left px-4 py-2.5 rounded-lg text-xs sm:text-sm md:text-base font-medium transition whitespace-nowrap
+                className={`text-left px-4 py-2.5 rounded-2xl text-sm sm:text-sm md:text-base font-medium transition whitespace-nowrap
                 ${
                   activeIndex === i
                     ? "bg-[#625FD0] text-white shadow"
-                    : "text-gray-600 hover:bg-gray-100"
+                    : "text-[#625FD0] border-2 border-[#625FD0] hover:bg-gray-100"
                 }`}
               >
                 {tab.label}
@@ -95,9 +95,9 @@ export default function AgentPlatformTabs() {
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
             {/* TEXT */}
             <div>
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-black mb-3">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  text-black mb-3">
                 {active.heading}
-              </h3>
+              </p>
 
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-5">
                 {active.body}

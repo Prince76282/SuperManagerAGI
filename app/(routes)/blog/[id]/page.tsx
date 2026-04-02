@@ -3,6 +3,7 @@ import {
   getBlogPostById,
   normalizeBlogImagePath,
 } from "@/lib/Dataset/blogData";
+import { ArrowBigDown, ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -29,13 +30,13 @@ export default async function BlogPostPage({ params }: PageProps) {
   const tags = post.tag ?? [];
 
   return (
-    <article className="bg-[#F5F4FF] py-20 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <article className="bg-[#EEF2FF] py-20 sm:py-20">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <Link
           href="/blog"
-          className="inline-flex items-center text-sm font-medium text-[#625FD0] transition hover:text-[#4e4bb3]"
+          className="inline-flex items-center text-md font-semibold text-[#625FD0] transition hover:text-[#625FD0]"
         >
-          Back to blog
+          <ArrowLeft /> Back to blog
         </Link>
 
         <div className="mt-6 overflow-hidden rounded-[32px] bg-white p-6 shadow-md sm:p-8 lg:p-10">
@@ -44,7 +45,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-[#F5F4FF] px-3 py-1 text-xs  uppercase tracking-wide text-[#625FD0]"
+                  className="rounded-full bg-[#EEF2FF] px-3 py-1 text-sm uppercase tracking-wide text-[#625FD0]"
                 >
                   {tag}
                 </span>

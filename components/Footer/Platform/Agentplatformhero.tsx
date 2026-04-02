@@ -165,7 +165,7 @@ function InfoBlock({ title, items }: InfoBlockProps) {
 // --- Main Component ---
 export default function PlatformOverview() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-20">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mb-16">

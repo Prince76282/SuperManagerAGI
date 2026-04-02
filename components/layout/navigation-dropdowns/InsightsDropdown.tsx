@@ -17,7 +17,7 @@ export default function InsightsDropdown({ onClose }: InsightsDropdownProps) {
     <div className="absolute left-0 top-full z-50 mt-2 w-full dropdown-open lg:left-1/2 lg:ml-14 lg:w-screen lg:max-w-322.5 lg:-translate-x-1/2">
       <div className="mr-3 max-h-[90vh] overflow-y-auto p-4 scrollbar-hide sm:p-6 lg:p-8">
         <div className="mb-25 grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="space-y-6 rounded-2xl bg-white p-4 sm:p-6">
+          <div className="space-y-6  rounded-2xl bg-white p-4 sm:p-6">
             <div>
               <h4 className="mb-2 text-md text-[#625FD0]">LEARN & RESOURCES</h4>
 

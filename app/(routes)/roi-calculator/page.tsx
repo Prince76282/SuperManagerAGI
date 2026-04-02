@@ -164,7 +164,7 @@ export default function ROICalculatorPage() {
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   return (
     <div className="bg-white text-black min-h-screen">
-      <div className="max-w-[1200px] mx-auto px-6 py-16">
+      <div className="max-w-[1200px] mx-auto px-6 py-20">
         {/* HERO */}
         <section className="text-center mb-20">
           <p className="text-[#625FD0]  uppercase tracking-wide">

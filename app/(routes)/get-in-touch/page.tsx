@@ -6,7 +6,7 @@ export default function DemoSection() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <main className="min-h-screen bg-[#F4F3FC] px-4 sm:px-6 py-16 sm:py-24">
+    <main className="min-h-screen bg-[#F4F3FC] px-4 sm:px-6 py-20 ">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
         {/* LEFT CONTENT */}
@@ -22,7 +22,6 @@ export default function DemoSection() {
 
           <h1
             className="text-[clamp(28px,3.5vw,46px)]  leading-[1.2] tracking-tight text-[#1C1A3A] mb-6"
-          
           >
             See Autonomous Project Management Running on{" "}
             <span className="text-[#625FD0]">Your Real Projects</span>
@@ -64,7 +63,7 @@ export default function DemoSection() {
                 <Link
                   key={href}
                   href={href}
-                  target="_blank"
+              
                   className="font-medium text-[#625FD0] underline underline-offset-2 decoration-[#625FD0]/40 hover:decoration-[#625FD0] transition-all"
                 >
                   {label}
@@ -97,7 +96,7 @@ export default function DemoSection() {
             />
           </div>
 
-          {/* Trust note */}
+          
           <p className="mt-4 text-center text-xs text-[#9C9AB8]">
             🔒 Secure scheduling powered by Calendly · Usually responds within 24h
           </p>
