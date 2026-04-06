@@ -9,8 +9,8 @@ export default function Home() {
       {/* NAV */}
       <nav className="navbar">
         <div className="logo">
-          <Image src="/image/logo1.png" alt="SuperManager AGI Symbol" className="logo-symbol" width={36} height={36} />
-          <Image src="/image/logo.png" alt="SuperManager AGI Logo" className="logo-text" width={160} height={50} style={{ height: '50px', width: 'auto' }} />
+          <Image src="/Image/logo1.png" alt="SuperManager AGI Symbol" className="logo-symbol" width={36} height={36} />
+          <Image src="/Image/logo.png" alt="SuperManager AGI Logo" className="logo-text" width={160} height={50} style={{ height: '50px', width: 'auto' }} />
         </div>
         <span className="nav-badge">AI Super Autonomous Agent</span>
       </nav>
@@ -298,7 +298,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="f-logo">
-          <Image src="/image/logo1.png" alt="SuperManager AGI Logo" className="footer-logo" width={28} height={28} style={{ height: '28px', width: 'auto' }} />
+          <Image src="/Image/logo1.png" alt="SuperManager AGI Logo" className="footer-logo" width={28} height={28} style={{ height: '28px', width: 'auto' }} />
           <span>SuperManager AGI</span>
         </div>
         <div className="f-links">
