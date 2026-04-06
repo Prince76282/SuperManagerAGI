@@ -113,7 +113,7 @@ export default function SuperManagerSection() {
           
           {/* ── LEFT COLUMN ── */}
           <div className="lg:sticky lg:top-24 space-y-5 sm:space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-semibold leading-[1.2] tracking-[-0.02em]">
+            <h1 className="text-3xl lg:text-5xl lg:text-[2.5rem]  leading-[1.2] tracking-[-0.02em]">
               The World's First AI Vibe Working Platform
             </h1>
 

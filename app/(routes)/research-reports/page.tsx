@@ -73,7 +73,7 @@ export default function AIResearchReports() {
         </p>
         <h1 className="text-3xl sm:text-3xl lg:text-5xl text-black leading-tight">
           SuperManager AGI{" "}
-          <span className="text-[#625FD0]">Research Reports</span>
+          <span className="text-[#625FD0] font-semibold">Research Reports</span>
         </h1>
         <p className="text-gray-500 mt-4 max-w-2xl text-sm sm:text-base">
           Deep research on AI operations, workflow automation, productivity, and
@@ -101,7 +101,7 @@ export default function AIResearchReports() {
                     className="object-contain"
                   />
                 )}
-                <span className="text-[11px]  tracking-widest uppercase text-[#625FD0] bg-[#625FD0]/8 px-3 py-1 rounded-full border border-[#625FD0]/20">
+                <span className="text-[11px] font-semibold  tracking-widest uppercase text-[#625FD0] bg-[#625FD0]/8 px-3 py-1 rounded-full border border-[#625FD0]/20">
                   {featuredReport.category}
                 </span>
               </div>
@@ -208,7 +208,7 @@ export default function AIResearchReports() {
 
 
     </div>
-   <PdfViewer pdfPath="/pdf/page.pdf" title="User Manual" height="700px" />
+   <PdfViewer pdfPath="/pdf/page.pdf" title="Research Reports" height="700px" />
     </>
   );
 }
