@@ -47,7 +47,7 @@ export default function CustomerSuccessSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between gap-10 mb-16">
           <div className="flex flex-col gap-4 max-w-xl">
-            <span className="text-xs uppercase text-[#625FD0] bg-indigo-50 px-3 py-1 rounded-full w-fit">
+            <span className="text-sm font-semibold uppercase text-[#625FD0] bg-indigo-50 px-3 py-1 rounded-full w-fit">
               Customer Success
             </span>
 

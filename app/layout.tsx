@@ -4,8 +4,9 @@ import './globals.css';
 import AppShell from '@/components/layout/AppShell';
 
 export const metadata: Metadata = {
-  title: 'SuperManager AGI',
-  description: 'Transform enterprise management with Autonomous General Intelligence',
+  title: 'SuperManager AI',
+  description: 'Where AI Meets Vibe Working',
+  robots: 'index, follow',
 };
 
 export default function RootLayout({

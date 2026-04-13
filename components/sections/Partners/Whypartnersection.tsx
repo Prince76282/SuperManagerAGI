@@ -60,7 +60,7 @@ export default function WhyPartnerSection() {
                 key={i}
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
-                className="relative group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="relative group rounded-2xl border-2 border-gray-200 hover:border-[#625FD0] bg-white p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 {/* Gradient Overlay */}
                 <div
@@ -96,11 +96,11 @@ export default function WhyPartnerSection() {
                   {item.description}
                 </p>
 
-                <div
+                {/* <div
                   className={`absolute bottom-0 left-0 h-[2px] bg-[#625FD0] transition-all duration-500 ${
                     isHovered ? "w-full" : "w-0"
                   }`}
-                />
+                /> */}
               </div>
             );
           })}

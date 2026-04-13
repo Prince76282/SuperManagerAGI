@@ -4,7 +4,7 @@ import WorkspaceControlPage from "@/components/sections/generated/layouts/Worksp
 import { platformWorkspacePage } from "@/lib/Dataset/dropdownRouteContent";
 
 export const metadata: Metadata = {
-  title: `${platformWorkspacePage.title} | SuperManager AGI`,
+  title: `${platformWorkspacePage.title} | SuperManager AI`,
   description: platformWorkspacePage.description,
 };
 

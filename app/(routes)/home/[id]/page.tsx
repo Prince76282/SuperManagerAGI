@@ -203,7 +203,7 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
       <section className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-6">
-            <p className="text-sm  uppercase tracking-[0.2em] text-[#625FD0]">
+            <p className="text-sm  font-semibold uppercase tracking-[0.2em] text-[#625FD0]">
               Enterprise Infrastructure
             </p>
             <h1 className="text-4xl  tracking-tight text-gray-900 sm:text-5xl">

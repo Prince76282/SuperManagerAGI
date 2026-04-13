@@ -27,12 +27,12 @@ const team: Member[] = [
     photo: "/Image/about/Aditya.jpg",
     linkedin: "https://www.linkedin.com/in/aditya5harma/",
   },
-  {
-    name: "Satish Ramanan ",
-    role: " CBO ",
-    photo: "/Image/about/Satish.jpg",
-    linkedin: "https://www.linkedin.com/in/satishramanan/",
-  },
+  // {
+  //   name: "Satish Ramanan ",
+  //   role: " CBO ",
+  //   photo: "/Image/about/Satish.jpg",
+  //   linkedin: "https://www.linkedin.com/in/satishramanan/",
+  // },
   {
     name: "Robert perry",
     role: "Partner",

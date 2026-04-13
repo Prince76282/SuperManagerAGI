@@ -12,7 +12,7 @@ export const tabs = [
     description:
       "AI agents handle CRM updates, reporting, support workflows, hiring coordination, vendor follow-ups, and finance trackingenabling startups to scale operations without increasing team size.",
     footer: "Manage 10× more operational complexity with the same team",
-    image: "/Image/World'sFirst/PLAN.jpg",
+   image: "/Image/World'sFirst/image3.webp",
   },
   {
     id: "d2c",

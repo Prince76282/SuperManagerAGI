@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { useEffect, useRef } from "react";
 import { features } from "@/lib/Dataset/features";
+import { ArrowUpRight } from "lucide-react";
 
 const companies = [
   { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 120 },
@@ -136,17 +137,25 @@ export default function HeroSection() {
             className="mx-auto max-w-[1200px] px-4 pb-20 flex gap-6 overflow-x-auto scrollbar-hide"
           >
             {/* FIX 1: duplicated features for seamless infinite loop */}
-            {[...features, ...features].map((feature, index) => (
+            {[...features].map((feature, index) => (
               <Link
                 key={index}
                 href={feature.href}
                 // FIX 3: removed snap-start
-                className="group relative flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[32%] rounded-2xl bg-white/10 backdrop-blur-md border border-gray-300/40 text-black transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                className="group relative flex-shrink-0 mt-2 w-[85%] sm:w-[48%] lg:w-[32%] rounded-2xl bg-white/10 backdrop-blur-md border border-gray-300/40 text-black transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                style={{ height: "500px" }}
               >
                 {/* CONTENT */}
                 <div className="flex h-full flex-col">
                   <div className="p-6 flex-1">
-                    <h3 className="text-2xl mb-3">{feature.title}</h3>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xl font-medium mb-2 leading-snug">
+                        {feature.title}
+                      </h3>
+                      <span className="px-1.5 py-1.5 hover:bg-[#625FD0] text-[#625FD0] hover:text-white rounded-full text-sm font-medium transition-colors">
+                        <ArrowUpRight size={18} />
+                      </span>
+                    </div>
                     <p className="text-md group-hover:text-[#625FD0] text-gray-700">
                       {feature.description}
                     </p>
@@ -157,16 +166,9 @@ export default function HeroSection() {
                       src={feature.image}
                       alt={feature.title}
                       fill
-                      className="object-contain transition-transform duration-500 group-hover:scale-110 p-2"
+                      className="object-contain transition-transform duration-500 group-hover:scale-105 p-2"
                     />
                   </div>
-                </div>
-
-                {/* HOVER OVERLAY */}
-                <div className="absolute inset-0 rounded-2xl bg-[#625FD0]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <span className="px-4 py-2 bg-[#625FD0] text-white rounded-full text-sm font-medium shadow-md">
-                    Explore
-                  </span>
                 </div>
               </Link>
             ))}

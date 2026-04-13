@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Terms of Service | SuperManager AGI",
+  title: "Terms of Service | SuperManager AI",
   description:
-    "Our terms of service outline the rules and regulations for using SuperManager AGI.",
+    "Our terms of service outline the rules and regulations for using SuperManager AI.",
 };
 
 export default function TermsOfService() {

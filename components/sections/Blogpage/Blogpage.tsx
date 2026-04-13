@@ -41,7 +41,7 @@ function FeaturedCard({ featured }: { featured: Featured }) {
           sizes="(max-width: 1024px) 100vw, 60vw"
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
         <div className="absolute left-4 top-4">
           <Tag label={featured.tag?.[0]} />
         </div>
@@ -56,6 +56,10 @@ function FeaturedCard({ featured }: { featured: Featured }) {
           {featured.desc}
         </p>
 
+        <p className="line-clamp-2 text-sm text-gray-700 sm:line-clamp-3">
+          {featured.intro}
+        </p>
+
         <div className="mt-auto flex items-center justify-between pt-2">
           <div className="flex flex-wrap items-center gap-2 text-xs text-gray-400 sm:gap-3">
             <span>{featured.date}</span>
@@ -66,7 +70,7 @@ function FeaturedCard({ featured }: { featured: Featured }) {
             </span>
           </div>
 
-          <span className="flex shrink-0 items-center gap-1 text-xs  text-[#625FD0] opacity-0 transition group-hover:opacity-100">
+          <span className="flex shrink-0 items-center gap-1 text-xs text-[#625FD0] opacity-0 transition group-hover:opacity-100">
             Read <ArrowUpRight size={13} />
           </span>
         </div>
@@ -81,7 +85,7 @@ function LatestCard({ post }: { post: Latest }) {
   return (
     <Link
       href={`/blog/${post.id}`}
-      className="group flex min-h-[60px] flex-row items-start gap-3 rounded-lg p-3 transition hover:bg-violet-50 lg:flex-row"
+      className="group flex min-h-15 flex-row items-start gap-3 rounded-lg p-3 transition hover:bg-violet-50 lg:flex-row"
     >
       <div className="relative h-20 w-16 shrink-0 overflow-hidden rounded-xl sm:h-16 sm:w-20">
         <Image
@@ -123,7 +127,7 @@ function ArticleCard({ post }: { post: Articles }) {
           sizes="(max-width: 1024px) 100vw, 33vw"
           className="h-full w-full object-cover transition group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
         <div className="absolute left-3 top-3">
           <Tag label={post.tag?.[0]} />
         </div>
@@ -157,13 +161,17 @@ function ArticleCard({ post }: { post: Articles }) {
 
 export default function BlogPage() {
   const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleLatestCount, setVisibleLatestCount] = useState(4);
 
   const visible = articles.slice(0, visibleCount);
   const hasMore = visibleCount < articles.length;
 
+  const visibleLatest = latest.slice(0, visibleLatestCount);
+  const hasMoreLatest = visibleLatestCount < latest.length;
+
   return (
     <section className="min-h-screen bg-[#F5F4FF] py-24 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-300 px-4 sm:px-6 lg:px-8">
         <div className="mb-8 sm:mb-10 lg:mb-12">
           <h1 className="text-2xl leading-tight text-gray-950 sm:text-3xl lg:text-5xl">
             Vibe Working Platform Blog
@@ -191,9 +199,20 @@ export default function BlogPage() {
             </p>
 
             <div className="flex flex-col overflow-hidden rounded-lg bg-white shadow-md">
-              {latest.map((post) => (
+              {visibleLatest.map((post) => (
                 <LatestCard key={post.id} post={post} />
               ))}
+
+              {hasMoreLatest && (
+                <div className="flex justify-center px-3 py-3 border-t border-gray-100">
+                  <button
+                    onClick={() => setVisibleLatestCount((c) => c + 4)}
+                    className="flex items-center gap-2 rounded-full bg-[#625FD0] px-5 py-2 text-xs text-white transition hover:bg-[#6e6af7] active:scale-95"
+                  >
+                    Show more <Plus size={12} />
+                  </button>
+                </div>
+              )}
             </div>
           </aside>
         </div>
@@ -215,7 +234,7 @@ export default function BlogPage() {
             <div className="mt-8 flex justify-center sm:mt-12">
               <button
                 onClick={() => setVisibleCount((count) => count + 6)}
-                className="flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm  text-white transition hover:bg-violet-700 active:scale-95 sm:px-7"
+                className="flex items-center gap-2 rounded-full bg-[#625FD0] px-6 py-3 text-sm text-white transition hover:bg-[#625FD0] active:scale-95 sm:px-7"
               >
                 Show more <Plus size={14} />
               </button>

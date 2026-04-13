@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <h1>One AI that runs<br />your <em>entire business.</em><br />Just ask.</h1>
           <p className="hero-sub">
-            Connect every app you use — shipping, payments, WhatsApp, email, store, analytics.
+            Connect every app you use shipping, payments, WhatsApp, email, store, analytics.
             Tell SuperManager AGI what you need. It gets it done.
           </p>
           <div className="metrics">
@@ -53,12 +53,12 @@ export default function Home() {
       <section>
         <div className="sec-chip">How It Works</div>
         <h2 className="sec-title">Connect. Prompt. <em>Done.</em></h2>
-        <p className="sec-desc">SuperManager sits on top of your existing tools and lets one AI run everything — in plain language.</p>
+        <p className="sec-desc">SuperManager sits on top of your existing tools and lets one AI run everything in plain language.</p>
         <div className="steps">
           <div className="step">
             <div className="step-num">01</div>
             <h3>Connect Your Apps</h3>
-            <p>One-click integrations with Shiprocket, Delhivery, Razorpay, WhatsApp, email, Meta Ads, Shopify, and more. Your stack — now AI-powered.</p>
+            <p>One-click integrations with Shiprocket, Delhivery, Razorpay, WhatsApp, email, Meta Ads, Shopify, and more. Your stack now AI-powered.</p>
           </div>
           <div className="step">
             <div className="step-num">02</div>
@@ -77,14 +77,14 @@ export default function Home() {
       <section>
         <div className="sec-chip">What You Can Do</div>
         <h2 className="sec-title">One AI. <em>Every job.</em></h2>
-        <p className="sec-desc">From logistics to campaigns — all from a single prompt. No dashboards. No manual ops. No switching tabs.</p>
+        <p className="sec-desc">From logistics to campaigns all from a single prompt. No dashboards. No manual ops. No switching tabs.</p>
         <div className="use-grid">
           <div className="use-card">
             <div className="use-card-top">
               <div className="use-icon">📦</div>
               <h3>Order &amp; Delivery</h3>
             </div>
-            <p>Auto-create shipments, pick the best courier, sync real-time tracking, and fix failed deliveries — all hands-free.</p>
+            <p>Auto-create shipments, pick the best courier, sync real-time tracking, and fix failed deliveries all hands-free.</p>
             <div className="prompt">Show all orders stuck 3+ days and message customers</div>
           </div>
           <div className="use-card">
@@ -100,7 +100,7 @@ export default function Home() {
               <div className="use-icon">📣</div>
               <h3>Marketing &amp; CRM</h3>
             </div>
-            <p>Launch WhatsApp, email, and Meta Ads campaigns in seconds. AGI writes the copy, picks the channel, and fires it — all from one prompt.</p>
+            <p>Launch WhatsApp, email, and Meta Ads campaigns in seconds. AGI writes the copy, picks the channel, and fires it all from one prompt.</p>
             <div className="prompt">Create a replenishment campaign for shampoo buyers</div>
           </div>
           <div className="use-card">
@@ -108,7 +108,7 @@ export default function Home() {
               <div className="use-icon">📊</div>
               <h3>Analytics &amp; Reports</h3>
             </div>
-            <p>Ask anything in plain English. Revenue by courier, margin by SKU, RTO by pincode — instant charts, no analyst needed.</p>
+            <p>Ask anything in plain English. Revenue by courier, margin by SKU, RTO by pincode instant charts, no analyst needed.</p>
             <div className="prompt">What&apos;s my real margin after returns and shipping?</div>
           </div>
           <div className="use-card">
@@ -124,7 +124,7 @@ export default function Home() {
               <div className="use-icon">🧾</div>
               <h3>Finance &amp; GST</h3>
             </div>
-            <p>Generate GST summaries, reconcile settlements, and get real profitability per order — fully automated every month.</p>
+            <p>Generate GST summaries, reconcile settlements, and get real profitability per order fully automated every month.</p>
             <div className="prompt">Generate my GST summary combining Razorpay + shipping</div>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function Home() {
       <section>
         <div className="sec-chip">Integrations</div>
         <h2 className="sec-title">Plugs into everything<br /><em>you already use.</em></h2>
-        <p className="sec-desc">No replacing tools. No rebuilding workflows. And if you need a custom integration — we build it <strong>within 24 hours.</strong></p>
+        <p className="sec-desc">No replacing tools. No rebuilding workflows. And if you need a custom integration we build it <strong>within 24 hours.</strong></p>
         <div className="int-grid">
           <div className="int-pill">🚚 Shiprocket</div>
           <div className="int-pill">🚛 Delhivery</div>
@@ -157,7 +157,7 @@ export default function Home() {
           <p className="tag">TRUSTED BY D2C BRANDS</p>
           <h2>Brands that <span>run on SuperManager.</span></h2>
           <p className="subtitle">
-            From fashion to wellness — founders across India are using
+            From fashion to wellness founders across India are using
             SuperManager AGI to automate operations and grow faster.
           </p>
 
@@ -219,7 +219,7 @@ export default function Home() {
             <div className="testimonial">
               <div className="stars">★★★★☆</div>
               <p className="review">
-                &quot;Setup was surprisingly fast — Razorpay and WhatsApp were connected
+                &quot;Setup was surprisingly fast Razorpay and WhatsApp were connected
                 in under an hour. In week one alone SuperManager flagged
                 40+ risky COD orders.&quot;
               </p>

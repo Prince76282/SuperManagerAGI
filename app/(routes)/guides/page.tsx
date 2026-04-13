@@ -4,7 +4,7 @@ import { ArrowRight, Radar } from "lucide-react";
 import { guidePages, guidePageSlugs } from "@/lib/Dataset/dropdownRouteContent";
 
 export const metadata = {
-  title: "Guides | SuperManager AGI",
+  title: "Guides | SuperManager AI",
   description:
     "Browse practical guides on autonomous execution, AI workforces, enterprise AI architecture, and decision intelligence.",
 };
