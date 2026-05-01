@@ -36,7 +36,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4 mt-10">
       {submitted ? (
         <div className="w-full max-w-md bg-white border border-gray-200 shadow-2xl rounded-2xl p-8 text-center space-y-4">
           <div className="text-5xl">Success</div>

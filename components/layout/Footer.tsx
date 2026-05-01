@@ -53,10 +53,10 @@ const Footer = () => {
                 <FooterCol
                   title="Get Started"
                   links={[
-                    { label: "Autonomous Execution", href: "/autonomous/" },
+                    { label: "Autonomous Execution", href: "/autonomous" },
                     {
                       label: "Project Intelligence",
-                      href: "/project-intelligence/",
+                      href: "/project-intelligence",
                     },
                     { label: "Management Replacement", href: "/management" },
                   ]}
@@ -65,18 +65,18 @@ const Footer = () => {
                 <FooterCol
                   title="SuperManager AGI Intelligence"
                   links={[
-                    { label: "Platform Overview", href: "/platform/" },
+                    { label: "Platform Overview", href: "/platform" },
                     {
                       label: "Autonomous Agent Orchestration",
-                      href: "/autonomousagent/",
+                      href: "/autonomousagent",
                     },
                     {
                       label: "Project & Workforce Intelligence",
-                      href: "/project-workforce/",
+                      href: "/project-workforce",
                     },
                     {
                       label: "Enterprise Integrations",
-                      href: "/enterprise-integrations/",
+                      href: "/enterprise-integrations",
                     },
                   ]}
                 />
@@ -84,10 +84,10 @@ const Footer = () => {
                 <FooterCol
                   title="AGI Deployments"
                   links={[
-                    { label: "AGI for Leadership", href: "/leadership/" },
-                    { label: "AGI for Execution", href: "/execution/" },
-                    { label: "AGI for Strategy", href: "/strategy/" },
-                    { label: "Manager Platform", href: "/managerplatform/" },
+                    { label: "AGI for Leadership", href: "/leadership" },
+                    { label: "AGI for Execution", href: "/execution" },
+                    { label: "AGI for Strategy", href: "/strategy" },
+                    { label: "Manager Platform", href: "/managerplatform" },
                   ]}
                 />
               </div>
@@ -96,7 +96,7 @@ const Footer = () => {
                 <FooterCol
                   title="Company"
                   links={[
-                    { label: "About SuperManager AGI", href: "/aboutus/" },
+                    { label: "About SuperManager AGI", href: "/aboutus" },
                     { label: "Leadership", href: "/leadership" },
                     { label: "Customer Stories", href: "/customer-stories" },
                     { label: "Partners", href: "/partners" },
@@ -115,8 +115,8 @@ const Footer = () => {
                 <FooterCol
                   title="Get Involved"
                   links={[
-                    { label: "Resources", href: "/resource/" },
-                    { label: "Blog", href: "/blog/" },
+                    { label: "Resources", href: "/resource" },
+                    { label: "Blog", href: "/blog" },
                     { label: "Support", href: "/support" },
                   ]}
                 />
@@ -192,16 +192,16 @@ const Footer = () => {
               <Link className="hover:text-[#625FD0]" href="/privacy-policy">
                 Privacy Policy
               </Link>
-              <Link className="hover:text-[#625FD0]" href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/terms-of-service">
                 Terms of Service
               </Link>
-              <Link className="hover:text-[#625FD0]" href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/acceptable_use_policy">
                 Acceptable Use Policy
               </Link>
-              <Link className="hover:text-[#625FD0]" href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/cookie-policys">
                 Cookie Policy
               </Link>
-              <Link className="hover:text-[#625FD0]" href="/learnmore">
+              <Link className="hover:text-[#625FD0]" href="/intellectual-property-rights">
                 Intellectual Property Rights
               </Link>
 

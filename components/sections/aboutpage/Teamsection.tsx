@@ -16,7 +16,7 @@ type Member = {
 
 const team: Member[] = [
   {
-    name: "Nimal Nambir",
+    name: "Nirmal Nambiar ",
     role: "CEO",
     photo: "/Image/about/Nimal.jpg",
     linkedin: "https://www.linkedin.com/in/nirmal-nambiar-778918228/",
@@ -34,7 +34,7 @@ const team: Member[] = [
   //   linkedin: "https://www.linkedin.com/in/satishramanan/",
   // },
   {
-    name: "Robert perry",
+    name: "Robert Perry",
     role: "Partner",
     photo: "/Image/about/Robert.jpg",
     linkedin: "https://www.linkedin.com/in/bobbypaul101/",
@@ -76,13 +76,13 @@ const TeamCard = React.memo(function TeamCard({
       <div className="flex flex-col gap-1.5">
         <div className="flex items-start justify-between gap-2">
           <div>
-            <p className="text-[18px]  text-black leading-tight">
+            <p className="text-[20px] group-hover:text-[#625FD0]   text-black leading-tight">
               {member.name}
             </p>
-            <p className="text-[14px] text-black/50 mt-0.5">{member.role}</p>
+            <p className="text-[16px] group-hover:text-[#625FD0]  text-black/50 mt-0.5">{member.role}</p>
           </div>
 
-          <span className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-[#625FD0] flex items-center justify-center text-black/40 group-hover:text-white group-hover:bg-[#625FD0] transition-all duration-300">
+          <span className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-[#625FD0] flex items-center justify-center text-[#625FD0] group-hover:text-white group-hover:bg-[#625FD0] transition-all duration-300">
             <Link href={member.linkedin}>
               <FaLinkedinIn size={20} />
             </Link>

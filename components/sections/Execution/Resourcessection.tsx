@@ -130,17 +130,17 @@ export default function ResourcesSection() {
             <button
               aria-label="Previous"
               onClick={prev}
-              className="w-11 h-11 flex items-center justify-center rounded-full border border-black/15 hover:bg-black/5 transition"
+              className="w-11 h-11 flex items-center justify-center rounded-full border-2 border-[#625FD0] hover:bg-black/5 transition"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-700" />
+              <ChevronLeft className="w-5 h-5 text-[#625FD0]" />
             </button>
 
             <button
               aria-label="Next"
               onClick={next}
-              className="w-11 h-11 flex items-center justify-center rounded-full border border-black/15 hover:bg-black/5 transition"
+              className="w-11 h-11 flex items-center justify-center rounded-full border-2 border-[#625FD0] hover:bg-black/5 transition"
             >
-              <ChevronRight className="w-5 h-5 text-gray-700" />
+              <ChevronRight className="w-5 h-5 text-[#625FD0]" />
             </button>
           </div>
         </div>

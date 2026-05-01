@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import image from "@/public/Image/logo1.png";
+
+export const metadata: Metadata = {
+  title: "Learn More SuperManager AI",
+  description:
+    "Learn more about SuperManager  AI  the autonomous AI management platform that replaces manual oversight with intelligent agents across your organization.",
+  alternates: { canonical: "https://www.supermanager.co/learnmore" },
+  openGraph: {
+    title: "Learn More SuperManager AI",
+    description:
+      "Learn more about SuperManager  AI  the autonomous AI management platform.",
+    url: "https://www.supermanager.co/learnmore",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
@@ -8,7 +23,7 @@ export default function Home() {
       {/* Logo */}
       <Image
         src={image}
-        alt="SuperManager AGI Logo"
+        alt="SuperManager  AI Logo"
         width={140}
         height={140}
         priority
@@ -17,7 +32,7 @@ export default function Home() {
 
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-2">
-        SuperManager AGI
+        SuperManager AI
       </h1>
 
       {/* Subtitle */}
@@ -27,9 +42,8 @@ export default function Home() {
 
       {/* Description */}
       <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed">
-        SuperManager AGI replaces half your project managers with autonomous AI
-        agents—cutting costs, boosting productivity, and eliminating manual
-        work.
+        SuperManager AI replaces half your project managers with autonomous AI
+        agentscutting costs, boosting productivity, and eliminating manual work.
       </p>
 
       {/* CTA Button */}

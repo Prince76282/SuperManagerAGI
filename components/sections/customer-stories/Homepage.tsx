@@ -72,15 +72,15 @@ const STORIES: Story[] = [
 ];
 
 const companies: Company[] = [
-  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 120 },
-  { name: "Microsoft", src: "/Image/newimage/Microsoft.png", width: 200 },
-  { name: "Nvidia", src: "/Image/newimage/image.png", width: 180 },
+  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 140 },
+  { name: "Microsoft", src: "/Image/newimage/Microsoft.png", width: 140 },
+  { name: "Nvidia", src: "/Image/newimage/image.png", width: 140 },
   { name: "Zoho", src: "/Image/newimage/Zoho.png", width: 120 },
-  { name: "BrowserStack", src: "/Image/newimage/Browser1.png", width: 200 },
+  { name: "BrowserStack", src: "/Image/newimage/Browser1.png", width: 140 },
   { name: "Sprinto", src: "/Image/newimage/Sprinto.png", width: 120 },
 ];
 
-/* ================= STORY CARD ================= */
+
 
 function StoryCard({ story, index }: { story: Story; index: number }) {
   const [hovered, setHovered] = useState(false);
@@ -97,9 +97,9 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
       {/* TEXT SIDE */}
       <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-12">
         <div className="space-y-6">
-          <div className="text-xs  tracking-widest uppercase">{story.tag}</div>
+          <div className="text-sm font-semibold  text-[#625FD0] tracking-widest uppercase">{story.tag}</div>
 
-          <h2 className="text-2xl sm:text-3xl  text-black leading-tight">
+          <h2 className="text-2xl sm:text-3xl  text-[#625FD0] leading-tight">
             {story.title}
           </h2>
 
@@ -139,7 +139,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
   );
 }
 
-/* ================= MARQUEE ================= */
+
 
 function Marquee() {
   return (

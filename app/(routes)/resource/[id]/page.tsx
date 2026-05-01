@@ -8,12 +8,38 @@ import {
 } from "@/lib/Dataset/contentData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
 
 type Resource = Manager | GuideItem | Insight;
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const allResources: Resource[] = [...managers, ...guides, ...insights];
+  const resource = allResources.find((item) => item.id === id);
+  if (!resource) return {};
+  const canonical = `https://www.supermanager.co/resource/${id}`;
+  return {
+    title: resource.title,
+    description: resource.text,
+    alternates: { canonical },
+    openGraph: {
+      title: resource.title,
+      description: resource.text,
+      type: 'article',
+      url: canonical,
+      images: [{ url: resource.img, width: 1200, height: 630, alt: resource.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: resource.title,
+      description: resource.text,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const managerParams = managers.map((item) => ({ id: item.id }));

@@ -30,7 +30,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${page.title} | SuperManager AGI`,
+    title: `${page.title}  SuperManager AGI`,
     description: page.description,
   };
 }

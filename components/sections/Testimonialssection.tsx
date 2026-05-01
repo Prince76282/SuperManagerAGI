@@ -141,11 +141,11 @@ export default function TestimonialsSection() {
 
           <div className="flex gap-3">
             <NavBtn onClick={() => paginate(-1)}>
-              <ChevronLeft size={18} />
+              <ChevronLeft size={20}  className="text-[#625FD0]" />
             </NavBtn>
 
             <NavBtn onClick={() => paginate(1)}>
-              <ChevronRight size={18} />
+              <ChevronRight size={20} className="text-[#625FD0]" />
             </NavBtn>
           </div>
         </div>
@@ -211,7 +211,7 @@ function NavBtn({
   return (
     <button
       onClick={onClick}
-      className="w-10 h-10 rounded-full border bg-white flex items-center justify-center hover:bg-gray-100 active:scale-95 transition"
+      className="w-10 h-10 rounded-full border-2 border-[#625FD0] bg-white flex items-center justify-center hover:bg-gray-100 active:scale-95 transition"
     >
       {children}
     </button>

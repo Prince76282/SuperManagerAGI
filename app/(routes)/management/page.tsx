@@ -1,3 +1,17 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Management  ',
+  description:
+    'SuperManager AI redefines enterprise management with autonomous AI agents that handle coordination, task delegation, and team operations at scale.',
+  alternates: { canonical: 'https://www.supermanager.co/management' },
+  openGraph: {
+    title: 'AI Management ',
+    description: 'SuperManager AGI redefines enterprise management with autonomous AI agents.',
+    url: 'https://www.supermanager.co/management',
+    type: 'website',
+  },
+};
 
 import ManagementCTA from '@/components/Footer/Management/ManagementCta'
 import ManagementHero from '@/components/Footer/Management/ManagementHero'

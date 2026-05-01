@@ -264,10 +264,7 @@ export default function PricingPage() {
         ))}
       </div>
 
-      {/* Footer */}
-      <p className="text-center text-xs text-[#9C9AB8] mt-12">
-        All plans include a 7-day free trial · No credit card required for Free plan · Cancel anytime
-      </p>
+    
     </div>
   );
 }

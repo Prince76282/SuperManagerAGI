@@ -13,12 +13,53 @@ import {
   type homedata,
 } from "@/lib/Dataset/homedata";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{
     id: string;
   }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const canonical = `https://www.supermanager.co/home/${id}`;
+
+  const article = getHomeDataById(id);
+  if (article) {
+    return {
+      title: article.title,
+      description: article.desc,
+      alternates: { canonical },
+      openGraph: { title: article.title, description: article.desc, type: 'article', url: canonical, images: [{ url: article.img, width: 1200, height: 630, alt: article.title }] },
+      twitter: { card: 'summary_large_image', title: article.title, description: article.desc },
+    };
+  }
+
+  const feature = getFeatureById(id);
+  if (feature) {
+    return {
+      title: feature.title,
+      description: feature.description,
+      alternates: { canonical },
+      openGraph: { title: feature.title, description: feature.description, type: 'article', url: canonical, images: [{ url: feature.image, width: 1200, height: 630, alt: feature.title }] },
+      twitter: { card: 'summary_large_image', title: feature.title, description: feature.description },
+    };
+  }
+
+  const card = getInfrastructureCardById(id);
+  if (card) {
+    return {
+      title: card.title,
+      description: card.description,
+      alternates: { canonical },
+      openGraph: { title: card.title, description: card.description, type: 'article', url: canonical, images: [{ url: card.image, width: 1200, height: 630, alt: card.title }] },
+      twitter: { card: 'summary_large_image', title: card.title, description: card.description },
+    };
+  }
+
+  return {};
+}
 
 export function generateStaticParams() {
   return Array.from(
@@ -37,7 +78,7 @@ function HomeArticleDetail({ data }: { data: homedata }) {
       <h1 className="text-3xl lg:text-5xl  mb-4">{data.title}</h1>
 
       <p className="text-gray-500 mb-6">
-        {data.date} | {data.readTime}
+        {data.date}  {data.readTime}
       </p>
 
       <div className="relative w-full h-72 lg:h-96 mb-8 rounded-xl overflow-hidden">
@@ -68,7 +109,7 @@ function FeatureDetail({ feature }: { feature: Feature }) {
 
   return (
     <article className="bg-white">
-      <section className="mx-auto max-w-[1200px] px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-[1200px] px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#625FD0]">
@@ -241,9 +282,9 @@ function InfrastructureDetail({ card }: { card: InfrastructureCard }) {
           <div>
             <h2 className="text-3xl  text-gray-900">Deployment Capabilities</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {card.features.map((feature) => (
+              {card.features.map((feature, i) => (
                 <div
-                  key={feature}
+                  key={`${feature}-${i}`}
                   className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
                 >
                   <p className="text-sm leading-7 text-gray-700">{feature}</p>

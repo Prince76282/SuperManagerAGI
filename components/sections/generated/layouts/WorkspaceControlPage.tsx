@@ -41,7 +41,7 @@ export default function WorkspaceControlPage({
               {page.secondaryCta && (
                 <Link
                   href={page.secondaryCta.href}
-                  className="px-8 py-3 rounded-full border-2 border-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
+                  className="px-8 py-3 rounded-full border-2 border-[#625FD0] text-[#625FD0] hover:bg-[#625FD0] hover:text-white transition"
                 >
                   {page.secondaryCta.label}
                 </Link>

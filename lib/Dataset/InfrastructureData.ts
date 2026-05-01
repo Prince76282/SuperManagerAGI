@@ -106,6 +106,11 @@ export const INFRASTRUCTURE_DATA = {
         "Automated Backups and Disaster Recovery ",
         "Enterprise Reliability and High Availability ",
         "Strict Access Governance ",
+        "Encrypted data storage and processing pipelines",
+        "Continuous 24/7 security monitoring with real-time alerting",
+        "Admin dashboard for real-time access visibility",
+        "Private VPC deployment with network-level isolation",
+        "Multi-layer encryption for data at rest and in transit"
       ],
       useCases: [
         {

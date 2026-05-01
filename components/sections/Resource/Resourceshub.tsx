@@ -56,15 +56,6 @@ export default function ResourcesHub() {
               every department and industry.
             </p>
 
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Link
-                href="#"
-                className="flex items-center justify-center bg-[#625FD0] px-6 py-3 text-white  text-sm rounded-md hover:opacity-90 transition"
-              >
-                Explore Resources
-              </Link>
-            </div>
 
             {/* QUICK STATS */}
             <div className="grid grid-cols-3 gap-6 sm:gap-8 max-w-sm">

@@ -10,7 +10,6 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-[#F4F3FC] px-4 py-20 sm:py-24">
       <div className="max-w-[1200px] mx-auto">
-
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#625FD0]/40 bg-[#625FD0]/10 mb-6">
@@ -19,10 +18,7 @@ const ContactPage = () => {
               Get in Touch
             </span>
           </div>
-          <h1
-            className="text-3xl sm:text-4xl lg:text-5xl  text-[#1C1A3A] mb-3 tracking-tight"
-            
-          >
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl  text-[#1C1A3A] mb-3 tracking-tight">
             Ways to reach us
           </h1>
           <p className="text-[#4A4770] text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
@@ -32,7 +28,6 @@ const ContactPage = () => {
 
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-5 mb-5">
-
           {/* Main Card */}
           <div className="md:col-span-3 bg-white rounded-2xl overflow-hidden shadow-sm ring-1 ring-[#625FD0]/10 flex flex-col">
             {/* Hero banner */}
@@ -57,7 +52,8 @@ const ContactPage = () => {
                 Contact our expert team
               </h2>
               <p className="text-[#6B6890] text-sm leading-relaxed mb-6">
-                Explore the platform, AI solutions, or create an account instantly.
+                Explore the platform, AI solutions, or create an account
+                instantly.
               </p>
               <Link
                 href="/get-in-touch"
@@ -71,7 +67,6 @@ const ContactPage = () => {
 
           {/* Side Cards */}
           <div className="md:col-span-2 flex flex-col gap-5">
-
             {/* Press */}
             <div className="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-[#625FD0]/10 flex flex-col">
               <div className="h-10 w-10 rounded-xl bg-[#625FD0]/10 flex items-center justify-center mb-4">
@@ -87,7 +82,7 @@ const ContactPage = () => {
                 Contact our press and media team.
               </p>
               <Link
-                href="/contact-form"
+                href="/submit_enquiry"
                 className="inline-flex items-center gap-2 bg-[#625FD0] hover:bg-[#4f4cb8] text-white text-xs font-semibold uppercase tracking-widest px-4 py-2.5 rounded-lg transition-all duration-200 w-fit mt-auto shadow-sm shadow-[#625FD0]/20"
               >
                 Submit an Enquiry
@@ -145,7 +140,9 @@ const ContactPage = () => {
             {!calLoaded && (
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white gap-4">
                 <div className="h-10 w-10 rounded-full border-4 border-[#625FD0]/20 border-t-[#625FD0] animate-spin" />
-                <p className="text-sm text-[#9C9AB8] font-medium">Loading scheduler…</p>
+                <p className="text-sm text-[#9C9AB8] font-medium">
+                  Loading scheduler…
+                </p>
               </div>
             )}
             <iframe
@@ -159,10 +156,10 @@ const ContactPage = () => {
           </div>
 
           <p className="text-center text-xs text-[#9C9AB8] py-4">
-            🔒 Secure scheduling powered by Calendly · Usually responds within 24h
+            🔒 Secure scheduling powered by Calendly · Usually responds within
+            24h
           </p>
         </div>
-
       </div>
     </div>
   );

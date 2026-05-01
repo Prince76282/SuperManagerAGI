@@ -151,7 +151,7 @@ export default function Navigation() {
 
                     {/* Pricing */}
                     <Link
-                      href="/pricing/"
+                      href="/pricing"
                        onClick={closeDropdown}
                       className="text-[14px] font-semibold  hover:text-[#625FD0]"
                     >
@@ -253,7 +253,7 @@ export default function Navigation() {
                     />
 
                     <Link
-                      href="/pricing/"
+                      href="/pricing"
                       onClick={closeMobileMenu}
                       className="flex w-full justify-between items-center py-3 px-4 rounded-lg text-base font-medium hover:text-[#625FD0]"
                     >

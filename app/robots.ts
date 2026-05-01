@@ -6,10 +6,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-   
+        disallow: ["/_next/static/", "/_next/image/"],
       },
     ],
     sitemap: "https://www.supermanager.co/sitemap.xml",
-    host: "https://www.supermanager.co", // optional but recommended
+    host: "https://www.supermanager.co",
   };
 }

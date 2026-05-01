@@ -52,13 +52,9 @@ function FeaturedCard({ featured }: { featured: Featured }) {
           {featured.title}
         </h2>
 
-        <p className="line-clamp-2 text-sm text-gray-500 sm:line-clamp-3">
-          {featured.desc}
-        </p>
+        <p className="text-sm text-gray-500">{featured.desc}</p>
 
-        <p className="line-clamp-2 text-sm text-gray-700 sm:line-clamp-3">
-          {featured.intro}
-        </p>
+        <p className="text-sm text-gray-700">{featured.intro}</p>
 
         <div className="mt-auto flex items-center justify-between pt-2">
           <div className="flex flex-wrap items-center gap-2 text-xs text-gray-400 sm:gap-3">
@@ -185,7 +181,8 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <div className="mb-10 grid grid-cols-1 gap-6 sm:mb-14 sm:gap-8 lg:grid-cols-5">
+        {/* ✅ FIX 1: Added `lg:items-start` to prevent grid row height recalculation */}
+        <div className="mb-10 grid grid-cols-1 gap-6 sm:mb-14 sm:gap-8 lg:grid-cols-5 lg:items-start">
           <div className="lg:col-span-3">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#625FD0] sm:text-sm">
               Featured Article
@@ -193,8 +190,9 @@ export default function BlogPage() {
             <FeaturedCard featured={featured} />
           </div>
 
-          <aside className="sm:mt-10 lg:col-span-2">
-            <p className="mb-3 mt-10 text-sm font-semibold uppercase tracking-widest text-[#625FD0] sm:text-sm">
+          {/* ✅ FIX 2: Added `lg:self-start` so aside doesn't stretch with featured card */}
+          <aside className="sm:mt-10 lg:mt-0.5 lg:col-span-2 lg:self-start">
+            <p className="mb-3 mt-10 lg:mt-0.5 text-sm font-semibold uppercase tracking-widest text-[#625FD0] sm:text-sm">
               Latest Articles
             </p>
 
@@ -205,8 +203,12 @@ export default function BlogPage() {
 
               {hasMoreLatest && (
                 <div className="flex justify-center px-3 py-3 border-t border-gray-100">
+                  {/* ✅ FIX 3: stopPropagation prevents event from bubbling to parent layout */}
                   <button
-                    onClick={() => setVisibleLatestCount((c) => c + 4)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setVisibleLatestCount((c) => c + 5);
+                    }}
                     className="flex items-center gap-2 rounded-full bg-[#625FD0] px-5 py-2 text-xs text-white transition hover:bg-[#6e6af7] active:scale-95"
                   >
                     Show more <Plus size={12} />

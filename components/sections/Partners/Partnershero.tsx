@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const companies = [
-  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 100 },
+  { name: "Adobe", src: "/Image/newimage/Adobe.png", width: 150 },
   { name: "BrowserStack", src: "/Image/newimage/Browser1.png", width: 140 },
   { name: "Zoho", src: "/Image/newimage/Zoho.png", width: 140 },
   { name: "Microsoft", src: "/Image/newimage/Microsoft.png", width: 140 },
@@ -119,7 +119,7 @@ export default function PartnersHero() {
 
         {/* LOGO MARQUEE */}
         <div className="relative mt-24 text-center">
-          <h2 className="mb-12 text-3xl lg:text-5xl font-semibold text-slate-900">
+          <h2 className="mb-12 text-lg lg:text-4xl font-semibold text-slate-900">
             Trusted by 100+ Leading Companies
           </h2>
 
@@ -139,8 +139,8 @@ export default function PartnersHero() {
                     src={company.src}
                     alt={company.name}
                     width={company.width}
-                    height={80}
-                    className="h-[80px] w-auto object-contain"
+                    height={150}
+                    className=" w-auto object-contain"
                   />
                 </div>
               ))}

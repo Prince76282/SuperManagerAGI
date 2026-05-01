@@ -5,7 +5,7 @@ import { Briefcase, Users, Target, DollarSign } from "lucide-react";
 
 const useCases = [
   {
-    value: 45,
+    value: 95,
     title: "Morning Intelligence Brief",
     description:
       "Every morning, a structured executive intelligence brief is auto-generated from every connected system: revenue vs target by channel, inventory health, logistics performance, marketing ROAS, customer care backlog, engineering delivery status, finance reconciliation status. Distributed automatically. No meetings required to get this information.",
@@ -14,7 +14,7 @@ const useCases = [
     icon: Briefcase,
   },
   {
-    value: 38,
+    value: 97,
     title: "Board and Investor Reporting",
     description:
       "Monthly and quarterly performance reports compiled automatically from live data across every connected system in the right format. Revenue by channel, unit economics, operational efficiency metrics, OKR attainment  all pulled from actual system data and formatted for board-level consumption.",
@@ -22,7 +22,7 @@ const useCases = [
     icon: Users,
   },
   {
-    value: 52,
+    value: 98,
     title: "Real-Time Competitive Intelligence",
     description:
       "Agents monitor competitor pricing, marketplace rankings, product launches and market signals continuously across connected platforms. Leadership receives alerts when significant competitive moves are detected  not weeks later in a market research report.",
@@ -30,7 +30,7 @@ const useCases = [
     icon: Target,
   },
   {
-    value: 41,
+    value: 96,
     title: "Cross-Department Cost Intelligence",
     description:
       "Agents identify operational inefficiencies, redundant workflows and budget waste across every department using actual data from connected systems. Cost reduction opportunities surfaced with specific data  not general recommendations.",

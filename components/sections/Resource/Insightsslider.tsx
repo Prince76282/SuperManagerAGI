@@ -72,15 +72,15 @@ export default function InsightsSlider() {
           {insights.map((item, i) => (
             <article
               key={i}
-              className="snap-start flex-shrink-0
+              className="snap-start flex-shrink-0 
               w-[85%] sm:w-[48%] lg:w-[32%]
               border border-gray-200 rounded-xl
               p-6 flex flex-col gap-4
               hover:border-[#625FD0]
-              hover:shadow-lg hover:-translate-y-1
+              hover:shadow-lg hover:-translate-y-1 mt-2
               transition-all duration-300 group"
             >
-              <span className="text-[11px] text-[#625FD0] uppercase tracking-widest font-medium">
+              <span className="text-[12px] font-semibold text-[#625FD0] uppercase tracking-widest font-medium">
                 {item.tag}
               </span>
 

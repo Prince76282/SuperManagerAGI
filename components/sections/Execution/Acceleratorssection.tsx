@@ -186,7 +186,7 @@ export default function PrebuiltManagersSection() {
               className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 flex items-center gap-2 ${
                 active === i
                   ? "bg-[#625FD0] text-white border-[#625FD0]"
-                  : "border-black/10 text-gray-600 hover:bg-[#625FD0] hover:text-white"
+                  : "border-[#625FD0] border-2 text-[#625FD0] hover:bg-[#625FD0] hover:text-white"
               }`}
             >
               <item.icon className="w-4 h-4" />

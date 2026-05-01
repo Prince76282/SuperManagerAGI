@@ -153,7 +153,7 @@ export default function PrebuiltAGIPage() {
             ))}
 
             <Link
-              href="./learnmore"
+              href="./get-in-touch"
               className="inline-flex items-center rounded-lg bg-[#625FD0] px-4 py-2 text-white  transition-all duration-300"
             >
               REQUEST DEMO

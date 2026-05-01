@@ -1,7 +1,13 @@
 "use client";
 
-import { report } from "process";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+
+type Description = string | Array<string | React.ReactNode>;
+
+function renderDescription(desc: Description) {
+  if (typeof desc === "string") return desc;
+  return desc.map((item, i) => <Fragment key={i}>{item}</Fragment>);
+}
 
 const tabsData = [
   { id: "Autonomous", label: "Autonomous Task Execution" },
@@ -195,7 +201,7 @@ const ProjectManagementPlatform = () => {
                         {item.title}
                       </h4>
                       <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed mt-3 md:mt-4">
-                        {item.description}
+                        {renderDescription(item.description)}
                       </p>
                     </div>
                   ))}
@@ -230,7 +236,7 @@ const ProjectManagementPlatform = () => {
                             {item.title}
                           </h4>
                           <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                            {item.description}
+                            {renderDescription(item.description)}
                           </p>
                         </div>
                       </div>
@@ -264,7 +270,7 @@ const ProjectManagementPlatform = () => {
                           {item.Highlight}
                         </h4>
                         <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                          {item.description}
+                          {renderDescription(item.description)}
                         </p>
                       </div>
                     </div>
@@ -297,7 +303,7 @@ const ProjectManagementPlatform = () => {
                           {item.Highlight}
                         </h4>
                         <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                          {item.description}
+                          {renderDescription(item.description)}
                         </p>
                       </div>
                     </div>
@@ -332,7 +338,7 @@ const ProjectManagementPlatform = () => {
                           {item.Highlight}
                         </h4>
                         <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                          {item.description}
+                          {renderDescription(item.description)}
                         </p>
                       </div>
                     </div>

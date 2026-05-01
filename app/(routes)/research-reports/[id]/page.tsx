@@ -22,10 +22,36 @@ import {
   getReportById,
   reportsList,
 } from "@/lib/Dataset/reportData";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const report = getReportById(id);
+  if (!report) return {};
+  const canonical = `https://www.supermanager.co/research-reports/${id}`;
+  return {
+    title: report.title,
+    description: report.description,
+    alternates: { canonical },
+    openGraph: {
+      title: report.title,
+      description: report.description,
+      type: 'article',
+      url: canonical,
+      images: [{ url: report.image, width: 1200, height: 630, alt: report.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: report.title,
+      description: report.description,
+      images: [report.image],
+    },
+  };
+}
 
 // ─── 404 ──────────────────────────────────────────────────────────────────────
 function NotFound() {
